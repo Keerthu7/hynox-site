@@ -1,0 +1,259 @@
+'use client';
+
+import { useEffect } from 'react';
+import Header from '../../components/Header';
+import ServiceCTA from '../../components/ServiceCTA';
+import Footer from '../../components/Footer';
+
+export default function AppDevelopmentPage() {
+  useEffect(() => {
+    const animationClasses = [
+      'reveal-on-scroll', 'reveal-fade-in', 'reveal-from-left',
+      'reveal-from-right', 'reveal-zoom', 'reveal-flip-x', 'reveal-blur',
+    ];
+    const selector = animationClasses.map(c => `.${c}`).join(', ');
+    const observerCallback = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          entry.target.classList.remove('is-hidden');
+        } else {
+          entry.target.classList.remove('is-visible');
+          entry.target.classList.add('is-hidden');
+        }
+      });
+    };
+    const observer = new IntersectionObserver(observerCallback, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll(selector).forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+
+  const whatWeBuild = [
+    { icon: '📱', title: 'Android Apps',        desc: 'Native and cross-platform Android apps optimized for all screen sizes and versions.' },
+    { icon: '🍎', title: 'iOS Apps',            desc: 'Smooth, fast iOS applications built for iPhone and iPad with premium UX standards.' },
+    { icon: '⚡', title: 'Cross-Platform Apps', desc: 'Build once, run on Android & iOS using React Native — saving time and cost.' },
+    { icon: '🏢', title: 'Business Apps',       desc: 'Internal business apps for orders, inventory, staff management and workflow automation.' },
+    { icon: '🛒', title: 'eCommerce Apps',      desc: 'Shopping apps with payments, wishlists, order tracking and push notifications.' },
+    { icon: '🔔', title: 'On-Demand Apps',      desc: 'Food delivery, booking and service apps with real-time tracking and notifications.' },
+  ];
+
+  const whatYouGet = [
+    { icon: '🛡', title: 'Custom App Development',  desc: 'Built from scratch for your specific business needs — no off-the-shelf solutions.' },
+    { icon: '🎨', title: 'Premium UI/UX Design',    desc: 'Beautiful, intuitive interfaces that keep users engaged and coming back.' },
+    { icon: '🔔', title: 'Push Notifications',      desc: 'Engage users with real-time alerts, offers and updates.' },
+    { icon: '💳', title: 'Payment Integration',     desc: 'Razorpay, Stripe, PayPal and UPI payment gateways fully integrated.' },
+    { icon: '📊', title: 'Admin Dashboard',         desc: 'Web-based admin panel to manage users, content, orders and analytics.' },
+    { icon: '🔒', title: 'Secure & Scalable',       desc: 'Encrypted, secure architecture that grows as your user base grows.' },
+    { icon: '🔄', title: 'API & Backend',           desc: 'Powerful backend and REST/GraphQL APIs to handle all app logic.' },
+    { icon: '🎧', title: 'Post-Launch Support',     desc: 'Bug fixes, updates and feature additions after your app goes live.' },
+  ];
+
+  const whyChoose = [
+    { title: '100% Custom Apps',         desc: 'Every app is built from scratch — no templates or clone solutions.' },
+    { title: 'End-to-End Delivery',      desc: 'Design, development, testing and launch — all handled by one team.' },
+    { title: 'Direct Communication',     desc: 'Work directly with our developers — no account managers or middlemen.' },
+    { title: 'App Store Deployment',     desc: 'We handle Google Play Store and Apple App Store submission for you.' },
+    { title: 'Ongoing Maintenance',      desc: 'We provide updates, OS compatibility fixes and new feature additions.' },
+  ];
+
+  const process = [
+    { step: '01', title: 'Discover',   desc: 'We understand your app idea, users and business requirements.' },
+    { step: '02', title: 'Wireframe',  desc: 'We create app wireframes and user flow maps before writing code.' },
+    { step: '03', title: 'Design',     desc: 'Beautiful, intuitive UI/UX designs for each screen of your app.' },
+    { step: '04', title: 'Develop',    desc: 'We build your app with clean, tested and production-ready code.' },
+    { step: '05', title: 'Launch',     desc: 'We test, submit and publish your app on Play Store and App Store.' },
+  ];
+
+  const portfolio = [
+    { title: 'JP Interiors App',    cat: 'Business App',      desc: 'Custom business automation and project management app', img: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=800&auto=format&fit=crop' },
+    { title: 'Food Delivery App',   cat: 'On-Demand App',     desc: 'On-demand food delivery service with real-time tracking', img: 'https://images.unsplash.com/photo-1526367790999-0150786686a2?q=80&w=800&auto=format&fit=crop' },
+    { title: 'Mallika Garments',    cat: 'eCommerce App',     desc: 'Fashion retail mobile app with cart and payments', img: 'https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?q=80&w=800&auto=format&fit=crop' },
+    { title: 'Kido Care',           cat: 'Kids Clothing App', desc: 'Kids clothing brand mobile shopping experience', img: 'https://images.unsplash.com/photo-1519241047957-be31d7379a5d?q=80&w=800&auto=format&fit=crop' },
+    { title: 'Sun Holidays',        cat: 'Travel App',        desc: 'Travel agency app with tour booking and enquiries', img: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=800&auto=format&fit=crop' },
+    { title: 'Teerex',              cat: 'eCommerce App',     desc: 'Wholesale clothing platform mobile app', img: 'https://images.unsplash.com/photo-1556740749-887f6717d7e4?q=80&w=800&auto=format&fit=crop' },
+  ];
+
+  const faqs = [
+    { q: 'How much does mobile app development cost in Tiruppur?', a: "The cost depends on the app's features, complexity, platforms, and integrations. We provide custom pricing based on your business requirements." },
+    { q: 'How long does it take to develop a mobile app?', a: 'Most mobile apps take between 4 and 12 weeks to design, develop, test, and launch, depending on the project scope.' },
+    { q: 'Do you build both Android and iOS apps?', a: 'Yes, we develop Android apps, iOS apps, and cross-platform mobile applications using modern technologies like React Native.' },
+    { q: 'Can HYNOX develop custom mobile apps for businesses?', a: 'Yes, we build custom mobile applications for businesses, startups, ecommerce brands, manufacturers, and service providers.' },
+    { q: 'Do you develop eCommerce mobile apps?', a: 'Yes, we create ecommerce apps with product catalogs, secure payments, order tracking, push notifications, and customer accounts.' },
+    { q: 'Will my mobile app be available on both Android and iPhone?', a: 'Yes, we can build cross-platform applications that work seamlessly on Android and iOS devices.' },
+    { q: 'Do you provide App Store and Play Store publishing?', a: 'Yes, we handle Google Play Store and Apple App Store submission, configuration, and deployment.' },
+    { q: 'Can you integrate payment gateways into mobile apps?', a: 'Yes, we integrate Razorpay, Stripe, PayPal, UPI, and other payment solutions into mobile applications.' },
+    { q: 'Do you provide backend development and APIs?', a: 'Yes, we develop secure backend systems, databases, admin dashboards, and APIs to power your mobile application.' },
+    { q: 'Will I receive the source code of my mobile app?', a: 'Yes, once the project is completed, you will receive full ownership of the application and source code.' },
+    { q: 'Do you provide mobile app maintenance and support?', a: 'Yes, we provide ongoing support, bug fixes, security updates, performance improvements, and feature enhancements after launch.' },
+    { q: 'Why choose HYNOX for mobile app development in Tiruppur?', a: 'HYNOX builds custom Android and iOS applications with modern technology, transparent communication, fast delivery, and long-term support.' },
+  ];
+
+  return (
+    <>
+      {/* ── Shared Header ── */}
+      <Header />
+
+      <main>
+        {/* ─── 1. HERO ─── */}
+        <section className="hero-2col-section">
+          <div className="hero-aurora-glow"></div>
+          <div className="hero-2col-container svc-hero-2col-container">
+            <div className="hero-2col-content svc-hero-2col-content mobile-apps-hero-content">
+              <div className="badge reveal-blur">
+                MOBILE APP DEVELOPMENT COMPANY IN TIRUPPUR
+              </div>
+              <h1 className="reveal-from-left reveal-delay-100 svc-subpage-h1">
+                Mobile Apps That<br />
+                <span className="svc-hero-accent-bw">Scale Your Business</span>
+              </h1>
+              <p className="reveal-from-left reveal-delay-200">
+                We design and develop high-performance Android and iOS apps for businesses,
+                startups and eCommerce brands. From idea to App Store — we handle everything.
+              </p>
+              <div className="hero-actions reveal-from-left reveal-delay-300" style={{ marginBottom: '2.5rem' }}>
+                <a href="mailto:thehynoxofficial@gmail.com" className="btn btn-hero-solid">Get Free Consultation →</a>
+                <a href="#portfolio" className="btn btn-hero-outline">View Our Work</a>
+              </div>
+              <div className="svc-hero-badges-bw reveal-fade-in reveal-delay-400">
+                <span>✓ Android &amp; iOS</span>
+                <span>✓ Custom Built</span>
+                <span>✓ Fast Delivery</span>
+                <span>✓ App Store Ready</span>
+              </div>
+            </div>
+            <div className="hero-2col-image-wrapper svc-hero-image-wrapper reveal-from-right reveal-delay-200">
+              <img
+                src="/mobile-apps-hero.png"
+                alt="Mobile App Development by HYNOX Tiruppur"
+                style={{
+                  width: '100%',
+                  maxWidth: '450px',
+                  height: 'auto',
+                  objectFit: 'contain',
+                }}
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* ─── 2. WHAT WE BUILD ─── */}
+        <section className="svc-section" id="what-we-build">
+          <div className="svc-section-header reveal-blur">
+            <span className="svc-label">WHAT WE BUILD</span>
+            <h2>Mobile Apps Built For Your Business</h2>
+            <div className="svc-divider" />
+          </div>
+          <div className="svc-build-grid reveal-zoom reveal-delay-200">
+            {whatWeBuild.map((item, i) => (
+              <div className="svc-build-card" key={i}>
+                <div className="svc-build-icon">{item.icon}</div>
+                <h3>{item.title}</h3>
+                <p>{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* ─── 3. WHAT YOU GET ─── */}
+        <section className="svc-section svc-section-alt" id="what-you-get">
+          <div className="svc-section-header reveal-blur">
+            <span className="svc-label">WHAT YOU GET</span>
+            <h2>Everything You Need, Included</h2>
+          </div>
+          <div className="svc-get-grid reveal-from-right reveal-delay-200">
+            {whatYouGet.map((item, i) => (
+              <div className="svc-get-card" key={i}>
+                <span className="svc-get-icon">{item.icon}</span>
+                <div>
+                  <h4>{item.title}</h4>
+                  <p>{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* ─── 4. WHY CHOOSE HYNOX ─── */}
+        <section className="svc-section" id="why-hynox">
+          <div className="svc-section-header reveal-flip-x">
+            <span className="svc-label">WHY CHOOSE HYNOX?</span>
+            <h2>We Focus On What Matters</h2>
+          </div>
+          <div className="svc-why-grid reveal-zoom reveal-delay-200">
+            {whyChoose.map((item, i) => (
+              <div className="svc-why-card" key={i}>
+                <div className="svc-why-check">✓</div>
+                <h4>{item.title}</h4>
+                <p>{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* ─── 5. PROCESS ─── */}
+        <section className="svc-section svc-section-alt" id="process">
+          <div className="svc-section-header reveal-blur">
+            <span className="svc-label">OUR PROCESS</span>
+            <h2>Simple Process, Successful Results</h2>
+          </div>
+          <div className="svc-process-row reveal-from-right reveal-delay-200">
+            {process.map((item, i) => (
+              <div className="svc-process-step" key={i}>
+                <div className="svc-process-circle">{item.step}</div>
+                {i < process.length - 1 && <div className="svc-process-line" />}
+                <h4>{item.title}</h4>
+                <p>{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* ─── 6. PORTFOLIO ─── */}
+        <section className="svc-section" id="portfolio">
+          <div className="svc-section-header reveal-blur">
+            <span className="svc-label">PORTFOLIO</span>
+            <h2>Real Apps. Real Results.</h2>
+          </div>
+          <div className="svc-portfolio-grid reveal-zoom reveal-delay-200">
+            {portfolio.map((item, i) => (
+              <div className="svc-portfolio-card" key={i}>
+                <div className="svc-portfolio-img">
+                  <img src={item.img} alt={item.title} />
+                </div>
+                <div className="svc-portfolio-info">
+                  <span className="badge-dev">{item.cat}</span>
+                  <h4>{item.title}</h4>
+                  <p>{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* ─── 7. FAQ ─── */}
+        <section className="svc-section svc-section-alt" id="faq">
+          <div className="svc-section-header reveal-flip-x">
+            <span className="svc-label">FAQ</span>
+            <h2>App Development Questions Answered</h2>
+          </div>
+          <div className="svc-faq-list reveal-from-left reveal-delay-200">
+            {faqs.map((item, i) => (
+              <details className="svc-faq-item" key={i}>
+                <summary className="svc-faq-q">{item.q}</summary>
+                <p className="svc-faq-a">{item.a}</p>
+              </details>
+            ))}
+          </div>
+        </section>
+
+        {/* ─── 8. CTA — Shared Component ─── */}
+        <ServiceCTA
+          title="Ready to Build Your App?"
+          subtitle="Tell us about your idea — we'll get back to you within 24 hours."
+        />
+      </main>
+
+      <Footer />
+    </>
+  );
+}
