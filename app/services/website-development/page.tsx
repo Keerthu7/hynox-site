@@ -1,6 +1,8 @@
 'use client';
 
 import { useEffect } from 'react';
+import * as LucideIcons from 'lucide-react';
+import { Check, ArrowRight } from 'lucide-react';
 import Header from '../../components/Header';
 import ServiceCTA from '../../components/ServiceCTA';
 import Footer from '../../components/Footer';
@@ -29,23 +31,23 @@ export default function WebDevelopmentPage() {
   }, []);
 
   const whatWeBuild = [
-    { icon: '</>', title: 'Web Applications',     desc: 'Custom web applications and dashboards to automate and simplify your business operations.' },
+    { icon: 'Code', title: 'Web Applications',     desc: 'Custom web applications and dashboards to automate and simplify your business operations.' },
     { icon: '▦',   title: 'Admin Dashboards',     desc: 'Powerful dashboards to manage data, users, reports and business operations in one place.' },
-    { icon: '🛒',  title: 'eCommerce Platforms',  desc: 'Custom online stores with secure payments, product management and order tracking.' },
-    { icon: '📅',  title: 'Booking Systems',      desc: 'Online booking and appointment systems for services, events and facilities.' },
+    { icon: 'ShoppingCart',  title: 'eCommerce Platforms',  desc: 'Custom online stores with secure payments, product management and order tracking.' },
+    { icon: 'Calendar',  title: 'Booking Systems',      desc: 'Online booking and appointment systems for services, events and facilities.' },
     { icon: '🔗',  title: 'API Integrations',     desc: 'Connect with payment gateways, CRMs, ERPs and third-party services seamlessly.' },
     { icon: '☁',  title: 'SaaS Applications',    desc: 'Scalable SaaS platforms with multi-user support, subscriptions and advanced features.' },
   ];
 
   const whatYouGet = [
-    { icon: '🛡', title: 'Custom Development',       desc: 'Built specifically for your business needs — no templates.' },
-    { icon: '📱', title: 'Mobile Responsive',        desc: 'Works perfectly on all devices and screen sizes.' },
-    { icon: '🔍', title: 'SEO Ready',               desc: 'Technical SEO setup included from the start for better Google rankings.' },
-    { icon: '⚡', title: 'Fast Performance',         desc: 'Optimized for speed, Core Web Vitals and better UX.' },
-    { icon: '🔒', title: 'Secure & Scalable',        desc: 'Clean code and secure architecture designed to grow with you.' },
-    { icon: '⚙', title: 'Admin Panel',              desc: 'Easy to manage content, users and settings without a developer.' },
-    { icon: '🔄', title: 'Third-Party Integrations', desc: 'Payment gateways, CRM, WhatsApp, APIs and more.' },
-    { icon: '🎧', title: 'Support After Launch',     desc: "We're here to help even after your project goes live." },
+    { icon: 'Shield', title: 'Custom Development',       desc: 'Built specifically for your business needs — no templates.' },
+    { icon: 'Smartphone', title: 'Mobile Responsive',        desc: 'Works perfectly on all devices and screen sizes.' },
+    { icon: 'Search', title: 'SEO Ready',               desc: 'Technical SEO setup included from the start for better Google rankings.' },
+    { icon: 'Zap', title: 'Fast Performance',         desc: 'Optimized for speed, Core Web Vitals and better UX.' },
+    { icon: 'Lock', title: 'Secure & Scalable',        desc: 'Clean code and secure architecture designed to grow with you.' },
+    { icon: 'Settings', title: 'Admin Panel',              desc: 'Easy to manage content, users and settings without a developer.' },
+    { icon: 'Repeat', title: 'Third-Party Integrations', desc: 'Payment gateways, CRM, WhatsApp, APIs and more.' },
+    { icon: 'Headphones', title: 'Support After Launch',     desc: "We're here to help even after your project goes live." },
   ];
 
   const whyChoose = [
@@ -65,12 +67,19 @@ export default function WebDevelopmentPage() {
   ];
 
   const portfolio = [
-    { title: 'JP Interiors Web',  cat: 'Web Development',    desc: 'Interior design portfolio & service showcase',    img: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=800&auto=format&fit=crop' },
-    { title: 'Team3 Associates',  cat: 'Custom Development', desc: 'Interior design and project execution platform',   img: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop' },
-    { title: 'SugarStar',         cat: 'Shopify Store',      desc: 'Premium confectionery eCommerce store',           img: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=800&auto=format&fit=crop' },
-    { title: 'Sun Holidays',      cat: 'Web Development',    desc: 'Travel agency portfolio & booking website',       img: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=800&auto=format&fit=crop' },
-    { title: 'Teerex',            cat: 'eCommerce',          desc: 'E-commerce platform with custom features',        img: 'https://images.unsplash.com/photo-1556740749-887f6717d7e4?q=80&w=800&auto=format&fit=crop' },
-    { title: 'Livinza',           cat: 'Portfolio Site',     desc: 'Interior business portfolio website',             img: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=800&auto=format&fit=crop' },
+    { title: "SugarStar", cat: "Shopify Development", desc: "Premium confectionery online store", img: "/images/sugarstar_web.jpeg" },
+    { title: "JP Interiors App", cat: "App Development", desc: "Custom business automation and project management app", img: "/images/JpApp_works.png" },
+    { title: "Team3 Associates", cat: "Custom Development", desc: "Interior Design and Project Execution", img: "/images/team3_web.png" },
+    { title: "JP Interiors Web", cat: "Web Development", desc: "Interior design portfolio and service showcase", img: "/images/JpWeb_works.png" },
+    { title: "Teerex", cat: "Custom Development", desc: "E-commerce platform with custom features", img: "/images/graaps_web.png" },
+    { title: "Mallika Garments", cat: "Custom Development", desc: "Fashion retail business solution", img: "/images/malika-garments_web.jpg" },
+    { title: "Graaps", cat: "Clothing Brand", desc: "Online clothing store", img: "/images/graaps_web.png" },
+    { title: "Zydenn", cat: "Clothing Brand", desc: "Online clothing store", img: "/images/kyto_web.jpeg" },
+    { title: "Kores Fabrics", cat: "Clothing Brand", desc: "Online clothing Wholesale Store", img: "/images/kores_web.png" },
+    { title: "Kido Care", cat: "Kids Clothing Brand", desc: "Online clothing store", img: "/images/kido_care_web.jpg" },
+    { title: "Sun Holidays", cat: "Tours and Travel Agency", desc: "Travel Agency Portfolio", img: "/images/sun_holidays_web.png" },
+    { title: "Twinstar", cat: "Clothing Brand", desc: "Online clothing store", img: "/images/kyto_web.jpeg" },
+    { title: "Livinza", cat: "Interior Business", desc: "Interior Business Portfolio", img: "/images/livinza_web.png" }
   ];
 
   const faqs = [
@@ -109,7 +118,7 @@ export default function WebDevelopmentPage() {
                 tailored to your business needs. From idea to launch — we handle everything.
               </p>
               <div className="hero-actions reveal-from-left reveal-delay-300" style={{ marginBottom: '2.5rem' }}>
-                <a href="mailto:thehynoxofficial@gmail.com" className="btn btn-hero-solid">Get Free Consultation →</a>
+                <a href="/contact" className="btn btn-hero-solid">Get Free Consultation <ArrowRight size={16} style={{ marginLeft: "4px", display: "inline-block", verticalAlign: "middle" }} /></a>
                 <a href="#portfolio" className="btn btn-hero-outline">View Our Work</a>
               </div>
               <div className="svc-hero-badges-bw reveal-fade-in reveal-delay-400">
@@ -144,7 +153,10 @@ export default function WebDevelopmentPage() {
           <div className="svc-build-grid reveal-zoom reveal-delay-200">
             {whatWeBuild.map((item, i) => (
               <div className="svc-build-card" key={i}>
-                <div className="svc-build-icon">{item.icon}</div>
+                {(() => {
+                  const BuildIcon = (LucideIcons as any)[item.icon] || LucideIcons.HelpCircle;
+                  return <div className="svc-build-icon"><BuildIcon size={36} /></div>;
+                })()}
                 <h3>{item.title}</h3>
                 <p>{item.desc}</p>
               </div>
@@ -161,7 +173,10 @@ export default function WebDevelopmentPage() {
           <div className="svc-get-grid reveal-from-left reveal-delay-200">
             {whatYouGet.map((item, i) => (
               <div className="svc-get-card" key={i}>
-                <span className="svc-get-icon">{item.icon}</span>
+                {(() => {
+                  const GetIcon = (LucideIcons as any)[item.icon] || LucideIcons.HelpCircle;
+                  return <span className="svc-get-icon"><GetIcon size={20} /></span>;
+                })()}
                 <div>
                   <h4>{item.title}</h4>
                   <p>{item.desc}</p>
@@ -180,7 +195,7 @@ export default function WebDevelopmentPage() {
           <div className="svc-why-grid reveal-zoom reveal-delay-200">
             {whyChoose.map((item, i) => (
               <div className="svc-why-card" key={i}>
-                <div className="svc-why-check">✓</div>
+                <div className="svc-why-check"><Check size={16} /></div>
                 <h4>{item.title}</h4>
                 <p>{item.desc}</p>
               </div>

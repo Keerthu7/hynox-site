@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import AnimatedSection from '../../components/AnimatedSection';
+import { ArrowUpRight, Calendar, Globe, Activity, Star, AlertCircle, CheckCircle, Trophy, Quote, ArrowRight, Send, Check, ChevronRight, Briefcase, Clock, ShieldAlert, Award, FileText, Layout, Wrench, User, MapPin, DollarSign, Users, Smartphone, Phone, MessageSquare, Truck, Heart, Lock, CheckSquare, Monitor, Package, TrendingUp } from 'lucide-react';
 
 // Dummy data for "More Case Studies" section
 const moreCaseStudies = [
@@ -27,9 +28,11 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
 
             {/* Breadcrumbs - above hero */}
             <AnimatedSection animation="fadeIn" delay={0}>
-              <div style={{ fontSize: '0.85rem', color: '#666666', marginBottom: '1.5rem', display: 'flex', gap: '0.5rem' }}>
-                <a href="/" style={{ color: '#666666', textDecoration: 'none' }}>Home</a> &gt; 
-                <a href="/case-studies" style={{ color: '#666666', textDecoration: 'none' }}>Case Studies</a> &gt; 
+              <div style={{ fontSize: '0.85rem', color: '#666666', marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                <a href="/" style={{ color: '#666666', textDecoration: 'none' }}>Home</a>
+                <ChevronRight size={12} />
+                <a href="/case-studies" style={{ color: '#666666', textDecoration: 'none' }}>Case Studies</a>
+                <ChevronRight size={12} />
                 <span style={{ color: '#ffffff' }}>Zyden Clothing</span>
               </div>
             </AnimatedSection>
@@ -46,7 +49,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                 </p>
                 <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
                   <a href="#" style={{ background: '#ffffff', color: '#000000', padding: '0.8rem 1.5rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '0.95rem', display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
-                    Visit Live Store <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+                    Visit Live Store <ArrowUpRight size={14} />
                   </a>
                   <a href="#cta" style={{ background: 'transparent', color: '#ffffff', border: '1px solid rgba(255,255,255,0.2)', padding: '0.8rem 1.5rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '0.95rem' }}>
                     Get Similar Solution
@@ -123,7 +126,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                   
                   <div style={{ marginBottom: '3rem' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
-                      <div style={{ background: 'rgba(255,255,255,0.05)', padding: '0.5rem', borderRadius: '6px' }}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+                      <div style={{ background: 'rgba(255,255,255,0.05)', padding: '0.5rem', borderRadius: '6px' }}><AlertCircle size={20} style={{ color: "#ffffff" }} /></div>
                       <h3 style={{ fontSize: '1.4rem', fontWeight: 600 }}>The Challenge</h3>
                     </div>
                     <p style={{ color: '#a3a3a3', lineHeight: 1.7, fontSize: '1.05rem' }}>
@@ -133,7 +136,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
 
                   <div style={{ marginBottom: '3rem' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
-                      <div style={{ background: 'rgba(255,255,255,0.05)', padding: '0.5rem', borderRadius: '6px' }}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+                      <div style={{ background: 'rgba(255,255,255,0.05)', padding: '0.5rem', borderRadius: '6px' }}><CheckCircle size={20} style={{ color: "#ffffff" }} /></div>
                       <h3 style={{ fontSize: '1.4rem', fontWeight: 600 }}>Our Solution</h3>
                     </div>
                     <ul style={{ listStyleType: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '1rem' }}>
@@ -145,7 +148,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                         'Launched performance marketing campaigns for traffic & sales'
                       ].map((item, i) => (
                         <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', color: '#a3a3a3', fontSize: '1.05rem', lineHeight: 1.5 }}>
-                          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2" style={{ marginTop: '3px', flexShrink: 0 }}><polyline points="20 6 9 17 4 12"/></svg>
+                          <Check size={18} style={{ color: "#ffffff", marginTop: "3px", flexShrink: 0 }} />
                           <span>{item}</span>
                         </li>
                       ))}
@@ -154,7 +157,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
 
                   <div>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
-                      <div style={{ background: 'rgba(255,255,255,0.05)', padding: '0.5rem', borderRadius: '6px' }}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg></div>
+                      <div style={{ background: 'rgba(255,255,255,0.05)', padding: '0.5rem', borderRadius: '6px' }}><Trophy size={20} style={{ color: "#ffffff" }} /></div>
                       <h3 style={{ fontSize: '1.4rem', fontWeight: 600 }}>The Results</h3>
                     </div>
                     <ul style={{ listStyleType: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '1rem' }}>
@@ -166,7 +169,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                         'Built a strong foundation for long-term brand growth'
                       ].map((item, i) => (
                         <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', color: '#a3a3a3', fontSize: '1.05rem', lineHeight: 1.5 }}>
-                          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2" style={{ marginTop: '3px', flexShrink: 0 }}><polyline points="20 6 9 17 4 12"/></svg>
+                          <Check size={18} style={{ color: "#ffffff", marginTop: "3px", flexShrink: 0 }} />
                           <span>{item}</span>
                         </li>
                       ))}
@@ -175,7 +178,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
 
                   <div style={{ marginTop: '3rem', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.05)', padding: '2rem', borderRadius: '12px', display: 'flex', gap: '1.5rem', alignItems: 'flex-start' }}>
                     <div style={{ color: '#ffffff', opacity: 0.5 }}>
-                      <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"/></svg>
+                      <Quote size={40} style={{ fill: "currentColor" }} />
                     </div>
                     <div>
                       <p style={{ color: '#ffffff', fontSize: '1.1rem', fontStyle: 'italic', lineHeight: 1.6, marginBottom: '1rem' }}>
@@ -231,8 +234,8 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                     <div>
                       <div style={{ color: '#666666', fontSize: '0.85rem', marginBottom: '0.5rem' }}>Technologies</div>
                       <div style={{ display: 'flex', gap: '0.5rem' }}>
-                        <div style={{ background: '#111', padding: '0.5rem', borderRadius: '4px', border: '1px solid rgba(255,255,255,0.1)' }}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><path d="M20 9v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9"/><path d="M9 22V12h6v10M2 10.6L12 2l10 8.6"/></svg></div>
-                        <div style={{ background: '#111', padding: '0.5rem', borderRadius: '4px', border: '1px solid rgba(255,255,255,0.1)' }}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+                        <div style={{ background: '#111', padding: '0.5rem', borderRadius: '4px', border: '1px solid rgba(255,255,255,0.1)' }}><Layout size={20} style={{ color: "#ffffff" }} /></div>
+                        <div style={{ background: '#111', padding: '0.5rem', borderRadius: '4px', border: '1px solid rgba(255,255,255,0.1)' }}><Globe size={20} style={{ color: "#ffffff" }} /></div>
                       </div>
                     </div>
                     <div>
@@ -250,7 +253,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                     <h4 style={{ color: '#000000', fontSize: '1rem', fontWeight: 600, marginBottom: '0.5rem' }}>Want similar results for your business?</h4>
                     <p style={{ color: '#666666', fontSize: '0.85rem', marginBottom: '1.5rem' }}>Let's build your success story together.</p>
                     <a href="/contact" style={{ display: 'block', background: '#ffffff', color: '#000000', padding: '0.8rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '0.9rem' }}>
-                      Get Free Consultation &rarr;
+                      Get Free Consultation <ArrowRight size={16} style={{ marginLeft: "4px", display: "inline-block", verticalAlign: "middle" }} />
                     </a>
                   </div>
 
@@ -267,7 +270,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '2rem' }}>
                 <h3 style={{ fontSize: '1.6rem', fontWeight: 600 }}>More Case Studies</h3>
                 <a href="/case-studies" style={{ color: '#a3a3a3', textDecoration: 'none', fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                  View All Case Studies <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                  View All Case Studies <ArrowRight size={14} />
                 </a>
               </div>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1.5rem' }}>
@@ -281,7 +284,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                       <p style={{ color: '#a3a3a3', fontSize: '0.85rem', marginBottom: '1rem', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{cs.subtitle}</p>
                       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderTop: '1px solid rgba(255,255,255,0.05)', paddingTop: '1rem' }}>
                         <span style={{ color: '#666666', fontSize: '0.75rem' }}>{cs.category}</span>
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                        <AlertCircle size={18} style={{ color: "#ffffff" }} />
                       </div>
                     </div>
                   </a>
@@ -295,7 +298,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
             <div style={{ marginTop: '6rem', background: '#ffffff', borderRadius: '12px', padding: '3rem', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '2rem' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
                 <div style={{ background: '#000000', padding: '1rem', borderRadius: '12px' }}>
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="1.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                  <Send size={32} style={{ color: "#ffffff" }} />
                 </div>
                 <div>
                   <h3 style={{ color: '#000000', fontSize: '1.8rem', fontWeight: 700, marginBottom: '0.5rem' }}>Ready to Build Your Success Story?</h3>
@@ -304,7 +307,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
               </div>
               <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
                 <a href="/contact" style={{ background: '#000000', color: '#ffffff', padding: '1rem 2rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                  Get Free Consultation <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                  Get Free Consultation <ArrowRight size={16} />
                 </a>
                 <a href="#" style={{ background: 'transparent', color: '#000000', border: '1px solid #000000', padding: '1rem 2rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                   Chat on WhatsApp <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
@@ -330,9 +333,11 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
           <div style={{ maxWidth: '1500px', margin: '0 auto', padding: '0 2rem' }}>
 
             {/* Breadcrumbs */}
-            <div style={{ fontSize: '0.85rem', color: '#666666', marginBottom: '1.5rem', display: 'flex', gap: '0.5rem' }}>
-              <a href="/" style={{ color: '#666666', textDecoration: 'none' }}>Home</a> &gt;
-              <a href="/case-studies" style={{ color: '#666666', textDecoration: 'none' }}>Case Studies</a> &gt;
+            <div style={{ fontSize: '0.85rem', color: '#666666', marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+              <a href="/" style={{ color: '#666666', textDecoration: 'none' }}>Home</a>
+              <ChevronRight size={12} />
+              <a href="/case-studies" style={{ color: '#666666', textDecoration: 'none' }}>Case Studies</a>
+              <ChevronRight size={12} />
               <span style={{ color: '#ffffff' }}>NSK Tex</span>
             </div>
 
@@ -348,7 +353,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                 </p>
                 <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
                   <a href="#" style={{ background: '#ffffff', color: '#000000', padding: '0.8rem 1.5rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '0.95rem', display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
-                    Visit Live Store <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+                    Visit Live Store <ArrowUpRight size={14} />
                   </a>
                   <a href="#cta" style={{ background: 'transparent', color: '#ffffff', border: '1px solid rgba(255,255,255,0.2)', padding: '0.8rem 1.5rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '0.95rem' }}>
                     Get Similar Solution
@@ -365,10 +370,10 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
             {/* Stats */}
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1.5rem', marginBottom: '4rem', marginTop: '6rem' }}>
               {[
-                { icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" strokeWidth="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>, value: '300+', label: 'Confirmed Orders' },
-                { icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" strokeWidth="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>, value: '100%', label: 'Fake COD Eliminated' },
-                { icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" strokeWidth="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>, value: '0%', label: 'COD Abuse Returns' },
-                { icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" strokeWidth="1.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>, value: 'Lower', label: 'Logistics Costs' },
+                { icon: <Activity size={24} style={{ color: "#000000" }} />, value: '300+', label: 'Confirmed Orders' },
+                { icon: <CheckCircle size={24} style={{ color: "#000000" }} />, value: '100%', label: 'Fake COD Eliminated' },
+                { icon: <Star size={24} style={{ color: "#000000" }} />, value: '0%', label: 'COD Abuse Returns' },
+                { icon: <DollarSign size={24} style={{ color: "#000000" }} />, value: 'Lower', label: 'Logistics Costs' },
               ].map((stat, i) => (
                 <div key={i} style={{ background: '#ffffff', color: '#000000', border: '1px solid #e0e0e0', borderRadius: '12px', padding: '1.5rem', flex: '1 1 200px', display: 'flex', alignItems: 'center', gap: '1rem' }}>
                   <div style={{ background: '#f0f0f0', padding: '0.8rem', borderRadius: '8px' }}>{stat.icon}</div>
@@ -390,7 +395,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                   {/* Challenge */}
                   <div style={{ marginBottom: '3rem' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
-                      <div style={{ background: 'rgba(255,255,255,0.05)', padding: '0.5rem', borderRadius: '6px' }}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+                      <div style={{ background: 'rgba(255,255,255,0.05)', padding: '0.5rem', borderRadius: '6px' }}><AlertCircle size={20} style={{ color: "#ffffff" }} /></div>
                       <h3 style={{ fontSize: '1.4rem', fontWeight: 600 }}>The Challenge</h3>
                     </div>
                     <p style={{ color: '#a3a3a3', lineHeight: 1.7, fontSize: '1.05rem', marginBottom: '1.5rem' }}>
@@ -399,7 +404,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                     <ul style={{ listStyleType: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
                       {['Inconsistent online sales', 'Low return on advertising spend', 'High number of fake COD orders', 'Increasing product returns', 'Logistics costs affecting profit margins'].map((item, i) => (
                         <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', color: '#a3a3a3', fontSize: '1.05rem' }}>
-                          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2" style={{ marginTop: '3px', flexShrink: 0 }}><polyline points="20 6 9 17 4 12"/></svg>
+                          <Check size={18} style={{ color: "#ffffff", marginTop: "3px", flexShrink: 0 }} />
                           {item}
                         </li>
                       ))}
@@ -409,13 +414,13 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                   {/* Solution */}
                   <div style={{ marginBottom: '3rem' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
-                      <div style={{ background: 'rgba(255,255,255,0.05)', padding: '0.5rem', borderRadius: '6px' }}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+                      <div style={{ background: 'rgba(255,255,255,0.05)', padding: '0.5rem', borderRadius: '6px' }}><CheckCircle size={20} style={{ color: "#ffffff" }} /></div>
                       <h3 style={{ fontSize: '1.4rem', fontWeight: 600 }}>Our Solution</h3>
                     </div>
                     <ul style={{ listStyleType: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                       {['Performance marketing campaigns targeting Gen Z fashion shoppers', 'Audience research, segmentation & interest-based targeting', 'Creative testing and real-time campaign optimization', 'Partial advance COD system to filter fake orders', 'Order verification workflows', 'Customer trust-building strategies'].map((item, i) => (
                         <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', color: '#a3a3a3', fontSize: '1.05rem', lineHeight: 1.5 }}>
-                          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2" style={{ marginTop: '3px', flexShrink: 0 }}><polyline points="20 6 9 17 4 12"/></svg>
+                          <Check size={18} style={{ color: "#ffffff", marginTop: "3px", flexShrink: 0 }} />
                           {item}
                         </li>
                       ))}
@@ -425,13 +430,13 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                   {/* Results */}
                   <div>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
-                      <div style={{ background: 'rgba(255,255,255,0.05)', padding: '0.5rem', borderRadius: '6px' }}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg></div>
+                      <div style={{ background: 'rgba(255,255,255,0.05)', padding: '0.5rem', borderRadius: '6px' }}><Trophy size={20} style={{ color: "#ffffff" }} /></div>
                       <h3 style={{ fontSize: '1.4rem', fontWeight: 600 }}>The Results</h3>
                     </div>
                     <ul style={{ listStyleType: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                       {['300+ confirmed orders through targeted performance marketing', '100% elimination of fake COD orders via advance payment model', 'Zero returns from COD abuse', 'Reduced logistics costs from fewer fake shipments', 'Improved customer trust and repeat purchases'].map((item, i) => (
                         <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', color: '#a3a3a3', fontSize: '1.05rem', lineHeight: 1.5 }}>
-                          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2" style={{ marginTop: '3px', flexShrink: 0 }}><polyline points="20 6 9 17 4 12"/></svg>
+                          <Check size={18} style={{ color: "#ffffff", marginTop: "3px", flexShrink: 0 }} />
                           {item}
                         </li>
                       ))}
@@ -441,7 +446,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                   {/* Testimonial */}
                   <div style={{ marginTop: '3rem', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.05)', padding: '2rem', borderRadius: '12px', display: 'flex', gap: '1.5rem', alignItems: 'flex-start' }}>
                     <div style={{ color: '#ffffff', opacity: 0.4, flexShrink: 0 }}>
-                      <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"/></svg>
+                      <Quote size={40} style={{ fill: "currentColor" }} />
                     </div>
                     <div>
                       <p style={{ color: '#ffffff', fontSize: '1.1rem', fontStyle: 'italic', lineHeight: 1.6, marginBottom: '1rem' }}>
@@ -484,7 +489,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                     <h4 style={{ color: '#000000', fontSize: '1rem', fontWeight: 600, marginBottom: '0.5rem' }}>Want similar results for your business?</h4>
                     <p style={{ color: '#666666', fontSize: '0.85rem', marginBottom: '1.5rem' }}>Let's build your success story together.</p>
                     <a href="/contact" style={{ display: 'block', background: '#000000', color: '#ffffff', padding: '0.8rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '0.9rem' }}>
-                      Get Free Consultation &rarr;
+                      Get Free Consultation <ArrowRight size={16} style={{ marginLeft: "4px", display: "inline-block", verticalAlign: "middle" }} />
                     </a>
                   </div>
                 </div>
@@ -497,7 +502,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '2rem' }}>
                 <h3 style={{ fontSize: '1.6rem', fontWeight: 600 }}>More Case Studies</h3>
                 <a href="/case-studies" style={{ color: '#a3a3a3', textDecoration: 'none', fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                  View All <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                  View All <ArrowRight size={14} />
                 </a>
               </div>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1.5rem' }}>
@@ -522,7 +527,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
             <div style={{ marginTop: '6rem', background: '#ffffff', borderRadius: '12px', padding: '3rem', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '2rem' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
                 <div style={{ background: '#000000', padding: '1rem', borderRadius: '12px' }}>
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="1.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                  <Send size={32} style={{ color: "#ffffff" }} />
                 </div>
                 <div>
                   <h3 style={{ color: '#000000', fontSize: '1.8rem', fontWeight: 700, marginBottom: '0.5rem' }}>Ready to Build Your Success Story?</h3>
@@ -531,7 +536,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
               </div>
               <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
                 <a href="/contact" style={{ background: '#000000', color: '#ffffff', padding: '1rem 2rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                  Get Free Consultation <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                  Get Free Consultation <ArrowRight size={16} />
                 </a>
                 <a href="#" style={{ background: 'transparent', color: '#000000', border: '1px solid #000000', padding: '1rem 2rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                   Chat on WhatsApp <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
@@ -555,9 +560,11 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
           <div style={{ maxWidth: '1500px', margin: '0 auto', padding: '0 2rem' }}>
 
             <AnimatedSection animation="fadeIn" delay={0}>
-              <div style={{ fontSize: '0.85rem', color: '#666666', marginBottom: '1.5rem', display: 'flex', gap: '0.5rem' }}>
-                <a href="/" style={{ color: '#666666', textDecoration: 'none' }}>Home</a> &gt;
-                <a href="/case-studies" style={{ color: '#666666', textDecoration: 'none' }}>Case Studies</a> &gt;
+              <div style={{ fontSize: '0.85rem', color: '#666666', marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                <a href="/" style={{ color: '#666666', textDecoration: 'none' }}>Home</a>
+                <ChevronRight size={12} />
+                <a href="/case-studies" style={{ color: '#666666', textDecoration: 'none' }}>Case Studies</a>
+                <ChevronRight size={12} />
                 <span style={{ color: '#ffffff' }}>JP Aluminium Interior</span>
               </div>
             </AnimatedSection>
@@ -573,7 +580,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                 </p>
                 <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
                   <a href="#" style={{ background: '#ffffff', color: '#000000', padding: '0.8rem 1.5rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '0.95rem', display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
-                    View Live Demo <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+                    View Live Demo <ArrowUpRight size={14} />
                   </a>
                   <a href="#cta" style={{ background: 'transparent', color: '#ffffff', border: '1px solid rgba(255,255,255,0.2)', padding: '0.8rem 1.5rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '0.95rem' }}>
                     Get Similar Solution
@@ -590,10 +597,10 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
             <AnimatedSection animation="fadeUp" delay={100}>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1.5rem', marginBottom: '4rem', marginTop: '6rem' }}>
               {[
-                { icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" strokeWidth="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>, value: '100%', label: 'Lead Capture Rate' },
-                { icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" strokeWidth="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>, value: '70%', label: 'Faster Quotations' },
-                { icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" strokeWidth="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.09 6.09l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 17z"/></svg>, value: '50%', label: 'Fewer Support Calls' },
-                { icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" strokeWidth="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>, value: '1 App', label: 'Centralized Platform' },
+                { icon: <CheckCircle size={24} style={{ color: "#000000" }} />, value: '100%', label: 'Lead Capture Rate' },
+                { icon: <Activity size={24} style={{ color: "#000000" }} />, value: '70%', label: 'Faster Quotations' },
+                { icon: <Phone size={24} style={{ color: "#000000" }} />, value: '50%', label: 'Fewer Support Calls' },
+                { icon: <Layout size={24} style={{ color: "#000000" }} />, value: '1 App', label: 'Centralized Platform' },
               ].map((stat, i) => (
                 <div key={i} style={{ background: '#ffffff', color: '#000000', border: '1px solid #e0e0e0', borderRadius: '12px', padding: '1.5rem', flex: '1 1 200px', display: 'flex', alignItems: 'center', gap: '1rem' }}>
                   <div style={{ background: '#f0f0f0', padding: '0.8rem', borderRadius: '8px' }}>{stat.icon}</div>
@@ -613,14 +620,14 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                 <div style={{ background: '#0a0a0a', border: '1px solid rgba(255,255,255,0.05)', borderRadius: '12px', padding: '3rem' }}>
                   <div style={{ marginBottom: '3rem' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
-                      <div style={{ background: 'rgba(255,255,255,0.05)', padding: '0.5rem', borderRadius: '6px' }}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+                      <div style={{ background: 'rgba(255,255,255,0.05)', padding: '0.5rem', borderRadius: '6px' }}><AlertCircle size={20} style={{ color: "#ffffff" }} /></div>
                       <h3 style={{ fontSize: '1.4rem', fontWeight: 600 }}>The Challenge</h3>
                     </div>
                     <p style={{ color: '#a3a3a3', lineHeight: 1.7, fontSize: '1.05rem', marginBottom: '1.5rem' }}>JP Aluminium Interior relied on manual processes that caused inefficiencies across leads, projects, and customer communication:</p>
                     <ul style={{ listStyleType: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
                       {['Leads recorded in notebooks and spreadsheets', 'Missed customer follow-ups', 'Separate tools for quotations and invoicing', 'Limited visibility into site progress', 'Frequent customer calls requesting updates', 'Time lost managing multiple systems'].map((item, i) => (
                         <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', color: '#a3a3a3', fontSize: '1.05rem' }}>
-                          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" style={{ marginTop: '3px', flexShrink: 0 }}><polyline points="20 6 9 17 4 12"/></svg>
+                          <Check size={18} style={{ color: "#ffffff", marginTop: "3px", flexShrink: 0 }} />
                           {item}
                         </li>
                       ))}
@@ -628,13 +635,13 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                   </div>
                   <div style={{ marginBottom: '3rem' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
-                      <div style={{ background: 'rgba(255,255,255,0.05)', padding: '0.5rem', borderRadius: '6px' }}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+                      <div style={{ background: 'rgba(255,255,255,0.05)', padding: '0.5rem', borderRadius: '6px' }}><CheckCircle size={20} style={{ color: "#ffffff" }} /></div>
                       <h3 style={{ fontSize: '1.4rem', fontWeight: 600 }}>Our Solution</h3>
                     </div>
                     <ul style={{ listStyleType: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                       {['Smart lead capture system on HYNOX-powered subdomain', 'Integrated quotation & invoice generation inside the app', 'Worker login portal — daily progress, photos, measurements', 'Customer portal for real-time project visibility', 'Centralized business dashboard replacing all manual tools', 'Automated follow-up workflows and notifications'].map((item, i) => (
                         <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', color: '#a3a3a3', fontSize: '1.05rem', lineHeight: 1.5 }}>
-                          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" style={{ marginTop: '3px', flexShrink: 0 }}><polyline points="20 6 9 17 4 12"/></svg>
+                          <Check size={18} style={{ color: "#ffffff", marginTop: "3px", flexShrink: 0 }} />
                           {item}
                         </li>
                       ))}
@@ -642,20 +649,20 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                   </div>
                   <div>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
-                      <div style={{ background: 'rgba(255,255,255,0.05)', padding: '0.5rem', borderRadius: '6px' }}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg></div>
+                      <div style={{ background: 'rgba(255,255,255,0.05)', padding: '0.5rem', borderRadius: '6px' }}><Trophy size={20} style={{ color: "#ffffff" }} /></div>
                       <h3 style={{ fontSize: '1.4rem', fontWeight: 600 }}>The Results</h3>
                     </div>
                     <ul style={{ listStyleType: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                       {['100% lead capture — no inquiries lost', '70% faster quotation & invoice creation', 'Real-time site visibility for management via worker portal', '50% reduction in customer support calls', 'Manual work significantly reduced — more time for delivery'].map((item, i) => (
                         <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', color: '#a3a3a3', fontSize: '1.05rem', lineHeight: 1.5 }}>
-                          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" style={{ marginTop: '3px', flexShrink: 0 }}><polyline points="20 6 9 17 4 12"/></svg>
+                          <Check size={18} style={{ color: "#ffffff", marginTop: "3px", flexShrink: 0 }} />
                           {item}
                         </li>
                       ))}
                     </ul>
                   </div>
                   <div style={{ marginTop: '3rem', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.05)', padding: '2rem', borderRadius: '12px', display: 'flex', gap: '1.5rem', alignItems: 'flex-start' }}>
-                    <div style={{ color: '#ffffff', opacity: 0.4, flexShrink: 0 }}><svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"/></svg></div>
+                    <div style={{ color: '#ffffff', opacity: 0.4, flexShrink: 0 }}><Quote size={40} style={{ fill: "currentColor" }} /></div>
                     <div>
                       <p style={{ color: '#ffffff', fontSize: '1.1rem', fontStyle: 'italic', lineHeight: 1.6, marginBottom: '1rem' }}>"The system HYNOX built changed everything. Our team now operates from one platform and our customers love the live progress portal. We've cut follow-up calls in half."</p>
                       <p style={{ color: '#a3a3a3', fontSize: '0.9rem', fontWeight: 600 }}>— JP Aluminium Interior Team</p>
@@ -694,7 +701,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                   <div style={{ marginTop: '2.5rem', background: '#ffffff', border: '1px solid #e0e0e0', padding: '1.5rem', borderRadius: '8px', textAlign: 'center' }}>
                     <h4 style={{ color: '#000000', fontSize: '1rem', fontWeight: 600, marginBottom: '0.5rem' }}>Want similar results for your business?</h4>
                     <p style={{ color: '#666666', fontSize: '0.85rem', marginBottom: '1.5rem' }}>Let's build your success story together.</p>
-                    <a href="/contact" style={{ display: 'block', background: '#000000', color: '#ffffff', padding: '0.8rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '0.9rem' }}>Get Free Consultation &rarr;</a>
+                    <a href="/contact" style={{ display: 'block', background: '#000000', color: '#ffffff', padding: '0.8rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '0.9rem' }}>Get Free Consultation <ArrowRight size={16} style={{ marginLeft: "4px", display: "inline-block", verticalAlign: "middle" }} /></a>
                   </div>
                 </div>
                 </AnimatedSection>
@@ -706,7 +713,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
             <div style={{ marginTop: '6rem' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '2rem' }}>
                 <h3 style={{ fontSize: '1.6rem', fontWeight: 600 }}>More Case Studies</h3>
-                <a href="/case-studies" style={{ color: '#a3a3a3', textDecoration: 'none', fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>View All <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+                <a href="/case-studies" style={{ color: '#a3a3a3', textDecoration: 'none', fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>View All <ArrowRight size={14} /></a>
               </div>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1.5rem' }}>
                 {moreCaseStudies.filter(cs => cs.slug !== slug).map((cs, i) => (
@@ -726,14 +733,14 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
             <AnimatedSection animation="scaleIn" delay={100}>
             <div style={{ marginTop: '6rem', background: '#ffffff', borderRadius: '12px', padding: '3rem', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '2rem' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
-                <div style={{ background: '#000000', padding: '1rem', borderRadius: '12px' }}><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="1.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></div>
+                <div style={{ background: '#000000', padding: '1rem', borderRadius: '12px' }}><Send size={32} style={{ color: "#ffffff" }} /></div>
                 <div>
                   <h3 style={{ color: '#000000', fontSize: '1.8rem', fontWeight: 700, marginBottom: '0.5rem' }}>Ready to Build Your Success Story?</h3>
                   <p style={{ color: '#666666', fontSize: '1.1rem' }}>Get a free consultation and let's discuss your project.</p>
                 </div>
               </div>
               <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-                <a href="/contact" style={{ background: '#000000', color: '#ffffff', padding: '1rem 2rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>Get Free Consultation <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+                <a href="/contact" style={{ background: '#000000', color: '#ffffff', padding: '1rem 2rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>Get Free Consultation <ArrowRight size={16} /></a>
                 <a href="#" style={{ background: 'transparent', color: '#000000', border: '1px solid #000000', padding: '1rem 2rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>Chat on WhatsApp <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></a>
               </div>
             </div>
@@ -756,9 +763,11 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
 
             {/* Breadcrumb */}
             <AnimatedSection animation="fadeIn" delay={0}>
-              <div style={{ fontSize: '0.85rem', color: '#666666', marginBottom: '1.5rem', display: 'flex', gap: '0.5rem' }}>
-                <a href="/" style={{ color: '#666666', textDecoration: 'none' }}>Home</a> &gt;
-                <a href="/case-studies" style={{ color: '#666666', textDecoration: 'none' }}>Case Studies</a> &gt;
+              <div style={{ fontSize: '0.85rem', color: '#666666', marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                <a href="/" style={{ color: '#666666', textDecoration: 'none' }}>Home</a>
+                <ChevronRight size={12} />
+                <a href="/case-studies" style={{ color: '#666666', textDecoration: 'none' }}>Case Studies</a>
+                <ChevronRight size={12} />
                 <span style={{ color: '#ffffff' }}>graaps</span>
               </div>
             </AnimatedSection>
@@ -775,7 +784,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                 </p>
                 <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
                   <a href="#" style={{ background: '#ffffff', color: '#000000', padding: '0.8rem 1.5rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '0.95rem', display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
-                    Visit Live Store <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+                    Visit Live Store <ArrowUpRight size={14} />
                   </a>
                   <a href="#cta" style={{ background: 'transparent', color: '#ffffff', border: '1px solid rgba(255,255,255,0.2)', padding: '0.8rem 1.5rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '0.95rem' }}>
                     Get Similar Solution
@@ -793,10 +802,10 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
             <AnimatedSection animation="fadeUp" delay={100}>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1.5rem', marginBottom: '4rem', marginTop: '6rem' }}>
               {[
-                { icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" strokeWidth="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>, value: '3 Countries', label: 'Finland · India · UK' },
-                { icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" strokeWidth="1.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>, value: 'End-to-End', label: 'Supply Chain Built' },
-                { icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" strokeWidth="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>, value: 'Global Brand', label: 'Identity Created' },
-                { icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" strokeWidth="1.5"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>, value: 'Tirupur → UK', label: 'Export Ready' },
+                { icon: <Globe size={24} style={{ color: "#000000" }} />, value: '3 Countries', label: 'Finland · India · UK' },
+                { icon: <ArrowRight size={24} style={{ color: "#000000" }} />, value: 'End-to-End', label: 'Supply Chain Built' },
+                { icon: <Heart size={24} style={{ color: "#000000" }} />, value: 'Global Brand', label: 'Identity Created' },
+                { icon: <Truck size={24} style={{ color: "#000000" }} />, value: 'Tirupur → UK', label: 'Export Ready' },
               ].map((stat, i) => (
                 <div key={i} style={{ background: '#ffffff', color: '#000000', border: '1px solid #e0e0e0', borderRadius: '12px', padding: '1.5rem', flex: '1 1 200px', display: 'flex', alignItems: 'center', gap: '1rem' }}>
                   <div style={{ background: '#f0f0f0', padding: '0.8rem', borderRadius: '8px' }}>{stat.icon}</div>
@@ -820,7 +829,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                   {/* Client Conversations */}
                   <div style={{ marginBottom: '3rem' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '2rem' }}>
-                      <div style={{ background: 'rgba(255,255,255,0.05)', padding: '0.5rem', borderRadius: '6px' }}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+                      <div style={{ background: 'rgba(255,255,255,0.05)', padding: '0.5rem', borderRadius: '6px' }}><MessageSquare size={20} style={{ color: "#ffffff" }} /></div>
                       <h3 style={{ fontSize: '1.4rem', fontWeight: 600 }}>Client Conversations</h3>
                     </div>
                     {[
@@ -857,7 +866,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                   {/* Solution */}
                   <div style={{ marginBottom: '3rem' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
-                      <div style={{ background: 'rgba(255,255,255,0.05)', padding: '0.5rem', borderRadius: '6px' }}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+                      <div style={{ background: 'rgba(255,255,255,0.05)', padding: '0.5rem', borderRadius: '6px' }}><CheckCircle size={20} style={{ color: "#ffffff" }} /></div>
                       <h3 style={{ fontSize: '1.4rem', fontWeight: 600 }}>What We Delivered</h3>
                     </div>
                     <ul style={{ listStyleType: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '1rem' }}>
@@ -871,7 +880,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                         'Positioned as Finland-born, India-powered, globally focused',
                       ].map((item, i) => (
                         <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', color: '#a3a3a3', fontSize: '1.05rem', lineHeight: 1.5 }}>
-                          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" style={{ marginTop: '3px', flexShrink: 0 }}><polyline points="20 6 9 17 4 12"/></svg>
+                          <Check size={18} style={{ color: "#ffffff", marginTop: "3px", flexShrink: 0 }} />
                           {item}
                         </li>
                       ))}
@@ -881,7 +890,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                   {/* Outcomes */}
                   <div>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
-                      <div style={{ background: 'rgba(255,255,255,0.05)', padding: '0.5rem', borderRadius: '6px' }}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg></div>
+                      <div style={{ background: 'rgba(255,255,255,0.05)', padding: '0.5rem', borderRadius: '6px' }}><Trophy size={20} style={{ color: "#ffffff" }} /></div>
                       <h3 style={{ fontSize: '1.4rem', fontWeight: 600 }}>Outcomes</h3>
                     </div>
                     <ul style={{ listStyleType: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '1rem' }}>
@@ -893,7 +902,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                         'Set to launch with a globally competitive brand presence',
                       ].map((item, i) => (
                         <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', color: '#a3a3a3', fontSize: '1.05rem', lineHeight: 1.5 }}>
-                          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" style={{ marginTop: '3px', flexShrink: 0 }}><polyline points="20 6 9 17 4 12"/></svg>
+                          <Check size={18} style={{ color: "#ffffff", marginTop: "3px", flexShrink: 0 }} />
                           {item}
                         </li>
                       ))}
@@ -956,7 +965,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                   <div style={{ marginTop: '2rem', background: '#ffffff', border: '1px solid #e0e0e0', padding: '1.5rem', borderRadius: '8px', textAlign: 'center' }}>
                     <h4 style={{ color: '#000000', fontSize: '1rem', fontWeight: 600, marginBottom: '0.5rem' }}>Want to go global with your brand?</h4>
                     <p style={{ color: '#666666', fontSize: '0.85rem', marginBottom: '1.5rem' }}>Let's build your international success story.</p>
-                    <a href="/contact" style={{ display: 'block', background: '#000000', color: '#ffffff', padding: '0.8rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '0.9rem' }}>Get Free Consultation &rarr;</a>
+                    <a href="/contact" style={{ display: 'block', background: '#000000', color: '#ffffff', padding: '0.8rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '0.9rem' }}>Get Free Consultation <ArrowRight size={16} style={{ marginLeft: "4px", display: "inline-block", verticalAlign: "middle" }} /></a>
                   </div>
                 </div>
                 </AnimatedSection>
@@ -969,7 +978,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
             <div style={{ marginTop: '6rem' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '2rem' }}>
                 <h3 style={{ fontSize: '1.6rem', fontWeight: 600 }}>More Case Studies</h3>
-                <a href="/case-studies" style={{ color: '#a3a3a3', textDecoration: 'none', fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>View All <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+                <a href="/case-studies" style={{ color: '#a3a3a3', textDecoration: 'none', fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>View All <ArrowRight size={14} /></a>
               </div>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1.5rem' }}>
                 {moreCaseStudies.map((cs, i) => (
@@ -990,14 +999,14 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
             <AnimatedSection animation="scaleIn" delay={100}>
             <div style={{ marginTop: '6rem', background: '#ffffff', borderRadius: '12px', padding: '3rem', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '2rem' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
-                <div style={{ background: '#000000', padding: '1rem', borderRadius: '12px' }}><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="1.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></div>
+                <div style={{ background: '#000000', padding: '1rem', borderRadius: '12px' }}><Send size={32} style={{ color: "#ffffff" }} /></div>
                 <div>
                   <h3 style={{ color: '#000000', fontSize: '1.8rem', fontWeight: 700, marginBottom: '0.5rem' }}>Ready to Build Your Success Story?</h3>
                   <p style={{ color: '#666666', fontSize: '1.1rem' }}>Get a free consultation and let's discuss your project.</p>
                 </div>
               </div>
               <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-                <a href="/contact" style={{ background: '#000000', color: '#ffffff', padding: '1rem 2rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>Get Free Consultation <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+                <a href="/contact" style={{ background: '#000000', color: '#ffffff', padding: '1rem 2rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>Get Free Consultation <ArrowRight size={16} /></a>
                 <a href="#" style={{ background: 'transparent', color: '#000000', border: '1px solid #000000', padding: '1rem 2rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>Chat on WhatsApp <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></a>
               </div>
             </div>
@@ -1019,9 +1028,11 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
           <div style={{ maxWidth: '1500px', margin: '0 auto', padding: '0 2rem' }}>
 
             <AnimatedSection animation="fadeIn" delay={0}>
-              <div style={{ fontSize: '0.85rem', color: '#666666', marginBottom: '1.5rem', display: 'flex', gap: '0.5rem' }}>
-                <a href="/" style={{ color: '#666666', textDecoration: 'none' }}>Home</a> &gt;
-                <a href="/case-studies" style={{ color: '#666666', textDecoration: 'none' }}>Case Studies</a> &gt;
+              <div style={{ fontSize: '0.85rem', color: '#666666', marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                <a href="/" style={{ color: '#666666', textDecoration: 'none' }}>Home</a>
+                <ChevronRight size={12} />
+                <a href="/case-studies" style={{ color: '#666666', textDecoration: 'none' }}>Case Studies</a>
+                <ChevronRight size={12} />
                 <span style={{ color: '#ffffff' }}>Kores</span>
               </div>
             </AnimatedSection>
@@ -1038,7 +1049,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                 </p>
                 <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
                   <a href="#" style={{ background: '#ffffff', color: '#000000', padding: '0.8rem 1.5rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '0.95rem', display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
-                    View Live Demo <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+                    View Live Demo <ArrowUpRight size={14} />
                   </a>
                   <a href="#cta" style={{ background: 'transparent', color: '#ffffff', border: '1px solid rgba(255,255,255,0.2)', padding: '0.8rem 1.5rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '0.95rem' }}>
                     Get Similar Solution
@@ -1056,10 +1067,10 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
             <AnimatedSection animation="fadeUp" delay={100}>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1.5rem', marginBottom: '4rem', marginTop: '6rem' }}>
               {[
-                { icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" strokeWidth="1.5"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>, value: 'Faster', label: 'Order Processing' },
-                { icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" strokeWidth="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>, value: 'Real-Time', label: 'Inventory Visibility' },
-                { icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" strokeWidth="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>, value: 'Better', label: 'Client Management' },
-                { icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" strokeWidth="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>, value: '1 Platform', label: 'All Operations' },
+                { icon: <CheckSquare size={24} style={{ color: "#000000" }} />, value: 'Faster', label: 'Order Processing' },
+                { icon: <Briefcase size={24} style={{ color: "#000000" }} />, value: 'Real-Time', label: 'Inventory Visibility' },
+                { icon: <Users size={24} style={{ color: "#000000" }} />, value: 'Better', label: 'Client Management' },
+                { icon: <Layout size={24} style={{ color: "#000000" }} />, value: '1 Platform', label: 'All Operations' },
               ].map((stat, i) => (
                 <div key={i} style={{ background: '#ffffff', color: '#000000', border: '1px solid #e0e0e0', borderRadius: '12px', padding: '1.5rem', flex: '1 1 200px', display: 'flex', alignItems: 'center', gap: '1rem' }}>
                   <div style={{ background: '#f0f0f0', padding: '0.8rem', borderRadius: '8px' }}>{stat.icon}</div>
@@ -1083,7 +1094,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                   {/* Challenge */}
                   <div style={{ marginBottom: '3rem' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
-                      <div style={{ background: 'rgba(255,255,255,0.05)', padding: '0.5rem', borderRadius: '6px' }}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+                      <div style={{ background: 'rgba(255,255,255,0.05)', padding: '0.5rem', borderRadius: '6px' }}><AlertCircle size={20} style={{ color: "#ffffff" }} /></div>
                       <h3 style={{ fontSize: '1.4rem', fontWeight: 600 }}>The Challenge</h3>
                     </div>
                     <p style={{ color: '#a3a3a3', lineHeight: 1.7, fontSize: '1.05rem', marginBottom: '1.5rem' }}>Kores was growing steadily, but its operational processes were not built to scale. Key challenges included:</p>
@@ -1097,7 +1108,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                         'Time-consuming communication between teams',
                       ].map((item, i) => (
                         <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', color: '#a3a3a3', fontSize: '1.05rem' }}>
-                          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" style={{ marginTop: '3px', flexShrink: 0 }}><polyline points="20 6 9 17 4 12"/></svg>
+                          <Check size={18} style={{ color: "#ffffff", marginTop: "3px", flexShrink: 0 }} />
                           {item}
                         </li>
                       ))}
@@ -1107,7 +1118,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                   {/* Solution */}
                   <div style={{ marginBottom: '3rem' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
-                      <div style={{ background: 'rgba(255,255,255,0.05)', padding: '0.5rem', borderRadius: '6px' }}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+                      <div style={{ background: 'rgba(255,255,255,0.05)', padding: '0.5rem', borderRadius: '6px' }}><CheckCircle size={20} style={{ color: "#ffffff" }} /></div>
                       <h3 style={{ fontSize: '1.4rem', fontWeight: 600 }}>Our Solution</h3>
                     </div>
                     <ul style={{ listStyleType: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '1rem' }}>
@@ -1120,7 +1131,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                         'Automation of repetitive workflows to reduce manual tasks',
                       ].map((item, i) => (
                         <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', color: '#a3a3a3', fontSize: '1.05rem', lineHeight: 1.5 }}>
-                          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" style={{ marginTop: '3px', flexShrink: 0 }}><polyline points="20 6 9 17 4 12"/></svg>
+                          <Check size={18} style={{ color: "#ffffff", marginTop: "3px", flexShrink: 0 }} />
                           {item}
                         </li>
                       ))}
@@ -1130,7 +1141,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                   {/* Results */}
                   <div>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
-                      <div style={{ background: 'rgba(255,255,255,0.05)', padding: '0.5rem', borderRadius: '6px' }}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg></div>
+                      <div style={{ background: 'rgba(255,255,255,0.05)', padding: '0.5rem', borderRadius: '6px' }}><Trophy size={20} style={{ color: "#ffffff" }} /></div>
                       <h3 style={{ fontSize: '1.4rem', fontWeight: 600 }}>The Results</h3>
                     </div>
                     <ul style={{ listStyleType: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '1rem' }}>
@@ -1142,7 +1153,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                         'Scalable operations — software foundation ready for future growth',
                       ].map((item, i) => (
                         <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', color: '#a3a3a3', fontSize: '1.05rem', lineHeight: 1.5 }}>
-                          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" style={{ marginTop: '3px', flexShrink: 0 }}><polyline points="20 6 9 17 4 12"/></svg>
+                          <Check size={18} style={{ color: "#ffffff", marginTop: "3px", flexShrink: 0 }} />
                           {item}
                         </li>
                       ))}
@@ -1202,7 +1213,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                   <div style={{ marginTop: '2rem', background: '#ffffff', border: '1px solid #e0e0e0', padding: '1.5rem', borderRadius: '8px', textAlign: 'center' }}>
                     <h4 style={{ color: '#000000', fontSize: '1rem', fontWeight: 600, marginBottom: '0.5rem' }}>Want similar results for your business?</h4>
                     <p style={{ color: '#666666', fontSize: '0.85rem', marginBottom: '1.5rem' }}>Let's build your success story together.</p>
-                    <a href="/contact" style={{ display: 'block', background: '#000000', color: '#ffffff', padding: '0.8rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '0.9rem' }}>Get Free Consultation &rarr;</a>
+                    <a href="/contact" style={{ display: 'block', background: '#000000', color: '#ffffff', padding: '0.8rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '0.9rem' }}>Get Free Consultation <ArrowRight size={16} style={{ marginLeft: "4px", display: "inline-block", verticalAlign: "middle" }} /></a>
                   </div>
                 </div>
                 </AnimatedSection>
@@ -1215,7 +1226,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
             <div style={{ marginTop: '6rem' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '2rem' }}>
                 <h3 style={{ fontSize: '1.6rem', fontWeight: 600 }}>More Case Studies</h3>
-                <a href="/case-studies" style={{ color: '#a3a3a3', textDecoration: 'none', fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>View All <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+                <a href="/case-studies" style={{ color: '#a3a3a3', textDecoration: 'none', fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>View All <ArrowRight size={14} /></a>
               </div>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1.5rem' }}>
                 {moreCaseStudies.map((cs, i) => (
@@ -1236,14 +1247,14 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
             <AnimatedSection animation="scaleIn" delay={100}>
             <div style={{ marginTop: '6rem', background: '#ffffff', borderRadius: '12px', padding: '3rem', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '2rem' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
-                <div style={{ background: '#000000', padding: '1rem', borderRadius: '12px' }}><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="1.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></div>
+                <div style={{ background: '#000000', padding: '1rem', borderRadius: '12px' }}><Send size={32} style={{ color: "#ffffff" }} /></div>
                 <div>
                   <h3 style={{ color: '#000000', fontSize: '1.8rem', fontWeight: 700, marginBottom: '0.5rem' }}>Ready to Build Your Success Story?</h3>
                   <p style={{ color: '#666666', fontSize: '1.1rem' }}>Get a free consultation and let's discuss your project.</p>
                 </div>
               </div>
               <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-                <a href="/contact" style={{ background: '#000000', color: '#ffffff', padding: '1rem 2rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>Get Free Consultation <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+                <a href="/contact" style={{ background: '#000000', color: '#ffffff', padding: '1rem 2rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>Get Free Consultation <ArrowRight size={16} /></a>
                 <a href="#" style={{ background: 'transparent', color: '#000000', border: '1px solid #000000', padding: '1rem 2rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>Chat on WhatsApp <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></a>
               </div>
             </div>
@@ -1265,9 +1276,11 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
           <div style={{ maxWidth: '1500px', margin: '0 auto', padding: '0 2rem' }}>
 
             <AnimatedSection animation="fadeIn" delay={0}>
-              <div style={{ fontSize: '0.85rem', color: '#666666', marginBottom: '1.5rem', display: 'flex', gap: '0.5rem' }}>
-                <a href="/" style={{ color: '#666666', textDecoration: 'none' }}>Home</a> &gt;
-                <a href="/case-studies" style={{ color: '#666666', textDecoration: 'none' }}>Case Studies</a> &gt;
+              <div style={{ fontSize: '0.85rem', color: '#666666', marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                <a href="/" style={{ color: '#666666', textDecoration: 'none' }}>Home</a>
+                <ChevronRight size={12} />
+                <a href="/case-studies" style={{ color: '#666666', textDecoration: 'none' }}>Case Studies</a>
+                <ChevronRight size={12} />
                 <span style={{ color: '#ffffff' }}>Kido Care</span>
               </div>
             </AnimatedSection>
@@ -1284,7 +1297,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                 </p>
                 <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
                   <a href="#" style={{ background: '#ffffff', color: '#000000', padding: '0.8rem 1.5rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '0.95rem', display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
-                    View Live Store <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+                    View Live Store <ArrowUpRight size={14} />
                   </a>
                   <a href="#cta" style={{ background: 'transparent', color: '#ffffff', border: '1px solid rgba(255,255,255,0.2)', padding: '0.8rem 1.5rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '0.95rem' }}>
                     Get Similar Solution
@@ -1302,10 +1315,10 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
             <AnimatedSection animation="fadeUp" delay={100}>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1.5rem', marginBottom: '4rem', marginTop: '6rem' }}>
               {[
-                { icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" strokeWidth="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>, value: '2 Weeks', label: 'Live Store Launch' },
-                { icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" strokeWidth="1.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>, value: 'Custom', label: 'Shopify Storefront' },
-                { icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" strokeWidth="1.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>, value: 'Secure', label: 'Payment Integration' },
-                { icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" strokeWidth="1.5"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>, value: 'Mobile', label: 'Responsive Design' },
+                { icon: <Clock size={24} style={{ color: "#000000" }} />, value: '2 Weeks', label: 'Live Store Launch' },
+                { icon: <Package size={24} style={{ color: "#000000" }} />, value: 'Custom', label: 'Shopify Storefront' },
+                { icon: <Briefcase size={24} style={{ color: "#000000" }} />, value: 'Secure', label: 'Payment Integration' },
+                { icon: <Briefcase size={24} style={{ color: "#000000" }} />, value: 'Mobile', label: 'Responsive Design' },
               ].map((stat, i) => (
                 <div key={i} style={{ background: '#ffffff', color: '#000000', border: '1px solid #e0e0e0', borderRadius: '12px', padding: '1.5rem', flex: '1 1 200px', display: 'flex', alignItems: 'center', gap: '1rem' }}>
                   <div style={{ background: '#f0f0f0', padding: '0.8rem', borderRadius: '8px' }}>{stat.icon}</div>
@@ -1329,7 +1342,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                   {/* Challenge */}
                   <div style={{ marginBottom: '3rem' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
-                      <div style={{ background: 'rgba(255,255,255,0.05)', padding: '0.5rem', borderRadius: '6px' }}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+                      <div style={{ background: 'rgba(255,255,255,0.05)', padding: '0.5rem', borderRadius: '6px' }}><AlertCircle size={20} style={{ color: "#ffffff" }} /></div>
                       <h3 style={{ fontSize: '1.4rem', fontWeight: 600 }}>The Challenge</h3>
                     </div>
                     <p style={{ color: '#a3a3a3', lineHeight: 1.7, fontSize: '1.05rem', marginBottom: '1.5rem' }}>As a new retail business, Kido Care needed a platform capable of generating online sales from day one. Their requirements included:</p>
@@ -1342,7 +1355,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                         'Fast launch timeline',
                       ].map((item, i) => (
                         <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', color: '#a3a3a3', fontSize: '1.05rem' }}>
-                          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" style={{ marginTop: '3px', flexShrink: 0 }}><polyline points="20 6 9 17 4 12"/></svg>
+                          <Check size={18} style={{ color: "#ffffff", marginTop: "3px", flexShrink: 0 }} />
                           {item}
                         </li>
                       ))}
@@ -1352,7 +1365,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                   {/* Solution */}
                   <div style={{ marginBottom: '3rem' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
-                      <div style={{ background: 'rgba(255,255,255,0.05)', padding: '0.5rem', borderRadius: '6px' }}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+                      <div style={{ background: 'rgba(255,255,255,0.05)', padding: '0.5rem', borderRadius: '6px' }}><CheckCircle size={20} style={{ color: "#ffffff" }} /></div>
                       <h3 style={{ fontSize: '1.4rem', fontWeight: 600 }}>Our Solution</h3>
                     </div>
                     <ul style={{ listStyleType: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '1rem' }}>
@@ -1365,7 +1378,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                         'Optimized checkout experience',
                       ].map((item, i) => (
                         <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', color: '#a3a3a3', fontSize: '1.05rem', lineHeight: 1.5 }}>
-                          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" style={{ marginTop: '3px', flexShrink: 0 }}><polyline points="20 6 9 17 4 12"/></svg>
+                          <Check size={18} style={{ color: "#ffffff", marginTop: "3px", flexShrink: 0 }} />
                           {item}
                         </li>
                       ))}
@@ -1375,7 +1388,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                   {/* Results */}
                   <div>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
-                      <div style={{ background: 'rgba(255,255,255,0.05)', padding: '0.5rem', borderRadius: '6px' }}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg></div>
+                      <div style={{ background: 'rgba(255,255,255,0.05)', padding: '0.5rem', borderRadius: '6px' }}><Trophy size={20} style={{ color: "#ffffff" }} /></div>
                       <h3 style={{ fontSize: '1.4rem', fontWeight: 600 }}>The Results</h3>
                     </div>
                     <ul style={{ listStyleType: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '1rem' }}>
@@ -1387,7 +1400,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                         'Ready-to-scale online retail infrastructure',
                       ].map((item, i) => (
                         <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', color: '#a3a3a3', fontSize: '1.05rem', lineHeight: 1.5 }}>
-                          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" style={{ marginTop: '3px', flexShrink: 0 }}><polyline points="20 6 9 17 4 12"/></svg>
+                          <Check size={18} style={{ color: "#ffffff", marginTop: "3px", flexShrink: 0 }} />
                           {item}
                         </li>
                       ))}
@@ -1447,7 +1460,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                   <div style={{ marginTop: '2rem', background: '#ffffff', border: '1px solid #e0e0e0', padding: '1.5rem', borderRadius: '8px', textAlign: 'center' }}>
                     <h4 style={{ color: '#000000', fontSize: '1rem', fontWeight: 600, marginBottom: '0.5rem' }}>Looking for Shopify Development?</h4>
                     <p style={{ color: '#666666', fontSize: '0.85rem', marginBottom: '1.5rem' }}>HYNOX provides Shopify development, eCommerce website development, and custom online store solutions.</p>
-                    <a href="/contact" style={{ display: 'block', background: '#000000', color: '#ffffff', padding: '0.8rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '0.9rem' }}>Get Free Consultation &rarr;</a>
+                    <a href="/contact" style={{ display: 'block', background: '#000000', color: '#ffffff', padding: '0.8rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '0.9rem' }}>Get Free Consultation <ArrowRight size={16} style={{ marginLeft: "4px", display: "inline-block", verticalAlign: "middle" }} /></a>
                   </div>
                 </div>
                 </AnimatedSection>
@@ -1460,7 +1473,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
             <div style={{ marginTop: '6rem' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '2rem' }}>
                 <h3 style={{ fontSize: '1.6rem', fontWeight: 600 }}>More Case Studies</h3>
-                <a href="/case-studies" style={{ color: '#a3a3a3', textDecoration: 'none', fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>View All <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+                <a href="/case-studies" style={{ color: '#a3a3a3', textDecoration: 'none', fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>View All <ArrowRight size={14} /></a>
               </div>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1.5rem' }}>
                 {moreCaseStudies.map((cs, i) => (
@@ -1481,14 +1494,14 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
             <AnimatedSection animation="scaleIn" delay={100}>
             <div style={{ marginTop: '6rem', background: '#ffffff', borderRadius: '12px', padding: '3rem', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '2rem' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
-                <div style={{ background: '#000000', padding: '1rem', borderRadius: '12px' }}><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="1.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></div>
+                <div style={{ background: '#000000', padding: '1rem', borderRadius: '12px' }}><Send size={32} style={{ color: "#ffffff" }} /></div>
                 <div>
                   <h3 style={{ color: '#000000', fontSize: '1.8rem', fontWeight: 700, marginBottom: '0.5rem' }}>Ready to Build Your Success Story?</h3>
                   <p style={{ color: '#666666', fontSize: '1.1rem' }}>Get a free consultation and let's discuss your project.</p>
                 </div>
               </div>
               <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-                <a href="/contact" style={{ background: '#000000', color: '#ffffff', padding: '1rem 2rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>Get Free Consultation <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+                <a href="/contact" style={{ background: '#000000', color: '#ffffff', padding: '1rem 2rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>Get Free Consultation <ArrowRight size={16} /></a>
                 <a href="#" style={{ background: 'transparent', color: '#000000', border: '1px solid #000000', padding: '1rem 2rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>Chat on WhatsApp <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></a>
               </div>
             </div>
@@ -1510,9 +1523,11 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
           <div style={{ maxWidth: '1500px', margin: '0 auto', padding: '0 2rem' }}>
 
             <AnimatedSection animation="fadeIn" delay={0}>
-              <div style={{ fontSize: '0.85rem', color: '#666666', marginBottom: '1.5rem', display: 'flex', gap: '0.5rem' }}>
-                <a href="/" style={{ color: '#666666', textDecoration: 'none' }}>Home</a> &gt;
-                <a href="/case-studies" style={{ color: '#666666', textDecoration: 'none' }}>Case Studies</a> &gt;
+              <div style={{ fontSize: '0.85rem', color: '#666666', marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                <a href="/" style={{ color: '#666666', textDecoration: 'none' }}>Home</a>
+                <ChevronRight size={12} />
+                <a href="/case-studies" style={{ color: '#666666', textDecoration: 'none' }}>Case Studies</a>
+                <ChevronRight size={12} />
                 <span style={{ color: '#ffffff' }}>Sun Holidays</span>
               </div>
             </AnimatedSection>
@@ -1529,7 +1544,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                 </p>
                 <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
                   <a href="#" style={{ background: '#ffffff', color: '#000000', padding: '0.8rem 1.5rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '0.95rem', display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
-                    View Live Demo <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+                    View Live Demo <ArrowUpRight size={14} />
                   </a>
                   <a href="#cta" style={{ background: 'transparent', color: '#ffffff', border: '1px solid rgba(255,255,255,0.2)', padding: '0.8rem 1.5rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '0.95rem' }}>
                     Get Similar Solution
@@ -1547,10 +1562,10 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
             <AnimatedSection animation="fadeUp" delay={100}>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1.5rem', marginBottom: '4rem', marginTop: '6rem' }}>
               {[
-                { icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" strokeWidth="1.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>, value: 'Centralized', label: 'Booking Management' },
-                { icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" strokeWidth="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>, value: 'Faster', label: 'Package Updates' },
-                { icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" strokeWidth="1.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>, value: 'Dynamic', label: 'Itinerary Generation' },
-                { icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" strokeWidth="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>, value: 'Automated', label: 'Business Operations' },
+                { icon: <Calendar size={24} style={{ color: "#000000" }} />, value: 'Centralized', label: 'Booking Management' },
+                { icon: <Activity size={24} style={{ color: "#000000" }} />, value: 'Faster', label: 'Package Updates' },
+                { icon: <Package size={24} style={{ color: "#000000" }} />, value: 'Dynamic', label: 'Itinerary Generation' },
+                { icon: <CheckCircle size={24} style={{ color: "#000000" }} />, value: 'Automated', label: 'Business Operations' },
               ].map((stat, i) => (
                 <div key={i} style={{ background: '#ffffff', color: '#000000', border: '1px solid #e0e0e0', borderRadius: '12px', padding: '1.5rem', flex: '1 1 200px', display: 'flex', alignItems: 'center', gap: '1rem' }}>
                   <div style={{ background: '#f0f0f0', padding: '0.8rem', borderRadius: '8px' }}>{stat.icon}</div>
@@ -1574,7 +1589,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                   {/* Challenge */}
                   <div style={{ marginBottom: '3rem' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
-                      <div style={{ background: 'rgba(255,255,255,0.05)', padding: '0.5rem', borderRadius: '6px' }}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+                      <div style={{ background: 'rgba(255,255,255,0.05)', padding: '0.5rem', borderRadius: '6px' }}><AlertCircle size={20} style={{ color: "#ffffff" }} /></div>
                       <h3 style={{ fontSize: '1.4rem', fontWeight: 600 }}>The Challenge</h3>
                     </div>
                     <p style={{ color: '#a3a3a3', lineHeight: 1.7, fontSize: '1.05rem', marginBottom: '1.5rem' }}>The agency struggled with increasing demand, leading to several operational bottlenecks:</p>
@@ -1587,7 +1602,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                         'Follow-up communication',
                       ].map((item, i) => (
                         <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', color: '#a3a3a3', fontSize: '1.05rem' }}>
-                          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" style={{ marginTop: '3px', flexShrink: 0 }}><polyline points="20 6 9 17 4 12"/></svg>
+                          <Check size={18} style={{ color: "#ffffff", marginTop: "3px", flexShrink: 0 }} />
                           {item}
                         </li>
                       ))}
@@ -1597,7 +1612,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                   {/* Solution */}
                   <div style={{ marginBottom: '3rem' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
-                      <div style={{ background: 'rgba(255,255,255,0.05)', padding: '0.5rem', borderRadius: '6px' }}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+                      <div style={{ background: 'rgba(255,255,255,0.05)', padding: '0.5rem', borderRadius: '6px' }}><CheckCircle size={20} style={{ color: "#ffffff" }} /></div>
                       <h3 style={{ fontSize: '1.4rem', fontWeight: 600 }}>Our Solution</h3>
                     </div>
                     <ul style={{ listStyleType: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '1rem' }}>
@@ -1610,7 +1625,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                         'Administrative management tools',
                       ].map((item, i) => (
                         <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', color: '#a3a3a3', fontSize: '1.05rem', lineHeight: 1.5 }}>
-                          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" style={{ marginTop: '3px', flexShrink: 0 }}><polyline points="20 6 9 17 4 12"/></svg>
+                          <Check size={18} style={{ color: "#ffffff", marginTop: "3px", flexShrink: 0 }} />
                           {item}
                         </li>
                       ))}
@@ -1620,7 +1635,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                   {/* Results */}
                   <div>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
-                      <div style={{ background: 'rgba(255,255,255,0.05)', padding: '0.5rem', borderRadius: '6px' }}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg></div>
+                      <div style={{ background: 'rgba(255,255,255,0.05)', padding: '0.5rem', borderRadius: '6px' }}><Trophy size={20} style={{ color: "#ffffff" }} /></div>
                       <h3 style={{ fontSize: '1.4rem', fontWeight: 600 }}>The Results</h3>
                     </div>
                     <ul style={{ listStyleType: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '1rem' }}>
@@ -1632,7 +1647,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                         'Better operational efficiency',
                       ].map((item, i) => (
                         <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', color: '#a3a3a3', fontSize: '1.05rem', lineHeight: 1.5 }}>
-                          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" style={{ marginTop: '3px', flexShrink: 0 }}><polyline points="20 6 9 17 4 12"/></svg>
+                          <Check size={18} style={{ color: "#ffffff", marginTop: "3px", flexShrink: 0 }} />
                           {item}
                         </li>
                       ))}
@@ -1692,7 +1707,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                   <div style={{ marginTop: '2rem', background: '#ffffff', border: '1px solid #e0e0e0', padding: '1.5rem', borderRadius: '8px', textAlign: 'center' }}>
                     <h4 style={{ color: '#000000', fontSize: '1rem', fontWeight: 600, marginBottom: '0.5rem' }}>Looking for Custom Web Development?</h4>
                     <p style={{ color: '#666666', fontSize: '0.85rem', marginBottom: '1.5rem' }}>HYNOX develops custom web applications, booking systems, and business automation software.</p>
-                    <a href="/contact" style={{ display: 'block', background: '#000000', color: '#ffffff', padding: '0.8rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '0.9rem' }}>Get Free Consultation &rarr;</a>
+                    <a href="/contact" style={{ display: 'block', background: '#000000', color: '#ffffff', padding: '0.8rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '0.9rem' }}>Get Free Consultation <ArrowRight size={16} style={{ marginLeft: "4px", display: "inline-block", verticalAlign: "middle" }} /></a>
                   </div>
                 </div>
                 </AnimatedSection>
@@ -1705,7 +1720,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
             <div style={{ marginTop: '6rem' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '2rem' }}>
                 <h3 style={{ fontSize: '1.6rem', fontWeight: 600 }}>More Case Studies</h3>
-                <a href="/case-studies" style={{ color: '#a3a3a3', textDecoration: 'none', fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>View All <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+                <a href="/case-studies" style={{ color: '#a3a3a3', textDecoration: 'none', fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>View All <ArrowRight size={14} /></a>
               </div>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1.5rem' }}>
                 {moreCaseStudies.map((cs, i) => (
@@ -1726,14 +1741,14 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
             <AnimatedSection animation="scaleIn" delay={100}>
             <div style={{ marginTop: '6rem', background: '#ffffff', borderRadius: '12px', padding: '3rem', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '2rem' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
-                <div style={{ background: '#000000', padding: '1rem', borderRadius: '12px' }}><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="1.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></div>
+                <div style={{ background: '#000000', padding: '1rem', borderRadius: '12px' }}><Send size={32} style={{ color: "#ffffff" }} /></div>
                 <div>
                   <h3 style={{ color: '#000000', fontSize: '1.8rem', fontWeight: 700, marginBottom: '0.5rem' }}>Ready to Build Your Success Story?</h3>
                   <p style={{ color: '#666666', fontSize: '1.1rem' }}>Get a free consultation and let's discuss your project.</p>
                 </div>
               </div>
               <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-                <a href="/contact" style={{ background: '#000000', color: '#ffffff', padding: '1rem 2rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>Get Free Consultation <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+                <a href="/contact" style={{ background: '#000000', color: '#ffffff', padding: '1rem 2rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>Get Free Consultation <ArrowRight size={16} /></a>
                 <a href="#" style={{ background: 'transparent', color: '#000000', border: '1px solid #000000', padding: '1rem 2rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>Chat on WhatsApp <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></a>
               </div>
             </div>
@@ -1755,9 +1770,11 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
           <div style={{ maxWidth: '1500px', margin: '0 auto', padding: '0 2rem' }}>
 
             <AnimatedSection animation="fadeIn" delay={0}>
-              <div style={{ fontSize: '0.85rem', color: '#666666', marginBottom: '1.5rem', display: 'flex', gap: '0.5rem' }}>
-                <a href="/" style={{ color: '#666666', textDecoration: 'none' }}>Home</a> &gt;
-                <a href="/case-studies" style={{ color: '#666666', textDecoration: 'none' }}>Case Studies</a> &gt;
+              <div style={{ fontSize: '0.85rem', color: '#666666', marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
+                <a href="/" style={{ color: '#666666', textDecoration: 'none' }}>Home</a>
+                <ChevronRight size={12} />
+                <a href="/case-studies" style={{ color: '#666666', textDecoration: 'none' }}>Case Studies</a>
+                <ChevronRight size={12} />
                 <span style={{ color: '#ffffff' }}>Livinza</span>
               </div>
             </AnimatedSection>
@@ -1774,7 +1791,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                 </p>
                 <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
                   <a href="#" style={{ background: '#ffffff', color: '#000000', padding: '0.8rem 1.5rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '0.95rem', display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
-                    View Live Demo <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+                    View Live Demo <ArrowUpRight size={14} />
                   </a>
                   <a href="#cta" style={{ background: 'transparent', color: '#ffffff', border: '1px solid rgba(255,255,255,0.2)', padding: '0.8rem 1.5rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '0.95rem' }}>
                     Get Similar Solution
@@ -1792,10 +1809,10 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
             <AnimatedSection animation="fadeUp" delay={100}>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1.5rem', marginBottom: '4rem', marginTop: '6rem' }}>
               {[
-                { icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" strokeWidth="1.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>, value: 'Premium', label: 'Online Portfolio' },
-                { icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" strokeWidth="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>, value: 'Centralized', label: 'Client Communication' },
-                { icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" strokeWidth="1.5"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>, value: 'Increased', label: 'Lead Generation' },
-                { icon: <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" strokeWidth="1.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>, value: 'Interactive', label: 'Project Tracking' },
+                { icon: <Layout size={24} style={{ color: "#000000" }} />, value: 'Premium', label: 'Online Portfolio' },
+                { icon: <MessageSquare size={24} style={{ color: "#000000" }} />, value: 'Centralized', label: 'Client Communication' },
+                { icon: <TrendingUp size={24} style={{ color: "#000000" }} />, value: 'Increased', label: 'Lead Generation' },
+                { icon: <Monitor size={24} style={{ color: "#000000" }} />, value: 'Interactive', label: 'Project Tracking' },
               ].map((stat, i) => (
                 <div key={i} style={{ background: '#ffffff', color: '#000000', border: '1px solid #e0e0e0', borderRadius: '12px', padding: '1.5rem', flex: '1 1 200px', display: 'flex', alignItems: 'center', gap: '1rem' }}>
                   <div style={{ background: '#f0f0f0', padding: '0.8rem', borderRadius: '8px' }}>{stat.icon}</div>
@@ -1819,7 +1836,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                   {/* Challenge */}
                   <div style={{ marginBottom: '3rem' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
-                      <div style={{ background: 'rgba(255,255,255,0.05)', padding: '0.5rem', borderRadius: '6px' }}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+                      <div style={{ background: 'rgba(255,255,255,0.05)', padding: '0.5rem', borderRadius: '6px' }}><AlertCircle size={20} style={{ color: "#ffffff" }} /></div>
                       <h3 style={{ fontSize: '1.4rem', fontWeight: 600 }}>The Challenge</h3>
                     </div>
                     <p style={{ color: '#a3a3a3', lineHeight: 1.7, fontSize: '1.05rem', marginBottom: '1.5rem' }}>Livinza required a digital presence that matched the quality of their interior design work while solving operational needs:</p>
@@ -1832,7 +1849,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                         'Improved lead generation',
                       ].map((item, i) => (
                         <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', color: '#a3a3a3', fontSize: '1.05rem' }}>
-                          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" style={{ marginTop: '3px', flexShrink: 0 }}><polyline points="20 6 9 17 4 12"/></svg>
+                          <Check size={18} style={{ color: "#ffffff", marginTop: "3px", flexShrink: 0 }} />
                           {item}
                         </li>
                       ))}
@@ -1842,7 +1859,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                   {/* Solution */}
                   <div style={{ marginBottom: '3rem' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
-                      <div style={{ background: 'rgba(255,255,255,0.05)', padding: '0.5rem', borderRadius: '6px' }}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+                      <div style={{ background: 'rgba(255,255,255,0.05)', padding: '0.5rem', borderRadius: '6px' }}><CheckCircle size={20} style={{ color: "#ffffff" }} /></div>
                       <h3 style={{ fontSize: '1.4rem', fontWeight: 600 }}>Our Solution</h3>
                     </div>
                     <ul style={{ listStyleType: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '1rem' }}>
@@ -1855,7 +1872,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                         'Mobile-responsive design',
                       ].map((item, i) => (
                         <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', color: '#a3a3a3', fontSize: '1.05rem', lineHeight: 1.5 }}>
-                          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" style={{ marginTop: '3px', flexShrink: 0 }}><polyline points="20 6 9 17 4 12"/></svg>
+                          <Check size={18} style={{ color: "#ffffff", marginTop: "3px", flexShrink: 0 }} />
                           {item}
                         </li>
                       ))}
@@ -1865,7 +1882,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                   {/* Results */}
                   <div>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
-                      <div style={{ background: 'rgba(255,255,255,0.05)', padding: '0.5rem', borderRadius: '6px' }}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg></div>
+                      <div style={{ background: 'rgba(255,255,255,0.05)', padding: '0.5rem', borderRadius: '6px' }}><Trophy size={20} style={{ color: "#ffffff" }} /></div>
                       <h3 style={{ fontSize: '1.4rem', fontWeight: 600 }}>The Results</h3>
                     </div>
                     <ul style={{ listStyleType: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '1rem' }}>
@@ -1877,7 +1894,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                         'Increased lead generation opportunities',
                       ].map((item, i) => (
                         <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', color: '#a3a3a3', fontSize: '1.05rem', lineHeight: 1.5 }}>
-                          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" style={{ marginTop: '3px', flexShrink: 0 }}><polyline points="20 6 9 17 4 12"/></svg>
+                          <Check size={18} style={{ color: "#ffffff", marginTop: "3px", flexShrink: 0 }} />
                           {item}
                         </li>
                       ))}
@@ -1937,7 +1954,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                   <div style={{ marginTop: '2rem', background: '#ffffff', border: '1px solid #e0e0e0', padding: '1.5rem', borderRadius: '8px', textAlign: 'center' }}>
                     <h4 style={{ color: '#000000', fontSize: '1rem', fontWeight: 600, marginBottom: '0.5rem' }}>Looking for Custom Software Development?</h4>
                     <p style={{ color: '#666666', fontSize: '0.85rem', marginBottom: '1.5rem' }}>HYNOX builds custom websites, business applications, and client portals.</p>
-                    <a href="/contact" style={{ display: 'block', background: '#000000', color: '#ffffff', padding: '0.8rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '0.9rem' }}>Get Free Consultation &rarr;</a>
+                    <a href="/contact" style={{ display: 'block', background: '#000000', color: '#ffffff', padding: '0.8rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '0.9rem' }}>Get Free Consultation <ArrowRight size={16} style={{ marginLeft: "4px", display: "inline-block", verticalAlign: "middle" }} /></a>
                   </div>
                 </div>
                 </AnimatedSection>
@@ -1950,7 +1967,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
             <div style={{ marginTop: '6rem' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '2rem' }}>
                 <h3 style={{ fontSize: '1.6rem', fontWeight: 600 }}>More Case Studies</h3>
-                <a href="/case-studies" style={{ color: '#a3a3a3', textDecoration: 'none', fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>View All <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+                <a href="/case-studies" style={{ color: '#a3a3a3', textDecoration: 'none', fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>View All <ArrowRight size={14} /></a>
               </div>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1.5rem' }}>
                 {moreCaseStudies.map((cs, i) => (
@@ -1971,14 +1988,14 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
             <AnimatedSection animation="scaleIn" delay={100}>
             <div style={{ marginTop: '6rem', background: '#ffffff', borderRadius: '12px', padding: '3rem', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '2rem' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
-                <div style={{ background: '#000000', padding: '1rem', borderRadius: '12px' }}><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="1.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></div>
+                <div style={{ background: '#000000', padding: '1rem', borderRadius: '12px' }}><Send size={32} style={{ color: "#ffffff" }} /></div>
                 <div>
                   <h3 style={{ color: '#000000', fontSize: '1.8rem', fontWeight: 700, marginBottom: '0.5rem' }}>Ready to Build Your Success Story?</h3>
                   <p style={{ color: '#666666', fontSize: '1.1rem' }}>Get a free consultation and let's discuss your project.</p>
                 </div>
               </div>
               <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-                <a href="/contact" style={{ background: '#000000', color: '#ffffff', padding: '1rem 2rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>Get Free Consultation <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+                <a href="/contact" style={{ background: '#000000', color: '#ffffff', padding: '1rem 2rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>Get Free Consultation <ArrowRight size={16} /></a>
                 <a href="#" style={{ background: 'transparent', color: '#000000', border: '1px solid #000000', padding: '1rem 2rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>Chat on WhatsApp <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></a>
               </div>
             </div>

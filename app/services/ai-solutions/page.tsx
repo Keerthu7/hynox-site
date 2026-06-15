@@ -1,6 +1,8 @@
 'use client';
 
 import { useEffect } from 'react';
+import * as LucideIcons from 'lucide-react';
+import { Check, ArrowRight } from 'lucide-react';
 import Header from '../../components/Header';
 import ServiceCTA from '../../components/ServiceCTA';
 import Footer from '../../components/Footer';
@@ -29,23 +31,23 @@ export default function AISolutionsPage() {
   }, []);
 
   const whatWeBuild = [
-    { icon: '🤖',  title: 'Custom AI Chatbots',      desc: 'Intelligent customer support agents integrated with WhatsApp, Website, and CRM to answer queries 24/7.' },
-    { icon: '📄',  title: 'Smart Document OCR',      desc: 'Automate invoice scanning, transport bill entries, and data extraction using custom vision models.' },
-    { icon: '📊',  title: 'Predictive Analytics',     desc: 'Demand forecasting, sales projections, and inventory estimation models based on historical trends.' },
-    { icon: '💬',  title: 'Natural Language Tools',  desc: 'Text summarization, lead sentiment analysis, customer feedback parsing, and classification.' },
-    { icon: '🔄',  title: 'Automation Pipelines',    desc: 'Chain multiple AI models to clean raw data, compile reports, and trigger automated alerts.' },
-    { icon: '🔍',  title: 'Semantic Smart Search',   desc: 'Advanced search tools that index your files and databases, retrieving records based on context.' },
+    { icon: 'Bot',  title: 'Custom AI Chatbots',      desc: 'Intelligent customer support agents integrated with WhatsApp, Website, and CRM to answer queries 24/7.' },
+    { icon: 'FileText',  title: 'Smart Document OCR',      desc: 'Automate invoice scanning, transport bill entries, and data extraction using custom vision models.' },
+    { icon: 'BarChart3',  title: 'Predictive Analytics',     desc: 'Demand forecasting, sales projections, and inventory estimation models based on historical trends.' },
+    { icon: 'MessageSquare',  title: 'Natural Language Tools',  desc: 'Text summarization, lead sentiment analysis, customer feedback parsing, and classification.' },
+    { icon: 'Repeat',  title: 'Automation Pipelines',    desc: 'Chain multiple AI models to clean raw data, compile reports, and trigger automated alerts.' },
+    { icon: 'Search',  title: 'Semantic Smart Search',   desc: 'Advanced search tools that index your files and databases, retrieving records based on context.' },
   ];
 
   const whatYouGet = [
-    { icon: '🛡', title: 'Complete Data Security',   desc: 'Secure enterprise isolation ensuring your training datasets never leak.' },
-    { icon: '🔌', title: 'API & Chat Integrations',   desc: 'Deploy chatbots directly into WhatsApp, Telegram, or internal web portals.' },
-    { icon: '⚙', title: 'Custom Model Tuning',       desc: 'Fine-tune pre-trained models on your specific company knowledge bases.' },
-    { icon: '📊', title: 'Analytics Dashboards',     desc: 'Track API usage, chatbot conversations, accuracy rates, and actions taken.' },
-    { icon: '⚡', title: 'Blazing Fast APIs',        desc: 'Optimized serverless microservices for low latency responses.' },
-    { icon: '👥', title: 'User Access Controls',     desc: 'Manage keys, limits, and authorization scopes for employees.' },
-    { icon: '📈', title: 'Regular Optimization',     desc: 'Ongoing evaluation of model drift, fine-tuning scripts, and updates.' },
-    { icon: '🎧', title: 'Developer Support',         desc: 'Direct developer maintenance and updates to align models with new systems.' },
+    { icon: 'Shield', title: 'Complete Data Security',   desc: 'Secure enterprise isolation ensuring your training datasets never leak.' },
+    { icon: 'Plug', title: 'API & Chat Integrations',   desc: 'Deploy chatbots directly into WhatsApp, Telegram, or internal web portals.' },
+    { icon: 'Settings', title: 'Custom Model Tuning',       desc: 'Fine-tune pre-trained models on your specific company knowledge bases.' },
+    { icon: 'BarChart3', title: 'Analytics Dashboards',     desc: 'Track API usage, chatbot conversations, accuracy rates, and actions taken.' },
+    { icon: 'Zap', title: 'Blazing Fast APIs',        desc: 'Optimized serverless microservices for low latency responses.' },
+    { icon: 'Users', title: 'User Access Controls',     desc: 'Manage keys, limits, and authorization scopes for employees.' },
+    { icon: 'TrendingUp', title: 'Regular Optimization',     desc: 'Ongoing evaluation of model drift, fine-tuning scripts, and updates.' },
+    { icon: 'Headphones', title: 'Developer Support',         desc: 'Direct developer maintenance and updates to align models with new systems.' },
   ];
 
   const whyChoose = [
@@ -65,9 +67,19 @@ export default function AISolutionsPage() {
   ];
 
   const portfolio = [
-    { title: 'Billing Forecast Tool', cat: 'AI Analytics',     desc: 'Demand forecasting tool for managing cloth production orders', img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop' },
-    { title: 'Garments CRM Bot',      cat: 'Intelligent Bot',   desc: 'Automated inquiry chatbot resolving 75% of export support tickets', img: 'https://images.unsplash.com/photo-1531747118685-ca8fa6e08806?q=80&w=800&auto=format&fit=crop' },
-    { title: 'OCR Invoice Parser',    cat: 'Computer Vision',   desc: 'Automatic extraction of invoice line items into ERP system', img: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop' },
+    { title: "SugarStar", cat: "Shopify Development", desc: "Premium confectionery online store", img: "/images/sugarstar_web.jpeg" },
+    { title: "JP Interiors App", cat: "App Development", desc: "Custom business automation and project management app", img: "/images/JpApp_works.png" },
+    { title: "Team3 Associates", cat: "Custom Development", desc: "Interior Design and Project Execution", img: "/images/team3_web.png" },
+    { title: "JP Interiors Web", cat: "Web Development", desc: "Interior design portfolio and service showcase", img: "/images/JpWeb_works.png" },
+    { title: "Teerex", cat: "Custom Development", desc: "E-commerce platform with custom features", img: "/images/graaps_web.png" },
+    { title: "Mallika Garments", cat: "Custom Development", desc: "Fashion retail business solution", img: "/images/malika-garments_web.jpg" },
+    { title: "Graaps", cat: "Clothing Brand", desc: "Online clothing store", img: "/images/graaps_web.png" },
+    { title: "Zydenn", cat: "Clothing Brand", desc: "Online clothing store", img: "/images/kyto_web.jpeg" },
+    { title: "Kores Fabrics", cat: "Clothing Brand", desc: "Online clothing Wholesale Store", img: "/images/kores_web.png" },
+    { title: "Kido Care", cat: "Kids Clothing Brand", desc: "Online clothing store", img: "/images/kido_care_web.jpg" },
+    { title: "Sun Holidays", cat: "Tours and Travel Agency", desc: "Travel Agency Portfolio", img: "/images/sun_holidays_web.png" },
+    { title: "Twinstar", cat: "Clothing Brand", desc: "Online clothing store", img: "/images/kyto_web.jpeg" },
+    { title: "Livinza", cat: "Interior Business", desc: "Interior Business Portfolio", img: "/images/livinza_web.png" }
   ];
 
   const faqs = [
@@ -107,7 +119,7 @@ export default function AISolutionsPage() {
                 and predictive dashboards to eliminate repetitive work in your operations.
               </p>
               <div className="hero-actions reveal-from-left reveal-delay-300" style={{ marginBottom: '2.5rem' }}>
-                <a href="mailto:thehynoxofficial@gmail.com" className="btn btn-hero-solid">Get Free Consultation →</a>
+                <a href="/contact" className="btn btn-hero-solid">Get Free Consultation <ArrowRight size={16} style={{ marginLeft: "4px", display: "inline-block", verticalAlign: "middle" }} /></a>
                 <a href="#portfolio" className="btn btn-hero-outline">View Our Work</a>
               </div>
               <div className="svc-hero-badges-bw reveal-fade-in reveal-delay-400">
@@ -142,7 +154,10 @@ export default function AISolutionsPage() {
           <div className="svc-build-grid reveal-zoom reveal-delay-200">
             {whatWeBuild.map((item, i) => (
               <div className="svc-build-card" key={i}>
-                <div className="svc-build-icon">{item.icon}</div>
+                {(() => {
+                  const BuildIcon = (LucideIcons as any)[item.icon] || LucideIcons.HelpCircle;
+                  return <div className="svc-build-icon"><BuildIcon size={36} /></div>;
+                })()}
                 <h3>{item.title}</h3>
                 <p>{item.desc}</p>
               </div>
@@ -159,7 +174,10 @@ export default function AISolutionsPage() {
           <div className="svc-get-grid reveal-from-left reveal-delay-200">
             {whatYouGet.map((item, i) => (
               <div className="svc-get-card" key={i}>
-                <span className="svc-get-icon">{item.icon}</span>
+                {(() => {
+                  const GetIcon = (LucideIcons as any)[item.icon] || LucideIcons.HelpCircle;
+                  return <span className="svc-get-icon"><GetIcon size={20} /></span>;
+                })()}
                 <div>
                   <h4>{item.title}</h4>
                   <p>{item.desc}</p>
@@ -178,7 +196,7 @@ export default function AISolutionsPage() {
           <div className="svc-why-grid reveal-zoom reveal-delay-200">
             {whyChoose.map((item, i) => (
               <div className="svc-why-card" key={i}>
-                <div className="svc-why-check">✓</div>
+                <div className="svc-why-check"><Check size={16} /></div>
                 <h4>{item.title}</h4>
                 <p>{item.desc}</p>
               </div>

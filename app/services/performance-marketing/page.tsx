@@ -1,6 +1,8 @@
 'use client';
 
 import { useEffect } from 'react';
+import * as LucideIcons from 'lucide-react';
+import { Check, ArrowRight } from 'lucide-react';
 import Header from '../../components/Header';
 import ServiceCTA from '../../components/ServiceCTA';
 import Footer from '../../components/Footer';
@@ -29,23 +31,23 @@ export default function PerformanceMarketingPage() {
   }, []);
 
   const whatWeBuild = [
-    { icon: '📱',  title: 'Meta (Facebook & IG) Ads', desc: 'Create, launch and manage high-converting image and video ads targeting relevant buyers.' },
-    { icon: '🔍',  title: 'Google Search & PMax',    desc: 'Capture active search intent and shopping queries using Google Search, Performance Max, and Shopping ads.' },
-    { icon: '🔄',  title: 'Retargeting Funnels',     desc: 'Re-engage cart abandoners and store visitors with custom dynamic catalog ads to secure lost sales.' },
-    { icon: '📈',  title: 'CRO Store Audit',         desc: 'A/B testing, layout edits, and speed audits to convert a higher percentage of visitors into buyers.' },
-    { icon: '📄',  title: 'Custom Landing Pages',    desc: 'Design distraction-free, lightning-fast landing pages crafted specifically for single-product campaigns.' },
-    { icon: '📊',  title: 'Analytics & GA4 Setup',   desc: 'Configure Meta Conversions API (CAPI), Google Analytics 4, and UTM tags for accurate data tracking.' },
+    { icon: 'Smartphone',  title: 'Meta (Facebook & IG) Ads', desc: 'Create, launch and manage high-converting image and video ads targeting relevant buyers.' },
+    { icon: 'Search',  title: 'Google Search & PMax',    desc: 'Capture active search intent and shopping queries using Google Search, Performance Max, and Shopping ads.' },
+    { icon: 'Repeat',  title: 'Retargeting Funnels',     desc: 'Re-engage cart abandoners and store visitors with custom dynamic catalog ads to secure lost sales.' },
+    { icon: 'TrendingUp',  title: 'CRO Store Audit',         desc: 'A/B testing, layout edits, and speed audits to convert a higher percentage of visitors into buyers.' },
+    { icon: 'FileText',  title: 'Custom Landing Pages',    desc: 'Design distraction-free, lightning-fast landing pages crafted specifically for single-product campaigns.' },
+    { icon: 'BarChart3',  title: 'Analytics & GA4 Setup',   desc: 'Configure Meta Conversions API (CAPI), Google Analytics 4, and UTM tags for accurate data tracking.' },
   ];
 
   const whatYouGet = [
-    { icon: '⚙', title: 'Complete Pixel Setup',     desc: 'Error-free implementation of tracking codes and pixel triggers.' },
-    { icon: '🎯', title: 'Audience Segments',        desc: 'Custom, lookalike, and interest-based buyer audience definitions.' },
-    { icon: '✍', title: 'Ad Copy & Angles',         desc: 'Persuasive sales copywriting tailored to address buyer pain points.' },
-    { icon: '📊', title: 'Weekly Performance Logs',  desc: 'Detailed updates highlighting cost per purchase, ROAS, and clicks.' },
-    { icon: '🛡', title: 'Daily Budget Safety',      desc: 'Close monitoring to prevent overspending and budget waste.' },
-    { icon: '🔄', title: 'Creative Testing Grid',    desc: 'Systematic testing of hooks, layouts, and copy variations.' },
-    { icon: '💬', title: 'Slack / WhatsApp Sync',    desc: 'Direct channels to message the marketers handling your budget.' },
-    { icon: '📈', title: 'Scaling Strategy',        desc: 'Vertical and horizontal scaling frameworks for winning assets.' },
+    { icon: 'Settings', title: 'Complete Pixel Setup',     desc: 'Error-free implementation of tracking codes and pixel triggers.' },
+    { icon: 'Target', title: 'Audience Segments',        desc: 'Custom, lookalike, and interest-based buyer audience definitions.' },
+    { icon: 'PenTool', title: 'Ad Copy & Angles',         desc: 'Persuasive sales copywriting tailored to address buyer pain points.' },
+    { icon: 'BarChart3', title: 'Weekly Performance Logs',  desc: 'Detailed updates highlighting cost per purchase, ROAS, and clicks.' },
+    { icon: 'Shield', title: 'Daily Budget Safety',      desc: 'Close monitoring to prevent overspending and budget waste.' },
+    { icon: 'Repeat', title: 'Creative Testing Grid',    desc: 'Systematic testing of hooks, layouts, and copy variations.' },
+    { icon: 'MessageSquare', title: 'Slack / WhatsApp Sync',    desc: 'Direct channels to message the marketers handling your budget.' },
+    { icon: 'TrendingUp', title: 'Scaling Strategy',        desc: 'Vertical and horizontal scaling frameworks for winning assets.' },
   ];
 
   const whyChoose = [
@@ -65,9 +67,19 @@ export default function PerformanceMarketingPage() {
   ];
 
   const portfolio = [
-    { title: 'Graaps Scaling',        cat: 'Meta & Google Ads', desc: 'Scaling direct-to-consumer sales for a clothing brand in the UK', img: 'https://images.unsplash.com/photo-1523381210434-271e8be1f52b?q=80&w=800&auto=format&fit=crop' },
-    { title: 'Zydenn Marketing',      cat: 'ROAS Optimization', desc: 'Sustained 4.2x ROAS on Meta Ads for streetwear apparel store', img: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=800&auto=format&fit=crop' },
-    { title: 'Kores Fabrics Leads',   cat: 'Lead Generation',   desc: 'B2B WhatsApp lead generation campaign for a wholesale fabric manufacturer', img: 'https://images.unsplash.com/photo-1558769132-cb1fac0840f2?q=80&w=800&auto=format&fit=crop' },
+    { title: "SugarStar", cat: "Shopify Development", desc: "Premium confectionery online store", img: "/images/sugarstar_web.jpeg" },
+    { title: "JP Interiors App", cat: "App Development", desc: "Custom business automation and project management app", img: "/images/JpApp_works.png" },
+    { title: "Team3 Associates", cat: "Custom Development", desc: "Interior Design and Project Execution", img: "/images/team3_web.png" },
+    { title: "JP Interiors Web", cat: "Web Development", desc: "Interior design portfolio and service showcase", img: "/images/JpWeb_works.png" },
+    { title: "Teerex", cat: "Custom Development", desc: "E-commerce platform with custom features", img: "/images/graaps_web.png" },
+    { title: "Mallika Garments", cat: "Custom Development", desc: "Fashion retail business solution", img: "/images/malika-garments_web.jpg" },
+    { title: "Graaps", cat: "Clothing Brand", desc: "Online clothing store", img: "/images/graaps_web.png" },
+    { title: "Zydenn", cat: "Clothing Brand", desc: "Online clothing store", img: "/images/kyto_web.jpeg" },
+    { title: "Kores Fabrics", cat: "Clothing Brand", desc: "Online clothing Wholesale Store", img: "/images/kores_web.png" },
+    { title: "Kido Care", cat: "Kids Clothing Brand", desc: "Online clothing store", img: "/images/kido_care_web.jpg" },
+    { title: "Sun Holidays", cat: "Tours and Travel Agency", desc: "Travel Agency Portfolio", img: "/images/sun_holidays_web.png" },
+    { title: "Twinstar", cat: "Clothing Brand", desc: "Online clothing store", img: "/images/kyto_web.jpeg" },
+    { title: "Livinza", cat: "Interior Business", desc: "Interior Business Portfolio", img: "/images/livinza_web.png" }
   ];
 
   const faqs = [
@@ -107,7 +119,7 @@ export default function PerformanceMarketingPage() {
                 designed to scale your online orders and boost your bottom line.
               </p>
               <div className="hero-actions reveal-from-left reveal-delay-300" style={{ marginBottom: '2.5rem' }}>
-                <a href="mailto:thehynoxofficial@gmail.com" className="btn btn-hero-solid">Get Free Consultation →</a>
+                <a href="/contact" className="btn btn-hero-solid">Get Free Consultation <ArrowRight size={16} style={{ marginLeft: "4px", display: "inline-block", verticalAlign: "middle" }} /></a>
                 <a href="#portfolio" className="btn btn-hero-outline">View Our Work</a>
               </div>
               <div className="svc-hero-badges-bw reveal-fade-in reveal-delay-400">
@@ -142,7 +154,10 @@ export default function PerformanceMarketingPage() {
           <div className="svc-build-grid reveal-zoom reveal-delay-200">
             {whatWeBuild.map((item, i) => (
               <div className="svc-build-card" key={i}>
-                <div className="svc-build-icon">{item.icon}</div>
+                {(() => {
+                  const BuildIcon = (LucideIcons as any)[item.icon] || LucideIcons.HelpCircle;
+                  return <div className="svc-build-icon"><BuildIcon size={36} /></div>;
+                })()}
                 <h3>{item.title}</h3>
                 <p>{item.desc}</p>
               </div>
@@ -159,7 +174,10 @@ export default function PerformanceMarketingPage() {
           <div className="svc-get-grid reveal-from-left reveal-delay-200">
             {whatYouGet.map((item, i) => (
               <div className="svc-get-card" key={i}>
-                <span className="svc-get-icon">{item.icon}</span>
+                {(() => {
+                  const GetIcon = (LucideIcons as any)[item.icon] || LucideIcons.HelpCircle;
+                  return <span className="svc-get-icon"><GetIcon size={20} /></span>;
+                })()}
                 <div>
                   <h4>{item.title}</h4>
                   <p>{item.desc}</p>
@@ -178,7 +196,7 @@ export default function PerformanceMarketingPage() {
           <div className="svc-why-grid reveal-zoom reveal-delay-200">
             {whyChoose.map((item, i) => (
               <div className="svc-why-card" key={i}>
-                <div className="svc-why-check">✓</div>
+                <div className="svc-why-check"><Check size={16} /></div>
                 <h4>{item.title}</h4>
                 <p>{item.desc}</p>
               </div>

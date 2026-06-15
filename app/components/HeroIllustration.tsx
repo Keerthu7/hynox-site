@@ -17,16 +17,20 @@ export default function HeroIllustration() {
         filter: 'drop-shadow(0 30px 50px rgba(0,0,0,0.4))'
       }}
     >
-      <img 
-        src="/hero-illustration.png" 
-        alt="Hero Illustration" 
-        style={{ 
-          width: '100%', 
-          height: 'auto', 
-          objectFit: 'contain',
-          borderRadius: '16px' 
-        }}
-      />
+      <div style={{ width: '100%', overflow: 'hidden', borderRadius: '16px' }}>
+        <img 
+          src="/hero-illustration.png" 
+          alt="Hero Illustration" 
+          style={{ 
+            width: '100%', 
+            height: 'auto', 
+            objectFit: 'contain',
+            borderRadius: '16px',
+            transform: 'scale(1.4)',
+            transformOrigin: 'center'
+          }}
+        />
+      </div>
     </motion.div>
   );
 }

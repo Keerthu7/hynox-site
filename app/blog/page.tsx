@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { posts } from './blogData';
+import { Calendar, Clock, ArrowRight, ChevronLeft, ChevronRight, Search, Check, Mail } from 'lucide-react';
 
 export default function BlogPage() {
   const [activeCategory, setActiveCategory] = useState('All');
@@ -169,7 +170,7 @@ export default function BlogPage() {
               </p>
               <div className="reveal-fade-in reveal-delay-300 cs-hero-btn-container">
                 <a href="#topics" className="cs-contact-btn" onMouseEnter={(e) => { e.currentTarget.style.transform = 'scale(1.05)'; e.currentTarget.style.boxShadow = '0 10px 20px rgba(255,255,255,0.2)'; }} onMouseLeave={(e) => { e.currentTarget.style.transform = 'scale(1)'; e.currentTarget.style.boxShadow = 'none'; }}>
-                  Explore Topics <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                  Explore Topics <ArrowRight size={18} style={{ marginLeft: '4px', display: 'inline-block', verticalAlign: 'middle' }} />
                 </a>
               </div>
             </div>
@@ -227,19 +228,11 @@ export default function BlogPage() {
                         </Link>
                         <div className="blog-card-meta">
                           <span className="meta-date">
-                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                              <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
-                              <line x1="16" y1="2" x2="16" y2="6" />
-                              <line x1="8" y1="2" x2="8" y2="6" />
-                              <line x1="3" y1="10" x2="21" y2="10" />
-                            </svg>
+                            <Calendar size={12} style={{ marginRight: '4px', display: 'inline-block', verticalAlign: 'middle' }} />
                             {post.date}
                           </span>
                           <span className="meta-read-time">
-                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                              <circle cx="12" cy="12" r="10" />
-                              <polyline points="12 6 12 12 16 14" />
-                            </svg>
+                            <Clock size={12} style={{ marginRight: '4px', display: 'inline-block', verticalAlign: 'middle' }} />
                             {post.readTime}
                           </span>
                         </div>
@@ -249,10 +242,7 @@ export default function BlogPage() {
                         <p className="blog-card-description">{post.desc}</p>
                         <Link href={`/blog/${post.slug}`} className="blog-card-readmore">
                           Read More
-                          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                            <line x1="5" y1="12" x2="19" y2="12" />
-                            <polyline points="12 5 19 12 12 19" />
-                          </svg>
+                          <ArrowRight size={16} />
                         </Link>
                       </article>
                     ))}
@@ -278,10 +268,7 @@ export default function BlogPage() {
                       className="page-btn arrow-btn"
                       disabled={activePage === 1}
                     >
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                        <line x1="19" y1="12" x2="5" y2="12" />
-                        <polyline points="12 19 5 12 12 5" />
-                      </svg>
+                      <ChevronLeft size={14} />
                     </button>
 
                     {getPageNumbers().map((pageNum, idx) => {
@@ -310,10 +297,7 @@ export default function BlogPage() {
                       className="page-btn arrow-btn"
                       disabled={activePage === totalPages}
                     >
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                        <line x1="5" y1="12" x2="19" y2="12" />
-                        <polyline points="12 5 19 12 12 19" />
-                      </svg>
+                      <ChevronRight size={14} />
                     </button>
                   </div>
                 )}
@@ -333,10 +317,7 @@ export default function BlogPage() {
                       className="sidebar-search-input"
                     />
                     <button type="submit" className="sidebar-search-btn" aria-label="Search">
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                        <circle cx="11" cy="11" r="8" />
-                        <line x1="21" y1="21" x2="16.65" y2="16.65" />
-                      </svg>
+                      <Search size={16} />
                     </button>
                   </form>
                 </div>
@@ -354,9 +335,7 @@ export default function BlogPage() {
                           }}
                           className={`category-item-btn ${activeCategory.toLowerCase() === cat.name.toLowerCase() ? 'active' : ''}`}
                         >
-                          <svg className="category-arrow" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
-                            <polyline points="9 18 15 12 9 6" />
-                          </svg>
+                          <ChevronRight className="category-arrow" size={10} />
                           {cat.name}
                         </button>
                         <span className="category-count">{cat.count}</span>
@@ -389,32 +368,12 @@ export default function BlogPage() {
 
                 {/* STAY UPDATED NEWSLETTER */}
                 <div className="sidebar-widget newsletter-widget reveal-on-scroll">
-                  <h3 className="widget-title">Stay Updated</h3>
-                  <p className="widget-desc">Get the latest insights and tips straight to your inbox.</p>
-                  
-                  {isSubscribed ? (
-                    <div className="newsletter-success">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                        <polyline points="20 6 9 17 4 12" />
-                      </svg>
-                      <span>Subscribed Successfully!</span>
-                    </div>
-                  ) : (
-                    <form onSubmit={(e) => handleSubscribe(e, false)} className="newsletter-form-sidebar">
-                      <input
-                        type="email"
-                        placeholder="Enter your email"
-                        value={emailInput}
-                        onChange={(e) => setEmailInput(e.target.value)}
-                        required
-                        className="newsletter-input-sidebar"
-                      />
-                      <button type="submit" className="newsletter-btn-sidebar">
-                        Subscribe
-                      </button>
-                    </form>
-                  )}
-                  <span className="newsletter-disclaimer">No spam. Unsubscribe anytime.</span>
+                  <h3 className="widget-title">Have a Project?</h3>
+                  <p className="widget-desc">Let's build custom software, web solutions, and marketing engines to grow your business.</p>
+                  <a href="/contact" className="newsletter-btn-sidebar" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center', height: '42px', marginTop: '1rem' }}>
+                    Let's Talk
+                    <ArrowRight size={14} style={{ marginLeft: '6px' }} />
+                  </a>
                 </div>
 
               </aside>
@@ -425,44 +384,19 @@ export default function BlogPage() {
             <section className="bottom-newsletter-banner reveal-fade-in">
               <div className="banner-content">
                 <div className="banner-icon-box">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                    <polyline points="22,6 12,13 2,6" />
-                  </svg>
+                  <Mail size={24} />
                 </div>
                 <div className="banner-text-details">
-                  <h3>Want More Business Growth Tips?</h3>
-                  <p>Join 500+ business owners who get our latest insights.</p>
+                  <h3>Ready to Grow Your Business?</h3>
+                  <p>Partner with HYNOX to build custom software, web solutions, and marketing engines.</p>
                 </div>
               </div>
 
-              <div className="banner-form-box">
-                {isSubscribedBottom ? (
-                  <div className="banner-success-alert">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                      <polyline points="20 6 9 17 4 12" />
-                    </svg>
-                    <span>Thank you for subscribing!</span>
-                  </div>
-                ) : (
-                  <form onSubmit={(e) => handleSubscribe(e, true)} className="banner-subscription-form">
-                    <input
-                      type="email"
-                      placeholder="Enter your email"
-                      value={emailInputBottom}
-                      onChange={(e) => setEmailInputBottom(e.target.value)}
-                      required
-                      className="banner-email-input"
-                    />
-                    <button type="submit" className="banner-submit-btn">
-                      Subscribe Now
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                        <line x1="5" y1="12" x2="19" y2="12" />
-                        <polyline points="12 5 19 12 12 19" />
-                      </svg>
-                    </button>
-                  </form>
-                )}
+              <div className="banner-form-box" style={{ display: 'flex', justifyContent: 'flex-end' }}>
+                <a href="/contact" className="banner-submit-btn" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', height: '50px' }}>
+                  Get Free Consultation
+                  <ArrowRight size={14} strokeWidth={2.5} style={{ marginLeft: '6px' }} />
+                </a>
               </div>
             </section>
           </div>

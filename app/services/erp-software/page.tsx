@@ -1,6 +1,8 @@
 'use client';
 
 import { useEffect } from 'react';
+import * as LucideIcons from 'lucide-react';
+import { Check, ArrowRight } from 'lucide-react';
 import Header from '../../components/Header';
 import ServiceCTA from '../../components/ServiceCTA';
 import Footer from '../../components/Footer';
@@ -29,23 +31,23 @@ export default function ERPSoftwarePage() {
   }, []);
 
   const whatWeBuild = [
-    { icon: '⚙',  title: 'Custom ERP Systems',      desc: 'All-in-one business management platforms for inventory, sales, purchasing, and operations.' },
-    { icon: '👥',  title: 'CRM Software',            desc: 'Track leads, client conversations, task history, sales pipelines, and follow-ups.' },
-    { icon: '📦',  title: 'Inventory & Stock',       desc: 'Real-time stock monitoring, automated reordering, stock alerts, and warehouse tracking.' },
-    { icon: '📊',  title: 'Admin Dashboards',        desc: 'Custom visual dashboards to see business metrics, financial graphs, and operations statistics.' },
-    { icon: '💼',  title: 'HR & Payroll Systems',    desc: 'Manage employee shifts, attendance logs, salary slips, performance records, and files.' },
-    { icon: '🔄',  title: 'Workflow Automation',     desc: 'Automate manual entry, email notifications, WhatsApp alerts, and data sync between platforms.' },
+    { icon: 'Settings',  title: 'Custom ERP Systems',      desc: 'All-in-one business management platforms for inventory, sales, purchasing, and operations.' },
+    { icon: 'Users',  title: 'CRM Software',            desc: 'Track leads, client conversations, task history, sales pipelines, and follow-ups.' },
+    { icon: 'Package',  title: 'Inventory & Stock',       desc: 'Real-time stock monitoring, automated reordering, stock alerts, and warehouse tracking.' },
+    { icon: 'BarChart3',  title: 'Admin Dashboards',        desc: 'Custom visual dashboards to see business metrics, financial graphs, and operations statistics.' },
+    { icon: 'Briefcase',  title: 'HR & Payroll Systems',    desc: 'Manage employee shifts, attendance logs, salary slips, performance records, and files.' },
+    { icon: 'Repeat',  title: 'Workflow Automation',     desc: 'Automate manual entry, email notifications, WhatsApp alerts, and data sync between platforms.' },
   ];
 
   const whatYouGet = [
-    { icon: '🛡', title: 'Custom Fit Solutions',     desc: 'Software mapped exactly to your current business workflows — zero compromises.' },
-    { icon: '📊', title: 'Real-time Analytics',       desc: 'View sales, stock, and staff productivity reports live at any time.' },
-    { icon: '🔒', title: 'Secure Database',           desc: 'Encrypted databases and secure architecture to protect sensitive data.' },
-    { icon: '👥', title: 'Role Access Control',       desc: 'Define who can view, edit, or delete data based on employee hierarchy.' },
-    { icon: '⚡', title: 'Fast & Lightweight',       desc: 'Built with modern frontend and backend frameworks for blazing speed.' },
-    { icon: '⚙', title: 'No License Fees',           desc: 'Complete ownership. Say goodbye to expensive per-user monthly subscription fees.' },
-    { icon: '🔄', title: 'API Integrations',          desc: 'Seamlessly link payment gates, WhatsApp, SMS gateways, and accounting software.' },
-    { icon: '🎧', title: 'Support & Updates',         desc: 'Ongoing support, routine data backups, and upgrades as your business grows.' },
+    { icon: 'Shield', title: 'Custom Fit Solutions',     desc: 'Software mapped exactly to your current business workflows — zero compromises.' },
+    { icon: 'BarChart3', title: 'Real-time Analytics',       desc: 'View sales, stock, and staff productivity reports live at any time.' },
+    { icon: 'Lock', title: 'Secure Database',           desc: 'Encrypted databases and secure architecture to protect sensitive data.' },
+    { icon: 'Users', title: 'Role Access Control',       desc: 'Define who can view, edit, or delete data based on employee hierarchy.' },
+    { icon: 'Zap', title: 'Fast & Lightweight',       desc: 'Built with modern frontend and backend frameworks for blazing speed.' },
+    { icon: 'Settings', title: 'No License Fees',           desc: 'Complete ownership. Say goodbye to expensive per-user monthly subscription fees.' },
+    { icon: 'Repeat', title: 'API Integrations',          desc: 'Seamlessly link payment gates, WhatsApp, SMS gateways, and accounting software.' },
+    { icon: 'Headphones', title: 'Support & Updates',         desc: 'Ongoing support, routine data backups, and upgrades as your business grows.' },
   ];
 
   const whyChoose = [
@@ -65,10 +67,19 @@ export default function ERPSoftwarePage() {
   ];
 
   const portfolio = [
-    { title: 'JP Interiors ERP',     cat: 'ERP System',        desc: 'Inventory, purchase orders, billing, and staff tracking dashboard', img: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop' },
-    { title: 'Sun Holidays CRM',     cat: 'CRM Portal',        desc: 'Customer lead tracking, holiday package design, and query system',  img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop' },
-    { title: 'Sun Garments Billing',  cat: 'Billing Software',  desc: 'Barcode billing, stock alert, GST invoice generator, and finance metrics', img: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=800&auto=format&fit=crop' },
-    { title: 'TwinStar HR Portal',    cat: 'HR & Payroll',      desc: 'Shift timings, automated payroll calculations, salary slips, and attendance logs', img: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800&auto=format&fit=crop' },
+    { title: "SugarStar", cat: "Shopify Development", desc: "Premium confectionery online store", img: "/images/sugarstar_web.jpeg" },
+    { title: "JP Interiors App", cat: "App Development", desc: "Custom business automation and project management app", img: "/images/JpApp_works.png" },
+    { title: "Team3 Associates", cat: "Custom Development", desc: "Interior Design and Project Execution", img: "/images/team3_web.png" },
+    { title: "JP Interiors Web", cat: "Web Development", desc: "Interior design portfolio and service showcase", img: "/images/JpWeb_works.png" },
+    { title: "Teerex", cat: "Custom Development", desc: "E-commerce platform with custom features", img: "/images/graaps_web.png" },
+    { title: "Mallika Garments", cat: "Custom Development", desc: "Fashion retail business solution", img: "/images/malika-garments_web.jpg" },
+    { title: "Graaps", cat: "Clothing Brand", desc: "Online clothing store", img: "/images/graaps_web.png" },
+    { title: "Zydenn", cat: "Clothing Brand", desc: "Online clothing store", img: "/images/kyto_web.jpeg" },
+    { title: "Kores Fabrics", cat: "Clothing Brand", desc: "Online clothing Wholesale Store", img: "/images/kores_web.png" },
+    { title: "Kido Care", cat: "Kids Clothing Brand", desc: "Online clothing store", img: "/images/kido_care_web.jpg" },
+    { title: "Sun Holidays", cat: "Tours and Travel Agency", desc: "Travel Agency Portfolio", img: "/images/sun_holidays_web.png" },
+    { title: "Twinstar", cat: "Clothing Brand", desc: "Online clothing store", img: "/images/kyto_web.jpeg" },
+    { title: "Livinza", cat: "Interior Business", desc: "Interior Business Portfolio", img: "/images/livinza_web.png" }
   ];
 
   const faqs = [
@@ -109,7 +120,7 @@ export default function ERPSoftwarePage() {
                 built specifically for your business workflow. Streamline your operations today.
               </p>
               <div className="hero-actions reveal-from-left reveal-delay-300" style={{ marginBottom: '2.5rem' }}>
-                <a href="mailto:thehynoxofficial@gmail.com" className="btn btn-hero-solid">Get Free Consultation →</a>
+                <a href="/contact" className="btn btn-hero-solid">Get Free Consultation <ArrowRight size={16} style={{ marginLeft: "4px", display: "inline-block", verticalAlign: "middle" }} /></a>
                 <a href="#portfolio" className="btn btn-hero-outline">View Our Work</a>
               </div>
               <div className="svc-hero-badges-bw reveal-fade-in reveal-delay-400">
@@ -144,7 +155,10 @@ export default function ERPSoftwarePage() {
           <div className="svc-build-grid reveal-zoom reveal-delay-200">
             {whatWeBuild.map((item, i) => (
               <div className="svc-build-card" key={i}>
-                <div className="svc-build-icon">{item.icon}</div>
+                {(() => {
+                  const BuildIcon = (LucideIcons as any)[item.icon] || LucideIcons.HelpCircle;
+                  return <div className="svc-build-icon"><BuildIcon size={36} /></div>;
+                })()}
                 <h3>{item.title}</h3>
                 <p>{item.desc}</p>
               </div>
@@ -161,7 +175,10 @@ export default function ERPSoftwarePage() {
           <div className="svc-get-grid reveal-from-left reveal-delay-200">
             {whatYouGet.map((item, i) => (
               <div className="svc-get-card" key={i}>
-                <span className="svc-get-icon">{item.icon}</span>
+                {(() => {
+                  const GetIcon = (LucideIcons as any)[item.icon] || LucideIcons.HelpCircle;
+                  return <span className="svc-get-icon"><GetIcon size={20} /></span>;
+                })()}
                 <div>
                   <h4>{item.title}</h4>
                   <p>{item.desc}</p>
@@ -180,7 +197,7 @@ export default function ERPSoftwarePage() {
           <div className="svc-why-grid reveal-zoom reveal-delay-200">
             {whyChoose.map((item, i) => (
               <div className="svc-why-card" key={i}>
-                <div className="svc-why-check">✓</div>
+                <div className="svc-why-check"><Check size={16} /></div>
                 <h4>{item.title}</h4>
                 <p>{item.desc}</p>
               </div>

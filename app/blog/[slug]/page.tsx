@@ -6,6 +6,7 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Link from 'next/link';
 import { posts, getBlogDetail, BlogPost } from '../blogData';
+import { ChevronRight, Sparkles, Laptop, Palette, Settings, FileText, Wrench, Check, X, Plus, ArrowRight, Copy, Send } from 'lucide-react';
 
 export default function BlogDetailPage() {
   const params = useParams();
@@ -76,11 +77,11 @@ export default function BlogDetailPage() {
         <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 2rem' }}>
           
           {/* BREADCRUMB */}
-          <div className="breadcrumb-container">
+          <div className="breadcrumb-container" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
             <Link href="/" style={{ color: '#888888', textDecoration: 'none' }} className="hover-white">Home</Link>
-            <span style={{ color: '#555555' }}>&rarr;</span>
+            <ChevronRight size={12} style={{ color: '#555555' }} />
             <Link href="/blog" style={{ color: '#888888', textDecoration: 'none' }} className="hover-white">Blog</Link>
-            <span style={{ color: '#555555' }}>&rarr;</span>
+            <ChevronRight size={12} style={{ color: '#555555' }} />
             <span className="breadcrumb-active-title">{post.title}</span>
           </div>
 
@@ -126,7 +127,10 @@ export default function BlogDetailPage() {
               
               {/* QUICK ANSWER / SUMMARY BOX */}
               <div style={{ background: 'rgba(255, 255, 255, 0.02)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px', padding: '2.2rem', display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
-                <span style={{ color: '#ffffff', fontSize: '0.8rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.5px' }}>Quick Answer</span>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                  <Sparkles size={16} style={{ color: '#ffffff' }} />
+                  <span style={{ color: '#ffffff', fontSize: '0.8rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.5px' }}>Quick Answer</span>
+                </div>
                 <p style={{ color: '#ffffff', fontSize: '1.15rem', lineHeight: 1.6, margin: 0, fontWeight: 500 }}>
                   {detail.quickAnswer}
                 </p>
@@ -156,14 +160,14 @@ export default function BlogDetailPage() {
                   {post.slug === 'website-development-cost-in-tiruppur-2025-guide' && section.anchorId === 'factors' && (
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))', gap: '1.2rem', margin: '1.5rem 0' }}>
                       {[
-                        { title: 'Type of Website', desc: 'Business, eCommerce, Portal or Web App', icon: '💻' },
-                        { title: 'Design Complexity', desc: 'Custom Design vs Template Based', icon: '🎨' },
-                        { title: 'Features & Options', desc: 'Features, Integrations and Functionality', icon: '⚙️' },
-                        { title: 'Content & Pages', desc: 'Number of pages and content scope', icon: '📄' },
-                        { title: 'Maintenance', desc: 'Ongoing support and future updates', icon: '🛠️' }
+                        { title: 'Type of Website', desc: 'Business, eCommerce, Portal or Web App', icon: <Laptop size={28} style={{ color: '#ffffff', margin: '0 auto' }} /> },
+                        { title: 'Design Complexity', desc: 'Custom Design vs Template Based', icon: <Palette size={28} style={{ color: '#ffffff', margin: '0 auto' }} /> },
+                        { title: 'Features & Options', desc: 'Features, Integrations and Functionality', icon: <Settings size={28} style={{ color: '#ffffff', margin: '0 auto' }} /> },
+                        { title: 'Content & Pages', desc: 'Number of pages and content scope', icon: <FileText size={28} style={{ color: '#ffffff', margin: '0 auto' }} /> },
+                        { title: 'Maintenance', desc: 'Ongoing support and future updates', icon: <Wrench size={28} style={{ color: '#ffffff', margin: '0 auto' }} /> }
                       ].map((item, index) => (
                         <div key={index} style={{ border: '1px solid rgba(255,255,255,0.1)', padding: '1.2rem', borderRadius: '8px', background: 'rgba(255,255,255,0.02)', textAlign: 'center' }}>
-                          <div style={{ fontSize: '1.8rem', marginBottom: '0.6rem' }}>{item.icon}</div>
+                          <div style={{ marginBottom: '0.6rem' }}>{item.icon}</div>
                           <div style={{ fontWeight: 600, fontSize: '0.9rem', marginBottom: '0.4rem', color: '#ffffff' }}>{item.title}</div>
                           <div style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.5)' }}>{item.desc}</div>
                         </div>
@@ -198,7 +202,7 @@ export default function BlogDetailPage() {
                 <ul style={{ listStyleType: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                   {detail.benefits.map((benefit, bidx) => (
                     <li key={bidx} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', color: 'rgba(255,255,255,0.7)', fontSize: '1.05rem', lineHeight: 1.5 }}>
-                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2.5" style={{ marginTop: '3px', flexShrink: 0 }}><polyline points="20 6 9 17 4 12"/></svg>
+                      <Check size={18} strokeWidth={2.5} style={{ marginTop: '3px', flexShrink: 0, color: '#ffffff' }} />
                       <span>{benefit}</span>
                     </li>
                   ))}
@@ -212,7 +216,7 @@ export default function BlogDetailPage() {
                   <ul style={{ listStyleType: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                     {detail.commonMistakes.map((mistake, midx) => (
                       <li key={midx} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', color: 'rgba(255,255,255,0.7)', fontSize: '1.05rem', lineHeight: 1.5 }}>
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2.5" style={{ marginTop: '4px', flexShrink: 0 }}><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                        <X size={16} strokeWidth={2.5} style={{ marginTop: '4px', flexShrink: 0, color: '#ffffff' }} />
                         <span>{mistake}</span>
                       </li>
                     ))}
@@ -265,9 +269,14 @@ export default function BlogDetailPage() {
                         }}
                       >
                         <span>{faq.q}</span>
-                        <span style={{ fontSize: '1.4rem', color: 'rgba(255,255,255,0.4)', transition: 'transform 0.2s', transform: activeFaq === fidx ? 'rotate(45deg)' : 'none' }}>
-                          +
-                        </span>
+                        <Plus 
+                          size={20} 
+                          style={{ 
+                            color: 'rgba(255,255,255,0.4)', 
+                            transition: 'transform 0.2s', 
+                            transform: activeFaq === fidx ? 'rotate(45deg)' : 'none' 
+                          }} 
+                        />
                       </button>
                       
                       {activeFaq === fidx && (
@@ -337,7 +346,7 @@ export default function BlogDetailPage() {
                   fontSize: '0.9rem',
                   transition: 'all 0.3s'
                 }} onMouseEnter={(e) => { e.currentTarget.style.transform = 'scale(1.03)'; e.currentTarget.style.background = '#0043d0'; }} onMouseLeave={(e) => { e.currentTarget.style.transform = 'scale(1)'; e.currentTarget.style.background = '#0052ff'; }}>
-                  Start Project &rarr;
+                  Start Project <ArrowRight size={16} />
                 </Link>
                 {/* Tech Dashboard mockup container */}
                 <div style={{ marginTop: '2rem', border: '1px solid #e5e5e5', borderRadius: '6px', overflow: 'hidden', height: '140px', background: '#0a0a0a' }}>
@@ -404,6 +413,7 @@ export default function BlogDetailPage() {
                     onMouseEnter={(e) => { e.currentTarget.style.background = '#e5e5e5'; }}
                     onMouseLeave={(e) => { e.currentTarget.style.background = '#f5f5f5'; }}
                   >
+                    {copiedLink ? <Check size={14} /> : <Copy size={14} />}
                     <span>{copiedLink ? 'Copied!' : 'Copy Link'}</span>
                   </button>
                 </div>
@@ -431,39 +441,18 @@ export default function BlogDetailPage() {
                 </div>
               </div>
 
-              {/* STAY UPDATED NEWSLETTER */}
+              {/* HAVE A PROJECT IDEA? */}
               <div className="sidebar-widget" style={{ padding: '2rem', background: '#ffffff', border: '1px solid #e5e5e5', borderRadius: '12px', textAlign: 'left' }}>
                 <h3 className="widget-title" style={{ fontSize: '1rem', fontWeight: 700, color: '#000000', borderBottom: '1px solid #f0f0f0', paddingBottom: '0.75rem', marginBottom: '0.75rem', textTransform: 'uppercase' }}>
-                  Stay Updated
+                  Have a Project?
                 </h3>
                 <p className="widget-desc" style={{ fontSize: '0.82rem', color: '#666666', lineHeight: 1.5, marginBottom: '1.25rem' }}>
-                  Get the latest insights and tips straight to your inbox.
+                  Let's build custom software, web solutions, and marketing engines to grow your business.
                 </p>
-                
-                {isSubscribed ? (
-                  <div className="newsletter-success" style={{ border: '1px solid #e5e5e5', background: '#f5f5f5', color: '#000000' }}>
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                      <polyline points="20 6 9 17 4 12" />
-                    </svg>
-                    <span>Subscribed!</span>
-                  </div>
-                ) : (
-                  <form onSubmit={handleSubscribe} className="newsletter-form-sidebar">
-                    <input
-                      type="email"
-                      placeholder="Enter your email"
-                      value={emailInput}
-                      onChange={(e) => setEmailInput(e.target.value)}
-                      required
-                      className="newsletter-input-sidebar"
-                      style={{ background: '#f9f9f9', border: '1px solid #e5e5e5', color: '#000000' }}
-                    />
-                    <button type="submit" className="newsletter-btn-sidebar" style={{ background: '#0052ff', color: '#ffffff' }}>
-                      Subscribe
-                    </button>
-                  </form>
-                )}
-                <span className="newsletter-disclaimer" style={{ color: '#888888' }}>No spam. Unsubscribe anytime.</span>
+                <a href="/contact" className="newsletter-btn-sidebar" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#0052ff', color: '#ffffff', fontWeight: 'bold', height: '42px' }}>
+                  Let's Talk
+                  <ArrowRight size={14} style={{ marginLeft: '6px' }} />
+                </a>
               </div>
 
             </aside>
@@ -474,16 +463,16 @@ export default function BlogDetailPage() {
           <div style={{ marginTop: '7rem', background: 'linear-gradient(145deg, #111111, #020202)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px', padding: '3.5rem', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '2rem', textAlign: 'left' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
               <div style={{ background: '#ffffff', padding: '1rem', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="1.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                <Send size={32} style={{ color: '#000000' }} />
               </div>
               <div>
                 <h3 style={{ color: '#ffffff', fontSize: '1.8rem', fontWeight: 700, marginBottom: '0.5rem', letterSpacing: '-0.5px' }}>Ready to Build Your Website?</h3>
-                <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '1.05rem', margin: 0 }}>Get a free consultation and let\'s discuss your project.</p>
+                <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '1.05rem', margin: 0 }}>Get a free consultation and let's discuss your project.</p>
               </div>
             </div>
             <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
               <Link href="/contact" style={{ background: '#ffffff', color: '#000000', padding: '1rem 2rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }} className="hover-gray">
-                Get Free Consultation <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                Get Free Consultation <ArrowRight size={16} strokeWidth={2.5} />
               </Link>
               <a href="https://wa.me/918870524355" target="_blank" rel="noopener noreferrer" style={{ background: 'transparent', color: '#ffffff', border: '1px solid rgba(255,255,255,0.3)', padding: '1rem 2rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }} className="hover-white-border">
                 Chat on WhatsApp <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>

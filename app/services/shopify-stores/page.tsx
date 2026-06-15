@@ -1,6 +1,8 @@
 'use client';
 
 import { useEffect } from 'react';
+import * as LucideIcons from 'lucide-react';
+import { Check, ArrowRight } from 'lucide-react';
 import Header from '../../components/Header';
 import ServiceCTA from '../../components/ServiceCTA';
 import Footer from '../../components/Footer';
@@ -29,23 +31,23 @@ export default function ShopifyStoresPage() {
   }, []);
 
   const whatWeBuild = [
-    { icon: '🛒',  title: 'Custom Shopify Themes',   desc: 'Tailored designs that represent your brand, optimized for maximum conversion rate.' },
-    { icon: '⚙',  title: 'Store Setup & Launch',    desc: 'Domain connection, shipping configurations, checkout settings, and full storefront launch.' },
-    { icon: '🔌',  title: 'App Integration',         desc: 'Seamless setup of review apps, loyalty programs, upselling features, and marketing tools.' },
-    { icon: '🔄',  title: 'Platform Migration',      desc: 'Migrate products, customers, and order history safely from WooCommerce, Wix, or custom tools.' },
+    { icon: 'ShoppingCart',  title: 'Custom Shopify Themes',   desc: 'Tailored designs that represent your brand, optimized for maximum conversion rate.' },
+    { icon: 'Settings',  title: 'Store Setup & Launch',    desc: 'Domain connection, shipping configurations, checkout settings, and full storefront launch.' },
+    { icon: 'Plug',  title: 'App Integration',         desc: 'Seamless setup of review apps, loyalty programs, upselling features, and marketing tools.' },
+    { icon: 'Repeat',  title: 'Platform Migration',      desc: 'Migrate products, customers, and order history safely from WooCommerce, Wix, or custom tools.' },
     { icon: '🏢',  title: 'B2B Wholesale Setup',     desc: 'Specialized portals for wholesalers with tier pricing, custom ordering sheets, and billing.' },
-    { icon: '⚡',  title: 'Store Speed Audit',       desc: 'Speed optimization to reduce cart abandonment, fix layout shifts, and improve page scores.' },
+    { icon: 'Zap',  title: 'Store Speed Audit',       desc: 'Speed optimization to reduce cart abandonment, fix layout shifts, and improve page scores.' },
   ];
 
   const whatYouGet = [
-    { icon: '🎨', title: 'Modern Theme Design',      desc: 'Sleek, minimalist interface matching your brand aesthetics.' },
-    { icon: '📱', title: 'Mobile First Layout',       desc: 'Optimized shopping cart and checkout screens for mobile users.' },
-    { icon: '💳', title: 'Local Payment Options',    desc: 'Razorpay, PhonePe, Paytm, and COD gateways completely integrated.' },
+    { icon: 'Palette', title: 'Modern Theme Design',      desc: 'Sleek, minimalist interface matching your brand aesthetics.' },
+    { icon: 'Smartphone', title: 'Mobile First Layout',       desc: 'Optimized shopping cart and checkout screens for mobile users.' },
+    { icon: 'CreditCard', title: 'Local Payment Options',    desc: 'Razorpay, PhonePe, Paytm, and COD gateways completely integrated.' },
     { icon: '🚚', title: 'Shipping & Delivery APIs',  desc: 'Automated delivery rates and tracking links via Delhivery, Shiprocket, etc.' },
-    { icon: '💬', title: 'WhatsApp & SMS Alerts',     desc: 'Automatic order confirmation, dispatch alerts, and abandoned cart reminders.' },
-    { icon: '🔍', title: 'SEO Optimized Setup',       desc: 'Proper product tags, site maps, speed boosts, and schema markup.' },
-    { icon: '📊', title: 'Google Analytics & Pixel',  desc: 'Meta Pixel, Google Analytics 4, and conversion API setups for tracking ads.' },
-    { icon: '🎧', title: 'Post-Launch Handover',     desc: 'Full video walkthroughs and guides on how to manage inventory and discounts.' },
+    { icon: 'MessageSquare', title: 'WhatsApp & SMS Alerts',     desc: 'Automatic order confirmation, dispatch alerts, and abandoned cart reminders.' },
+    { icon: 'Search', title: 'SEO Optimized Setup',       desc: 'Proper product tags, site maps, speed boosts, and schema markup.' },
+    { icon: 'BarChart3', title: 'Google Analytics & Pixel',  desc: 'Meta Pixel, Google Analytics 4, and conversion API setups for tracking ads.' },
+    { icon: 'Headphones', title: 'Post-Launch Handover',     desc: 'Full video walkthroughs and guides on how to manage inventory and discounts.' },
   ];
 
   const whyChoose = [
@@ -65,10 +67,19 @@ export default function ShopifyStoresPage() {
   ];
 
   const portfolio = [
-    { title: 'SugarStar Store',       cat: 'Shopify Store',    desc: 'Premium confectionery online store with custom checkouts', img: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=800&auto=format&fit=crop' },
-    { title: 'Graaps Store',          cat: 'Apparel Store',    desc: 'Fashion brand store built for the UK & Finland market', img: 'https://images.unsplash.com/photo-1523381210434-271e8be1f52b?q=80&w=800&auto=format&fit=crop' },
-    { title: 'Zydenn Store',          cat: 'Clothing Store',   desc: 'Clean, minimalist streetwear e-commerce platform',  img: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=800&auto=format&fit=crop' },
-    { title: 'Kido Care',             cat: 'Kids Fashion',     desc: 'Interactive store featuring automated discount modules', img: 'https://images.unsplash.com/photo-1519241047957-be31d7379a5d?q=80&w=800&auto=format&fit=crop' },
+    { title: "SugarStar", cat: "Shopify Development", desc: "Premium confectionery online store", img: "/images/sugarstar_web.jpeg" },
+    { title: "JP Interiors App", cat: "App Development", desc: "Custom business automation and project management app", img: "/images/JpApp_works.png" },
+    { title: "Team3 Associates", cat: "Custom Development", desc: "Interior Design and Project Execution", img: "/images/team3_web.png" },
+    { title: "JP Interiors Web", cat: "Web Development", desc: "Interior design portfolio and service showcase", img: "/images/JpWeb_works.png" },
+    { title: "Teerex", cat: "Custom Development", desc: "E-commerce platform with custom features", img: "/images/graaps_web.png" },
+    { title: "Mallika Garments", cat: "Custom Development", desc: "Fashion retail business solution", img: "/images/malika-garments_web.jpg" },
+    { title: "Graaps", cat: "Clothing Brand", desc: "Online clothing store", img: "/images/graaps_web.png" },
+    { title: "Zydenn", cat: "Clothing Brand", desc: "Online clothing store", img: "/images/kyto_web.jpeg" },
+    { title: "Kores Fabrics", cat: "Clothing Brand", desc: "Online clothing Wholesale Store", img: "/images/kores_web.png" },
+    { title: "Kido Care", cat: "Kids Clothing Brand", desc: "Online clothing store", img: "/images/kido_care_web.jpg" },
+    { title: "Sun Holidays", cat: "Tours and Travel Agency", desc: "Travel Agency Portfolio", img: "/images/sun_holidays_web.png" },
+    { title: "Twinstar", cat: "Clothing Brand", desc: "Online clothing store", img: "/images/kyto_web.jpeg" },
+    { title: "Livinza", cat: "Interior Business", desc: "Interior Business Portfolio", img: "/images/livinza_web.png" }
   ];
 
   const faqs = [
@@ -108,7 +119,7 @@ export default function ShopifyStoresPage() {
                 tailored to scale your clothing, retail, or wholesale brand globally.
               </p>
               <div className="hero-actions reveal-from-left reveal-delay-300" style={{ marginBottom: '2.5rem' }}>
-                <a href="mailto:thehynoxofficial@gmail.com" className="btn btn-hero-solid">Get Free Consultation →</a>
+                <a href="/contact" className="btn btn-hero-solid">Get Free Consultation <ArrowRight size={16} style={{ marginLeft: "4px", display: "inline-block", verticalAlign: "middle" }} /></a>
                 <a href="#portfolio" className="btn btn-hero-outline">View Our Work</a>
               </div>
               <div className="svc-hero-badges-bw reveal-fade-in reveal-delay-400">
@@ -143,7 +154,10 @@ export default function ShopifyStoresPage() {
           <div className="svc-build-grid reveal-zoom reveal-delay-200">
             {whatWeBuild.map((item, i) => (
               <div className="svc-build-card" key={i}>
-                <div className="svc-build-icon">{item.icon}</div>
+                {(() => {
+                  const BuildIcon = (LucideIcons as any)[item.icon] || LucideIcons.HelpCircle;
+                  return <div className="svc-build-icon"><BuildIcon size={36} /></div>;
+                })()}
                 <h3>{item.title}</h3>
                 <p>{item.desc}</p>
               </div>
@@ -160,7 +174,10 @@ export default function ShopifyStoresPage() {
           <div className="svc-get-grid reveal-from-left reveal-delay-200">
             {whatYouGet.map((item, i) => (
               <div className="svc-get-card" key={i}>
-                <span className="svc-get-icon">{item.icon}</span>
+                {(() => {
+                  const GetIcon = (LucideIcons as any)[item.icon] || LucideIcons.HelpCircle;
+                  return <span className="svc-get-icon"><GetIcon size={20} /></span>;
+                })()}
                 <div>
                   <h4>{item.title}</h4>
                   <p>{item.desc}</p>
@@ -179,7 +196,7 @@ export default function ShopifyStoresPage() {
           <div className="svc-why-grid reveal-zoom reveal-delay-200">
             {whyChoose.map((item, i) => (
               <div className="svc-why-card" key={i}>
-                <div className="svc-why-check">✓</div>
+                <div className="svc-why-check"><Check size={16} /></div>
                 <h4>{item.title}</h4>
                 <p>{item.desc}</p>
               </div>

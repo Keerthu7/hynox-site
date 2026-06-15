@@ -1,6 +1,8 @@
 'use client';
 
 import { useEffect } from 'react';
+import * as LucideIcons from 'lucide-react';
+import { Check, ArrowRight } from 'lucide-react';
 import Header from '../../components/Header';
 import ServiceCTA from '../../components/ServiceCTA';
 import Footer from '../../components/Footer';
@@ -30,20 +32,20 @@ export default function UGCVideoCreationPage() {
 
   const whatWeBuild = [
     { icon: '🪝',  title: 'High-Converting Ad Hooks', desc: 'First 3 seconds hooks designed to capture user scrolling attention on TikTok, Instagram, and YouTube.' },
-    { icon: '📦',  title: 'Product Unboxing & Demos', desc: 'Real-world unboxing experiences showing product texture, packaging details, and usage features.' },
-    { icon: '🎬',  title: 'Aesthetic Reels & Shorts',  desc: 'Trending transitions, lifestyle fits, aesthetic styling videos perfect for apparel and retail brands.' },
+    { icon: 'Package',  title: 'Product Unboxing & Demos', desc: 'Real-world unboxing experiences showing product texture, packaging details, and usage features.' },
+    { icon: 'Film',  title: 'Aesthetic Reels & Shorts',  desc: 'Trending transitions, lifestyle fits, aesthetic styling videos perfect for apparel and retail brands.' },
     { icon: '📖',  title: 'Storytelling Brand Ads',   desc: 'Narrative-driven videos talking about brand origins, quality selection, or customer problem-solving.' },
     { icon: '💡',  title: 'How-to & Tutorial Guides',  desc: 'Educational videos showing how to style, use, assemble or care for your products.' },
     { icon: '🗣',  title: 'Review & Testimonial Clips', desc: 'Authentic reviews from real people sharing their customer experience, handling objections.' },
   ];
 
   const whatYouGet = [
-    { icon: '📝', title: 'Ad Concept Ideation',      desc: 'Researching angles, visual triggers, and storylines.' },
-    { icon: '✍', title: 'Script Writing & Drafts',   desc: 'Conversational scripts featuring clear calls-to-action.' },
-    { icon: '👥', title: 'Creator Selection',        desc: 'Sourcing, vetting, and booking creators that match your brand.' },
+    { icon: 'FileText', title: 'Ad Concept Ideation',      desc: 'Researching angles, visual triggers, and storylines.' },
+    { icon: 'PenTool', title: 'Script Writing & Drafts',   desc: 'Conversational scripts featuring clear calls-to-action.' },
+    { icon: 'Users', title: 'Creator Selection',        desc: 'Sourcing, vetting, and booking creators that match your brand.' },
     { icon: '✂', title: 'Professional Video Edits',  desc: 'Video editing featuring dynamic captions, effects, and audio tracks.' },
-    { icon: '🔄', title: 'Multi-Hook Variations',    desc: 'Receiving 1 base video with 3 different hooks to test ad copy.' },
-    { icon: '🎵', title: 'Commercial Audio Sync',    desc: 'Integrating royalty-free audio tracks that fit the video mood.' },
+    { icon: 'Repeat', title: 'Multi-Hook Variations',    desc: 'Receiving 1 base video with 3 different hooks to test ad copy.' },
+    { icon: 'Music', title: 'Commercial Audio Sync',    desc: 'Integrating royalty-free audio tracks that fit the video mood.' },
     { icon: '📁', title: 'Raw Footages Shared',      desc: 'Accessing clean raw clips to compile additional hooks later.' },
     { icon: '⚖', title: 'Full Paid Ads Rights',      desc: 'Complete digital rights to run the videos on Meta, Google, TikTok.' },
   ];
@@ -65,9 +67,19 @@ export default function UGCVideoCreationPage() {
   ];
 
   const portfolio = [
-    { title: 'SugarStar Ad Clips',   cat: 'Confectionery UGC', desc: 'Unboxing and taste test videos boosting landing page conversions by 28%', img: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=800&auto=format&fit=crop' },
-    { title: 'Graaps Style Reels',   cat: 'Apparel UGC',       desc: 'Fit checks and clothing transition Reels for UK audience reach', img: 'https://images.unsplash.com/photo-1523381210434-271e8be1f52b?q=80&w=800&auto=format&fit=crop' },
-    { title: 'Zydenn Streetwear',    cat: 'Lookbook UGC',      desc: 'Aesthetic street lookbooks and dynamic ad hook testing clips', img: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=800&auto=format&fit=crop' },
+    { title: "SugarStar", cat: "Shopify Development", desc: "Premium confectionery online store", img: "/images/sugarstar_web.jpeg" },
+    { title: "JP Interiors App", cat: "App Development", desc: "Custom business automation and project management app", img: "/images/JpApp_works.png" },
+    { title: "Team3 Associates", cat: "Custom Development", desc: "Interior Design and Project Execution", img: "/images/team3_web.png" },
+    { title: "JP Interiors Web", cat: "Web Development", desc: "Interior design portfolio and service showcase", img: "/images/JpWeb_works.png" },
+    { title: "Teerex", cat: "Custom Development", desc: "E-commerce platform with custom features", img: "/images/graaps_web.png" },
+    { title: "Mallika Garments", cat: "Custom Development", desc: "Fashion retail business solution", img: "/images/malika-garments_web.jpg" },
+    { title: "Graaps", cat: "Clothing Brand", desc: "Online clothing store", img: "/images/graaps_web.png" },
+    { title: "Zydenn", cat: "Clothing Brand", desc: "Online clothing store", img: "/images/kyto_web.jpeg" },
+    { title: "Kores Fabrics", cat: "Clothing Brand", desc: "Online clothing Wholesale Store", img: "/images/kores_web.png" },
+    { title: "Kido Care", cat: "Kids Clothing Brand", desc: "Online clothing store", img: "/images/kido_care_web.jpg" },
+    { title: "Sun Holidays", cat: "Tours and Travel Agency", desc: "Travel Agency Portfolio", img: "/images/sun_holidays_web.png" },
+    { title: "Twinstar", cat: "Clothing Brand", desc: "Online clothing store", img: "/images/kyto_web.jpeg" },
+    { title: "Livinza", cat: "Interior Business", desc: "Interior Business Portfolio", img: "/images/livinza_web.png" }
   ];
 
   const faqs = [
@@ -107,7 +119,7 @@ export default function UGCVideoCreationPage() {
                 and short-form ad creatives designed to drive clicks and boost ROAS.
               </p>
               <div className="hero-actions reveal-from-left reveal-delay-300" style={{ marginBottom: '2.5rem' }}>
-                <a href="mailto:thehynoxofficial@gmail.com" className="btn btn-hero-solid">Get Free Consultation →</a>
+                <a href="/contact" className="btn btn-hero-solid">Get Free Consultation <ArrowRight size={16} style={{ marginLeft: "4px", display: "inline-block", verticalAlign: "middle" }} /></a>
                 <a href="#portfolio" className="btn btn-hero-outline">View Our Work</a>
               </div>
               <div className="svc-hero-badges-bw reveal-fade-in reveal-delay-400">
@@ -142,7 +154,10 @@ export default function UGCVideoCreationPage() {
           <div className="svc-build-grid reveal-zoom reveal-delay-200">
             {whatWeBuild.map((item, i) => (
               <div className="svc-build-card" key={i}>
-                <div className="svc-build-icon">{item.icon}</div>
+                {(() => {
+                  const BuildIcon = (LucideIcons as any)[item.icon] || LucideIcons.HelpCircle;
+                  return <div className="svc-build-icon"><BuildIcon size={36} /></div>;
+                })()}
                 <h3>{item.title}</h3>
                 <p>{item.desc}</p>
               </div>
@@ -159,7 +174,10 @@ export default function UGCVideoCreationPage() {
           <div className="svc-get-grid reveal-from-left reveal-delay-200">
             {whatYouGet.map((item, i) => (
               <div className="svc-get-card" key={i}>
-                <span className="svc-get-icon">{item.icon}</span>
+                {(() => {
+                  const GetIcon = (LucideIcons as any)[item.icon] || LucideIcons.HelpCircle;
+                  return <span className="svc-get-icon"><GetIcon size={20} /></span>;
+                })()}
                 <div>
                   <h4>{item.title}</h4>
                   <p>{item.desc}</p>
@@ -178,7 +196,7 @@ export default function UGCVideoCreationPage() {
           <div className="svc-why-grid reveal-zoom reveal-delay-200">
             {whyChoose.map((item, i) => (
               <div className="svc-why-card" key={i}>
-                <div className="svc-why-check">✓</div>
+                <div className="svc-why-check"><Check size={16} /></div>
                 <h4>{item.title}</h4>
                 <p>{item.desc}</p>
               </div>

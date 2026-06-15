@@ -1,6 +1,8 @@
 'use client';
 
 import { useEffect } from 'react';
+import * as LucideIcons from 'lucide-react';
+import { Check, ArrowRight, Play } from 'lucide-react';
 import Header from '../../components/Header';
 import ServiceCTA from '../../components/ServiceCTA';
 import Footer from '../../components/Footer';
@@ -29,23 +31,23 @@ export default function SocialMediaMarketingPage() {
   }, []);
 
   const whatWeBuild = [
-    { icon: '📅',  title: 'Content Strategy Calendar', desc: 'Pre-planned monthly calendar outlining educational, promotional, and trending content ideas.' },
-    { icon: '🎨',  title: 'Custom Graphic Design',    desc: 'Bespoke feed banners, carousel infographics, and story templates reflecting your brand guidelines.' },
-    { icon: '🎬',  title: 'Reels & Video Editing',   desc: 'Professional editing of raw product videos with trending audios, captions, and transitions.' },
-    { icon: '💬',  title: 'Community Engagement',     desc: 'Daily monitoring of post comments and direct messages (DMs) to boost interaction score.' },
-    { icon: '👥',  title: 'Influencer Collaboration',  desc: 'Sourcing, vetting, and coordinating with local creators for product features.' },
-    { icon: '📈',  title: 'Profile Optimization',     desc: 'Revamp bio layouts, story highlights, link placements, and tags for better profile conversion.' },
+    { icon: 'Calendar',  title: 'Content Strategy Calendar', desc: 'Pre-planned monthly calendar outlining educational, promotional, and trending content ideas.' },
+    { icon: 'Palette',  title: 'Custom Graphic Design',    desc: 'Bespoke feed banners, carousel infographics, and story templates reflecting your brand guidelines.' },
+    { icon: 'Film',  title: 'Reels & Video Editing',   desc: 'Professional editing of raw product videos with trending audios, captions, and transitions.' },
+    { icon: 'MessageSquare',  title: 'Community Engagement',     desc: 'Daily monitoring of post comments and direct messages (DMs) to boost interaction score.' },
+    { icon: 'Users',  title: 'Influencer Collaboration',  desc: 'Sourcing, vetting, and coordinating with local creators for product features.' },
+    { icon: 'TrendingUp',  title: 'Profile Optimization',     desc: 'Revamp bio layouts, story highlights, link placements, and tags for better profile conversion.' },
   ];
 
   const whatYouGet = [
-    { icon: '✍', title: 'Monthly Strategy File',    desc: 'Structured themes and goals defined for the upcoming month.' },
-    { icon: '🎨', title: 'Premium Visual Designs',   desc: 'Clean, minimalist grid layouts matching premium aesthetics.' },
+    { icon: 'PenTool', title: 'Monthly Strategy File',    desc: 'Structured themes and goals defined for the upcoming month.' },
+    { icon: 'Palette', title: 'Premium Visual Designs',   desc: 'Clean, minimalist grid layouts matching premium aesthetics.' },
     { icon: '✂', title: 'Short-form Video Edits',    desc: 'Edited Reels, TikToks, and Shorts optimized for viewer retention.' },
-    { icon: '💬', title: 'Daily Message Reviews',    desc: 'Ensuring customer questions are addressed instantly in comments.' },
-    { icon: '🏷', title: 'Niche Hashtag Lists',      desc: 'Researched keyword groupings to improve explore-page reach.' },
-    { icon: '📊', title: 'Monthly Growth Audits',    desc: 'Reports detailing reach improvements, follower gains, and link clicks.' },
-    { icon: '🔥', title: 'Trend Sourcing Alerts',    desc: 'Weekly briefs on trending formats and sounds to hop on early.' },
-    { icon: '🎧', title: 'Direct Team Access',       desc: 'Talk directly to the designer and editor managing your page.' },
+    { icon: 'MessageSquare', title: 'Daily Message Reviews',    desc: 'Ensuring customer questions are addressed instantly in comments.' },
+    { icon: 'Tag', title: 'Niche Hashtag Lists',      desc: 'Researched keyword groupings to improve explore-page reach.' },
+    { icon: 'BarChart3', title: 'Monthly Growth Audits',    desc: 'Reports detailing reach improvements, follower gains, and link clicks.' },
+    { icon: 'Flame', title: 'Trend Sourcing Alerts',    desc: 'Weekly briefs on trending formats and sounds to hop on early.' },
+    { icon: 'Headphones', title: 'Direct Team Access',       desc: 'Talk directly to the designer and editor managing your page.' },
   ];
 
   const whyChoose = [
@@ -65,9 +67,42 @@ export default function SocialMediaMarketingPage() {
   ];
 
   const portfolio = [
-    { title: 'SugarStar Instagram',  cat: 'Brand Curation',   desc: 'Curated premium feed grid and interactive stories increasing reach by 140%', img: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=800&auto=format&fit=crop' },
-    { title: 'Livinza Visuals',      cat: 'Page Management',  desc: 'Showcasing luxury interior designs with cohesive grid layouts', img: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=800&auto=format&fit=crop' },
-    { title: 'JP Interiors Social',  cat: 'Reels Production', desc: 'Short-form construction updates and before/after transition reels', img: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=800&auto=format&fit=crop' },
+    { 
+      title: 'JP Interiors', 
+      username: '@jp_interiors',
+      subtitle: 'Design & Build', 
+      img: '/images/JpWeb_works.png',
+      videoUrl: '/videos/1.mp4'
+    },
+    { 
+      title: 'Zydenn', 
+      username: '@zydenn_official',
+      subtitle: 'Streetwear Lookbook', 
+      img: '/images/kyto_web.jpeg',
+      videoUrl: '/videos/2.mp4'
+    },
+    { 
+      title: 'Graaps Brand', 
+      username: '@graaps_clothing',
+      subtitle: 'Summer Collection', 
+      img: '/images/graaps_web.png',
+      videoUrl: '/videos/3.mp4'
+    },
+    { 
+      title: 'Sun Holidays', 
+      username: '@_sun_holidays',
+      subtitle: 'Tours & Travels', 
+      img: '/images/sun_holidays_web.png',
+      videoUrl: '/videos/4.mp4',
+      titleColor: '#facc15'
+    },
+    { 
+      title: 'Kido Care', 
+      username: '@kidocare_store',
+      subtitle: 'Kids Fashion Reels', 
+      img: '/images/kido_care_web.jpg',
+      videoUrl: '/videos/5.mp4'
+    },
   ];
 
   const faqs = [
@@ -107,7 +142,7 @@ export default function SocialMediaMarketingPage() {
                 and engage your community to establish a premium online presence.
               </p>
               <div className="hero-actions reveal-from-left reveal-delay-300" style={{ marginBottom: '2.5rem' }}>
-                <a href="mailto:thehynoxofficial@gmail.com" className="btn btn-hero-solid">Get Free Consultation →</a>
+                <a href="/contact" className="btn btn-hero-solid">Get Free Consultation <ArrowRight size={16} style={{ marginLeft: "4px", display: "inline-block", verticalAlign: "middle" }} /></a>
                 <a href="#portfolio" className="btn btn-hero-outline">View Our Work</a>
               </div>
               <div className="svc-hero-badges-bw reveal-fade-in reveal-delay-400">
@@ -142,7 +177,10 @@ export default function SocialMediaMarketingPage() {
           <div className="svc-build-grid reveal-zoom reveal-delay-200">
             {whatWeBuild.map((item, i) => (
               <div className="svc-build-card" key={i}>
-                <div className="svc-build-icon">{item.icon}</div>
+                {(() => {
+                  const BuildIcon = (LucideIcons as any)[item.icon] || LucideIcons.HelpCircle;
+                  return <div className="svc-build-icon"><BuildIcon size={36} /></div>;
+                })()}
                 <h3>{item.title}</h3>
                 <p>{item.desc}</p>
               </div>
@@ -159,7 +197,10 @@ export default function SocialMediaMarketingPage() {
           <div className="svc-get-grid reveal-from-left reveal-delay-200">
             {whatYouGet.map((item, i) => (
               <div className="svc-get-card" key={i}>
-                <span className="svc-get-icon">{item.icon}</span>
+                {(() => {
+                  const GetIcon = (LucideIcons as any)[item.icon] || LucideIcons.HelpCircle;
+                  return <span className="svc-get-icon"><GetIcon size={20} /></span>;
+                })()}
                 <div>
                   <h4>{item.title}</h4>
                   <p>{item.desc}</p>
@@ -178,7 +219,7 @@ export default function SocialMediaMarketingPage() {
           <div className="svc-why-grid reveal-zoom reveal-delay-200">
             {whyChoose.map((item, i) => (
               <div className="svc-why-card" key={i}>
-                <div className="svc-why-check">✓</div>
+                <div className="svc-why-check"><Check size={16} /></div>
                 <h4>{item.title}</h4>
                 <p>{item.desc}</p>
               </div>
@@ -208,21 +249,162 @@ export default function SocialMediaMarketingPage() {
         <section className="svc-section" id="portfolio">
           <div className="svc-section-header reveal-blur">
             <span className="svc-label">PORTFOLIO</span>
-            <h2>Real Pages. Real Results.</h2>
+            <h2>Recent Works</h2>
           </div>
-          <div className="svc-portfolio-grid reveal-zoom reveal-delay-200">
-            {portfolio.map((item, i) => (
-              <div className="svc-portfolio-card" key={i}>
-                <div className="svc-portfolio-img">
-                  <img src={item.img} alt={item.title} />
+          <div className="social-portfolio-grid reveal-zoom reveal-delay-200">
+            {portfolio.map((item: any, i) => (
+              <div className="social-portfolio-card" key={i}>
+                <div className="social-portfolio-img" style={{ width: '100%', height: '100%' }}>
+                  <video 
+                    src={item.videoUrl} 
+                    poster={item.img} 
+                    autoPlay 
+                    loop 
+                    muted 
+                    playsInline 
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+                  />
                 </div>
-                <div className="svc-portfolio-info">
-                  <span className="badge-marketing">{item.cat}</span>
-                  <h4>{item.title}</h4>
-                  <p>{item.desc}</p>
+                <div className="social-portfolio-overlay">
+                  <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px', opacity: 0.9 }}>
+                      <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24" style={{ display: 'inline-block' }}>
+                        <path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.64-.07-4.85s.01-3.58.07-4.85C2.38 3.86 3.9 2.32 7.15 2.17 8.42 2.11 8.8 2.1 12 2.16zM12 0C8.74 0 8.33.01 7.05.07c-4.27.19-6.78 2.7-6.97 6.98C.01 8.33 0 8.74 0 12s.01 3.67.08 4.95c.19 4.28 2.7 6.79 6.97 6.98C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.08c4.28-.19 6.79-2.7 6.98-6.98C23.99 15.67 24 15.26 24 12s-.01-3.67-.08-4.95c-.19-4.28-2.7-6.79-6.98-6.98C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1018.16 12 6.16 6.16 0 0012 5.84zm0 10.16A4 4 0 1116 12a4 4 0 01-4 4zm6.4-11.44a1.44 1.44 0 11-2.88 0 1.44 1.44 0 012.88 0z" />
+                      </svg>
+                      <span style={{ fontSize: '0.75rem', fontWeight: 500 }}>{item.username}</span>
+                    </div>
+                    <div style={{ textAlign: 'center', margin: 'auto 0 0 0' }}>
+                      <div style={{ background: 'rgba(255, 255, 255, 0.15)', backdropFilter: 'blur(8px)', width: '40px', height: '40px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifySelf: 'center', justifyContent: 'center', margin: '0 auto 1.5rem' }}>
+                        <Play size={16} fill="white" style={{ marginLeft: '2px' }} />
+                      </div>
+                      <h4 style={{ textTransform: 'uppercase', fontSize: '1.2rem', fontWeight: 800, letterSpacing: '0.05em', margin: 0, color: item.titleColor || '#ffffff' }}>
+                        {item.title}
+                      </h4>
+                      <p style={{ fontSize: '0.75rem', fontWeight: 500, letterSpacing: '0.05em', color: '#ffffff', opacity: 0.9, textTransform: 'uppercase', margin: 0 }}>
+                        {item.subtitle}
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             ))}
+            <div className="social-portfolio-card social-portfolio-cta-card">
+              <h4 style={{ margin: 0 }}>YOUR BRAND<br />NEXT?</h4>
+              <a href="/contact" className="cta-btn">
+                Start Now <ArrowRight size={14} />
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* ─── 6b. PROOF OF PERFORMANCE / VIEW INSIGHTS ─── */}
+        <section className="svc-section svc-section-alt" id="insights" style={{ paddingBottom: '5rem' }}>
+          <div className="svc-section-header reveal-blur" style={{ textAlign: 'center', marginBottom: '3rem' }}>
+            <span className="svc-label" style={{ letterSpacing: '0.15em', fontSize: '0.85rem' }}>PROOF OF PERFORMANCE</span>
+            <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textTransform: 'uppercase', color: '#ffffff', marginTop: '0.5rem', fontFamily: 'var(--font-geist-sans), sans-serif' }}>View Insights</h2>
+            <div className="svc-divider" style={{ margin: '1rem auto' }} />
+          </div>
+
+          <div className="reveal-zoom" style={{ display: 'flex', gap: '2rem', justifyContent: 'center', flexWrap: 'wrap', maxWidth: '1200px', margin: '0 auto', padding: '0 1rem' }}>
+            {/* Dashboard Card 1 */}
+            <div style={{ background: '#0b0f19', border: '1px solid rgba(255, 255, 255, 0.08)', borderRadius: '24px', padding: '2rem 1.75rem', width: '100%', maxWidth: '380px', fontFamily: 'system-ui, -apple-system, sans-serif' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2rem', color: '#ffffff' }}>
+                <span style={{ cursor: 'pointer', fontSize: '1.2rem' }}>←</span>
+                <span style={{ fontSize: '0.95rem', fontWeight: 600 }}>Professional dashboard</span>
+                <span style={{ cursor: 'pointer', fontSize: '1.2rem' }}>⚙</span>
+              </div>
+
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '1.5rem' }}>
+                <div>
+                  <h3 style={{ fontSize: '1.3rem', fontWeight: 700, color: '#ffffff', margin: 0 }}>Insights</h3>
+                </div>
+                <div style={{ color: '#8e9aa8', fontSize: '0.8rem', fontWeight: 500 }}>6 Apr-5 May</div>
+              </div>
+
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                  <span style={{ color: '#8e9aa8', fontSize: '0.9rem', fontWeight: 500 }}>Views</span>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '4px', color: '#4ade80', fontWeight: 600, fontSize: '0.95rem' }}>
+                    <span>↗ 4.2M</span>
+                    <span style={{ color: '#8e9aa8', fontSize: '0.8rem', marginLeft: '2px' }}>&gt;</span>
+                  </div>
+                </div>
+
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                  <span style={{ color: '#8e9aa8', fontSize: '0.9rem', fontWeight: 500 }}>Interactions</span>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '4px', color: '#ffffff', fontWeight: 600, fontSize: '0.95rem' }}>
+                    <span>330.2K</span>
+                    <span style={{ color: '#8e9aa8', fontSize: '0.8rem', marginLeft: '2px' }}>&gt;</span>
+                  </div>
+                </div>
+
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                  <span style={{ color: '#8e9aa8', fontSize: '0.9rem', fontWeight: 500 }}>New followers</span>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '4px', color: '#ffffff', fontWeight: 600, fontSize: '0.95rem' }}>
+                    <span>829</span>
+                    <span style={{ color: '#8e9aa8', fontSize: '0.8rem', marginLeft: '2px' }}>&gt;</span>
+                  </div>
+                </div>
+
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                  <span style={{ color: '#8e9aa8', fontSize: '0.9rem', fontWeight: 500 }}>Content you shared</span>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '4px', color: '#ffffff', fontWeight: 600, fontSize: '0.95rem' }}>
+                    <span>47</span>
+                    <span style={{ color: '#8e9aa8', fontSize: '0.8rem', marginLeft: '2px' }}>&gt;</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Dashboard Card 2 */}
+            <div style={{ background: '#0b0f19', border: '1px solid rgba(255, 255, 255, 0.08)', borderRadius: '24px', padding: '2rem 1.75rem', width: '100%', maxWidth: '380px', fontFamily: 'system-ui, -apple-system, sans-serif' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2rem', color: '#ffffff' }}>
+                <span style={{ cursor: 'pointer', fontSize: '1.2rem' }}>←</span>
+                <span style={{ fontSize: '0.95rem', fontWeight: 600 }}>Professional dashboa...</span>
+                <span style={{ cursor: 'pointer', fontSize: '1.2rem' }}>⚙</span>
+              </div>
+
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '1.5rem' }}>
+                <div>
+                  <h3 style={{ fontSize: '1.3rem', fontWeight: 700, color: '#ffffff', margin: 0 }}>Insights</h3>
+                </div>
+                <div style={{ color: '#8e9aa8', fontSize: '0.8rem', fontWeight: 500 }}>14 Apr-13 May</div>
+              </div>
+
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                  <span style={{ color: '#8e9aa8', fontSize: '0.9rem', fontWeight: 500 }}>Views</span>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '4px', color: '#ffffff', fontWeight: 600, fontSize: '0.95rem' }}>
+                    <span>1.4L</span>
+                    <span style={{ color: '#8e9aa8', fontSize: '0.8rem', marginLeft: '2px' }}>&gt;</span>
+                  </div>
+                </div>
+
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                  <span style={{ color: '#8e9aa8', fontSize: '0.9rem', fontWeight: 500 }}>Interactions</span>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '4px', color: '#4ade80', fontWeight: 600, fontSize: '0.95rem' }}>
+                    <span>↗ 1.1T</span>
+                    <span style={{ color: '#8e9aa8', fontSize: '0.8rem', marginLeft: '2px' }}>&gt;</span>
+                  </div>
+                </div>
+
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                  <span style={{ color: '#8e9aa8', fontSize: '0.9rem', fontWeight: 500 }}>New followers</span>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '4px', color: '#4ade80', fontWeight: 600, fontSize: '0.95rem' }}>
+                    <span>↗ 119</span>
+                    <span style={{ color: '#8e9aa8', fontSize: '0.8rem', marginLeft: '2px' }}>&gt;</span>
+                  </div>
+                </div>
+
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                  <span style={{ color: '#8e9aa8', fontSize: '0.9rem', fontWeight: 500 }}>Content you shared</span>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '4px', color: '#ffffff', fontWeight: 600, fontSize: '0.95rem' }}>
+                    <span>31</span>
+                    <span style={{ color: '#8e9aa8', fontSize: '0.8rem', marginLeft: '2px' }}>&gt;</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 

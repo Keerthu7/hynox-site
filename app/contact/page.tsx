@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { Check, Phone, Mail, MapPin, ChevronDown } from 'lucide-react';
 
 const countries = [
   { name: 'India', code: '+91', flag: '🇮🇳' },
@@ -97,33 +98,25 @@ export default function ContactPage() {
               <ul className="why-list">
                 <li>
                   <div className="check-icon-wrapper">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round">
-                      <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
+                    <Check size={14} strokeWidth={3.5} />
                   </div>
                   <span>Expert consultation and planning</span>
                 </li>
                 <li>
                   <div className="check-icon-wrapper">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round">
-                      <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
+                    <Check size={14} strokeWidth={3.5} />
                   </div>
                   <span>Custom solutions for your needs</span>
                 </li>
                 <li>
                   <div className="check-icon-wrapper">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round">
-                      <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
+                    <Check size={14} strokeWidth={3.5} />
                   </div>
                   <span>Transparent pricing and timeline</span>
                 </li>
                 <li>
                   <div className="check-icon-wrapper">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round">
-                      <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
+                    <Check size={14} strokeWidth={3.5} />
                   </div>
                   <span>24-hour response guarantee</span>
                 </li>
@@ -144,9 +137,7 @@ export default function ContactPage() {
               {/* Phone item */}
               <a href="tel:+918870524355" className="contact-detail-card">
                 <div className="icon-wrapper">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                  </svg>
+                  <Phone size={20} />
                 </div>
                 <div className="detail-card-text">
                   <span className="detail-card-title">Phone</span>
@@ -157,10 +148,7 @@ export default function ContactPage() {
               {/* Email item */}
               <a href="mailto:thehynoxofficial@gmail.com" className="contact-detail-card">
                 <div className="icon-wrapper">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                    <polyline points="22,6 12,13 2,6"></polyline>
-                  </svg>
+                  <Mail size={20} />
                 </div>
                 <div className="detail-card-text">
                   <span className="detail-card-title">Email</span>
@@ -171,10 +159,7 @@ export default function ContactPage() {
               {/* Location item */}
               <div className="contact-detail-card pointer-none">
                 <div className="icon-wrapper">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                    <circle cx="12" cy="10" r="3"></circle>
-                  </svg>
+                  <MapPin size={20} />
                 </div>
                 <div className="detail-card-text">
                   <span className="detail-card-title">Location</span>
@@ -195,9 +180,7 @@ export default function ContactPage() {
               {submitSuccess ? (
                 <div className="form-success-alert animate-fade-in">
                   <div className="success-icon">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                      <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
+                    <Check size={24} strokeWidth={2.5} />
                   </div>
                   <h3>Message Sent Successfully!</h3>
                   <p>Thank you for reaching out to HYNOX. We will get back to you shortly.</p>
@@ -237,9 +220,7 @@ export default function ContactPage() {
                       <div className="country-selector">
                         <span className="country-flag">{selectedCountryObj.flag}</span>
                         <span className="country-code-display">{country}</span>
-                        <svg className="dropdown-arrow" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                          <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
+                        <ChevronDown className="dropdown-arrow" size={10} strokeWidth={2.5} />
                         <select
                           value={country}
                           onChange={(e) => setCountry(e.target.value)}

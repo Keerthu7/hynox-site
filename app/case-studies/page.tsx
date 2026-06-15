@@ -3,6 +3,18 @@
 import { useState, useEffect } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { ArrowRight, Grid, ShoppingCart, Layers, Smartphone, Target, TrendingUp, FileText, Cpu, Users } from 'lucide-react';
+
+const getCategoryIcon = (category: string) => {
+  switch (category) {
+    case 'All': return <Grid size={16} style={{ display: 'inline-block', verticalAlign: 'middle', marginRight: '8px' }} />;
+    case 'Ecommerce': return <ShoppingCart size={16} style={{ display: 'inline-block', verticalAlign: 'middle', marginRight: '8px' }} />;
+    case 'ERP & Automation': return <Layers size={16} style={{ display: 'inline-block', verticalAlign: 'middle', marginRight: '8px' }} />;
+    case 'App Development': return <Smartphone size={16} style={{ display: 'inline-block', verticalAlign: 'middle', marginRight: '8px' }} />;
+    case 'Marketing': return <Target size={16} style={{ display: 'inline-block', verticalAlign: 'middle', marginRight: '8px' }} />;
+    default: return null;
+  }
+};
 
 const caseStudies = [
   {
@@ -127,7 +139,7 @@ export default function CaseStudiesPage() {
               </p>
               <div className="reveal-fade-in reveal-delay-300 cs-hero-btn-container">
                 <a href="/contact" className="cs-contact-btn" onMouseEnter={(e) => { e.currentTarget.style.transform = 'scale(1.05)'; e.currentTarget.style.boxShadow = '0 10px 20px rgba(255,255,255,0.2)'; }} onMouseLeave={(e) => { e.currentTarget.style.transform = 'scale(1)'; e.currentTarget.style.boxShadow = 'none'; }}>
-                  Start a Project <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                  Start a Project <ArrowRight size={18} style={{ marginLeft: '4px', display: 'inline-block', verticalAlign: 'middle' }} />
                 </a>
               </div>
             </div>
@@ -153,8 +165,9 @@ export default function CaseStudiesPage() {
                 key={cat}
                 onClick={() => setActiveTab(cat)}
                 className={`category-btn-item reveal-fade-in reveal-delay-${(i % 5) * 100} ${activeTab === cat ? 'active' : ''}`}
+                style={{ display: 'inline-flex', alignItems: 'center' }}
               >
-                {cat === 'All' ? <span style={{ marginRight: '8px' }}>⊞</span> : null}
+                {getCategoryIcon(cat)}
                 {cat}
               </button>
             ))}
@@ -218,21 +231,21 @@ export default function CaseStudiesPage() {
 
                   <div style={{ 
                     display: 'flex', 
-                    alignItems: 'flex-start', 
+                    alignItems: 'center', 
                     gap: '0.5rem',
                     color: '#a3a3a3',
                     fontSize: '0.85rem',
                     fontWeight: 500,
                     marginBottom: '1.5rem'
                   }}>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ marginTop: '2px' }}><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg>
+                    <TrendingUp size={16} style={{ color: '#ffffff' }} />
                     <span>{cs.highlight}</span>
                   </div>
                   
                   {/* Know More Button */}
                   <div style={{ borderTop: '1px solid rgba(255, 255, 255, 0.05)', paddingTop: '1rem', marginTop: 'auto' }}>
                     <a href={`/case-studies/${cs.slug}`} style={{ color: '#ffffff', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 500, display: 'inline-flex', alignItems: 'center', gap: '0.5rem', transition: 'gap 0.3s' }} onMouseEnter={(e) => e.currentTarget.style.gap = '0.75rem'} onMouseLeave={(e) => e.currentTarget.style.gap = '0.5rem'}>
-                      Know More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                      Know More <ArrowRight size={14} />
                     </a>
                   </div>
                 </div>
@@ -256,7 +269,7 @@ export default function CaseStudiesPage() {
             <div style={{ flex: '1 1 300px' }}>
               <h2 style={{ fontSize: '1.8rem', color: '#ffffff', fontWeight: 500, marginBottom: '1rem' }}>Projects That Create Impact</h2>
               <p style={{ color: 'rgba(255, 255, 255, 0.5)', lineHeight: 1.6, fontSize: '1rem' }}>
-                Hynox has delivered software projects for businesses in Tiruppur, Tamil Nadu and internationally. Our case studies cover ecommerce brands, textile manufacturers, interior businesses, food delivery apps and travel agencies.
+                Hynox has delivered software projects for businesses in Tiruppur, Tamil Nadu and internationally. Our case studies cover ecommerce brands, textile manufacturers, interior businesses, mobile applications and travel agencies.
               </p>
             </div>
           </div>
@@ -270,8 +283,8 @@ export default function CaseStudiesPage() {
             gap: '2rem' 
           }}>
             <div className="reveal-zoom" style={{ background: '#0a0a0a', padding: '2rem', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.05)', display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
-              <div style={{ background: 'rgba(255,255,255,0.05)', color: '#ffffff', padding: '1rem', borderRadius: '50%' }}>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+              <div style={{ background: 'rgba(255,255,255,0.05)', color: '#ffffff', padding: '1rem', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <FileText size={24} />
               </div>
               <div>
                 <div style={{ fontSize: '1.8rem', color: '#ffffff', fontWeight: 600 }}>8+</div>
@@ -280,8 +293,8 @@ export default function CaseStudiesPage() {
             </div>
             
             <div className="reveal-zoom reveal-delay-100" style={{ background: '#0a0a0a', padding: '2rem', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.05)', display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
-              <div style={{ background: 'rgba(255,255,255,0.05)', color: '#ffffff', padding: '1rem', borderRadius: '50%' }}>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>
+              <div style={{ background: 'rgba(255,255,255,0.05)', color: '#ffffff', padding: '1rem', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <Cpu size={24} />
               </div>
               <div>
                 <div style={{ fontSize: '1.8rem', color: '#ffffff', fontWeight: 600 }}>5+</div>
@@ -290,8 +303,8 @@ export default function CaseStudiesPage() {
             </div>
 
             <div className="reveal-zoom reveal-delay-200" style={{ background: '#0a0a0a', padding: '2rem', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.05)', display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
-              <div style={{ background: 'rgba(255,255,255,0.05)', color: '#ffffff', padding: '1rem', borderRadius: '50%' }}>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+              <div style={{ background: 'rgba(255,255,255,0.05)', color: '#ffffff', padding: '1rem', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <Users size={24} />
               </div>
               <div>
                 <div style={{ fontSize: '1.8rem', color: '#ffffff', fontWeight: 600 }}>15+</div>
@@ -320,9 +333,12 @@ export default function CaseStudiesPage() {
             </div>
             <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
               <a href="/contact" style={{ background: '#ffffff', color: '#000000', padding: '0.8rem 1.5rem', borderRadius: '8px', textDecoration: 'none', fontWeight: 600, display: 'flex', alignItems: 'center', gap: '0.5rem', transition: 'background 0.3s' }} onMouseEnter={(e) => e.currentTarget.style.background = '#f0f0f0'} onMouseLeave={(e) => e.currentTarget.style.background = '#ffffff'}>
-                Get Free Consultation →
+                Get Free Consultation <ArrowRight size={16} />
               </a>
-              <a href="https://wa.me/918870524355" target="_blank" style={{ border: '1px solid rgba(255,255,255,0.3)', color: '#ffffff', padding: '0.8rem 1.5rem', borderRadius: '8px', textDecoration: 'none', fontWeight: 500, display: 'flex', alignItems: 'center', gap: '0.5rem', transition: 'background 0.3s' }} onMouseEnter={(e) => e.currentTarget.style.background = 'rgba(255,255,255,0.1)'} onMouseLeave={(e) => e.currentTarget.style.background = 'transparent'}>
+              <a href="https://wa.me/918870524355" target="_blank" rel="noopener noreferrer" style={{ border: '1px solid rgba(255,255,255,0.3)', color: '#ffffff', padding: '0.8rem 1.5rem', borderRadius: '8px', textDecoration: 'none', fontWeight: 500, display: 'flex', alignItems: 'center', gap: '0.5rem', transition: 'background 0.3s' }} onMouseEnter={(e) => e.currentTarget.style.background = 'rgba(255,255,255,0.1)'} onMouseLeave={(e) => e.currentTarget.style.background = 'transparent'}>
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.066 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.772-.725 2.02-1.425.25-.7.25-1.3 0-1.425-.075-.125-.27-.199-.57-.35zM12 2C6.477 2 2 6.477 2 12c0 1.74.443 3.37 1.217 4.793L2 22l5.377-1.411A9.947 9.947 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18c-1.634 0-3.153-.443-4.466-1.214l-.32-.189-3.32.872.887-3.218-.207-.33A7.94 7.94 0 014 12c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8z" />
+                </svg>
                 Chat on WhatsApp
               </a>
             </div>

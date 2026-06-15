@@ -6,6 +6,7 @@ import HeroIllustration from "./components/HeroIllustration";
 import FAQ from "./components/FAQ";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import { ArrowRight, ShoppingBag, Factory, Briefcase, Check, Users, MapPin, Zap, MessageSquare, Globe, LifeBuoy } from "lucide-react";
 
 export default function Home() {
   /* 
@@ -100,8 +101,8 @@ export default function Home() {
             </p>
             
             <div className="hero-actions reveal-from-left reveal-delay-300">
-              <a href="#" className="btn btn-hero-solid">Get Free Consultation</a>
-              <a href="#" className="btn btn-hero-outline">See Our Work</a>
+              <Link href="/contact" className="btn btn-hero-solid">Get Free Consultation</Link>
+              <Link href="#work" className="btn btn-hero-outline">See Our Work</Link>
             </div>
           </div>
           
@@ -126,30 +127,33 @@ export default function Home() {
         
         <div className="cards-grid">
           <div className="reach-card reveal-from-left reveal-delay-100">
-            <div className="card-header">
-              <img src="https://flagcdn.com/w40/in.png" alt="India Flag" className="card-flag" />
-              <h3>IN</h3>
+            <div className="flag-box">
+              <img src="https://flagcdn.com/in.svg" alt="India Flag" className="card-flag" />
             </div>
-            <h4>India</h4>
-            <p>15+ clients across Tamil Nadu — textile brands, retail, travel & food businesses</p>
+            <div className="reach-card-content">
+              <h4>India</h4>
+              <p>15+ clients across Tamil Nadu — textile brands, retail, travel & food businesses</p>
+            </div>
           </div>
           
           <div className="reach-card reveal-zoom reveal-delay-200">
-            <div className="card-header">
-              <img src="https://flagcdn.com/w40/gb.png" alt="UK Flag" className="card-flag" />
-              <h3>GB</h3>
+            <div className="flag-box">
+              <img src="https://flagcdn.com/gb.svg" alt="UK Flag" className="card-flag" />
             </div>
-            <h4>United Kingdom</h4>
-            <p>Built Graaps clothing brand's online store targeting the UK market</p>
+            <div className="reach-card-content">
+              <h4>United Kingdom</h4>
+              <p>Built Graaps clothing brand's online store targeting the UK market</p>
+            </div>
           </div>
           
           <div className="reach-card reveal-from-right reveal-delay-300">
-            <div className="card-header">
-              <img src="https://flagcdn.com/w40/fi.png" alt="Finland Flag" className="card-flag" />
-              <h3>FI</h3>
+            <div className="flag-box">
+              <img src="https://flagcdn.com/fi.svg" alt="Finland Flag" className="card-flag" />
             </div>
-            <h4>Finland</h4>
-            <p>Supported Graaps' global brand launch from their Finland base</p>
+            <div className="reach-card-content">
+              <h4>Finland</h4>
+              <p>Supported Graaps' global brand launch from their Finland base</p>
+            </div>
           </div>
         </div>
       </section>
@@ -170,7 +174,7 @@ export default function Home() {
                 <span className="badge-dev">Development</span>
                 <h4>Website Development</h4>
                 <p>Fast, modern websites that convert visitors into customers</p>
-                <Link href="/services/website-development" className="service-link">Learn More <span>→</span></Link>
+                <Link href="/services/website-development" className="service-link">Learn More <ArrowRight size={14} style={{ display: 'inline-block', marginLeft: '4px', verticalAlign: 'middle' }} /></Link>
               </div>
             </div>
             <div className="service-card">
@@ -179,7 +183,7 @@ export default function Home() {
                 <span className="badge-dev">Development</span>
                 <h4>Mobile Apps</h4>
                 <p>iOS & Android apps built for your business workflow</p>
-                <Link href="/services/mobile-apps" className="service-link">Learn More <span>→</span></Link>
+                <Link href="/services/mobile-apps" className="service-link">Learn More <ArrowRight size={14} style={{ display: 'inline-block', marginLeft: '4px', verticalAlign: 'middle' }} /></Link>
               </div>
             </div>
             <div className="service-card">
@@ -188,7 +192,7 @@ export default function Home() {
                 <span className="badge-dev">Development</span>
                 <h4>Custom Software & ERP</h4>
                 <p>Automate operations — orders, inventory, billing, all in one system</p>
-                <Link href="/services/erp-software" className="service-link">Learn More <span>→</span></Link>
+                <Link href="/services/erp-software" className="service-link">Learn More <ArrowRight size={14} style={{ display: 'inline-block', marginLeft: '4px', verticalAlign: 'middle' }} /></Link>
               </div>
             </div>
             <div className="service-card">
@@ -197,7 +201,7 @@ export default function Home() {
                 <span className="badge-dev">Development</span>
                 <h4>Shopify Stores</h4>
                 <p>Launch your ecommerce store — from setup to first sale</p>
-                <Link href="/services/shopify-stores" className="service-link">Learn More <span>→</span></Link>
+                <Link href="/services/shopify-stores" className="service-link">Learn More <ArrowRight size={14} style={{ display: 'inline-block', marginLeft: '4px', verticalAlign: 'middle' }} /></Link>
               </div>
             </div>
             <div className="service-card">
@@ -206,7 +210,21 @@ export default function Home() {
                 <span className="badge-ai">AI/ML</span>
                 <h4>AI/ML Solutions</h4>
                 <p>Automate repetitive tasks, reduce costs, scale faster</p>
-                <Link href="/services/ai-solutions" className="service-link">Learn More <span>→</span></Link>
+                <Link href="/services/ai-solutions" className="service-link">Learn More <ArrowRight size={14} style={{ display: 'inline-block', marginLeft: '4px', verticalAlign: 'middle' }} /></Link>
+              </div>
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'column', padding: '1.5rem', justifyContent: 'center' }}>
+              <div>
+                <span className="badge-dev" style={{ background: 'linear-gradient(135deg, #7928CA 0%, #FF007A 100%)', color: '#ffffff', marginBottom: '1.25rem', display: 'inline-block', padding: '0.25rem 0.75rem', borderRadius: '20px', fontSize: '0.75rem', fontWeight: 500, textTransform: 'uppercase' }}>Custom</span>
+                <h4 style={{ fontSize: '1.5rem', fontWeight: 600, color: '#ffffff', marginBottom: '0.75rem', marginTop: '0.5rem' }}>Have a Custom Project?</h4>
+                <p style={{ color: '#a3a3a3', fontSize: '0.95rem', lineHeight: '1.6', marginBottom: '1.5rem', margin: 0 }}>
+                  Need a custom software system, mobile app, or specialized integration? We build bespoke tech tailored to your workflows.
+                </p>
+              </div>
+              <div style={{ marginTop: '1.5rem' }}>
+                <Link href="/contact" className="service-link" style={{ color: '#ffffff', textDecoration: 'none', fontWeight: 500, display: 'flex', alignItems: 'center', gap: '0.5rem', transition: 'color 0.3s' }}>
+                  Contact Us <ArrowRight size={14} style={{ display: 'inline-block', marginLeft: '4px', verticalAlign: 'middle' }} />
+                </Link>
               </div>
             </div>
           </div>
@@ -221,7 +239,7 @@ export default function Home() {
                 <span className="badge-marketing">Marketing</span>
                 <h4>Performance Marketing</h4>
                 <p>Meta & Google Ads that bring real paying customers</p>
-                <Link href="/services/performance-marketing" className="service-link">Learn More <span>→</span></Link>
+                <Link href="/services/performance-marketing" className="service-link">Learn More <ArrowRight size={14} style={{ display: 'inline-block', marginLeft: '4px', verticalAlign: 'middle' }} /></Link>
               </div>
             </div>
             <div className="service-card">
@@ -230,7 +248,7 @@ export default function Home() {
                 <span className="badge-marketing">Marketing</span>
                 <h4>Social Media Marketing</h4>
                 <p>Content + strategy to grow your brand online</p>
-                <Link href="/services/social-media-marketing" className="service-link">Learn More <span>→</span></Link>
+                <Link href="/services/social-media-marketing" className="service-link">Learn More <ArrowRight size={14} style={{ display: 'inline-block', marginLeft: '4px', verticalAlign: 'middle' }} /></Link>
               </div>
             </div>
             <div className="service-card">
@@ -239,7 +257,7 @@ export default function Home() {
                 <span className="badge-content">Content</span>
                 <h4>UGC Video Creation</h4>
                 <p>Authentic product videos that drive sales</p>
-                <Link href="/services/ugc-video-creation" className="service-link">Learn More <span>→</span></Link>
+                <Link href="/services/ugc-video-creation" className="service-link">Learn More <ArrowRight size={14} style={{ display: 'inline-block', marginLeft: '4px', verticalAlign: 'middle' }} /></Link>
               </div>
             </div>
           </div>
@@ -255,29 +273,29 @@ export default function Home() {
         <div className="business-grid reveal-zoom reveal-delay-200">
           <div className="business-card">
             <div className="business-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+              <ShoppingBag size={24} />
             </div>
             <h4>Ecommerce Brands</h4>
             <p>We help clothing, food & retail businesses go online — with stores that actually sell.</p>
-            <a href="#" className="business-link">Scale your brand <span>→</span></a>
+            <Link href="/services/shopify-stores" className="business-link">Scale your brand <ArrowRight size={14} style={{ display: 'inline-block', marginLeft: '4px', verticalAlign: 'middle' }} /></Link>
           </div>
 
           <div className="business-card">
             <div className="business-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M17 18h1"/><path d="M12 18h1"/><path d="M7 18h1"/></svg>
+              <Factory size={24} />
             </div>
-            <h4>Textile & Manufacturing</h4>
+            <h4>Enterprise Systems & Automation</h4>
             <p>ERP & automation systems that replace spreadsheets — orders, inventory, tracking.</p>
-            <a href="#" className="business-link">Automate your business <span>→</span></a>
+            <Link href="/services/erp-software" className="business-link">Automate your business <ArrowRight size={14} style={{ display: 'inline-block', marginLeft: '4px', verticalAlign: 'middle' }} /></Link>
           </div>
 
           <div className="business-card">
             <div className="business-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+              <Briefcase size={24} />
             </div>
             <h4>Service Businesses</h4>
             <p>Interiors, travel, consultancies — website, app & digital presence from scratch.</p>
-            <a href="#" className="business-link">Get started <span>→</span></a>
+            <Link href="#services" className="business-link">Get started <ArrowRight size={14} style={{ display: 'inline-block', marginLeft: '4px', verticalAlign: 'middle' }} /></Link>
           </div>
         </div>
       </section>
@@ -287,56 +305,55 @@ export default function Home() {
           <h2>Real projects. Real results.</h2>
         </div>
 
-        <div className="work-grid reveal-on-scroll reveal-delay-200">
-          {[
-            { title: "SugarStar", category: "Shopify Development", badgeClass: "badge-dev", desc: "Premium confectionery online store", image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=800&auto=format&fit=crop" },
-            { title: "JP Interiors App", category: "App Development", badgeClass: "badge-dev", desc: "Custom business automation and project management app", image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=800&auto=format&fit=crop" },
-            { title: "Team3 Associates", category: "Custom Development", badgeClass: "badge-dev", desc: "Interior Design and Project Execution", image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop" },
-            { title: "JP Interiors Web", category: "Web Development", badgeClass: "badge-dev", desc: "Interior design portfolio and service showcase", image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=800&auto=format&fit=crop" },
-            { title: "Food delivery app", category: "Custom Development", badgeClass: "badge-dev", desc: "On-demand food delivery service", image: "https://images.unsplash.com/photo-1526367790999-0150786686a2?q=80&w=800&auto=format&fit=crop" },
-            { title: "Teerex", category: "Custom Development", badgeClass: "badge-dev", desc: "E-commerce platform with custom features", image: "https://images.unsplash.com/photo-1556740749-887f6717d7e4?q=80&w=800&auto=format&fit=crop" },
-            { title: "Mallika Garments", category: "Custom Development", badgeClass: "badge-dev", desc: "Fashion retail business solution", image: "https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?q=80&w=800&auto=format&fit=crop" },
-            { title: "Graaps", category: "Clothing Brand", badgeClass: "badge-marketing", desc: "Online clothing store", image: "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?q=80&w=800&auto=format&fit=crop" },
-            { title: "Zydenn", category: "Clothing Brand", badgeClass: "badge-marketing", desc: "Online clothing store", image: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=800&auto=format&fit=crop" },
-            { title: "Kores Fabrics", category: "Clothing Brand", badgeClass: "badge-marketing", desc: "Online clothing Wholesale Store", image: "https://images.unsplash.com/photo-1558769132-cb1fac0840f2?q=80&w=800&auto=format&fit=crop" },
-            { title: "Kido Care", category: "Kids Clothing Brand", badgeClass: "badge-ai", desc: "Online clothing store", image: "https://images.unsplash.com/photo-1519241047957-be31d7379a5d?q=80&w=800&auto=format&fit=crop" },
-            { title: "Sun Holidays", category: "Tours and Travel", badgeClass: "badge-content", desc: "Travel Agency Portfolio", image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=800&auto=format&fit=crop" },
-            { title: "Twinstar", category: "Clothing Brand", badgeClass: "badge-marketing", desc: "Online clothing store", image: "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=800&auto=format&fit=crop" },
-            { title: "Livinza", category: "Interior Business", badgeClass: "badge-content", desc: "Interior Business Portfolio", image: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=800&auto=format&fit=crop" }
-          ].map((project, index) => (
-            <div className="work-card" key={index}>
-              <div className="work-card-image">
-                <img src={project.image} alt={project.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-              </div>
-              <div className="work-card-content">
-                <span className={project.badgeClass}>{project.category}</span>
-                <h4 className="work-title">{project.title}</h4>
-                <p className="work-highlight">
-                  <span className="check-icon">✓</span> {project.desc}
-                </p>
-              </div>
+        <div className="work-marquee-wrapper reveal-from-left reveal-delay-200">
+          <div className="work-marquee-container">
+            <div className="work-marquee-content">
+              {[
+                { title: "SugarStar", category: "Shopify Development", badgeClass: "badge-dev", desc: "Premium confectionery online store", image: "/images/sugarstar_web.jpeg" },
+                { title: "JP Interiors App", category: "App Development", badgeClass: "badge-dev", desc: "Custom business automation and project management app", image: "/images/JpApp_works.png" },
+                { title: "Team3 Associates", category: "Custom Development", badgeClass: "badge-dev", desc: "Interior Design and Project Execution", image: "/images/team3_web.png" },
+                { title: "JP Interiors Web", category: "Web Development", badgeClass: "badge-dev", desc: "Interior design portfolio and service showcase", image: "/images/JpWeb_works.png" },
+                { title: "Teerex", category: "Custom Development", badgeClass: "badge-dev", desc: "E-commerce platform with custom features", image: "/images/graaps_web.png" },
+                { title: "Mallika Garments", category: "Custom Development", badgeClass: "badge-dev", desc: "Fashion retail business solution", image: "/images/malika-garments_web.jpg" },
+                { title: "Graaps", category: "Clothing Brand", badgeClass: "badge-marketing", desc: "Online clothing store", image: "/images/graaps_web.png" },
+                { title: "Zydenn", category: "Clothing Brand", badgeClass: "badge-marketing", desc: "Online clothing store", image: "/images/kyto_web.jpeg" },
+                { title: "Kores Fabrics", category: "Clothing Brand", badgeClass: "badge-marketing", desc: "Online clothing Wholesale Store", image: "/images/kores_web.png" },
+                { title: "Kido Care", category: "Kids Clothing Brand", badgeClass: "badge-ai", desc: "Online clothing store", image: "/images/kido_care_web.jpg" },
+                { title: "Sun Holidays", category: "Tours and Travel Agency", badgeClass: "badge-content", desc: "Travel Agency Portfolio", image: "/images/sun_holidays_web.png" },
+                { title: "Twinstar", category: "Clothing Brand", badgeClass: "badge-marketing", desc: "Online clothing store", image: "/images/kyto_web.jpeg" },
+                { title: "Livinza", category: "Interior Business", badgeClass: "badge-content", desc: "Interior Business Portfolio", image: "/images/livinza_web.png" },
+                // Duplicate for infinite scroll
+                { title: "SugarStar", category: "Shopify Development", badgeClass: "badge-dev", desc: "Premium confectionery online store", image: "/images/sugarstar_web.jpeg" },
+                { title: "JP Interiors App", category: "App Development", badgeClass: "badge-dev", desc: "Custom business automation and project management app", image: "/images/JpApp_works.png" },
+                { title: "Team3 Associates", category: "Custom Development", badgeClass: "badge-dev", desc: "Interior Design and Project Execution", image: "/images/team3_web.png" },
+                { title: "JP Interiors Web", category: "Web Development", badgeClass: "badge-dev", desc: "Interior design portfolio and service showcase", image: "/images/JpWeb_works.png" },
+                { title: "Teerex", category: "Custom Development", badgeClass: "badge-dev", desc: "E-commerce platform with custom features", image: "/images/graaps_web.png" },
+                { title: "Mallika Garments", category: "Custom Development", badgeClass: "badge-dev", desc: "Fashion retail business solution", image: "/images/malika-garments_web.jpg" },
+                { title: "Graaps", category: "Clothing Brand", badgeClass: "badge-marketing", desc: "Online clothing store", image: "/images/graaps_web.png" },
+                { title: "Zydenn", category: "Clothing Brand", badgeClass: "badge-marketing", desc: "Online clothing store", image: "/images/kyto_web.jpeg" },
+                { title: "Kores Fabrics", category: "Clothing Brand", badgeClass: "badge-marketing", desc: "Online clothing Wholesale Store", image: "/images/kores_web.png" },
+                { title: "Kido Care", category: "Kids Clothing Brand", badgeClass: "badge-ai", desc: "Online clothing store", image: "/images/kido_care_web.jpg" },
+                { title: "Sun Holidays", category: "Tours and Travel Agency", badgeClass: "badge-content", desc: "Travel Agency Portfolio", image: "/images/sun_holidays_web.png" },
+                { title: "Twinstar", category: "Clothing Brand", badgeClass: "badge-marketing", desc: "Online clothing store", image: "/images/kyto_web.jpeg" },
+                { title: "Livinza", category: "Interior Business", badgeClass: "badge-content", desc: "Interior Business Portfolio", image: "/images/livinza_web.png" }
+              ].map((project, index) => (
+                <div className="work-card" key={index}>
+                  <div className="work-card-image">
+                    <img src={project.image} alt={project.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  </div>
+                  <div className="work-card-content">
+                    <span className={project.badgeClass}>{project.category}</span>
+                    <h4 className="work-title">{project.title}</h4>
+                    <p className="work-highlight">
+                      <Check size={14} className="check-icon" style={{ display: 'inline-block', marginRight: '4px', verticalAlign: 'middle', color: '#ffffff' }} /> {project.desc}
+                    </p>
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
 
-        <div className="stats-row reveal-zoom reveal-delay-300">
-          <div className="stat-card">
-            <h3 className="stat-value">15+</h3>
-            <span className="stat-label">Projects delivered</span>
-          </div>
-          <div className="stat-card">
-            <h3 className="stat-value">3</h3>
-            <span className="stat-label">Countries</span>
-          </div>
-          <div className="stat-card">
-            <h3 className="stat-value">5+</h3>
-            <span className="stat-label">Industries</span>
-          </div>
-          <div className="stat-card">
-            <h3 className="stat-value">24h</h3>
-            <span className="stat-label">Response time</span>
-          </div>
-        </div>
       </section>
 
       <section id="clients" className="clients-testimonials-section">
@@ -345,33 +362,72 @@ export default function Home() {
           <h2>Businesses that trust us</h2>
         </div>
 
-        <div className="client-logo-grid reveal-zoom reveal-delay-200">
-          {[
-            { name: "SugarStar", category: "Textile", logo: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=150&auto=format&fit=crop" },
-            { name: "JP Aluminium", category: "Interiors", logo: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=150&auto=format&fit=crop" },
-            { name: "Team3Associates", category: "Architectural", logo: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=150&auto=format&fit=crop" },
-            { name: "Aharraa", category: "Food", logo: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=150&auto=format&fit=crop" },
-            { name: "Teerex", category: "Textile", logo: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=150&auto=format&fit=crop" },
-            { name: "Twinstar", category: "Textile", logo: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=150&auto=format&fit=crop" },
-            { name: "Kyto", category: "Textile", logo: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=150&auto=format&fit=crop" },
-            { name: "NSK", category: "Textile", logo: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=150&auto=format&fit=crop" },
-            { name: "Mallika Garments", category: "Textile", logo: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=150&auto=format&fit=crop" },
-            { name: "NP Global Exports", category: "Textile", logo: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=150&auto=format&fit=crop" },
-            { name: "Zyden", category: "Textile", logo: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=150&auto=format&fit=crop" },
-            { name: "Graaps", category: "Textile", logo: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=150&auto=format&fit=crop" },
-            { name: "Kores Fabrics", category: "Textile", logo: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=150&auto=format&fit=crop" },
-            { name: "Kido Care", category: "Textile", logo: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=150&auto=format&fit=crop" },
-            { name: "Sun Holidays", category: "Travel", logo: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=150&auto=format&fit=crop" },
-            { name: "Livinza", category: "Textile", logo: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=150&auto=format&fit=crop" }
-          ].map((client, index) => (
-            <div className="client-logo-item" key={index}>
-              <div className="client-logo-box">
-                <img src={client.logo} alt={client.name} />
-              </div>
-              <p className="client-logo-name">{client.name}</p>
-              <p className="client-logo-category">{client.category}</p>
+        <div className="clients-marquee-wrapper reveal-zoom reveal-delay-200">
+          {/* Row 1: Leftward Scroll */}
+          <div className="clients-marquee-container">
+            <div className="clients-marquee-content clients-marquee-content-left">
+              {[
+                { name: "SugarStar", category: "Retail", logo: "/images/sugarstar_logo.jpg" },
+                { name: "West", category: "Textile", logo: "/images/West_logo.png" },
+                { name: "Aharraa", category: "Food", logo: "/images/aharraa_logo.jpg" },
+                { name: "Teerex", category: "Textile", logo: "/images/teerex_logo.jpg" },
+                { name: "Twinstar", category: "Textile", logo: "/images/twinstar_logo.jpg" },
+                { name: "Kyto", category: "Textile", logo: "/images/kyto_logo.jpg" },
+                { name: "NSK", category: "Textile", logo: "/images/nsk_logo.jpg" },
+                { name: "JP Nets", category: "Textile", logo: "/images/jpnets_logo.jpg" },
+                // Duplicate for infinite scroll
+                { name: "SugarStar", category: "Retail", logo: "/images/sugarstar_logo.jpg" },
+                { name: "West", category: "Textile", logo: "/images/West_logo.png" },
+                { name: "Aharraa", category: "Food", logo: "/images/aharraa_logo.jpg" },
+                { name: "Teerex", category: "Textile", logo: "/images/teerex_logo.jpg" },
+                { name: "Twinstar", category: "Textile", logo: "/images/twinstar_logo.jpg" },
+                { name: "Kyto", category: "Textile", logo: "/images/kyto_logo.jpg" },
+                { name: "NSK", category: "Textile", logo: "/images/nsk_logo.jpg" },
+                { name: "JP Nets", category: "Textile", logo: "/images/jpnets_logo.jpg" }
+              ].map((client, index) => (
+                <div className="client-logo-item" key={index}>
+                  <div className="client-logo-box">
+                    <img src={client.logo} alt={client.name} style={{ backgroundColor: '#ffffff', padding: '10px' }} />
+                  </div>
+                  <p className="client-logo-name">{client.name}</p>
+                  <p className="client-logo-category">{client.category}</p>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
+
+          {/* Row 2: Rightward Scroll */}
+          <div className="clients-marquee-container" style={{ marginTop: '1.5rem' }}>
+            <div className="clients-marquee-content clients-marquee-content-right">
+              {[
+                { name: "Mallika Garments", category: "Textile", logo: "/images/mallika_garments_logo.jpg" },
+                { name: "NP Global Exports", category: "Textile", logo: "/images/npglobal_logo.jpg" },
+                { name: "Zyden", category: "Textile", logo: "/images/zyden_logo.jpg" },
+                { name: "Graaps", category: "Textile", logo: "/images/graasp_logo.jpg" },
+                { name: "Kores Fabrics", category: "Textile", logo: "/images/kores_logo.jpg" },
+                { name: "Kido Care", category: "Textile", logo: "/images/kido_care_logo.png" },
+                { name: "Sun Holidays", category: "Travel", logo: "/images/sun_holidays_logo.png" },
+                { name: "Livinza", category: "Interiors", logo: "/images/livinza_logo.png" },
+                // Duplicate for infinite scroll
+                { name: "Mallika Garments", category: "Textile", logo: "/images/mallika_garments_logo.jpg" },
+                { name: "NP Global Exports", category: "Textile", logo: "/images/npglobal_logo.jpg" },
+                { name: "Zyden", category: "Textile", logo: "/images/zyden_logo.jpg" },
+                { name: "Graaps", category: "Textile", logo: "/images/graasp_logo.jpg" },
+                { name: "Kores Fabrics", category: "Textile", logo: "/images/kores_logo.jpg" },
+                { name: "Kido Care", category: "Textile", logo: "/images/kido_care_logo.png" },
+                { name: "Sun Holidays", category: "Travel", logo: "/images/sun_holidays_logo.png" },
+                { name: "Livinza", category: "Interiors", logo: "/images/livinza_logo.png" }
+              ].map((client, index) => (
+                <div className="client-logo-item" key={index}>
+                  <div className="client-logo-box">
+                    <img src={client.logo} alt={client.name} style={{ backgroundColor: '#ffffff', padding: '10px' }} />
+                  </div>
+                  <p className="client-logo-name">{client.name}</p>
+                  <p className="client-logo-category">{client.category}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
 
         <div className="testimonials-marquee-wrapper reveal-from-left reveal-delay-300">
@@ -418,18 +474,16 @@ export default function Home() {
         
         <div className="features-bento-grid reveal-on-scroll reveal-delay-200">
           {[
-            { title: "Full stack team", desc: "Design, development and marketing — one team, one place, no middlemen. We handle the entire lifecycle of your product." },
-            { title: "Based in Tiruppur", desc: "As the top software company in Tiruppur, we understand Tamil Nadu's textile, garments manufacturing, and business landscape better than anyone." },
-            { title: "Fast delivery", desc: "Most projects delivered in 2–6 weeks — not 6 months." },
-            { title: "Direct communication", desc: "You talk to the developers actually building your product — not a sales rep." },
-            { title: "Global experience", desc: "Delivered premium projects for clients across India, UK and Finland." },
-            { title: "Post-launch support", desc: "We don't disappear after delivery — ongoing support, maintenance, and updates are part of our commitment to your growth." }
+            { title: "Full stack team", icon: <Users size={24} />, desc: "Design, development and marketing — one team, one place, no middlemen. We handle the entire lifecycle of your product." },
+            { title: "Based in Tiruppur", icon: <MapPin size={24} />, desc: "As the top software company in Tiruppur, we understand Tamil Nadu's textile, garments manufacturing, and business landscape better than anyone." },
+            { title: "Fast delivery", icon: <Zap size={24} />, desc: "Most projects delivered in 2–6 weeks — not 6 months." },
+            { title: "Direct communication", icon: <MessageSquare size={24} />, desc: "You talk to the developers actually building your product — not a sales rep." },
+            { title: "Global experience", icon: <Globe size={24} />, desc: "Delivered premium projects for clients across India, UK and Finland." },
+            { title: "Post-launch support", icon: <LifeBuoy size={24} />, desc: "We don't disappear after delivery — ongoing support, maintenance, and updates are part of our commitment to your growth." }
           ].map((feature, index) => (
             <div className="bento-card" key={index}>
               <div className="bento-icon-wrapper">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
-                </svg>
+                {feature.icon}
               </div>
               <div className="bento-content">
                 <h3 className="bento-title">{feature.title}</h3>
@@ -450,14 +504,22 @@ export default function Home() {
             <p className="cta-subtitle">Tell us what you need — we'll get back to you within 24 hours.</p>
             
             <div className="cta-buttons">
-              <button className="cta-btn primary">Start a Project</button>
-              <button className="cta-btn secondary">WhatsApp Us</button>
+              <Link href="/contact" className="cta-btn primary" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>
+                Start a Project
+              </Link>
+              <a href="https://wa.me/918870524355" target="_blank" rel="noopener noreferrer" className="cta-btn secondary" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>
+                WhatsApp Us
+              </a>
             </div>
 
             <div className="cta-contact">
-              <span>thehynoxofficial@gmail.com</span>
+              <a href="mailto:thehynoxofficial@gmail.com" style={{ color: 'inherit', textDecoration: 'none' }}>
+                thehynoxofficial@gmail.com
+              </a>
               <span className="separator">·</span>
-              <span>+91 88705 24355</span>
+              <a href="tel:+918870524355" style={{ color: 'inherit', textDecoration: 'none' }}>
+                +91 88705 24355
+              </a>
             </div>
           </div>
         </div>
