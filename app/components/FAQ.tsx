@@ -3,8 +3,8 @@
 import { useState, useEffect } from 'react';
 
 const faqs = [
-  { q: "What software services does HYNOX provide in Tiruppur?", a: "HYNOX is a custom software development company based in Tiruppur, Tamil Nadu. We specialize in building custom web applications, mobile apps (Android & iOS), enterprise ERP systems, Shopify stores, and custom AI business automation." },
-  { q: "Does HYNOX provide custom software development in Tiruppur?", a: "Yes, HYNOX is a custom software company based in Tiruppur, Tamil Nadu. We design and build custom business databases, inventory portals, and CRM/ERP systems tailored for garment manufacturers, textile brands, and e-commerce stores." },
+  { q: "What software services does HYNOX provide in Coimbatore?", a: "HYNOX is a custom software development company based in Coimbatore, Tamil Nadu. We specialize in building custom web applications, mobile apps (Android & iOS), enterprise ERP systems, Shopify stores, and custom AI business automation." },
+  { q: "Does HYNOX provide custom software development in Coimbatore?", a: "Yes, HYNOX is a custom software company based in Coimbatore, Tamil Nadu. We design and build custom business databases, inventory portals, and CRM/ERP systems tailored for garment manufacturers, textile brands, and e-commerce stores." },
   { q: "What industries does HYNOX work with?", a: "We work with textile manufacturers, garment brands, ecommerce businesses, interior designers, travel agencies, food businesses, and startups." },
   { q: "Do you build custom software for businesses?", a: "Yes, we develop custom software tailored to your business processes, workflows, and growth requirements." },
   { q: "Can HYNOX develop ERP software?", a: "Yes, we build ERP software for inventory management, order processing, billing, production tracking, and business automation." },

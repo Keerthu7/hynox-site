@@ -13,23 +13,23 @@ export const posts: BlogPost[] = [
   // --- WEB DEVELOPMENT (1-10) ---
   {
     id: 1,
-    title: 'Website Development Cost in Tiruppur (2025 Guide)',
-    desc: 'Learn how much a business website costs in Tiruppur and what factors affect pricing, features, and development timelines.',
+    title: 'Website Development Cost in Coimbatore (2025 Guide)',
+    desc: 'Learn how much a business website costs in Coimbatore and what factors affect pricing, features, and development timelines.',
     category: 'Web Development',
     date: 'May 10, 2025',
     readTime: '7 min read',
     image: '/web-development-hero.png',
-    slug: 'website-development-cost-in-tiruppur-2025-guide'
+    slug: 'website-development-cost-in-coimbatore-2025-guide'
   },
   {
     id: 2,
-    title: 'Leading Web Development Company in Tiruppur: How to Choose',
+    title: 'Leading Web Development Company in Coimbatore: How to Choose',
     desc: 'Discover what to look for when selecting a web development company for your business in Tamil Nadu.',
     category: 'Web Development',
     date: 'May 12, 2025',
     readTime: '6 min read',
     image: '/web-development-hero.png',
-    slug: 'leading-web-development-company-in-tiruppur-how-to-choose'
+    slug: 'leading-web-development-company-in-coimbatore-how-to-choose'
   },
   {
     id: 3,
@@ -44,7 +44,7 @@ export const posts: BlogPost[] = [
   {
     id: 4,
     title: 'Why Every Textile Business Needs a Professional Website',
-    desc: 'See how textile manufacturers in Tiruppur use websites to generate leads and grow globally.',
+    desc: 'See how textile manufacturers in Coimbatore use websites to generate leads and grow globally.',
     category: 'Web Development',
     date: 'May 16, 2025',
     readTime: '6 min read',
@@ -125,13 +125,13 @@ export const posts: BlogPost[] = [
   },
   {
     id: 12,
-    title: 'ERP Software for Textile Manufacturers in Tiruppur',
+    title: 'ERP Software for Textile Manufacturers in Coimbatore',
     desc: 'How ERP systems streamline inventory, orders, and production.',
     category: 'Automation',
     date: 'June 3, 2025',
     readTime: '7 min read',
     image: '/erp-software-hero.png',
-    slug: 'erp-software-for-textile-manufacturers-in-tiruppur'
+    slug: 'erp-software-for-textile-manufacturers-in-coimbatore'
   },
   {
     id: 13,
@@ -421,13 +421,13 @@ export const posts: BlogPost[] = [
   // --- SEO & DIGITAL MARKETING (41-50) ---
   {
     id: 41,
-    title: 'Local SEO Guide for Businesses in Tiruppur',
+    title: 'Local SEO Guide for Businesses in Coimbatore',
     desc: 'Improve visibility and attract local customers.',
     category: 'Digital Marketing',
     date: 'Aug 1, 2025',
     readTime: '6 min read',
     image: '/performance-marketing-hero.png',
-    slug: 'local-seo-guide-for-businesses-in-tiruppur'
+    slug: 'local-seo-guide-for-businesses-in-coimbatore'
   },
   {
     id: 42,
@@ -561,11 +561,11 @@ export interface BlogDetail {
 
 export function getBlogDetail(post: BlogPost): BlogDetail {
   // Return custom, extremely rich details for the primary cost guide
-  if (post.slug === 'website-development-cost-in-tiruppur-2025-guide') {
+  if (post.slug === 'website-development-cost-in-coimbatore-2025-guide') {
     return {
-      quickAnswer: 'Website development in Tiruppur typically costs between ₹15,000 and ₹2,50,000 depending on features, design complexity, integrations and business requirements.',
-      introduction: 'Understanding the costs involved in building a new website is the crucial first step. In this guide, we break down website development costs in Tiruppur, exploring key pricing structures, components, and how to choose the right partner.',
-      problem: 'Many small and medium textile or manufacturing businesses in Tiruppur struggle to estimate realistic pricing when looking to take their operations online. Outdated rates or lack of technical transparency often lead to paying for features they don\'t need or ending up with slow, insecure websites that lose potential customers.',
+      quickAnswer: 'Website development in Coimbatore typically costs between ₹15,000 and ₹2,50,000 depending on features, design complexity, integrations and business requirements.',
+      introduction: 'Understanding the costs involved in building a new website is the crucial first step. In this guide, we break down website development costs in Coimbatore, exploring key pricing structures, components, and how to choose the right partner.',
+      problem: 'Many small and medium textile or manufacturing businesses in Coimbatore struggle to estimate realistic pricing when looking to take their operations online. Outdated rates or lack of technical transparency often lead to paying for features they don\'t need or ending up with slow, insecure websites that lose potential customers.',
       solution: 'Our systematic pricing guide offers transparency. By separating requirements into Basic Business, E-commerce, and Custom Web Applications, businesses can align their target budget with the essential features required to make a massive global impact.',
       benefits: [
         'Clear pricing structures that fit specific budgets.',
@@ -580,7 +580,7 @@ export function getBlogDetail(post: BlogPost): BlogDetail {
         'Ignoring website performance and search rankings.',
         'No clear structure or conversion goals.'
       ],
-      conclusion: 'Ready to take your Tiruppur business to the next level? Contact our expert engineering team for a transparent quote customized precisely to your requirements.',
+      conclusion: 'Ready to take your Coimbatore business to the next level? Contact our expert engineering team for a transparent quote customized precisely to your requirements.',
       sections: [
         {
           title: '1. What Affects Website Development Cost?',
@@ -591,7 +591,7 @@ export function getBlogDetail(post: BlogPost): BlogDetail {
           ]
         },
         {
-          title: '2. Business Website Cost in Tiruppur',
+          title: '2. Business Website Cost in Coimbatore',
           anchorId: 'business-cost',
           paragraphs: [
             'Estimated Cost: ₹15,000 – ₹40,000',
@@ -600,7 +600,7 @@ export function getBlogDetail(post: BlogPost): BlogDetail {
           ]
         },
         {
-          title: '3. eCommerce Website Cost in Tiruppur',
+          title: '3. eCommerce Website Cost in Coimbatore',
           anchorId: 'ecommerce-cost',
           paragraphs: [
             'Estimated Cost: ₹35,000 – ₹1,50,000+',
@@ -609,7 +609,7 @@ export function getBlogDetail(post: BlogPost): BlogDetail {
           ]
         },
         {
-          title: '4. Custom Web Application Cost in Tiruppur',
+          title: '4. Custom Web Application Cost in Coimbatore',
           anchorId: 'custom-app-cost',
           paragraphs: [
             'Estimated Cost: ₹50,000 – ₹5,000,000+',
@@ -619,7 +619,7 @@ export function getBlogDetail(post: BlogPost): BlogDetail {
         }
       ],
       faqs: [
-        { q: 'How much does a basic business website cost in Tiruppur?', a: 'A basic informational website ranges from ₹15,000 to ₹40,000 depending on page count and layout design.' },
+        { q: 'How much does a basic business website cost in Coimbatore?', a: 'A basic informational website ranges from ₹15,000 to ₹40,000 depending on page count and layout design.' },
         { q: 'How long does it take to build a website?', a: 'Informational websites take 2-3 weeks, eCommerce stores take 3-5 weeks, and custom web applications take 6-12 weeks.' },
         { q: 'Do you provide domain and hosting service?', a: 'Yes, we provide secure, high-speed cloud hosting and domain setup with SSL certificates included in our packages.' },
         { q: 'Will my website be mobile-responsive?', a: 'Yes, every website we design is fully optimized for mobile devices, tablets, laptops, and desktop screens.' },
@@ -627,7 +627,7 @@ export function getBlogDetail(post: BlogPost): BlogDetail {
         { q: 'Can I update my website content myself after launch?', a: 'Yes, we build user-friendly administration panels (or Shopify/WordPress dashboards) so you can update product catalogs, images, and text easily.' },
         { q: 'Is SEO included in the website development cost?', a: 'We include basic search engine indexing and site speed optimization. For ongoing organic keyword rankings, we offer custom SEO management campaigns.' },
         { q: 'What is the cost of redesigning an existing website?', a: 'Website redesigning starts from ₹12,000 and depends on whether you are migrating platforms, restructuring pages, or rewriting copy.' },
-        { q: 'Do you design custom web applications for factories in Tiruppur?', a: 'Yes, we specialize in custom web applications for tracking textile production, scheduling looms, and managing orders.' },
+        { q: 'Do you design custom web applications for factories in Coimbatore?', a: 'Yes, we specialize in custom web applications for tracking textile production, scheduling looms, and managing orders.' },
         { q: 'What security practices do you use for web projects?', a: 'We implement HTTPS/SSL, clean database query structures to prevent injections, secure login interfaces, and automatic daily backups.' }
       ]
     };

@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Header from '../components/Header';
+import CubesBackground from '../components/CubesBackground';
 import Footer from '../components/Footer';
 import { posts } from './blogData';
 import { Calendar, Clock, ArrowRight, ChevronLeft, ChevronRight, Search, Check, Mail } from 'lucide-react';
@@ -18,13 +19,13 @@ export default function BlogPage() {
 
   const popularPosts = [
     {
-      title: 'Website Development Cost in Tiruppur – Complete Guide',
+      title: 'Website Development Cost in Coimbatore – Complete Guide',
       date: 'Apr 28, 2025',
       image: '/web-development-hero.png',
-      slug: 'website-development-cost-in-tiruppur-2025-guide',
+      slug: 'website-development-cost-in-coimbatore-2025-guide',
     },
     {
-      title: 'Why Every Business in Tiruppur Needs a Professional Website',
+      title: 'Why Every Business in Coimbatore Needs a Professional Website',
       date: 'Apr 20, 2025',
       image: '/performance-marketing-hero.png',
       slug: 'why-every-textile-business-needs-a-professional-website',
@@ -156,34 +157,33 @@ export default function BlogPage() {
       <main style={{ background: '#000000', color: '#ffffff', minHeight: '100vh', paddingBottom: '6rem' }}>
         
         {/* HERO SECTION */}
-        <section className="cs-hero-section reveal-blur">
-          <div className="cs-hero-grid">
-            {/* Left Content */}
-            <div className="cs-hero-left" style={{ paddingLeft: '0' }}>
-              <div className="badge reveal-fade-in" style={{ marginBottom: '1rem' }}>BLOG</div>
-              <h1 className="reveal-from-left reveal-delay-100 cs-page-title">
-                Insights That Drive<br/>
-                <span style={{ color: '#ffffff' }}>Digital Growth.</span>
-              </h1>
-              <p className="reveal-from-left reveal-delay-200 cs-page-desc">
-                Practical tips, industry insights and expert guides on web development, eCommerce, automation and digital marketing.
-              </p>
-              <div className="reveal-fade-in reveal-delay-300 cs-hero-btn-container">
-                <a href="#topics" className="cs-contact-btn" onMouseEnter={(e) => { e.currentTarget.style.transform = 'scale(1.05)'; e.currentTarget.style.boxShadow = '0 10px 20px rgba(255,255,255,0.2)'; }} onMouseLeave={(e) => { e.currentTarget.style.transform = 'scale(1)'; e.currentTarget.style.boxShadow = 'none'; }}>
-                  Explore Topics <ArrowRight size={18} style={{ marginLeft: '4px', display: 'inline-block', verticalAlign: 'middle' }} />
-                </a>
-              </div>
-            </div>
-            
-            {/* Right Image */}
-            <div className="cs-hero-right reveal-zoom reveal-delay-200">
-              <div className="cs-hero-img-box">
-                <img 
-                  src="/blog-hero-bright.png" 
-                  alt="HYNOX Blog Insights Mockup" 
-                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                />
-              </div>
+        <section className="hero-center-section">
+          {/* Animated Cubes Background */}
+          <div className="absolute inset-0 w-full h-full z-0" style={{ background: "#050505" }}>
+            <CubesBackground />
+          </div>
+
+          {/* Radial gradient overlay */}
+          <div className="absolute inset-0 z-[1] pointer-events-none" style={{ background: "radial-gradient(ellipse at 50% 50%, rgba(20,35,100,0.25) 0%, rgba(5,5,5,0.65) 75%)" }} />
+
+          <div className="hero-center-content">
+            <span className="hero-badge reveal-fade-in">
+              BLOG
+            </span>
+
+            <h1 className="hero-center-h1 reveal-fade-in reveal-delay-100">
+              Insights That Drive<br/>
+              <span style={{ color: '#ffffff' }}>Digital Growth.</span>
+            </h1>
+
+            <p className="hero-center-p reveal-fade-in reveal-delay-200">
+              Practical tips, industry insights and expert guides on web development, eCommerce, automation and digital marketing.
+            </p>
+
+            <div className="hero-center-actions reveal-fade-in reveal-delay-300">
+              <a href="#topics" className="btn btn-hero-solid">
+                Explore Topics <ArrowRight size={18} style={{ marginLeft: '4px', display: 'inline-block', verticalAlign: 'middle' }} />
+              </a>
             </div>
           </div>
         </section>

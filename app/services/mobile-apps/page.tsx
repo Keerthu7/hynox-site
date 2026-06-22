@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import * as LucideIcons from 'lucide-react';
 import { Check, ArrowRight } from 'lucide-react';
 import Header from '../../components/Header';
+import CubesBackground from '../../components/CubesBackground';
 import ServiceCTA from '../../components/ServiceCTA';
 import Footer from '../../components/Footer';
 
@@ -74,16 +75,15 @@ export default function AppDevelopmentPage() {
     { title: "Teerex", cat: "Custom Development", desc: "E-commerce platform with custom features", img: "/images/graaps_web.png" },
     { title: "Mallika Garments", cat: "Custom Development", desc: "Fashion retail business solution", img: "/images/malika-garments_web.jpg" },
     { title: "Graaps", cat: "Clothing Brand", desc: "Online clothing store", img: "/images/graaps_web.png" },
-    { title: "Zydenn", cat: "Clothing Brand", desc: "Online clothing store", img: "/images/kyto_web.jpeg" },
+    { title: "Food delivery app", cat: "Custom Development", desc: "On-demand food delivery service", img: "/images/aharraa_web.png" },
     { title: "Kores Fabrics", cat: "Clothing Brand", desc: "Online clothing Wholesale Store", img: "/images/kores_web.png" },
     { title: "Kido Care", cat: "Kids Clothing Brand", desc: "Online clothing store", img: "/images/kido_care_web.jpg" },
     { title: "Sun Holidays", cat: "Tours and Travel Agency", desc: "Travel Agency Portfolio", img: "/images/sun_holidays_web.png" },
-    { title: "Twinstar", cat: "Clothing Brand", desc: "Online clothing store", img: "/images/kyto_web.jpeg" },
     { title: "Livinza", cat: "Interior Business", desc: "Interior Business Portfolio", img: "/images/livinza_web.png" }
   ];
 
   const faqs = [
-    { q: 'How much does mobile app development cost in Tiruppur?', a: "The cost depends on the app's features, complexity, platforms, and integrations. We provide custom pricing based on your business requirements." },
+    { q: 'How much does mobile app development cost in Coimbatore?', a: "The cost depends on the app's features, complexity, platforms, and integrations. We provide custom pricing based on your business requirements." },
     { q: 'How long does it take to develop a mobile app?', a: 'Most mobile apps take between 4 and 12 weeks to design, develop, test, and launch, depending on the project scope.' },
     { q: 'Do you build both Android and iOS apps?', a: 'Yes, we develop Android apps, iOS apps, and cross-platform mobile applications using modern technologies like React Native.' },
     { q: 'Can HYNOX develop custom mobile apps for businesses?', a: 'Yes, we build custom mobile applications for businesses, startups, ecommerce brands, manufacturers, and service providers.' },
@@ -94,7 +94,7 @@ export default function AppDevelopmentPage() {
     { q: 'Do you provide backend development and APIs?', a: 'Yes, we develop secure backend systems, databases, admin dashboards, and APIs to power your mobile application.' },
     { q: 'Will I receive the source code of my mobile app?', a: 'Yes, once the project is completed, you will receive full ownership of the application and source code.' },
     { q: 'Do you provide mobile app maintenance and support?', a: 'Yes, we provide ongoing support, bug fixes, security updates, performance improvements, and feature enhancements after launch.' },
-    { q: 'Why choose HYNOX for mobile app development in Tiruppur?', a: 'HYNOX builds custom Android and iOS applications with modern technology, transparent communication, fast delivery, and long-term support.' },
+    { q: 'Why choose HYNOX for mobile app development in Coimbatore?', a: 'HYNOX builds custom Android and iOS applications with modern technology, transparent communication, fast delivery, and long-term support.' },
   ];
 
   return (
@@ -104,43 +104,40 @@ export default function AppDevelopmentPage() {
 
       <main>
         {/* ─── 1. HERO ─── */}
-        <section className="hero-2col-section">
-          <div className="hero-aurora-glow"></div>
-          <div className="hero-2col-container svc-hero-2col-container">
-            <div className="hero-2col-content svc-hero-2col-content mobile-apps-hero-content">
-              <div className="badge reveal-blur">
-                MOBILE APP DEVELOPMENT COMPANY IN TIRUPPUR
-              </div>
-              <h1 className="reveal-from-left reveal-delay-100 svc-subpage-h1">
-                Mobile Apps That<br />
-                <span className="svc-hero-accent-bw">Scale Your Business</span>
-              </h1>
-              <p className="reveal-from-left reveal-delay-200">
-                We design and develop high-performance Android and iOS apps for businesses,
-                startups and eCommerce brands. From idea to App Store — we handle everything.
-              </p>
-              <div className="hero-actions reveal-from-left reveal-delay-300" style={{ marginBottom: '2.5rem' }}>
-                <a href="/contact" className="btn btn-hero-solid">Get Free Consultation <ArrowRight size={16} style={{ marginLeft: "4px", display: "inline-block", verticalAlign: "middle" }} /></a>
-                <a href="#portfolio" className="btn btn-hero-outline">View Our Work</a>
-              </div>
-              <div className="svc-hero-badges-bw reveal-fade-in reveal-delay-400">
-                <span>✓ Android &amp; iOS</span>
-                <span>✓ Custom Built</span>
-                <span>✓ Fast Delivery</span>
-                <span>✓ App Store Ready</span>
-              </div>
+        <section className="hero-center-section">
+          {/* Animated Cubes Background */}
+          <div className="absolute inset-0 w-full h-full z-0" style={{ background: "#050505" }}>
+            <CubesBackground />
+          </div>
+
+          {/* Radial gradient overlay */}
+          <div className="absolute inset-0 z-[1] pointer-events-none" style={{ background: "radial-gradient(ellipse at 50% 50%, rgba(20,35,100,0.25) 0%, rgba(5,5,5,0.65) 75%)" }} />
+
+          <div className="hero-center-content">
+            <span className="hero-badge reveal-fade-in">
+              MOBILE APP DEVELOPMENT COMPANY IN COIMBATORE
+            </span>
+
+            <h1 className="hero-center-h1 reveal-fade-in reveal-delay-100">
+              Mobile Apps That<br />
+              <span className="svc-hero-accent-bw">Scale Your Business</span>
+            </h1>
+
+            <p className="hero-center-p reveal-fade-in reveal-delay-200">
+              We design and develop high-performance Android and iOS apps for businesses,
+              startups and eCommerce brands. From idea to App Store — we handle everything.
+            </p>
+
+            <div className="hero-center-actions reveal-fade-in reveal-delay-300">
+              <a href="/contact" className="btn btn-hero-solid">Get Free Consultation <ArrowRight size={16} style={{ marginLeft: "4px", display: "inline-block", verticalAlign: "middle" }} /></a>
+              <a href="#portfolio" className="btn btn-hero-outline">View Our Work</a>
             </div>
-            <div className="hero-2col-image-wrapper svc-hero-image-wrapper reveal-from-right reveal-delay-200">
-              <img
-                src="/mobile-apps-hero.png"
-                alt="Mobile App Development by HYNOX Tiruppur"
-                style={{
-                  width: '100%',
-                  maxWidth: '450px',
-                  height: 'auto',
-                  objectFit: 'contain',
-                }}
-              />
+
+            <div className="svc-hero-badges-bw reveal-fade-in reveal-delay-400" style={{ justifyContent: 'center', marginTop: '2.5rem' }}>
+              <span>✓ Android &amp; iOS</span>
+              <span>✓ Custom Built</span>
+              <span>✓ Fast Delivery</span>
+              <span>✓ App Store Ready</span>
             </div>
           </div>
         </section>

@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import * as LucideIcons from 'lucide-react';
 import { Check, ArrowRight } from 'lucide-react';
 import Header from '../../components/Header';
+import CubesBackground from '../../components/CubesBackground';
 import ServiceCTA from '../../components/ServiceCTA';
 import Footer from '../../components/Footer';
 
@@ -55,7 +56,7 @@ export default function ERPSoftwarePage() {
     { title: 'Zero Monthly License Fees',  desc: 'Unlike off-the-shelf software, you own the code completely. No surprise subscription increases.' },
     { title: 'Enterprise-grade Security',  desc: 'We prioritize secure code protocols, role-based authorization, and encrypted backups.' },
     { title: 'Direct Developer Contact',   desc: 'Communicate directly with our project leads and coders for fast feedback and deployment.' },
-    { title: 'Local Tiruppur Presence',   desc: 'We are based in Tiruppur. We understand local textile, manufacturing, and business workflows.' },
+    { title: 'Local Coimbatore Presence',   desc: 'We are based in Coimbatore. We understand local textile, manufacturing, and business workflows.' },
   ];
 
   const process = [
@@ -74,18 +75,17 @@ export default function ERPSoftwarePage() {
     { title: "Teerex", cat: "Custom Development", desc: "E-commerce platform with custom features", img: "/images/graaps_web.png" },
     { title: "Mallika Garments", cat: "Custom Development", desc: "Fashion retail business solution", img: "/images/malika-garments_web.jpg" },
     { title: "Graaps", cat: "Clothing Brand", desc: "Online clothing store", img: "/images/graaps_web.png" },
-    { title: "Zydenn", cat: "Clothing Brand", desc: "Online clothing store", img: "/images/kyto_web.jpeg" },
+    { title: "Food delivery app", cat: "Custom Development", desc: "On-demand food delivery service", img: "/images/aharraa_web.png" },
     { title: "Kores Fabrics", cat: "Clothing Brand", desc: "Online clothing Wholesale Store", img: "/images/kores_web.png" },
     { title: "Kido Care", cat: "Kids Clothing Brand", desc: "Online clothing store", img: "/images/kido_care_web.jpg" },
     { title: "Sun Holidays", cat: "Tours and Travel Agency", desc: "Travel Agency Portfolio", img: "/images/sun_holidays_web.png" },
-    { title: "Twinstar", cat: "Clothing Brand", desc: "Online clothing store", img: "/images/kyto_web.jpeg" },
     { title: "Livinza", cat: "Interior Business", desc: "Interior Business Portfolio", img: "/images/livinza_web.png" }
   ];
 
   const faqs = [
-    { q: 'How much does custom ERP software development cost in Tiruppur?', a: 'The cost depends on the number of modules, users, integrations, and business requirements. We provide custom pricing based on your workflow and goals.' },
+    { q: 'How much does custom ERP software development cost in Coimbatore?', a: 'The cost depends on the number of modules, users, integrations, and business requirements. We provide custom pricing based on your workflow and goals.' },
     { q: 'What is custom ERP software?', a: 'Custom ERP software is a business management system built specifically for your company\'s processes, helping manage inventory, sales, purchases, production, accounts, and operations in one place.' },
-    { q: 'Can HYNOX build ERP software for textile businesses?', a: 'Yes, we develop custom ERP solutions for textile manufacturers, garment companies, wholesalers, exporters, and other businesses in Tiruppur.' },
+    { q: 'Can HYNOX build ERP software for textile businesses?', a: 'Yes, we develop custom ERP solutions for textile manufacturers, garment companies, wholesalers, exporters, and other businesses in Coimbatore.' },
     { q: 'Do you develop CRM software?', a: 'Yes, we build custom CRM software to manage leads, customers, follow-ups, sales pipelines, and client communication.' },
     { q: 'Can ERP software automate my business operations?', a: 'Yes, ERP software can automate inventory tracking, order processing, billing, employee management, reporting, and other repetitive tasks.' },
     { q: 'Do you provide inventory management software?', a: 'Yes, we develop inventory and stock management systems with real-time tracking, stock alerts, warehouse management, and reporting.' },
@@ -94,7 +94,7 @@ export default function ERPSoftwarePage() {
     { q: 'Do I own the ERP software after development?', a: 'Yes, you receive complete ownership of the software without recurring license fees or vendor lock-in.' },
     { q: 'How long does it take to develop custom ERP software?', a: 'Development timelines depend on project complexity, but most ERP and business software projects take between 6 and 16 weeks.' },
     { q: 'Is custom ERP better than ready-made software?', a: 'Custom ERP software is designed around your workflow, giving you more flexibility, better efficiency, and complete control compared to generic software.' },
-    { q: 'Why choose HYNOX for ERP software development in Tiruppur?', a: 'HYNOX specializes in custom ERP development, business automation, CRM systems, inventory management software, and workflow solutions tailored for growing businesses.' },
+    { q: 'Why choose HYNOX for ERP software development in Coimbatore?', a: 'HYNOX specializes in custom ERP development, business automation, CRM systems, inventory management software, and workflow solutions tailored for growing businesses.' },
   ];
 
   return (
@@ -104,43 +104,40 @@ export default function ERPSoftwarePage() {
 
       <main>
         {/* ─── 1. HERO ─── */}
-        <section className="hero-2col-section">
-          <div className="hero-aurora-glow"></div>
-          <div className="hero-2col-container svc-hero-2col-container">
-            <div className="hero-2col-content svc-hero-2col-content mobile-apps-hero-content">
-              <div className="badge reveal-blur">
-                CUSTOM ERP &amp; SOFTWARE COMPANY IN TIRUPPUR
-              </div>
-              <h1 className="reveal-from-left reveal-delay-100 svc-subpage-h1">
-                Custom ERP &amp; Software<br />
-                That <span className="svc-hero-accent-bw">Automates Your Business</span>
-              </h1>
-              <p className="reveal-from-left reveal-delay-200">
-                We design and develop custom ERP systems, CRM portals, databases, and admin dashboards
-                built specifically for your business workflow. Streamline your operations today.
-              </p>
-              <div className="hero-actions reveal-from-left reveal-delay-300" style={{ marginBottom: '2.5rem' }}>
-                <a href="/contact" className="btn btn-hero-solid">Get Free Consultation <ArrowRight size={16} style={{ marginLeft: "4px", display: "inline-block", verticalAlign: "middle" }} /></a>
-                <a href="#portfolio" className="btn btn-hero-outline">View Our Work</a>
-              </div>
-              <div className="svc-hero-badges-bw reveal-fade-in reveal-delay-400">
-                <span>✓ Custom ERP</span>
-                <span>✓ CRM Software</span>
-                <span>✓ Mobile Responsive</span>
-                <span>✓ No License Fees</span>
-              </div>
+        <section className="hero-center-section">
+          {/* Animated Cubes Background */}
+          <div className="absolute inset-0 w-full h-full z-0" style={{ background: "#050505" }}>
+            <CubesBackground />
+          </div>
+
+          {/* Radial gradient overlay */}
+          <div className="absolute inset-0 z-[1] pointer-events-none" style={{ background: "radial-gradient(ellipse at 50% 50%, rgba(20,35,100,0.25) 0%, rgba(5,5,5,0.65) 75%)" }} />
+
+          <div className="hero-center-content">
+            <span className="hero-badge reveal-fade-in">
+              CUSTOM ERP &amp; SOFTWARE COMPANY IN COIMBATORE
+            </span>
+
+            <h1 className="hero-center-h1 reveal-fade-in reveal-delay-100">
+              Custom ERP &amp; Software<br />
+              That <span className="svc-hero-accent-bw">Automates Your Business</span>
+            </h1>
+
+            <p className="hero-center-p reveal-fade-in reveal-delay-200">
+              We design and develop custom ERP systems, CRM portals, databases, and admin dashboards
+              built specifically for your business workflow. Streamline your operations today.
+            </p>
+
+            <div className="hero-center-actions reveal-fade-in reveal-delay-300">
+              <a href="/contact" className="btn btn-hero-solid">Get Free Consultation <ArrowRight size={16} style={{ marginLeft: "4px", display: "inline-block", verticalAlign: "middle" }} /></a>
+              <a href="#portfolio" className="btn btn-hero-outline">View Our Work</a>
             </div>
-            <div className="hero-2col-image-wrapper svc-hero-image-wrapper reveal-from-right reveal-delay-200">
-              <img
-                src="/erp-software-hero.png"
-                alt="Custom ERP Software by HYNOX Tiruppur"
-                style={{
-                  width: '100%',
-                  maxWidth: '450px',
-                  height: 'auto',
-                  objectFit: 'contain',
-                }}
-              />
+
+            <div className="svc-hero-badges-bw reveal-fade-in reveal-delay-400" style={{ justifyContent: 'center', marginTop: '2.5rem' }}>
+              <span>✓ Custom ERP</span>
+              <span>✓ CRM Software</span>
+              <span>✓ Mobile Responsive</span>
+              <span>✓ No License Fees</span>
             </div>
           </div>
         </section>

@@ -1,15 +1,15 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Social Media Marketing Agency in Tiruppur | HYNOX',
+  title: 'Social Media Marketing Agency in Coimbatore | HYNOX',
   description:
-    'HYNOX provides professional social media management, organic page growth, graphic designs, content calendars, and brand positioning in Tiruppur, India, and globally.',
+    'HYNOX provides professional social media management, organic page growth, graphic designs, content calendars, and brand positioning in Coimbatore, India, and globally.',
   keywords: [
-    'Social media management Tiruppur',
+    'Social media management Coimbatore',
     'SMM agency India',
     'Instagram page managers Tamil Nadu',
     'brand strategy experts',
-    'best SMM company Tiruppur',
+    'best SMM company Coimbatore',
     'HYNOX social media marketing',
   ],
   openGraph: {

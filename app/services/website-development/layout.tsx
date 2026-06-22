@@ -1,25 +1,25 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Web Development Company in Tiruppur | Custom Websites & Web Apps – HYNOX',
+  title: 'Web Development Company in Coimbatore | Custom Websites & Web Apps – HYNOX',
   description:
-    'HYNOX is a leading web development company in Tiruppur, Tamil Nadu. We build custom websites, web applications, eCommerce stores, admin dashboards and SaaS platforms for businesses across India.',
+    'HYNOX is a leading web development company in Coimbatore, Tamil Nadu. We build custom websites, web applications, eCommerce stores, admin dashboards and SaaS platforms for businesses across India.',
   keywords: [
-    'web development company in Tiruppur',
-    'website development Tiruppur',
+    'web development company in Coimbatore',
+    'website development Coimbatore',
     'custom web application development Tamil Nadu',
     'web development company Tamil Nadu',
-    'website design Tiruppur',
-    'ecommerce website development Tiruppur',
+    'website design Coimbatore',
+    'ecommerce website development Coimbatore',
     'web app development company India',
-    'best web development company Tiruppur',
+    'best web development company Coimbatore',
     'HYNOX web development',
-    'software company Tiruppur',
+    'software company Coimbatore',
   ],
   openGraph: {
-    title: 'Web Development Company in Tiruppur | HYNOX',
+    title: 'Web Development Company in Coimbatore | HYNOX',
     description:
-      'Custom websites, web applications and eCommerce platforms built for businesses in Tiruppur and across India.',
+      'Custom websites, web applications and eCommerce platforms built for businesses in Coimbatore and across India.',
     type: 'website',
     locale: 'en_IN',
   },

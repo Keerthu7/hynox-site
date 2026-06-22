@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import * as LucideIcons from 'lucide-react';
 import { Check, ArrowRight, Play } from 'lucide-react';
 import Header from '../../components/Header';
+import CubesBackground from '../../components/CubesBackground';
 import ServiceCTA from '../../components/ServiceCTA';
 import Footer from '../../components/Footer';
 
@@ -75,13 +76,6 @@ export default function SocialMediaMarketingPage() {
       videoUrl: '/videos/1.mp4'
     },
     { 
-      title: 'Zydenn', 
-      username: '@zydenn_official',
-      subtitle: 'Streetwear Lookbook', 
-      img: '/images/kyto_web.jpeg',
-      videoUrl: '/videos/2.mp4'
-    },
-    { 
       title: 'Graaps Brand', 
       username: '@graaps_clothing',
       subtitle: 'Summer Collection', 
@@ -115,9 +109,9 @@ export default function SocialMediaMarketingPage() {
     { q: 'Do you provide content strategy and content calendars?', a: 'Yes, we create monthly content strategies and calendars tailored to your industry, audience, and business objectives.' },
     { q: 'Do you design social media graphics and creatives?', a: 'Yes, we design professional social media posts, carousel graphics, banners, promotional creatives, and branded visual content.' },
     { q: 'Can HYNOX help increase followers and engagement?', a: 'Yes, we focus on organic growth strategies, engaging content, profile optimization, and audience interaction to improve engagement.' },
-    { q: 'Do you offer social media marketing for businesses in Tiruppur?', a: 'Yes, HYNOX provides social media marketing services for businesses in Tiruppur and across India, including textile brands, retailers, manufacturers, and startups.' },
+    { q: 'Do you offer social media marketing for businesses in Coimbatore?', a: 'Yes, HYNOX provides social media marketing services for businesses in Coimbatore and across India, including textile brands, retailers, manufacturers, and startups.' },
     { q: 'How long does it take to see results from social media marketing?', a: 'Social media growth is a long-term strategy. Most businesses begin seeing noticeable improvements in reach and engagement within a few months of consistent activity.' },
-    { q: 'Why choose HYNOX as a social media marketing agency in Tiruppur?', a: 'HYNOX combines content strategy, creative design, video editing, and audience engagement to help businesses build a strong and professional online presence.' },
+    { q: 'Why choose HYNOX as a social media marketing agency in Coimbatore?', a: 'HYNOX combines content strategy, creative design, video editing, and audience engagement to help businesses build a strong and professional online presence.' },
   ];
 
   return (
@@ -126,43 +120,40 @@ export default function SocialMediaMarketingPage() {
 
       <main>
         {/* ─── 1. HERO ─── */}
-        <section className="hero-2col-section">
-          <div className="hero-aurora-glow"></div>
-          <div className="hero-2col-container svc-hero-2col-container">
-            <div className="hero-2col-content svc-hero-2col-content mobile-apps-hero-content">
-              <div className="badge reveal-blur">
-                SOCIAL MEDIA MARKETING AGENCY IN TIRUPPUR
-              </div>
-              <h1 className="reveal-from-left reveal-delay-100 svc-subpage-h1">
-                Social Media Strategy That<br />
-                <span className="svc-hero-accent-bw">Grows Your Brand Value</span>
-              </h1>
-              <p className="reveal-from-left reveal-delay-200">
-                We plan content calendars, design custom feed graphics, edit high-retention reels, 
-                and engage your community to establish a premium online presence.
-              </p>
-              <div className="hero-actions reveal-from-left reveal-delay-300" style={{ marginBottom: '2.5rem' }}>
-                <a href="/contact" className="btn btn-hero-solid">Get Free Consultation <ArrowRight size={16} style={{ marginLeft: "4px", display: "inline-block", verticalAlign: "middle" }} /></a>
-                <a href="#portfolio" className="btn btn-hero-outline">View Our Work</a>
-              </div>
-              <div className="svc-hero-badges-bw reveal-fade-in reveal-delay-400">
-                <span>✓ Content Creation</span>
-                <span>✓ Page Management</span>
-                <span>✓ Organic Growth</span>
-                <span>✓ Brand Engagement</span>
-              </div>
+        <section className="hero-center-section">
+          {/* Animated Cubes Background */}
+          <div className="absolute inset-0 w-full h-full z-0" style={{ background: "#050505" }}>
+            <CubesBackground />
+          </div>
+
+          {/* Radial gradient overlay */}
+          <div className="absolute inset-0 z-[1] pointer-events-none" style={{ background: "radial-gradient(ellipse at 50% 50%, rgba(20,35,100,0.25) 0%, rgba(5,5,5,0.65) 75%)" }} />
+
+          <div className="hero-center-content">
+            <span className="hero-badge reveal-fade-in">
+              SOCIAL MEDIA MARKETING AGENCY IN COIMBATORE
+            </span>
+
+            <h1 className="hero-center-h1 reveal-fade-in reveal-delay-100">
+              Social Media Strategy That<br />
+              <span className="svc-hero-accent-bw">Grows Your Brand Value</span>
+            </h1>
+
+            <p className="hero-center-p reveal-fade-in reveal-delay-200">
+              We plan content calendars, design custom feed graphics, edit high-retention reels, 
+              and engage your community to establish a premium online presence.
+            </p>
+
+            <div className="hero-center-actions reveal-fade-in reveal-delay-300">
+              <a href="/contact" className="btn btn-hero-solid">Get Free Consultation <ArrowRight size={16} style={{ marginLeft: "4px", display: "inline-block", verticalAlign: "middle" }} /></a>
+              <a href="#portfolio" className="btn btn-hero-outline">View Our Work</a>
             </div>
-            <div className="hero-2col-image-wrapper svc-hero-image-wrapper reveal-from-right reveal-delay-200">
-              <img
-                src="/social-media-marketing-hero.png"
-                alt="Social Media Marketing by HYNOX Tiruppur"
-                style={{
-                  width: '100%',
-                  maxWidth: '450px',
-                  height: 'auto',
-                  objectFit: 'contain',
-                }}
-              />
+
+            <div className="svc-hero-badges-bw reveal-fade-in reveal-delay-400" style={{ justifyContent: 'center', marginTop: '2.5rem' }}>
+              <span>✓ Content Creation</span>
+              <span>✓ Page Management</span>
+              <span>✓ Organic Growth</span>
+              <span>✓ Brand Engagement</span>
             </div>
           </div>
         </section>

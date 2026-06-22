@@ -2,10 +2,10 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import HeroIllustration from "./components/HeroIllustration";
 import FAQ from "./components/FAQ";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import CubesBackground from "./components/CubesBackground";
 import { ArrowRight, ShoppingBag, Factory, Briefcase, Check, Users, MapPin, Zap, MessageSquare, Globe, LifeBuoy } from "lucide-react";
 
 export default function Home() {
@@ -86,44 +86,48 @@ export default function Home() {
 
       <Header />
 
-      <main id="home" className="hero-2col-section">
-        <div className="hero-aurora-glow"></div>
-        <div className="hero-2col-container">
-          <div className="hero-2col-content">
-            <div className="badge reveal-blur">
-              Software &amp; E-commerce Company in Tiruppur
-            </div>
-            
-            <h1 className="reveal-from-left reveal-delay-100">Custom Software, Web &amp; App Development in Tiruppur</h1>
-            
-            <p className="reveal-from-left reveal-delay-200">
-              HYNOX is the leading software development company in Tiruppur, Tamil Nadu. We build fast websites, custom mobile apps, responsive ERP systems, and AI automation to scale your business globally.
-            </p>
-            
-            <div className="hero-actions reveal-from-left reveal-delay-300">
-              <Link href="/contact" className="btn btn-hero-solid">Get Free Consultation</Link>
-              <Link href="#work" className="btn btn-hero-outline">See Our Work</Link>
-            </div>
-          </div>
-          
-          <div className="hero-2col-image-wrapper reveal-from-right reveal-delay-200">
-            <HeroIllustration />
+      <main id="home" className="hero-center-section">
+        {/* Animated Cubes Background */}
+        <div className="absolute inset-0 w-full h-full z-0" style={{ background: "#050505" }}>
+          <CubesBackground />
+        </div>
+
+        {/* Radial gradient overlay */}
+        <div className="absolute inset-0 z-[1] pointer-events-none" style={{ background: "radial-gradient(ellipse at 50% 50%, rgba(20,35,100,0.25) 0%, rgba(5,5,5,0.65) 75%)" }} />
+
+        {/* Centred content */}
+        <div className="hero-center-content">
+          <span className="hero-badge reveal-fade-in">
+            Software &amp; E-commerce Company in Coimbatore
+          </span>
+
+          <h1 className="hero-center-h1 reveal-fade-in reveal-delay-100">
+            Custom Software, Web &amp;<br className="hidden md:block" /> App Development in Coimbatore
+          </h1>
+
+          <p className="hero-center-p reveal-fade-in reveal-delay-200">
+            HYNOX is the leading software development company in Coimbatore, Tamil Nadu. We build fast websites, custom mobile apps, responsive ERP systems, and AI automation to scale your business globally.
+          </p>
+
+          <div className="hero-center-actions reveal-fade-in reveal-delay-300">
+            <Link href="/contact" className="btn btn-hero-solid">Get Free Consultation</Link>
+            <Link href="#work" className="btn btn-hero-outline">See Our Work</Link>
           </div>
         </div>
       </main>
 
       <div className="marquee-container reveal-fade-in reveal-delay-400">
         <div className="marquee-content">
-          <span className="marquee-text">Trusted by 15+ businesses across India, UK & Finland — from Tiruppur textile brands to global ecommerce stores</span>
-          <span className="marquee-text">Trusted by 15+ businesses across India, UK & Finland — from Tiruppur textile brands to global ecommerce stores</span>
-          <span className="marquee-text">Trusted by 15+ businesses across India, UK & Finland — from Tiruppur textile brands to global ecommerce stores</span>
-          <span className="marquee-text">Trusted by 15+ businesses across India, UK & Finland — from Tiruppur textile brands to global ecommerce stores</span>
+          <span className="marquee-text">Trusted by 15+ businesses across India, UK & Finland — from Coimbatore textile brands to global ecommerce stores</span>
+          <span className="marquee-text">Trusted by 15+ businesses across India, UK & Finland — from Coimbatore textile brands to global ecommerce stores</span>
+          <span className="marquee-text">Trusted by 15+ businesses across India, UK & Finland — from Coimbatore textile brands to global ecommerce stores</span>
+          <span className="marquee-text">Trusted by 15+ businesses across India, UK & Finland — from Coimbatore textile brands to global ecommerce stores</span>
         </div>
       </div>
 
       <section className="global-reach">
         <span className="section-subtitle reveal-blur">GLOBAL REACH</span>
-        <h2 className="reveal-on-scroll">Delivering from Tiruppur to the world</h2>
+        <h2 className="reveal-on-scroll">Delivering from Coimbatore to the world</h2>
         
         <div className="cards-grid">
           <div className="reach-card reveal-from-left reveal-delay-100">
@@ -161,7 +165,7 @@ export default function Home() {
       <section id="services" className="services-section">
         <div className="services-header reveal-blur">  
           <span className="section-subtitle">OUR SERVICES</span>
-          <h2>Software &amp; Digital Services in Tiruppur</h2>
+          <h2>Software &amp; Digital Services in Coimbatore</h2>
           <p>Custom software development and digital marketing services. Design, development, and marketing — all under one roof.</p>
         </div>
 
@@ -275,7 +279,7 @@ export default function Home() {
             <div className="business-icon">
               <ShoppingBag size={24} />
             </div>
-            <h4>Ecommerce Brands</h4>
+            <h4>End-to-End Ecommerce Support</h4>
             <p>We help clothing, food & retail businesses go online — with stores that actually sell.</p>
             <Link href="/services/shopify-stores" className="business-link">Scale your brand <ArrowRight size={14} style={{ display: 'inline-block', marginLeft: '4px', verticalAlign: 'middle' }} /></Link>
           </div>
@@ -316,11 +320,10 @@ export default function Home() {
                 { title: "Teerex", category: "Custom Development", badgeClass: "badge-dev", desc: "E-commerce platform with custom features", image: "/images/graaps_web.png" },
                 { title: "Mallika Garments", category: "Custom Development", badgeClass: "badge-dev", desc: "Fashion retail business solution", image: "/images/malika-garments_web.jpg" },
                 { title: "Graaps", category: "Clothing Brand", badgeClass: "badge-marketing", desc: "Online clothing store", image: "/images/graaps_web.png" },
-                { title: "Zydenn", category: "Clothing Brand", badgeClass: "badge-marketing", desc: "Online clothing store", image: "/images/kyto_web.jpeg" },
+                { title: "Food delivery app", category: "Custom Development", badgeClass: "badge-dev", desc: "On-demand food delivery service", image: "/images/aharraa_web.png" },
                 { title: "Kores Fabrics", category: "Clothing Brand", badgeClass: "badge-marketing", desc: "Online clothing Wholesale Store", image: "/images/kores_web.png" },
                 { title: "Kido Care", category: "Kids Clothing Brand", badgeClass: "badge-ai", desc: "Online clothing store", image: "/images/kido_care_web.jpg" },
                 { title: "Sun Holidays", category: "Tours and Travel Agency", badgeClass: "badge-content", desc: "Travel Agency Portfolio", image: "/images/sun_holidays_web.png" },
-                { title: "Twinstar", category: "Clothing Brand", badgeClass: "badge-marketing", desc: "Online clothing store", image: "/images/kyto_web.jpeg" },
                 { title: "Livinza", category: "Interior Business", badgeClass: "badge-content", desc: "Interior Business Portfolio", image: "/images/livinza_web.png" },
                 // Duplicate for infinite scroll
                 { title: "SugarStar", category: "Shopify Development", badgeClass: "badge-dev", desc: "Premium confectionery online store", image: "/images/sugarstar_web.jpeg" },
@@ -330,11 +333,10 @@ export default function Home() {
                 { title: "Teerex", category: "Custom Development", badgeClass: "badge-dev", desc: "E-commerce platform with custom features", image: "/images/graaps_web.png" },
                 { title: "Mallika Garments", category: "Custom Development", badgeClass: "badge-dev", desc: "Fashion retail business solution", image: "/images/malika-garments_web.jpg" },
                 { title: "Graaps", category: "Clothing Brand", badgeClass: "badge-marketing", desc: "Online clothing store", image: "/images/graaps_web.png" },
-                { title: "Zydenn", category: "Clothing Brand", badgeClass: "badge-marketing", desc: "Online clothing store", image: "/images/kyto_web.jpeg" },
+                { title: "Food delivery app", category: "Custom Development", badgeClass: "badge-dev", desc: "On-demand food delivery service", image: "/images/aharraa_web.png" },
                 { title: "Kores Fabrics", category: "Clothing Brand", badgeClass: "badge-marketing", desc: "Online clothing Wholesale Store", image: "/images/kores_web.png" },
                 { title: "Kido Care", category: "Kids Clothing Brand", badgeClass: "badge-ai", desc: "Online clothing store", image: "/images/kido_care_web.jpg" },
                 { title: "Sun Holidays", category: "Tours and Travel Agency", badgeClass: "badge-content", desc: "Travel Agency Portfolio", image: "/images/sun_holidays_web.png" },
-                { title: "Twinstar", category: "Clothing Brand", badgeClass: "badge-marketing", desc: "Online clothing store", image: "/images/kyto_web.jpeg" },
                 { title: "Livinza", category: "Interior Business", badgeClass: "badge-content", desc: "Interior Business Portfolio", image: "/images/livinza_web.png" }
               ].map((project, index) => (
                 <div className="work-card" key={index}>
@@ -371,7 +373,6 @@ export default function Home() {
                 { name: "West", category: "Textile", logo: "/images/West_logo.png" },
                 { name: "Aharraa", category: "Food", logo: "/images/aharraa_logo.jpg" },
                 { name: "Teerex", category: "Textile", logo: "/images/teerex_logo.jpg" },
-                { name: "Twinstar", category: "Textile", logo: "/images/twinstar_logo.jpg" },
                 { name: "Kyto", category: "Textile", logo: "/images/kyto_logo.jpg" },
                 { name: "NSK", category: "Textile", logo: "/images/nsk_logo.jpg" },
                 { name: "JP Nets", category: "Textile", logo: "/images/jpnets_logo.jpg" },
@@ -380,7 +381,6 @@ export default function Home() {
                 { name: "West", category: "Textile", logo: "/images/West_logo.png" },
                 { name: "Aharraa", category: "Food", logo: "/images/aharraa_logo.jpg" },
                 { name: "Teerex", category: "Textile", logo: "/images/teerex_logo.jpg" },
-                { name: "Twinstar", category: "Textile", logo: "/images/twinstar_logo.jpg" },
                 { name: "Kyto", category: "Textile", logo: "/images/kyto_logo.jpg" },
                 { name: "NSK", category: "Textile", logo: "/images/nsk_logo.jpg" },
                 { name: "JP Nets", category: "Textile", logo: "/images/jpnets_logo.jpg" }
@@ -402,7 +402,6 @@ export default function Home() {
               {[
                 { name: "Mallika Garments", category: "Textile", logo: "/images/mallika_garments_logo.jpg" },
                 { name: "NP Global Exports", category: "Textile", logo: "/images/npglobal_logo.jpg" },
-                { name: "Zyden", category: "Textile", logo: "/images/zyden_logo.jpg" },
                 { name: "Graaps", category: "Textile", logo: "/images/graasp_logo.jpg" },
                 { name: "Kores Fabrics", category: "Textile", logo: "/images/kores_logo.jpg" },
                 { name: "Kido Care", category: "Textile", logo: "/images/kido_care_logo.png" },
@@ -411,7 +410,6 @@ export default function Home() {
                 // Duplicate for infinite scroll
                 { name: "Mallika Garments", category: "Textile", logo: "/images/mallika_garments_logo.jpg" },
                 { name: "NP Global Exports", category: "Textile", logo: "/images/npglobal_logo.jpg" },
-                { name: "Zyden", category: "Textile", logo: "/images/zyden_logo.jpg" },
                 { name: "Graaps", category: "Textile", logo: "/images/graasp_logo.jpg" },
                 { name: "Kores Fabrics", category: "Textile", logo: "/images/kores_logo.jpg" },
                 { name: "Kido Care", category: "Textile", logo: "/images/kido_care_logo.png" },
@@ -434,27 +432,23 @@ export default function Home() {
           <div className="testimonials-marquee-container">
             <div className="testimonials-marquee-content">
               {[
-                { quote: "Hynox built our entire store and handled our ads. Sales started within the first week.", author: "Zyden Clothing" },
-                { quote: "They replaced our entire manual process with one system. Saves us hours every day.", author: "JP Aluminium" },
-                { quote: "Our Shopify store's conversion rate doubled after the redesign. The team is incredible!", author: "SugarStar" },
-                { quote: "The business automation app they built for us completely transformed our workflow.", author: "JP Interiors" },
-                { quote: "Professional, fast, and highly skilled. They delivered our platform ahead of schedule.", author: "Teerex" },
-                { quote: "We scaled our UK operations seamlessly thanks to the robust Shopify store they developed.", author: "Graaps" },
-                { quote: "The best tech partners we've ever worked with. The travel booking system is flawless.", author: "Sun Holidays" },
-                { quote: "A completely stress-free experience. Our interior design portfolio website looks incredibly premium.", author: "Team3 Associates" },
-                { quote: "From retail to a digital powerhouse. The mobile app they built is a game-changer.", author: "Mallika Garments" },
-                { quote: "Our kids' clothing brand went live in just 2 weeks. Absolutely stellar execution and support.", author: "Kido Care" },
+                { quote: "We used to manage everything on books and WhatsApp. Their ERP software brought all our inventory and billing into one place. Saves us a lot of time daily.", author: "JP Aluminium" },
+                { quote: "Our old website was really slow. Hynox rebuilt it on Shopify, and our sales instantly went up. Very easy to work with them.", author: "SugarStar" },
+                { quote: "The site updates and order tracking app they built is super easy to use. Our team does everything on it now.", author: "JP Interiors" },
+                { quote: "We wanted a customized store for our apparel brand. They finished the coding fast and it works exactly how we wanted it to.", author: "Teerex" },
+                { quote: "Helped us launch our brand in the UK. Setting up global currency and international shipping was smooth. Highly recommend them.", author: "Graaps" },
+                { quote: "They built a custom booking dashboard for our travels business. Customers can easily book tours online now without any issues.", author: "Sun Holidays" },
+                { quote: "They built a custom mobile app for our retail customers. Very simple UI and works great on both Android and iPhone.", author: "Mallika Garments" },
+                { quote: "Got our kids store ready and live in just 2 weeks. Very supportive team, answered all our doubts even at night.", author: "Kido Care" },
                 // Duplicate for infinite scroll
-                { quote: "Hynox built our entire store and handled our ads. Sales started within the first week.", author: "Zyden Clothing" },
-                { quote: "They replaced our entire manual process with one system. Saves us hours every day.", author: "JP Aluminium" },
-                { quote: "Our Shopify store's conversion rate doubled after the redesign. The team is incredible!", author: "SugarStar" },
-                { quote: "The business automation app they built for us completely transformed our workflow.", author: "JP Interiors" },
-                { quote: "Professional, fast, and highly skilled. They delivered our platform ahead of schedule.", author: "Teerex" },
-                { quote: "We scaled our UK operations seamlessly thanks to the robust Shopify store they developed.", author: "Graaps" },
-                { quote: "The best tech partners we've ever worked with. The travel booking system is flawless.", author: "Sun Holidays" },
-                { quote: "A completely stress-free experience. Our interior design portfolio website looks incredibly premium.", author: "Team3 Associates" },
-                { quote: "From retail to a digital powerhouse. The mobile app they built is a game-changer.", author: "Mallika Garments" },
-                { quote: "Our kids' clothing brand went live in just 2 weeks. Absolutely stellar execution and support.", author: "Kido Care" }
+                { quote: "We used to manage everything on books and WhatsApp. Their ERP software brought all our inventory and billing into one place. Saves us a lot of time daily.", author: "JP Aluminium" },
+                { quote: "Our old website was really slow. Hynox rebuilt it on Shopify, and our sales instantly went up. Very easy to work with them.", author: "SugarStar" },
+                { quote: "The site updates and order tracking app they built is super easy to use. Our team does everything on it now.", author: "JP Interiors" },
+                { quote: "We wanted a customized store for our apparel brand. They finished the coding fast and it works exactly how we wanted it to.", author: "Teerex" },
+                { quote: "Helped us launch our brand in the UK. Setting up global currency and international shipping was smooth. Highly recommend them.", author: "Graaps" },
+                { quote: "They built a custom booking dashboard for our travels business. Customers can easily book tours online now without any issues.", author: "Sun Holidays" },
+                { quote: "They built a custom mobile app for our retail customers. Very simple UI and works great on both Android and iPhone.", author: "Mallika Garments" },
+                { quote: "Got our kids store ready and live in just 2 weeks. Very supportive team, answered all our doubts even at night.", author: "Kido Care" }
               ].map((testimonial, index) => (
                 <div className="testimonial-card" key={index}>
                   <p className="testimonial-quote">"{testimonial.quote}"</p>
@@ -469,13 +463,13 @@ export default function Home() {
       <section id="why-us" className="why-choose-us-section">
         <div className="section-header reveal-flip-x">
           <span className="section-subtitle">WHY HYNOX</span>
-          <h2>Software Engineers &amp; Marketers in Tiruppur</h2>
+          <h2>Software Engineers &amp; Marketers in Coimbatore</h2>
         </div>
         
         <div className="features-bento-grid reveal-on-scroll reveal-delay-200">
           {[
             { title: "Full stack team", icon: <Users size={24} />, desc: "Design, development and marketing — one team, one place, no middlemen. We handle the entire lifecycle of your product." },
-            { title: "Based in Tiruppur", icon: <MapPin size={24} />, desc: "As the top software company in Tiruppur, we understand Tamil Nadu's textile, garments manufacturing, and business landscape better than anyone." },
+            { title: "Based in Coimbatore", icon: <MapPin size={24} />, desc: "As the top software company in Coimbatore, we understand Tamil Nadu's textile, garments manufacturing, and business landscape better than anyone." },
             { title: "Fast delivery", icon: <Zap size={24} />, desc: "Most projects delivered in 2–6 weeks — not 6 months." },
             { title: "Direct communication", icon: <MessageSquare size={24} />, desc: "You talk to the developers actually building your product — not a sales rep." },
             { title: "Global experience", icon: <Globe size={24} />, desc: "Delivered premium projects for clients across India, UK and Finland." },

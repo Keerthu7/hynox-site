@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Header from '../components/Header';
+import CubesBackground from '../components/CubesBackground';
 import Footer from '../components/Footer';
 import { ArrowRight, Grid, ShoppingCart, Layers, Smartphone, Target, TrendingUp, FileText, Cpu, Users } from 'lucide-react';
 
@@ -18,15 +19,6 @@ const getCategoryIcon = (category: string) => {
 
 const caseStudies = [
   {
-    title: 'Zyden Clothing',
-    subtitle: 'From Investment Idea to Global Brand with the HYNOX Subscription Model',
-    desc: 'Zyden Clothing began as an investment inquiry and evolved into a global clothing brand under the HYNOX ecosystem. We guided the client through investment planning, brand creation, product selection, operational setup, and performance marketing—leading to profitable international sales.',
-    category: 'Ecommerce',
-    highlight: 'From zero to UK market in 90 days',
-    image: '/case-studies/cs_zyden.png',
-    slug: 'zyden-global-ecommerce-clothing-brand-development'
-  },
-  {
     title: 'NSK Tex',
     subtitle: 'Scaling an E-commerce Clothing Brand with Performance Marketing',
     desc: 'NSK Tex is an e-commerce clothing brand built for Gen Z. Despite having trendy, affordable fashion products, the brand faced inconsistent sales and major operational challenges like high return rates and fake COD orders. With a limited budget, they needed smart, results-driven marketing and operational solutions.',
@@ -41,7 +33,7 @@ const caseStudies = [
     desc: 'JP Aluminium Interior is a leading interior and aluminium works provider in Tamil Nadu. Their challenges revolved around managing leads, quotations, and site updates using manual methods and multiple platforms. They needed an integrated solution that simplified operations, improved customer satisfaction, and eliminated human errors.',
     category: 'ERP & Automation',
     highlight: 'Full automation — saves hours daily',
-    image: '/case-studies/cs_jp.png',
+    image: '/images/JpApp_works.png',
     slug: 'jp-aluminium-erp-automation-software-tamil-nadu'
   },
   {
@@ -49,8 +41,8 @@ const caseStudies = [
     subtitle: 'Taking a Clothing Brand Global',
     desc: 'graaps is a Finland-based startup looking to establish a global clothing brand with production in Tirupur, India, and target market in the UK. They needed comprehensive support to bridge geographical gaps and create a sustainable, globally-focused brand identity.',
     category: 'App Development',
-    highlight: 'Global brand launched from Tiruppur',
-    image: '/case-studies/cs_graaps.png',
+    highlight: 'Global brand launched from Coimbatore',
+    image: '/images/graaps_web.png',
     slug: 'graaps-clothing-brand-global-expansion-app-development'
   },
   {
@@ -59,7 +51,7 @@ const caseStudies = [
     desc: 'Kores needed a tailored software solution to manage their clothing manufacturing wholesale business, from order processing to inventory and client management.',
     category: 'ERP & Automation',
     highlight: 'Custom wholesale system built end to end',
-    image: '/case-studies/cs_kores.png',
+    image: '/images/kores_web.png',
     slug: 'kores-wholesale-clothing-manufacturing-erp-software'
   },
   {
@@ -68,7 +60,7 @@ const caseStudies = [
     desc: 'Kido Care partnered with HYNOX to build a comprehensive Shopify e-commerce store, focusing on user experience, product presentation, and secure payment gateways.',
     category: 'Ecommerce',
     highlight: 'Live store in 2 weeks',
-    image: '/case-studies/cs_kido.png',
+    image: '/images/kido_care_web.jpg',
     slug: 'kido-care-shopify-ecommerce-development-services'
   },
   {
@@ -77,7 +69,7 @@ const caseStudies = [
     desc: 'HYNOX developed a bespoke web platform for Sun Holidays, integrating features for tour package management, customer bookings, and itinerary customization.',
     category: 'ERP & Automation',
     highlight: 'Complete tour management system',
-    image: '/case-studies/cs_sun.png',
+    image: '/images/sun_holidays_web.png',
     slug: 'sun-holidays-travel-agency-custom-software-development'
   },
   {
@@ -86,7 +78,7 @@ const caseStudies = [
     desc: 'HYNOX developed a custom web platform for Livinza, focusing on an immersive portfolio display, project management tools, and client communication features.',
     category: 'App Development',
     highlight: 'Immersive portfolio & project management',
-    image: '/case-studies/cs_livinza.png',
+    image: '/images/livinza_web.png',
     slug: 'livinza-interior-design-project-management-app'
   }
 ];
@@ -125,34 +117,33 @@ export default function CaseStudiesPage() {
       <main style={{ background: '#000000', color: '#ffffff', minHeight: '100vh', paddingBottom: '6rem' }}>
         
         {/* HERO SECTION */}
-        <section className="cs-hero-section reveal-blur">
-          <div className="cs-hero-grid">
-            {/* Left Content */}
-            <div className="cs-hero-left">
-              <div className="badge reveal-fade-in" style={{ marginBottom: '1rem' }}>CASE STUDIES</div>
-              <h1 className="reveal-from-left reveal-delay-100 cs-page-title">
-                Real Projects.<br/>
-                <span style={{ color: '#ffffff' }}>Real Results.</span>
-              </h1>
-              <p className="reveal-from-left reveal-delay-200 cs-page-desc">
-                We don't just build software — we solve business problems. Here's proof. Discover how we transform ideas into scalable solutions and drive measurable growth across industries.
-              </p>
-              <div className="reveal-fade-in reveal-delay-300 cs-hero-btn-container">
-                <a href="/contact" className="cs-contact-btn" onMouseEnter={(e) => { e.currentTarget.style.transform = 'scale(1.05)'; e.currentTarget.style.boxShadow = '0 10px 20px rgba(255,255,255,0.2)'; }} onMouseLeave={(e) => { e.currentTarget.style.transform = 'scale(1)'; e.currentTarget.style.boxShadow = 'none'; }}>
-                  Start a Project <ArrowRight size={18} style={{ marginLeft: '4px', display: 'inline-block', verticalAlign: 'middle' }} />
-                </a>
-              </div>
-            </div>
-            
-            {/* Right Image */}
-            <div className="cs-hero-right reveal-zoom reveal-delay-200">
-              <div className="cs-hero-img-box">
-                <img 
-                  src="/case_studies_hero.png" 
-                  alt="Case Studies Hero" 
-                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                />
-              </div>
+        <section className="hero-center-section">
+          {/* Animated Cubes Background */}
+          <div className="absolute inset-0 w-full h-full z-0" style={{ background: "#050505" }}>
+            <CubesBackground />
+          </div>
+
+          {/* Radial gradient overlay */}
+          <div className="absolute inset-0 z-[1] pointer-events-none" style={{ background: "radial-gradient(ellipse at 50% 50%, rgba(20,35,100,0.25) 0%, rgba(5,5,5,0.65) 75%)" }} />
+
+          <div className="hero-center-content">
+            <span className="hero-badge reveal-fade-in">
+              CASE STUDIES
+            </span>
+
+            <h1 className="hero-center-h1 reveal-fade-in reveal-delay-100">
+              Real Projects.<br/>
+              <span style={{ color: '#ffffff' }}>Real Results.</span>
+            </h1>
+
+            <p className="hero-center-p reveal-fade-in reveal-delay-200">
+              We don't just build software — we solve business problems. Here's proof. Discover how we transform ideas into scalable solutions and drive measurable growth across industries.
+            </p>
+
+            <div className="hero-center-actions reveal-fade-in reveal-delay-300">
+              <a href="/contact" className="btn btn-hero-solid">
+                Start a Project <ArrowRight size={18} style={{ marginLeft: '4px', display: 'inline-block', verticalAlign: 'middle' }} />
+              </a>
             </div>
           </div>
         </section>
@@ -202,6 +193,9 @@ export default function CaseStudiesPage() {
                 e.currentTarget.style.boxShadow = 'none';
               }}
               >
+                
+
+                {/* Content */}
                 {/* Image */}
                 <div style={{ 
                   height: '160px', 
@@ -269,7 +263,7 @@ export default function CaseStudiesPage() {
             <div style={{ flex: '1 1 300px' }}>
               <h2 style={{ fontSize: '1.8rem', color: '#ffffff', fontWeight: 500, marginBottom: '1rem' }}>Projects That Create Impact</h2>
               <p style={{ color: 'rgba(255, 255, 255, 0.5)', lineHeight: 1.6, fontSize: '1rem' }}>
-                Hynox has delivered software projects for businesses in Tiruppur, Tamil Nadu and internationally. Our case studies cover ecommerce brands, textile manufacturers, interior businesses, mobile applications and travel agencies.
+                Hynox has delivered software projects for businesses in Coimbatore, Tamil Nadu and internationally. Our case studies cover ecommerce brands, textile manufacturers, interior businesses, mobile applications and travel agencies.
               </p>
             </div>
           </div>

@@ -7,9 +7,9 @@ import { ArrowUpRight, Calendar, Globe, Activity, Star, AlertCircle, CheckCircle
 // Dummy data for "More Case Studies" section
 const moreCaseStudies = [
   { title: 'NSK Tex', subtitle: 'Scaling an E-commerce Clothing Brand', image: '/case-studies/cs_nsk.png', slug: 'nsk-tex-ecommerce-performance-marketing-agency', category: 'Marketing' },
-  { title: 'JP Aluminium Interior', subtitle: 'Transforming Interior Business', image: '/case-studies/cs_jp.png', slug: 'jp-aluminium-erp-automation-software-tamil-nadu', category: 'ERP & Automation' },
-  { title: 'Kido Care', subtitle: 'Kids Retail Store Shopify Solution', image: '/case-studies/cs_kido.png', slug: 'kido-care-shopify-ecommerce-development-services', category: 'Ecommerce' },
-  { title: 'Sun Holidays', subtitle: 'Tours and Travels Custom Development', image: '/case-studies/cs_sun.png', slug: 'sun-holidays-travel-agency-custom-software-development', category: 'ERP & Automation' }
+  { title: 'JP Aluminium Interior', subtitle: 'Transforming Interior Business', image: '/images/JpApp_works.png', slug: 'jp-aluminium-erp-automation-software-tamil-nadu', category: 'ERP & Automation' },
+  { title: 'Kido Care', subtitle: 'Kids Retail Store Shopify Solution', image: '/images/kido_care_web.jpg', slug: 'kido-care-shopify-ecommerce-development-services', category: 'Ecommerce' },
+  { title: 'Sun Holidays', subtitle: 'Tours and Travels Custom Development', image: '/images/sun_holidays_web.png', slug: 'sun-holidays-travel-agency-custom-software-development', category: 'ERP & Automation' }
 ];
 
 export default async function CaseStudyDetail({ params }: { params: Promise<{ slug: string }> }) {
@@ -38,16 +38,16 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
             </AnimatedSection>
 
             {/* Hero Section */}
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', alignItems: 'center', marginBottom: '1.5rem' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', marginBottom: '1.5rem', paddingTop: '2rem' }}>
               <AnimatedSection animation="fadeLeft" delay={100}>
                 <div style={{ color: '#ffffff', fontSize: '0.8rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', marginBottom: '1rem' }}>Case Study</div>
-                <h1 style={{ fontSize: '3.5rem', fontWeight: 700, lineHeight: 1.1, marginBottom: '1.5rem', letterSpacing: '-0.03em' }}>
+                <h1 style={{ fontSize: '3.5rem', fontWeight: 700, lineHeight: 1.1, marginBottom: '1.5rem', letterSpacing: '-0.03em', maxWidth: '800px', margin: '0 auto 1.5rem auto' }}>
                   From Investment Idea to Global Brand in 90 Days
                 </h1>
-                <p style={{ fontSize: '1.1rem', color: '#a3a3a3', marginBottom: '2.5rem', lineHeight: 1.6, maxWidth: '90%' }}>
+                <p style={{ fontSize: '1.1rem', color: '#a3a3a3', marginBottom: '2.5rem', lineHeight: 1.6, maxWidth: '600px', margin: '0 auto 2.5rem auto' }}>
                   How we helped Zyden Clothing validate their idea, build their store, and launch in the UK market.
                 </p>
-                <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+                <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
                   <a href="#" style={{ background: '#ffffff', color: '#000000', padding: '0.8rem 1.5rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '0.95rem', display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
                     Visit Live Store <ArrowUpRight size={14} />
                   </a>
@@ -57,11 +57,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                 </div>
               </AnimatedSection>
               
-              <AnimatedSection animation="fadeRight" delay={200}>
-                <div style={{ width: '100%', paddingBottom: '75%', position: 'relative', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.8)', border: '1px solid rgba(255,255,255,0.05)' }}>
-                  <img src="/case-studies/cs_zyden.png" alt="Zyden Dashboard" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
-                </div>
-              </AnimatedSection>
+              
             </div>
 
             {/* Stats Row - White Cards */}
@@ -305,7 +301,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                   <p style={{ color: '#666666', fontSize: '1.1rem' }}>Get a free consultation and let's discuss your project.</p>
                 </div>
               </div>
-              <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+              <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
                 <a href="/contact" style={{ background: '#000000', color: '#ffffff', padding: '1rem 2rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                   Get Free Consultation <ArrowRight size={16} />
                 </a>
@@ -342,16 +338,16 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
             </div>
 
             {/* Hero */}
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', alignItems: 'center', marginBottom: '1.5rem' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', marginBottom: '1.5rem', paddingTop: '2rem' }}>
               <div>
                 <div style={{ color: '#ffffff', fontSize: '0.8rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', marginBottom: '1rem' }}>Case Study</div>
-                <h1 style={{ fontSize: '3.5rem', fontWeight: 700, lineHeight: 1.1, marginBottom: '1.5rem', letterSpacing: '-0.03em' }}>
+                <h1 style={{ fontSize: '3.5rem', fontWeight: 700, lineHeight: 1.1, marginBottom: '1.5rem', letterSpacing: '-0.03em', maxWidth: '800px', margin: '0 auto 1.5rem auto' }}>
                   Scaling an E-commerce Clothing Brand with Performance Marketing
                 </h1>
-                <p style={{ fontSize: '1.1rem', color: '#a3a3a3', marginBottom: '2.5rem', lineHeight: 1.6, maxWidth: '90%' }}>
+                <p style={{ fontSize: '1.1rem', color: '#a3a3a3', marginBottom: '2.5rem', lineHeight: 1.6, maxWidth: '600px', margin: '0 auto 2.5rem auto' }}>
                   How HYNOX helped NSK Tex eliminate fake COD orders, reduce returns, and drive 300+ confirmed orders through targeted performance marketing.
                 </p>
-                <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+                <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
                   <a href="#" style={{ background: '#ffffff', color: '#000000', padding: '0.8rem 1.5rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '0.95rem', display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
                     Visit Live Store <ArrowUpRight size={14} />
                   </a>
@@ -360,11 +356,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                   </a>
                 </div>
               </div>
-              <div style={{ position: 'relative' }}>
-                <div style={{ width: '100%', paddingBottom: '75%', position: 'relative', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.8)', border: '1px solid rgba(255,255,255,0.05)' }}>
-                  <img src="/case-studies/cs_nsk.png" alt="NSK Tex Dashboard" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
-                </div>
-              </div>
+              
             </div>
 
             {/* Stats */}
@@ -534,7 +526,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                   <p style={{ color: '#666666', fontSize: '1.1rem' }}>Get a free consultation and let's discuss your project.</p>
                 </div>
               </div>
-              <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+              <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
                 <a href="/contact" style={{ background: '#000000', color: '#ffffff', padding: '1rem 2rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                   Get Free Consultation <ArrowRight size={16} />
                 </a>
@@ -569,16 +561,16 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
               </div>
             </AnimatedSection>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', alignItems: 'center', marginBottom: '1.5rem' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', marginBottom: '1.5rem', paddingTop: '2rem' }}>
               <AnimatedSection animation="fadeLeft" delay={100}>
                 <div style={{ color: '#ffffff', fontSize: '0.8rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', marginBottom: '1rem' }}>Case Study</div>
-                <h1 style={{ fontSize: '3.5rem', fontWeight: 700, lineHeight: 1.1, marginBottom: '1.5rem', letterSpacing: '-0.03em' }}>
+                <h1 style={{ fontSize: '3.5rem', fontWeight: 700, lineHeight: 1.1, marginBottom: '1.5rem', letterSpacing: '-0.03em', maxWidth: '800px', margin: '0 auto 1.5rem auto' }}>
                   Transforming an Interior Business with Custom Automation Software
                 </h1>
-                <p style={{ fontSize: '1.1rem', color: '#a3a3a3', marginBottom: '2.5rem', lineHeight: 1.6, maxWidth: '90%' }}>
+                <p style={{ fontSize: '1.1rem', color: '#a3a3a3', marginBottom: '2.5rem', lineHeight: 1.6, maxWidth: '600px', margin: '0 auto 2.5rem auto' }}>
                   How HYNOX replaced manual operations at JP Aluminium Interior with a fully integrated platform for leads, quotations, invoices, workers, and customers.
                 </p>
-                <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+                <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
                   <a href="#" style={{ background: '#ffffff', color: '#000000', padding: '0.8rem 1.5rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '0.95rem', display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
                     View Live Demo <ArrowUpRight size={14} />
                   </a>
@@ -587,11 +579,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                   </a>
                 </div>
               </AnimatedSection>
-              <AnimatedSection animation="fadeRight" delay={200}>
-                <div style={{ width: '100%', paddingBottom: '75%', position: 'relative', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.8)', border: '1px solid rgba(255,255,255,0.05)' }}>
-                  <img src="/case-studies/cs_jp.png" alt="JP Dashboard" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
-                </div>
-              </AnimatedSection>
+              
             </div>
 
             <AnimatedSection animation="fadeUp" delay={100}>
@@ -739,7 +727,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                   <p style={{ color: '#666666', fontSize: '1.1rem' }}>Get a free consultation and let's discuss your project.</p>
                 </div>
               </div>
-              <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+              <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
                 <a href="/contact" style={{ background: '#000000', color: '#ffffff', padding: '1rem 2rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>Get Free Consultation <ArrowRight size={16} /></a>
                 <a href="#" style={{ background: 'transparent', color: '#000000', border: '1px solid #000000', padding: '1rem 2rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>Chat on WhatsApp <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></a>
               </div>
@@ -773,16 +761,16 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
             </AnimatedSection>
 
             {/* Hero */}
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', alignItems: 'center', marginBottom: '1.5rem' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', marginBottom: '1.5rem', paddingTop: '2rem' }}>
               <AnimatedSection animation="fadeLeft" delay={100}>
                 <div style={{ color: '#ffffff', fontSize: '0.8rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', marginBottom: '1rem' }}>Case Study</div>
-                <h1 style={{ fontSize: '3.5rem', fontWeight: 700, lineHeight: 1.1, marginBottom: '1.5rem', letterSpacing: '-0.03em' }}>
+                <h1 style={{ fontSize: '3.5rem', fontWeight: 700, lineHeight: 1.1, marginBottom: '1.5rem', letterSpacing: '-0.03em', maxWidth: '800px', margin: '0 auto 1.5rem auto' }}>
                   Taking a Clothing Brand Global
                 </h1>
-                <p style={{ fontSize: '1.1rem', color: '#a3a3a3', marginBottom: '2.5rem', lineHeight: 1.6, maxWidth: '90%' }}>
+                <p style={{ fontSize: '1.1rem', color: '#a3a3a3', marginBottom: '2.5rem', lineHeight: 1.6, maxWidth: '600px', margin: '0 auto 2.5rem auto' }}>
                   How HYNOX helped graaps — a Finland-based startup — build a clothing brand produced in Tirupur and launched in the UK market.
                 </p>
-                <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+                <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
                   <a href="#" style={{ background: '#ffffff', color: '#000000', padding: '0.8rem 1.5rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '0.95rem', display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
                     Visit Live Store <ArrowUpRight size={14} />
                   </a>
@@ -791,11 +779,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                   </a>
                 </div>
               </AnimatedSection>
-              <AnimatedSection animation="fadeRight" delay={200}>
-                <div style={{ width: '100%', paddingBottom: '75%', position: 'relative', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.8)', border: '1px solid rgba(255,255,255,0.05)' }}>
-                  <img src="/case-studies/cs_graaps.png" alt="graaps Brand" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
-                </div>
-              </AnimatedSection>
+              
             </div>
 
             {/* Stats */}
@@ -1005,7 +989,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                   <p style={{ color: '#666666', fontSize: '1.1rem' }}>Get a free consultation and let's discuss your project.</p>
                 </div>
               </div>
-              <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+              <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
                 <a href="/contact" style={{ background: '#000000', color: '#ffffff', padding: '1rem 2rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>Get Free Consultation <ArrowRight size={16} /></a>
                 <a href="#" style={{ background: 'transparent', color: '#000000', border: '1px solid #000000', padding: '1rem 2rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>Chat on WhatsApp <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></a>
               </div>
@@ -1038,16 +1022,16 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
             </AnimatedSection>
 
             {/* Hero */}
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', alignItems: 'center', marginBottom: '1.5rem' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', marginBottom: '1.5rem', paddingTop: '2rem' }}>
               <AnimatedSection animation="fadeLeft" delay={100}>
                 <div style={{ color: '#ffffff', fontSize: '0.8rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', marginBottom: '1rem' }}>Case Study</div>
-                <h1 style={{ fontSize: '3.5rem', fontWeight: 700, lineHeight: 1.1, marginBottom: '1.5rem', letterSpacing: '-0.03em' }}>
+                <h1 style={{ fontSize: '3.5rem', fontWeight: 700, lineHeight: 1.1, marginBottom: '1.5rem', letterSpacing: '-0.03em', maxWidth: '800px', margin: '0 auto 1.5rem auto' }}>
                   Building a Custom Wholesale Management System for a Clothing Manufacturer
                 </h1>
-                <p style={{ fontSize: '1.1rem', color: '#a3a3a3', marginBottom: '2.5rem', lineHeight: 1.6, maxWidth: '90%' }}>
+                <p style={{ fontSize: '1.1rem', color: '#a3a3a3', marginBottom: '2.5rem', lineHeight: 1.6, maxWidth: '600px', margin: '0 auto 2.5rem auto' }}>
                   How HYNOX replaced spreadsheets with a centralized wholesale platform for Kores — covering orders, inventory, clients, and production tracking.
                 </p>
-                <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+                <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
                   <a href="#" style={{ background: '#ffffff', color: '#000000', padding: '0.8rem 1.5rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '0.95rem', display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
                     View Live Demo <ArrowUpRight size={14} />
                   </a>
@@ -1056,11 +1040,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                   </a>
                 </div>
               </AnimatedSection>
-              <AnimatedSection animation="fadeRight" delay={200}>
-                <div style={{ width: '100%', paddingBottom: '75%', position: 'relative', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.8)', border: '1px solid rgba(255,255,255,0.05)' }}>
-                  <img src="/case-studies/cs_kores.png" alt="Kores Dashboard" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
-                </div>
-              </AnimatedSection>
+              
             </div>
 
             {/* Stats */}
@@ -1253,7 +1233,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                   <p style={{ color: '#666666', fontSize: '1.1rem' }}>Get a free consultation and let's discuss your project.</p>
                 </div>
               </div>
-              <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+              <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
                 <a href="/contact" style={{ background: '#000000', color: '#ffffff', padding: '1rem 2rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>Get Free Consultation <ArrowRight size={16} /></a>
                 <a href="#" style={{ background: 'transparent', color: '#000000', border: '1px solid #000000', padding: '1rem 2rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>Chat on WhatsApp <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></a>
               </div>
@@ -1286,16 +1266,16 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
             </AnimatedSection>
 
             {/* Hero */}
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', alignItems: 'center', marginBottom: '1.5rem' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', marginBottom: '1.5rem', paddingTop: '2rem' }}>
               <AnimatedSection animation="fadeLeft" delay={100}>
                 <div style={{ color: '#ffffff', fontSize: '0.8rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', marginBottom: '1rem' }}>Case Study</div>
-                <h1 style={{ fontSize: '3.5rem', fontWeight: 700, lineHeight: 1.1, marginBottom: '1.5rem', letterSpacing: '-0.03em' }}>
+                <h1 style={{ fontSize: '3.5rem', fontWeight: 700, lineHeight: 1.1, marginBottom: '1.5rem', letterSpacing: '-0.03em', maxWidth: '800px', margin: '0 auto 1.5rem auto' }}>
                   Launching a Kids Retail Brand with Shopify E-commerce Development
                 </h1>
-                <p style={{ fontSize: '1.1rem', color: '#a3a3a3', marginBottom: '2.5rem', lineHeight: 1.6, maxWidth: '90%' }}>
+                <p style={{ fontSize: '1.1rem', color: '#a3a3a3', marginBottom: '2.5rem', lineHeight: 1.6, maxWidth: '600px', margin: '0 auto 2.5rem auto' }}>
                   How HYNOX designed and developed a professional, mobile-responsive Shopify store for Kido Care to generate online sales from day one.
                 </p>
-                <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+                <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
                   <a href="#" style={{ background: '#ffffff', color: '#000000', padding: '0.8rem 1.5rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '0.95rem', display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
                     View Live Store <ArrowUpRight size={14} />
                   </a>
@@ -1304,11 +1284,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                   </a>
                 </div>
               </AnimatedSection>
-              <AnimatedSection animation="fadeRight" delay={200}>
-                <div style={{ width: '100%', paddingBottom: '75%', position: 'relative', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.8)', border: '1px solid rgba(255,255,255,0.05)' }}>
-                  <img src="/case-studies/cs_kido.png" alt="Kido Care Dashboard" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
-                </div>
-              </AnimatedSection>
+              
             </div>
 
             {/* Stats */}
@@ -1500,7 +1476,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                   <p style={{ color: '#666666', fontSize: '1.1rem' }}>Get a free consultation and let's discuss your project.</p>
                 </div>
               </div>
-              <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+              <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
                 <a href="/contact" style={{ background: '#000000', color: '#ffffff', padding: '1rem 2rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>Get Free Consultation <ArrowRight size={16} /></a>
                 <a href="#" style={{ background: 'transparent', color: '#000000', border: '1px solid #000000', padding: '1rem 2rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>Chat on WhatsApp <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></a>
               </div>
@@ -1533,16 +1509,16 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
             </AnimatedSection>
 
             {/* Hero */}
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', alignItems: 'center', marginBottom: '1.5rem' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', marginBottom: '1.5rem', paddingTop: '2rem' }}>
               <AnimatedSection animation="fadeLeft" delay={100}>
                 <div style={{ color: '#ffffff', fontSize: '0.8rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', marginBottom: '1rem' }}>Case Study</div>
-                <h1 style={{ fontSize: '3.5rem', fontWeight: 700, lineHeight: 1.1, marginBottom: '1.5rem', letterSpacing: '-0.03em' }}>
+                <h1 style={{ fontSize: '3.5rem', fontWeight: 700, lineHeight: 1.1, marginBottom: '1.5rem', letterSpacing: '-0.03em', maxWidth: '800px', margin: '0 auto 1.5rem auto' }}>
                   Building a Custom Tour Management Platform for a Travel Agency
                 </h1>
-                <p style={{ fontSize: '1.1rem', color: '#a3a3a3', marginBottom: '2.5rem', lineHeight: 1.6, maxWidth: '90%' }}>
+                <p style={{ fontSize: '1.1rem', color: '#a3a3a3', marginBottom: '2.5rem', lineHeight: 1.6, maxWidth: '600px', margin: '0 auto 2.5rem auto' }}>
                   How HYNOX developed a custom web application that centralized tour management, online bookings, and customer interactions for Sun Holidays.
                 </p>
-                <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+                <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
                   <a href="#" style={{ background: '#ffffff', color: '#000000', padding: '0.8rem 1.5rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '0.95rem', display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
                     View Live Demo <ArrowUpRight size={14} />
                   </a>
@@ -1551,11 +1527,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                   </a>
                 </div>
               </AnimatedSection>
-              <AnimatedSection animation="fadeRight" delay={200}>
-                <div style={{ width: '100%', paddingBottom: '75%', position: 'relative', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.8)', border: '1px solid rgba(255,255,255,0.05)' }}>
-                  <img src="/case-studies/cs_sun.png" alt="Sun Holidays Dashboard" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
-                </div>
-              </AnimatedSection>
+              
             </div>
 
             {/* Stats */}
@@ -1747,7 +1719,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                   <p style={{ color: '#666666', fontSize: '1.1rem' }}>Get a free consultation and let's discuss your project.</p>
                 </div>
               </div>
-              <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+              <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
                 <a href="/contact" style={{ background: '#000000', color: '#ffffff', padding: '1rem 2rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>Get Free Consultation <ArrowRight size={16} /></a>
                 <a href="#" style={{ background: 'transparent', color: '#000000', border: '1px solid #000000', padding: '1rem 2rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>Chat on WhatsApp <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></a>
               </div>
@@ -1780,16 +1752,16 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
             </AnimatedSection>
 
             {/* Hero */}
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', alignItems: 'center', marginBottom: '1.5rem' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', marginBottom: '1.5rem', paddingTop: '2rem' }}>
               <AnimatedSection animation="fadeLeft" delay={100}>
                 <div style={{ color: '#ffffff', fontSize: '0.8rem', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', marginBottom: '1rem' }}>Case Study</div>
-                <h1 style={{ fontSize: '3.5rem', fontWeight: 700, lineHeight: 1.1, marginBottom: '1.5rem', letterSpacing: '-0.03em' }}>
+                <h1 style={{ fontSize: '3.5rem', fontWeight: 700, lineHeight: 1.1, marginBottom: '1.5rem', letterSpacing: '-0.03em', maxWidth: '800px', margin: '0 auto 1.5rem auto' }}>
                   Digital Transformation for an Interior Design Business
                 </h1>
-                <p style={{ fontSize: '1.1rem', color: '#a3a3a3', marginBottom: '2.5rem', lineHeight: 1.6, maxWidth: '90%' }}>
+                <p style={{ fontSize: '1.1rem', color: '#a3a3a3', marginBottom: '2.5rem', lineHeight: 1.6, maxWidth: '600px', margin: '0 auto 2.5rem auto' }}>
                   How HYNOX developed a custom web platform for Livinza to showcase their portfolio, generate leads, and streamline project tracking.
                 </p>
-                <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+                <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
                   <a href="#" style={{ background: '#ffffff', color: '#000000', padding: '0.8rem 1.5rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '0.95rem', display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
                     View Live Demo <ArrowUpRight size={14} />
                   </a>
@@ -1798,11 +1770,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                   </a>
                 </div>
               </AnimatedSection>
-              <AnimatedSection animation="fadeRight" delay={200}>
-                <div style={{ width: '100%', paddingBottom: '75%', position: 'relative', borderRadius: '12px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.8)', border: '1px solid rgba(255,255,255,0.05)' }}>
-                  <img src="/case-studies/cs_livinza.png" alt="Livinza Dashboard" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
-                </div>
-              </AnimatedSection>
+              
             </div>
 
             {/* Stats */}
@@ -1994,7 +1962,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                   <p style={{ color: '#666666', fontSize: '1.1rem' }}>Get a free consultation and let's discuss your project.</p>
                 </div>
               </div>
-              <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+              <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
                 <a href="/contact" style={{ background: '#000000', color: '#ffffff', padding: '1rem 2rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>Get Free Consultation <ArrowRight size={16} /></a>
                 <a href="#" style={{ background: 'transparent', color: '#000000', border: '1px solid #000000', padding: '1rem 2rem', borderRadius: '6px', textDecoration: 'none', fontWeight: 600, fontSize: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>Chat on WhatsApp <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></a>
               </div>

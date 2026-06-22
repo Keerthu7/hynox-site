@@ -13,36 +13,69 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "HYNOX | Custom Software & E-commerce Development in Tiruppur",
-  description: "HYNOX builds custom software, websites, mobile applications, ERP systems, and AI automation for businesses in Tiruppur, Tamil Nadu, and globally.",
+  title: "HYNOX | #1 Software Development Company in Coimbatore, Tamil Nadu",
+  description:
+    "HYNOX is the best software development company in Coimbatore, Tamil Nadu. We build custom software, websites, mobile apps (iOS & Android), ERP systems, Shopify stores, and AI automation. Trusted by 15+ businesses across India, UK & Finland.",
   keywords: [
-    "software company Tiruppur",
-    "software development company Tiruppur",
-    "web development Tiruppur",
-    "mobile app development Tiruppur",
-    "ERP software company Tiruppur",
-    "AI solutions Tiruppur",
-    "IT company in Tiruppur",
-    "ecommerce website development Tiruppur",
+    "software company in Coimbatore",
+    "software development company Coimbatore",
+    "best software company Coimbatore",
+    "top IT company Coimbatore",
+    "web development company Coimbatore",
+    "website development Coimbatore",
+    "mobile app development Coimbatore",
+    "Android app development Coimbatore",
+    "iOS app development Coimbatore",
+    "ERP software Coimbatore",
+    "custom ERP development Tamil Nadu",
+    "Shopify development Coimbatore",
+    "ecommerce website Coimbatore",
+    "AI solutions Coimbatore",
+    "digital marketing Coimbatore",
+    "performance marketing Coimbatore",
+    "HYNOX",
+    "HYNOX Coimbatore",
     "hynox.in",
-    "HYNOX Tiruppur",
-    "software developers in Tamil Nadu"
+    "software developers Tamil Nadu",
+    "IT services Coimbatore",
+    "custom software development India",
+    "startup technology partner Coimbatore",
+    "web design Coimbatore",
+    "React Next.js developer Coimbatore",
   ],
-  authors: [{ name: "HYNOX" }],
+  authors: [{ name: "HYNOX", url: "https://hynox.in" }],
+  creator: "HYNOX",
+  publisher: "HYNOX",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, "max-snippet": -1, "max-image-preview": "large" },
+  },
+  alternates: { canonical: "https://hynox.in" },
   openGraph: {
-    title: "HYNOX | Custom Software & E-commerce Development in Tiruppur",
-    description: "HYNOX builds websites, custom mobile apps, ERP systems, and AI automation to scale your business.",
+    title: "HYNOX | #1 Software Development Company in Coimbatore, Tamil Nadu",
+    description:
+      "HYNOX builds custom software, websites, mobile apps, ERP systems, Shopify stores, and AI automation for businesses in Coimbatore, Tamil Nadu, and globally.",
     locale: "en_IN",
     type: "website",
     url: "https://hynox.in",
-    siteName: "HYNOX"
+    siteName: "HYNOX",
+    images: [{ url: "https://hynox.in/og-image.png", width: 1200, height: 630, alt: "HYNOX - Software Development Company in Coimbatore" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "HYNOX | Software Development Company in Coimbatore",
+    description: "Custom software, web & mobile app development company in Coimbatore, Tamil Nadu.",
+    site: "@hynoxin",
+    images: ["https://hynox.in/og-image.png"],
   },
   other: {
     "geo.region": "IN-TN",
-    "geo.placename": "Tiruppur",
+    "geo.placename": "Coimbatore",
     "geo.position": "11.1085;77.3411",
     "ICBM": "11.1085, 77.3411",
-  }
+    "article:publisher": "https://hynox.in",
+  },
 };
 
 export default function RootLayout({
@@ -50,24 +83,28 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const jsonLd = {
+  const organizationSchema = {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
+    "@type": ["LocalBusiness", "ProfessionalService"],
     "name": "HYNOX",
-    "alternateName": "HYNOX Software Company",
+    "alternateName": ["HYNOX Software Company", "HYNOX Coimbatore"],
     "url": "https://hynox.in",
-    "logo": "https://hynox.in/hero-illustration.png",
-    "image": "https://hynox.in/hero-illustration.png",
-    "description": "HYNOX is the leading software development and digital marketing company in Tiruppur, Tamil Nadu. We specialize in custom web development, mobile apps (Android & iOS), ERP systems, Shopify stores, and AI/ML solutions.",
+    "logo": "https://hynox.in/hynox-logo.png",
+    "image": "https://hynox.in/og-image.png",
+    "description": "HYNOX is the leading software development company in Coimbatore, Tamil Nadu. We build custom websites, mobile apps (Android & iOS), ERP systems, Shopify stores, and AI automation to help businesses grow globally.",
+    "slogan": "Build Smarter. Grow Faster.",
+    "foundingDate": "2022",
     "telephone": "+91 88705 24355",
     "email": "thehynoxofficial@gmail.com",
     "priceRange": "$$",
+    "currenciesAccepted": "INR",
+    "paymentAccepted": "Cash, Bank Transfer, UPI",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "Tiruppur",
+      "addressLocality": "Coimbatore",
       "addressRegion": "Tamil Nadu",
       "addressCountry": "IN",
-      "postalCode": "641601"
+      "postalCode": "641001"
     },
     "geo": {
       "@type": "GeoCoordinates",
@@ -76,38 +113,114 @@ export default function RootLayout({
     },
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday"
-      ],
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
       "opens": "09:00",
       "closes": "18:00"
+    },
+    "knowsAbout": [
+      "Custom Software Development",
+      "Web Development",
+      "Mobile App Development",
+      "ERP Systems",
+      "E-commerce Development",
+      "Shopify Development",
+      "AI Automation",
+      "Digital Marketing",
+      "Performance Marketing"
+    ],
+    "areaServed": [
+      { "@type": "City", "name": "Coimbatore" },
+      { "@type": "State", "name": "Tamil Nadu" },
+      { "@type": "Country", "name": "India" },
+      { "@type": "Country", "name": "United Kingdom" },
+      { "@type": "Country", "name": "Finland" }
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Software & Digital Services",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custom Software Development", "description": "Tailored software solutions for businesses in Coimbatore and beyond" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Website Development", "description": "Fast, modern websites built with React and Next.js" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mobile App Development", "description": "Native and cross-platform iOS & Android apps" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "ERP Software", "description": "Custom ERP systems for manufacturing, retail, and logistics" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Shopify E-commerce", "description": "Shopify store development and optimization" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI Automation", "description": "AI-powered automation and machine learning solutions" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Performance Marketing", "description": "Google Ads, Meta Ads, and digital marketing" } }
+      ]
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "15",
+      "bestRating": "5"
     },
     "sameAs": [
       "https://facebook.com/hynox",
       "https://instagram.com/hynox",
       "https://linkedin.com/company/hynox"
-    ],
-    "areaServed": [
-      "Tiruppur",
-      "Coimbatore",
-      "Erode",
-      "Tamil Nadu",
-      "India"
+    ]
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the best software development company in Coimbatore?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "HYNOX is the leading software development company in Coimbatore, Tamil Nadu. We specialize in custom software, web development, mobile apps, ERP systems, and AI solutions for businesses across India and globally."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which IT company in Coimbatore builds custom software?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "HYNOX builds fully custom software solutions in Coimbatore including websites, mobile applications, ERP systems, Shopify stores, and AI automation for businesses across India, UK, and Finland."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does HYNOX offer web development services in Coimbatore?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, HYNOX offers full-stack web development, Next.js/React websites, WordPress development, and e-commerce solutions from Coimbatore, Tamil Nadu."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What services does HYNOX offer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "HYNOX offers custom software development, website development, mobile app development (Android & iOS), ERP systems, Shopify e-commerce stores, AI/ML automation, performance marketing, and digital marketing services from Coimbatore, Tamil Nadu."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How to contact HYNOX software company in Coimbatore?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can contact HYNOX at +91 88705 24355 or email thehynoxofficial@gmail.com. We are based in Coimbatore, Tamil Nadu, India and serve clients globally."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is HYNOX a good software company for startups in Coimbatore?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, HYNOX is an excellent technology partner for startups in Coimbatore. We offer affordable custom software, MVP development, mobile apps, and digital marketing to help startups launch and scale."
+        }
+      }
     ]
   };
 
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html lang="en" prefix="og: https://ogp.me/ns#" className={`${geistSans.variable} ${geistMono.variable}`}>
       <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       </head>
       <body>
         {children}

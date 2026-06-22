@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="footer-col about-col">
           <h4>ABOUT HYNOX</h4>
           <p>
-            HYNOX is a software development company in Tiruppur, Tamil Nadu, helping businesses build websites, web applications, mobile apps, ERP systems, and AI-powered solutions.
+            HYNOX is a software development company in Coimbatore, Tamil Nadu, helping businesses build websites, web applications, mobile apps, ERP systems, and AI-powered solutions.
           </p>
           <div className="social-links">
             <a href="#" aria-label="Facebook">
@@ -80,7 +80,7 @@ export default function Footer() {
           </div>
           <div className="contact-item">
             <MapPin size={18} />
-            <span>Tiruppur, Tamil Nadu, India</span>
+            <span>Coimbatore, Tamil Nadu, India</span>
           </div>
         </div>
       </div>

@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import * as LucideIcons from 'lucide-react';
 import { Check, ArrowRight } from 'lucide-react';
 import Header from '../../components/Header';
+import CubesBackground from '../../components/CubesBackground';
 import ServiceCTA from '../../components/ServiceCTA';
 import Footer from '../../components/Footer';
 
@@ -55,7 +56,7 @@ export default function PerformanceMarketingPage() {
     { title: 'Tech & Marketing Integration',  desc: 'Since we code websites and run ads, we can resolve tracking and page speed errors instantly.' },
     { title: 'Proven E-commerce Results',    desc: 'Experienced in scaling textile and apparel brands in local and international markets.' },
     { title: '100% Transparent Tracking',    desc: 'You hold full ownership of ad accounts and billing profiles — complete visibility.' },
-    { title: 'Local Tiruppur Context',       desc: 'We know the exact buyer demographics and target markets for manufacturing and retail.' },
+    { title: 'Local Coimbatore Context',       desc: 'We know the exact buyer demographics and target markets for manufacturing and retail.' },
   ];
 
   const process = [
@@ -74,11 +75,10 @@ export default function PerformanceMarketingPage() {
     { title: "Teerex", cat: "Custom Development", desc: "E-commerce platform with custom features", img: "/images/graaps_web.png" },
     { title: "Mallika Garments", cat: "Custom Development", desc: "Fashion retail business solution", img: "/images/malika-garments_web.jpg" },
     { title: "Graaps", cat: "Clothing Brand", desc: "Online clothing store", img: "/images/graaps_web.png" },
-    { title: "Zydenn", cat: "Clothing Brand", desc: "Online clothing store", img: "/images/kyto_web.jpeg" },
+    { title: "Food delivery app", cat: "Custom Development", desc: "On-demand food delivery service", img: "/images/aharraa_web.png" },
     { title: "Kores Fabrics", cat: "Clothing Brand", desc: "Online clothing Wholesale Store", img: "/images/kores_web.png" },
     { title: "Kido Care", cat: "Kids Clothing Brand", desc: "Online clothing store", img: "/images/kido_care_web.jpg" },
     { title: "Sun Holidays", cat: "Tours and Travel Agency", desc: "Travel Agency Portfolio", img: "/images/sun_holidays_web.png" },
-    { title: "Twinstar", cat: "Clothing Brand", desc: "Online clothing store", img: "/images/kyto_web.jpeg" },
     { title: "Livinza", cat: "Interior Business", desc: "Interior Business Portfolio", img: "/images/livinza_web.png" }
   ];
 
@@ -93,8 +93,8 @@ export default function PerformanceMarketingPage() {
     { q: 'Can HYNOX create landing pages for ad campaigns?', a: 'Yes, we design high-converting landing pages optimized for lead generation, product sales, and advertising performance.' },
     { q: 'Do you offer remarketing and retargeting campaigns?', a: 'Yes, we run retargeting campaigns that reconnect with website visitors, cart abandoners, and previous customers to increase conversions.' },
     { q: 'Will I have access to my ad accounts?', a: 'Yes, you maintain full ownership and access to your advertising accounts, analytics, and billing profiles at all times.' },
-    { q: 'Do you provide performance marketing for businesses in Tiruppur?', a: 'Yes, HYNOX helps businesses in Tiruppur and across India grow through Meta Ads, Google Ads, lead generation campaigns, and eCommerce marketing.' },
-    { q: 'Why choose HYNOX as a performance marketing agency in Tiruppur?', a: 'HYNOX combines marketing expertise with technical development skills, allowing us to optimize ads, websites, landing pages, and tracking systems for maximum ROI.' },
+    { q: 'Do you provide performance marketing for businesses in Coimbatore?', a: 'Yes, HYNOX helps businesses in Coimbatore and across India grow through Meta Ads, Google Ads, lead generation campaigns, and eCommerce marketing.' },
+    { q: 'Why choose HYNOX as a performance marketing agency in Coimbatore?', a: 'HYNOX combines marketing expertise with technical development skills, allowing us to optimize ads, websites, landing pages, and tracking systems for maximum ROI.' },
   ];
 
   return (
@@ -103,43 +103,40 @@ export default function PerformanceMarketingPage() {
 
       <main>
         {/* ─── 1. HERO ─── */}
-        <section className="hero-2col-section">
-          <div className="hero-aurora-glow"></div>
-          <div className="hero-2col-container svc-hero-2col-container">
-            <div className="hero-2col-content svc-hero-2col-content mobile-apps-hero-content">
-              <div className="badge reveal-blur">
-                PERFORMANCE MARKETING AGENCY IN TIRUPPUR
-              </div>
-              <h1 className="reveal-from-left reveal-delay-100 svc-subpage-h1 perf-hero-h1">
-                Performance Marketing That<br />
-                <span className="svc-hero-accent-bw">Scales Your Revenues</span>
-              </h1>
-              <p className="reveal-from-left reveal-delay-200">
-                We plan, launch and manage high-converting Meta Ads, Google Ads, and shopping campaigns 
-                designed to scale your online orders and boost your bottom line.
-              </p>
-              <div className="hero-actions reveal-from-left reveal-delay-300" style={{ marginBottom: '2.5rem' }}>
-                <a href="/contact" className="btn btn-hero-solid">Get Free Consultation <ArrowRight size={16} style={{ marginLeft: "4px", display: "inline-block", verticalAlign: "middle" }} /></a>
-                <a href="#portfolio" className="btn btn-hero-outline">View Our Work</a>
-              </div>
-              <div className="svc-hero-badges-bw reveal-fade-in reveal-delay-400">
-                <span>✓ Meta (FB/IG) Ads</span>
-                <span>✓ Google Search &amp; PMax</span>
-                <span>✓ ROAS Optimization</span>
-                <span>✓ Creative Strategy</span>
-              </div>
+        <section className="hero-center-section">
+          {/* Animated Cubes Background */}
+          <div className="absolute inset-0 w-full h-full z-0" style={{ background: "#050505" }}>
+            <CubesBackground />
+          </div>
+
+          {/* Radial gradient overlay */}
+          <div className="absolute inset-0 z-[1] pointer-events-none" style={{ background: "radial-gradient(ellipse at 50% 50%, rgba(20,35,100,0.25) 0%, rgba(5,5,5,0.65) 75%)" }} />
+
+          <div className="hero-center-content">
+            <span className="hero-badge reveal-fade-in">
+              PERFORMANCE MARKETING AGENCY IN COIMBATORE
+            </span>
+
+            <h1 className="hero-center-h1 reveal-fade-in reveal-delay-100">
+              Performance Marketing That<br />
+              <span className="svc-hero-accent-bw">Scales Your Revenues</span>
+            </h1>
+
+            <p className="hero-center-p reveal-fade-in reveal-delay-200">
+              We plan, launch and manage high-converting Meta Ads, Google Ads, and shopping campaigns 
+              designed to scale your online orders and boost your bottom line.
+            </p>
+
+            <div className="hero-center-actions reveal-fade-in reveal-delay-300">
+              <a href="/contact" className="btn btn-hero-solid">Get Free Consultation <ArrowRight size={16} style={{ marginLeft: "4px", display: "inline-block", verticalAlign: "middle" }} /></a>
+              <a href="#portfolio" className="btn btn-hero-outline">View Our Work</a>
             </div>
-            <div className="hero-2col-image-wrapper svc-hero-image-wrapper reveal-from-right reveal-delay-200">
-              <img
-                src="/performance-marketing-hero.png"
-                alt="Performance Marketing by HYNOX Tiruppur"
-                style={{
-                  width: '100%',
-                  maxWidth: '450px',
-                  height: 'auto',
-                  objectFit: 'contain',
-                }}
-              />
+
+            <div className="svc-hero-badges-bw reveal-fade-in reveal-delay-400" style={{ justifyContent: 'center', marginTop: '2.5rem' }}>
+              <span>✓ Meta (FB/IG) Ads</span>
+              <span>✓ Google Search &amp; PMax</span>
+              <span>✓ ROAS Optimization</span>
+              <span>✓ Creative Strategy</span>
             </div>
           </div>
         </section>

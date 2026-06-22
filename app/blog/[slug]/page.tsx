@@ -86,7 +86,7 @@ export default function BlogDetailPage() {
           </div>
 
           {/* BLOG HEADER */}
-          <div style={{ marginBottom: '3.5rem', textAlign: 'left' }}>
+          <div style={{ marginBottom: '3.5rem', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <span style={{ 
               display: 'inline-block', 
               background: 'rgba(255,255,255,0.06)', 
@@ -105,18 +105,13 @@ export default function BlogDetailPage() {
             <h1 style={{ fontSize: 'clamp(2.2rem, 5vw, 3.6rem)', fontWeight: 700, lineHeight: 1.1, marginBottom: '1.5rem', color: '#ffffff', letterSpacing: '-1.5px', maxWidth: '1000px' }}>
               {post.title}
             </h1>
-            <div style={{ display: 'flex', gap: '1.5rem', color: 'rgba(255,255,255,0.5)', fontSize: '0.9rem', alignItems: 'center', borderBottom: '1px solid rgba(255,255,255,0.1)', paddingBottom: '1.5rem' }}>
+            <div style={{ display: 'flex', gap: '1.5rem', color: 'rgba(255,255,255,0.5)', fontSize: '0.9rem', alignItems: 'center', justifyContent: 'center', borderBottom: '1px solid rgba(255,255,255,0.1)', paddingBottom: '1.5rem', width: '100%', maxWidth: '800px' }}>
               <span>{post.date}</span>
               <span style={{ color: '#333333' }}>|</span>
               <span>{post.readTime}</span>
               <span style={{ color: '#333333' }}>|</span>
               <span>By HYNOX</span>
             </div>
-          </div>
-
-          {/* FEATURED IMAGE */}
-          <div style={{ width: '100%', height: 'clamp(240px, 45vw, 520px)', borderRadius: '16px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.1)', marginBottom: '4rem', boxShadow: '0 20px 45px rgba(0,0,0,0.6)' }}>
-            <img src={post.image} alt={post.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
           </div>
 
           {/* TWO-COLUMN GRID */}
@@ -157,7 +152,7 @@ export default function BlogDetailPage() {
                   </h2>
                   
                   {/* Web Dev Guide Factor layout grid */}
-                  {post.slug === 'website-development-cost-in-tiruppur-2025-guide' && section.anchorId === 'factors' && (
+                  {post.slug === 'website-development-cost-in-coimbatore-2025-guide' && section.anchorId === 'factors' && (
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))', gap: '1.2rem', margin: '1.5rem 0' }}>
                       {[
                         { title: 'Type of Website', desc: 'Business, eCommerce, Portal or Web App', icon: <Laptop size={28} style={{ color: '#ffffff', margin: '0 auto' }} /> },

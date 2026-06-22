@@ -1,15 +1,15 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'UGC Video Creation Agency in Tiruppur | HYNOX',
+  title: 'UGC Video Creation Agency in Coimbatore | HYNOX',
   description:
-    'HYNOX creates high-converting User Generated Content (UGC) videos, ad hooks, product demos, aesthetic reels, and video ads for e-commerce and retail brands in Tiruppur, India, and globally.',
+    'HYNOX creates high-converting User Generated Content (UGC) videos, ad hooks, product demos, aesthetic reels, and video ads for e-commerce and retail brands in Coimbatore, India, and globally.',
   keywords: [
-    'UGC video creation Tiruppur',
+    'UGC video creation Coimbatore',
     'User generated content agency India',
     'product video shoots Tamil Nadu',
     'tiktok reels creation',
-    'best video ads company Tiruppur',
+    'best video ads company Coimbatore',
     'HYNOX UGC videos',
   ],
   openGraph: {

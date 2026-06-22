@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import * as LucideIcons from 'lucide-react';
 import { Check, ArrowRight } from 'lucide-react';
 import Header from '../../components/Header';
+import CubesBackground from '../../components/CubesBackground';
 import ServiceCTA from '../../components/ServiceCTA';
 import Footer from '../../components/Footer';
 
@@ -55,7 +56,7 @@ export default function UGCVideoCreationPage() {
     { title: 'Diverse Creator Castings',     desc: 'Access creators of different age groups, genders, and styling preferences.' },
     { title: 'Fast Handover Cycles',         desc: 'Briefing, casting, filming, editing, and final delivery within 14–21 days.' },
     { title: 'Ad Agency Standard Editing',   desc: 'We edit for retention — utilizing dynamic zoom transitions, text overlays, and captions.' },
-    { title: 'Tiruppur Local Touch',         desc: 'We handle shipments, samples, and styling locally for fast setups.' },
+    { title: 'Coimbatore Local Touch',         desc: 'We handle shipments, samples, and styling locally for fast setups.' },
   ];
 
   const process = [
@@ -74,11 +75,10 @@ export default function UGCVideoCreationPage() {
     { title: "Teerex", cat: "Custom Development", desc: "E-commerce platform with custom features", img: "/images/graaps_web.png" },
     { title: "Mallika Garments", cat: "Custom Development", desc: "Fashion retail business solution", img: "/images/malika-garments_web.jpg" },
     { title: "Graaps", cat: "Clothing Brand", desc: "Online clothing store", img: "/images/graaps_web.png" },
-    { title: "Zydenn", cat: "Clothing Brand", desc: "Online clothing store", img: "/images/kyto_web.jpeg" },
+    { title: "Food delivery app", cat: "Custom Development", desc: "On-demand food delivery service", img: "/images/aharraa_web.png" },
     { title: "Kores Fabrics", cat: "Clothing Brand", desc: "Online clothing Wholesale Store", img: "/images/kores_web.png" },
     { title: "Kido Care", cat: "Kids Clothing Brand", desc: "Online clothing store", img: "/images/kido_care_web.jpg" },
     { title: "Sun Holidays", cat: "Tours and Travel Agency", desc: "Travel Agency Portfolio", img: "/images/sun_holidays_web.png" },
-    { title: "Twinstar", cat: "Clothing Brand", desc: "Online clothing store", img: "/images/kyto_web.jpeg" },
     { title: "Livinza", cat: "Interior Business", desc: "Interior Business Portfolio", img: "/images/livinza_web.png" }
   ];
 
@@ -94,7 +94,7 @@ export default function UGCVideoCreationPage() {
     { q: 'Will I receive the raw video files?', a: 'Yes, we provide edited videos and can also share raw footage based on the project requirements.' },
     { q: 'Do you create product demonstration videos?', a: 'Yes, we create product demo videos that showcase features, benefits, usage instructions, and customer experiences.' },
     { q: 'Do I get full usage rights for the videos?', a: 'Yes, you receive full marketing usage rights for running the videos across advertising platforms and social media channels.' },
-    { q: 'Why choose HYNOX for UGC video creation in Tiruppur?', a: 'HYNOX creates conversion-focused UGC videos designed for ecommerce brands, clothing businesses, startups, and companies looking to improve advertising performance and online sales.' },
+    { q: 'Why choose HYNOX for UGC video creation in Coimbatore?', a: 'HYNOX creates conversion-focused UGC videos designed for ecommerce brands, clothing businesses, startups, and companies looking to improve advertising performance and online sales.' },
   ];
 
   return (
@@ -103,43 +103,40 @@ export default function UGCVideoCreationPage() {
 
       <main>
         {/* ─── 1. HERO ─── */}
-        <section className="hero-2col-section">
-          <div className="hero-aurora-glow"></div>
-          <div className="hero-2col-container svc-hero-2col-container">
-            <div className="hero-2col-content svc-hero-2col-content mobile-apps-hero-content">
-              <div className="badge reveal-blur">
-                UGC VIDEO CREATION COMPANY IN TIRUPPUR
-              </div>
-              <h1 className="reveal-from-left reveal-delay-100 svc-subpage-h1">
-                UGC Video Creation That<br />
-                <span className="svc-hero-accent-bw">Converts Viewers to Buyers</span>
-              </h1>
-              <p className="reveal-from-left reveal-delay-200">
-                We conceptualize, script, cast, and edit high-converting User Generated Content (UGC) videos 
-                and short-form ad creatives designed to drive clicks and boost ROAS.
-              </p>
-              <div className="hero-actions reveal-from-left reveal-delay-300" style={{ marginBottom: '2.5rem' }}>
-                <a href="/contact" className="btn btn-hero-solid">Get Free Consultation <ArrowRight size={16} style={{ marginLeft: "4px", display: "inline-block", verticalAlign: "middle" }} /></a>
-                <a href="#portfolio" className="btn btn-hero-outline">View Our Work</a>
-              </div>
-              <div className="svc-hero-badges-bw reveal-fade-in reveal-delay-400">
-                <span>✓ Authentic Hook Videos</span>
-                <span>✓ Product Demos</span>
-                <span>✓ High-Converting Ads</span>
-                <span>✓ Creator Sourcing</span>
-              </div>
+        <section className="hero-center-section">
+          {/* Animated Cubes Background */}
+          <div className="absolute inset-0 w-full h-full z-0" style={{ background: "#050505" }}>
+            <CubesBackground />
+          </div>
+
+          {/* Radial gradient overlay */}
+          <div className="absolute inset-0 z-[1] pointer-events-none" style={{ background: "radial-gradient(ellipse at 50% 50%, rgba(20,35,100,0.25) 0%, rgba(5,5,5,0.65) 75%)" }} />
+
+          <div className="hero-center-content">
+            <span className="hero-badge reveal-fade-in">
+              UGC VIDEO CREATION COMPANY IN COIMBATORE
+            </span>
+
+            <h1 className="hero-center-h1 reveal-fade-in reveal-delay-100">
+              UGC Video Creation That<br />
+              <span className="svc-hero-accent-bw">Converts Viewers to Buyers</span>
+            </h1>
+
+            <p className="hero-center-p reveal-fade-in reveal-delay-200">
+              We conceptualize, script, cast, and edit high-converting User Generated Content (UGC) videos 
+              and short-form ad creatives designed to drive clicks and boost ROAS.
+            </p>
+
+            <div className="hero-center-actions reveal-fade-in reveal-delay-300">
+              <a href="/contact" className="btn btn-hero-solid">Get Free Consultation <ArrowRight size={16} style={{ marginLeft: "4px", display: "inline-block", verticalAlign: "middle" }} /></a>
+              <a href="#portfolio" className="btn btn-hero-outline">View Our Work</a>
             </div>
-            <div className="hero-2col-image-wrapper svc-hero-image-wrapper reveal-from-right reveal-delay-200">
-              <img
-                src="/ugc-video-creation-hero.png"
-                alt="UGC Video Creation by HYNOX Tiruppur"
-                style={{
-                  width: '100%',
-                  maxWidth: '450px',
-                  height: 'auto',
-                  objectFit: 'contain',
-                }}
-              />
+
+            <div className="svc-hero-badges-bw reveal-fade-in reveal-delay-400" style={{ justifyContent: 'center', marginTop: '2.5rem' }}>
+              <span>✓ Authentic Hook Videos</span>
+              <span>✓ Product Demos</span>
+              <span>✓ High-Converting Ads</span>
+              <span>✓ Creator Sourcing</span>
             </div>
           </div>
         </section>
