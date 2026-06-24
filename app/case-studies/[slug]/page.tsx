@@ -23,7 +23,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
         
         <main style={{ background: '#050505', color: '#ffffff', minHeight: '100vh', paddingTop: '2rem', paddingBottom: '4rem', fontFamily: 'system-ui, -apple-system, sans-serif' }}>
           
-          <div style={{ maxWidth: '1500px', margin: '0 auto', padding: '0 2rem' }}>
+          <div style={{ maxWidth: '1350px', margin: '0 auto', padding: '0 4%' }}>
             
 
             {/* Breadcrumbs - above hero */}
@@ -326,7 +326,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
       <>
         <Header />
         <main style={{ background: '#050505', color: '#ffffff', minHeight: '100vh', paddingTop: '2rem', paddingBottom: '4rem', fontFamily: 'system-ui, -apple-system, sans-serif' }}>
-          <div style={{ maxWidth: '1500px', margin: '0 auto', padding: '0 2rem' }}>
+          <div style={{ maxWidth: '1350px', margin: '0 auto', padding: '0 4%' }}>
 
             {/* Breadcrumbs */}
             <div style={{ fontSize: '0.85rem', color: '#666666', marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
@@ -549,7 +549,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
       <>
         <Header />
         <main style={{ background: '#050505', color: '#ffffff', minHeight: '100vh', paddingTop: '2rem', paddingBottom: '4rem', fontFamily: 'system-ui, -apple-system, sans-serif' }}>
-          <div style={{ maxWidth: '1500px', margin: '0 auto', padding: '0 2rem' }}>
+          <div style={{ maxWidth: '1350px', margin: '0 auto', padding: '0 4%' }}>
 
             <AnimatedSection animation="fadeIn" delay={0}>
               <div style={{ fontSize: '0.85rem', color: '#666666', marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
@@ -747,7 +747,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
       <>
         <Header />
         <main style={{ background: '#050505', color: '#ffffff', minHeight: '100vh', paddingTop: '2rem', paddingBottom: '4rem', fontFamily: 'system-ui, -apple-system, sans-serif' }}>
-          <div style={{ maxWidth: '1500px', margin: '0 auto', padding: '0 2rem' }}>
+          <div style={{ maxWidth: '1350px', margin: '0 auto', padding: '0 4%' }}>
 
             {/* Breadcrumb */}
             <AnimatedSection animation="fadeIn" delay={0}>
@@ -1009,7 +1009,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
       <>
         <Header />
         <main style={{ background: '#050505', color: '#ffffff', minHeight: '100vh', paddingTop: '2rem', paddingBottom: '4rem', fontFamily: 'system-ui, -apple-system, sans-serif' }}>
-          <div style={{ maxWidth: '1500px', margin: '0 auto', padding: '0 2rem' }}>
+          <div style={{ maxWidth: '1350px', margin: '0 auto', padding: '0 4%' }}>
 
             <AnimatedSection animation="fadeIn" delay={0}>
               <div style={{ fontSize: '0.85rem', color: '#666666', marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
@@ -1253,7 +1253,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
       <>
         <Header />
         <main style={{ background: '#050505', color: '#ffffff', minHeight: '100vh', paddingTop: '2rem', paddingBottom: '4rem', fontFamily: 'system-ui, -apple-system, sans-serif' }}>
-          <div style={{ maxWidth: '1500px', margin: '0 auto', padding: '0 2rem' }}>
+          <div style={{ maxWidth: '1350px', margin: '0 auto', padding: '0 4%' }}>
 
             <AnimatedSection animation="fadeIn" delay={0}>
               <div style={{ fontSize: '0.85rem', color: '#666666', marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
@@ -1496,7 +1496,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
       <>
         <Header />
         <main style={{ background: '#050505', color: '#ffffff', minHeight: '100vh', paddingTop: '2rem', paddingBottom: '4rem', fontFamily: 'system-ui, -apple-system, sans-serif' }}>
-          <div style={{ maxWidth: '1500px', margin: '0 auto', padding: '0 2rem' }}>
+          <div style={{ maxWidth: '1350px', margin: '0 auto', padding: '0 4%' }}>
 
             <AnimatedSection animation="fadeIn" delay={0}>
               <div style={{ fontSize: '0.85rem', color: '#666666', marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
@@ -1739,7 +1739,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
       <>
         <Header />
         <main style={{ background: '#050505', color: '#ffffff', minHeight: '100vh', paddingTop: '2rem', paddingBottom: '4rem', fontFamily: 'system-ui, -apple-system, sans-serif' }}>
-          <div style={{ maxWidth: '1500px', margin: '0 auto', padding: '0 2rem' }}>
+          <div style={{ maxWidth: '1350px', margin: '0 auto', padding: '0 4%' }}>
 
             <AnimatedSection animation="fadeIn" delay={0}>
               <div style={{ fontSize: '0.85rem', color: '#666666', marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
@@ -1986,7 +1986,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
     <>
       <Header />
       <main style={{ background: '#000000', color: '#ffffff', minHeight: '100vh', paddingTop: '8rem', paddingBottom: '6rem' }}>
-        <section style={{ maxWidth: '1000px', margin: '0 auto', padding: '0 2rem', textAlign: 'center' }}>
+        <section style={{ maxWidth: '1000px', margin: '0 auto', padding: '0 4%', textAlign: 'center' }}>
           <div className="badge" style={{ marginBottom: '1rem', display: 'inline-block' }}>CASE STUDY DETAILS</div>
           <h1 style={{ fontSize: '3rem', fontWeight: 600, marginBottom: '2rem', lineHeight: 1.2 }}>
             {title}

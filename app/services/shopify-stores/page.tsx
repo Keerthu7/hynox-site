@@ -32,39 +32,44 @@ export default function ShopifyStoresPage() {
   }, []);
 
   const whatWeBuild = [
-    { icon: 'ShoppingCart',  title: 'Custom Shopify Themes',   desc: 'Tailored designs that represent your brand, optimized for maximum conversion rate.' },
-    { icon: 'Settings',  title: 'Store Setup & Launch',    desc: 'Domain connection, shipping configurations, checkout settings, and full storefront launch.' },
-    { icon: 'Plug',  title: 'App Integration',         desc: 'Seamless setup of review apps, loyalty programs, upselling features, and marketing tools.' },
-    { icon: 'Repeat',  title: 'Platform Migration',      desc: 'Migrate products, customers, and order history safely from WooCommerce, Wix, or custom tools.' },
-    { icon: '🏢',  title: 'B2B Wholesale Setup',     desc: 'Specialized portals for wholesalers with tier pricing, custom ordering sheets, and billing.' },
-    { icon: 'Zap',  title: 'Store Speed Audit',       desc: 'Speed optimization to reduce cart abandonment, fix layout shifts, and improve page scores.' },
+    { icon: 'ShoppingCart',  title: 'Bespoke Storefronts',   desc: 'Distinctive, conversion-driven designs that perfectly encapsulate your brand identity.' },
+    { icon: 'Settings',  title: 'End-to-End Deployment',    desc: 'From domain mapping to checkout routing, we handle the entire technical launch process.' },
+    { icon: 'Plug',  title: 'Ecosystem Integration',         desc: 'Seamlessly connect CRM tools, loyalty programs, and advanced marketing plugins.' },
+    { icon: 'Repeat',  title: 'Seamless Migrations',      desc: 'Safely transfer your data, customer lists, and products from WooCommerce, Magento, or Wix.' },
+    { icon: '🏢',  title: 'B2B Wholesale Portals',     desc: 'Advanced wholesale environments featuring tiered pricing, bulk ordering, and custom billing.' },
+    { icon: 'Zap',  title: 'Performance Tuning',       desc: 'Deep technical optimization to eliminate lag, reduce bounce rates, and secure top Core Web Vitals scores.' },
   ];
 
   const whatYouGet = [
-    { icon: 'Palette', title: 'Modern Theme Design',      desc: 'Sleek, minimalist interface matching your brand aesthetics.' },
-    { icon: 'Smartphone', title: 'Mobile First Layout',       desc: 'Optimized shopping cart and checkout screens for mobile users.' },
-    { icon: 'CreditCard', title: 'Local Payment Options',    desc: 'Razorpay, PhonePe, Paytm, and COD gateways completely integrated.' },
-    { icon: '🚚', title: 'Shipping & Delivery APIs',  desc: 'Automated delivery rates and tracking links via Delhivery, Shiprocket, etc.' },
-    { icon: 'MessageSquare', title: 'WhatsApp & SMS Alerts',     desc: 'Automatic order confirmation, dispatch alerts, and abandoned cart reminders.' },
-    { icon: 'Search', title: 'SEO Optimized Setup',       desc: 'Proper product tags, site maps, speed boosts, and schema markup.' },
-    { icon: 'BarChart3', title: 'Google Analytics & Pixel',  desc: 'Meta Pixel, Google Analytics 4, and conversion API setups for tracking ads.' },
-    { icon: 'Headphones', title: 'Post-Launch Handover',     desc: 'Full video walkthroughs and guides on how to manage inventory and discounts.' },
+    { icon: 'Palette', title: 'Aesthetic Brilliance',      desc: 'Clean, immersive user interfaces tailored for modern shoppers.' },
+    { icon: 'Smartphone', title: 'Mobile-Optimized Commerce',       desc: 'Frictionless browsing and fast checkout experiences designed specifically for smartphones.' },
+    { icon: 'CreditCard', title: 'Frictionless Payments',    desc: 'Full integration with local favorites like Razorpay, PhonePe, UPI, and Cash on Delivery.' },
+    { icon: '🚚', title: 'Automated Logistics APIs',  desc: 'Real-time shipping rates and tracking synced through partners like Shiprocket and Delhivery.' },
+    { icon: 'MessageSquare', title: 'Instant Notifications',     desc: 'Automated WhatsApp and SMS workflows for order updates and abandoned cart recovery.' },
+    { icon: 'Search', title: 'Technical SEO Foundation',       desc: 'Advanced schema markup, dynamic sitemaps, and optimized product architectures for Google visibility.' },
+    { icon: 'BarChart3', title: 'Data-Driven Tracking',  desc: 'Precision tracking with Meta Pixel, GA4, and Server-Side APIs to measure exact marketing ROI.' },
+    { icon: 'Headphones', title: 'Empowered Teams',     desc: 'Comprehensive training and video documentation so your staff can manage daily operations effortlessly.' },
   ];
 
   const whyChoose = [
-    { title: 'Proven E-commerce Track Record', desc: 'We have launched highly successful Shopify brands (SugarStar, Graaps).' },
-    { title: 'Coimbatore Textile Savvy',       desc: 'We understand local apparel manufacturing, export procedures, and stock management.' },
-    { title: 'Direct Developer Team',         desc: 'Fast iterations, custom code fixes, and zero middlemen delays.' },
-    { title: 'Optimized for High ROAS',       desc: 'We build stores with high speed and conversion metrics, ideal for running paid ads.' },
-    { title: 'Complete Store Handover',       desc: 'No hidden dependencies. We train your internal team to run the store independently.' },
+    { title: 'Demonstrated Success', desc: 'We’ve engineered and scaled high-volume digital brands like SugarStar and Graaps.' },
+    { title: 'Deep Industry Insight',       desc: 'Being rooted in Coimbatore gives us a distinct advantage in apparel logic, inventory lifecycles, and export dynamics.' },
+    { title: 'In-House Technical Talent',         desc: 'Direct communication with engineers means faster execution and no outsourced delays.' },
+    { title: 'Built for Advertising',       desc: 'Our architectures prioritize speed and conversion rate—the two pillars of profitable ad spend.' },
+    { title: 'Absolute Ownership',       desc: 'You own everything. We deliver the keys and the knowledge, with zero vendor lock-in.' },
   ];
 
   const process = [
-    { step: '01', title: 'Discover',  desc: 'We analyze your catalog size, branding style, and target audience.' },
-    { step: '02', title: 'Design',    desc: 'We map user flow, product pages layout, and global style guides.' },
-    { step: '03', title: 'Develop',   desc: 'We customize your Shopify theme, add products, and configure apps.' },
-    { step: '04', title: 'Integrate', desc: 'We configure payment gateways, shipping partners, and tracking tools.' },
-    { step: '05', title: 'Launch',    desc: 'We conduct checkout tests, map your custom domain, and take the store live.' },
+    { step: '01', title: 'Blueprint',  desc: 'We audit your inventory, define user personas, and establish the technical requirements.' },
+    { step: '02', title: 'Wireframe',    desc: 'Crafting intuitive user journeys, wireframing product pages, and defining visual aesthetics.' },
+    { step: '03', title: 'Execution',   desc: 'Translating designs into robust code, structuring collections, and dialing in functionality.' },
+    { step: '04', title: 'Connectivity', desc: 'Wiring up payment processors, shipping APIs, and multi-channel inventory syncs.' },
+    { step: '05', title: 'Deployment',    desc: 'Rigorous quality assurance, live transaction testing, and deploying to the public web.' },
+  ];
+
+  const caseStudies = [
+    { title: "SugarStar", category: "E-Commerce · Loungewear", desc: "Executed hyper-targeted message campaigns to drive direct inquiries. Achieved massive scale with optimized entry costs, resulting in high-intent sales conversions.", metric1: "₹9.9", metric1Label: "Cost Per Click", metric2: "₹4.2L", metric2Label: "Total Sales", metric3: "₹1L", metric3Label: "Net Profit", duration: "4 Months" },
+    { title: "Teerex", category: "Retail · Apparel", desc: "Scaled lead generation for high-volume retail. By optimizing lead quality, we delivered a consistent flow of prospects and a strong return on marketing investment.", metric1: "₹220", metric1Label: "Cost Per Lead", metric2: "₹11.48L", metric2Label: "Total Returns", metric3: "3.02×", metric3Label: "ROI", duration: "6 Months" },
   ];
 
   const portfolio = [
@@ -114,7 +119,7 @@ export default function ShopifyStoresPage() {
 
           <div className="hero-center-content">
             <span className="hero-badge reveal-fade-in">
-              SHOPIFY STORES COMPANY IN COIMBATORE
+              LEADING E-COMMERCE AGENCY IN COIMBATORE
             </span>
 
             <h1 className="hero-center-h1 reveal-fade-in reveal-delay-100">
@@ -214,6 +219,56 @@ export default function ShopifyStoresPage() {
                 {i < process.length - 1 && <div className="svc-process-line" />}
                 <h4>{item.title}</h4>
                 <p>{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* ─── CASE STUDIES ─── */}
+        <section className="svc-section" id="cases">
+          <style dangerouslySetInnerHTML={{__html: `
+            .cases-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; max-width: 1200px; margin: 0 auto; }
+            .case-card { background: #ffffff; border: 1px solid #eaeaea; padding: 4rem; border-radius: 16px; transition: all 0.3s ease; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+            .case-card:hover { transform: translateY(-5px); box-shadow: 0 15px 40px rgba(0,0,0,0.15); }
+            .case-meta { display: flex; justify-content: space-between; margin-bottom: 2rem; font-size: 0.75rem; color: #888; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; }
+            .case-card h3 { font-size: 2.2rem; margin-bottom: 1rem; font-weight: 600; letter-spacing: -0.02em; color: #000; }
+            .case-card p { color: #444; line-height: 1.6; margin-bottom: 3rem; font-size: 1.1rem; font-weight: 400; }
+            .case-metrics { display: flex; justify-content: space-between; border-top: 1px solid #eaeaea; padding-top: 2.5rem; }
+            .case-metric { display: flex; flex-direction: column; }
+            .case-metric .val { font-size: 2rem; font-weight: 600; margin-bottom: 0.5rem; letter-spacing: -0.02em; color: #000; }
+            .case-metric .lbl { font-size: 0.75rem; color: #666; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; }
+            .case-metric.highlight .val { color: #000; }
+            @media (max-width: 900px) { .cases-grid { grid-template-columns: 1fr; } .case-metrics { flex-wrap: wrap; gap: 2rem; } }
+          `}} />
+          <div className="svc-section-header reveal-from-left">
+            <span className="svc-label">Case Studies</span>
+            <h2>Stores We've Built & Scaled</h2>
+          </div>
+
+          <div className="cases-grid reveal-from-bottom reveal-delay-200">
+            {caseStudies.map((cs, i) => (
+              <div className="case-card" key={i}>
+                <div className="case-meta">
+                  <span>{cs.category}</span>
+                  <span>Duration: {cs.duration}</span>
+                </div>
+                <h3>{cs.title}</h3>
+                <p>{cs.desc}</p>
+                
+                <div className="case-metrics">
+                  <div className="case-metric">
+                    <span className="val">{cs.metric1}</span>
+                    <span className="lbl">{cs.metric1Label}</span>
+                  </div>
+                  <div className="case-metric highlight">
+                    <span className="val">{cs.metric2}</span>
+                    <span className="lbl">{cs.metric2Label}</span>
+                  </div>
+                  <div className="case-metric">
+                    <span className="val">{cs.metric3}</span>
+                    <span className="lbl">{cs.metric3Label}</span>
+                  </div>
+                </div>
               </div>
             ))}
           </div>

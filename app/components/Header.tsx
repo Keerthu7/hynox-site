@@ -39,7 +39,7 @@ export default function Header() {
         <ul className="nav">
           <li><Link href={getHref('#home')} onClick={closeMobileMenu}>HOME</Link></li>
           <li><Link href={getHref('#services')} onClick={closeMobileMenu}>SERVICES</Link></li>
-          <li><Link href={getHref('#work')} onClick={closeMobileMenu}>WORK</Link></li>
+          <li><Link href="/works" className={pathname === '/works' ? 'active' : ''} onClick={closeMobileMenu}>WORKS</Link></li>
           <li><Link href="/case-studies" onClick={closeMobileMenu}>CASE STUDIES</Link></li>
           <li><Link href="/blog" className={pathname === '/blog' ? 'active' : ''} onClick={closeMobileMenu}>BLOG</Link></li>
           <li><Link href="/careers" onClick={closeMobileMenu}>CAREERS</Link></li>

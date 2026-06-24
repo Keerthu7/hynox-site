@@ -42,6 +42,10 @@ export const metadata: Metadata = {
     "startup technology partner Coimbatore",
     "web design Coimbatore",
     "React Next.js developer Coimbatore",
+    "top app developers in Coimbatore",
+    "AI software development company",
+    "best web development agency in Tamil Nadu",
+    "custom mobile app development company"
   ],
   authors: [{ name: "HYNOX", url: "https://hynox.in" }],
   creator: "HYNOX",

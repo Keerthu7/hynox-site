@@ -158,12 +158,14 @@ export default function ContactPage() {
 
               {/* Location item */}
               <div className="contact-detail-card pointer-none">
-                <div className="icon-wrapper">
+                <div className="icon-wrapper" style={{ alignSelf: 'flex-start', marginTop: '4px' }}>
                   <MapPin size={20} />
                 </div>
                 <div className="detail-card-text">
                   <span className="detail-card-title">Location</span>
-                  <span className="detail-value">Tirupur, Tamil Nadu</span>
+                  <span className="detail-value" style={{ whiteSpace: 'normal', lineHeight: '1.4' }}>
+                    3rd Floor, Sri Govindaraj Tower, 38/4, Father Randy St, R.S. Puram, Coimbatore, Tamil Nadu 641002
+                  </span>
                 </div>
               </div>
             </div>

@@ -270,8 +270,8 @@ export default function Home() {
 
       <section id="industries" className="business-types-section">
         <div className="section-header reveal-on-scroll">
-          <span className="section-subtitle">BUILT FOR BUSINESSES LIKE YOURS</span>
-          <h2>What kind of business are you?</h2>
+          <span className="section-subtitle">CORE SOLUTIONS</span>
+          <h2>Transforming Businesses Across Industries</h2>
         </div>
 
         <div className="business-grid reveal-zoom reveal-delay-200">
@@ -281,6 +281,14 @@ export default function Home() {
             </div>
             <h4>End-to-End Ecommerce Support</h4>
             <p>We help clothing, food & retail businesses go online — with stores that actually sell.</p>
+            <ul style={{ listStyleType: 'disc', paddingLeft: '1.5rem', marginBottom: '2rem', color: '#444444', fontSize: '0.95rem', lineHeight: '1.6' }}>
+              <li>Store Setup & Optimization</li>
+              <li>Performance Marketing (Meta & Google Ads)</li>
+              <li>Sales Funnel & Conversion Optimization</li>
+              <li>Social Media Marketing & Management</li>
+              <li>Product Shoots & UGC Video Creation</li>
+              <li>Analytics, Tracking & Growth Monitoring</li>
+            </ul>
             <Link href="/services/shopify-stores" className="business-link">Scale your brand <ArrowRight size={14} style={{ display: 'inline-block', marginLeft: '4px', verticalAlign: 'middle' }} /></Link>
           </div>
 
@@ -290,6 +298,13 @@ export default function Home() {
             </div>
             <h4>Enterprise Systems & Automation</h4>
             <p>ERP & automation systems that replace spreadsheets — orders, inventory, tracking.</p>
+            <ul style={{ listStyleType: 'disc', paddingLeft: '1.5rem', marginBottom: '2rem', color: '#444444', fontSize: '0.95rem', lineHeight: '1.6' }}>
+              <li>Custom ERP & Business Platforms</li>
+              <li>Workflow Automation & Process Control</li>
+              <li>Inventory, Orders & Financial Systems</li>
+              <li>Real-time Analytics & Monitoring</li>
+              <li>System Integration & API Infrastructure</li>
+            </ul>
             <Link href="/services/erp-software" className="business-link">Automate your business <ArrowRight size={14} style={{ display: 'inline-block', marginLeft: '4px', verticalAlign: 'middle' }} /></Link>
           </div>
 
@@ -299,6 +314,14 @@ export default function Home() {
             </div>
             <h4>Service Businesses</h4>
             <p>Interiors, travel, consultancies — website, app & digital presence from scratch.</p>
+            <ul style={{ listStyleType: 'disc', paddingLeft: '1.5rem', marginBottom: '2rem', color: '#444444', fontSize: '0.95rem', lineHeight: '1.6' }}>
+              <li>Custom Website & Portfolio Design</li>
+              <li>Booking & Lead Generation Systems</li>
+              <li>Search Engine Optimization (SEO)</li>
+              <li>Brand Identity & Logo Design</li>
+              <li>Content Creation & Video Marketing</li>
+              <li>Client Relationship Management (CRM)</li>
+            </ul>
             <Link href="#services" className="business-link">Get started <ArrowRight size={14} style={{ display: 'inline-block', marginLeft: '4px', verticalAlign: 'middle' }} /></Link>
           </div>
         </div>

@@ -166,23 +166,43 @@ const roles = [
     ]
   },
   {
-    title: 'Sales Executive',
-    desc: 'Drive sales growth by identifying new business opportunities, building client relationships, and closing deals. You\'ll be responsible for the entire sales cycle from lead generation to post-sales support.',
+    title: 'Business Development Executive (Internship)',
+    desc: 'Kickstart your career in tech sales. You\'ll learn to identify new business opportunities, generate B2B leads, and assist in closing deals while understanding the software and digital marketing landscape.',
     duration: '6 Months',
     location: 'Hybrid',
-    type: 'Full-time',
+    type: 'Internship',
     stipend: 'Performance-based',
     requirements: [
-      'Strong interpersonal skills and convincing verbal communication',
-      'Self-driven approach to identify leads, schedule meetings, and pitch solutions',
-      'Basic understanding of IT services, custom software, and digital marketing',
-      'Previous sales or client relationship experience is a plus'
+      'Excellent interpersonal skills and convincing verbal communication',
+      'Eagerness to learn sales cycles, lead generation, and client pitching',
+      'Basic interest in IT services, custom software, and digital marketing',
+      'Self-driven mindset to achieve targets and grow professionally'
     ],
     responsibilities: [
-      'Identify potential B2B clients in garment manufacturers and retail sectors',
-      'Initiate sales pitches, conduct service demonstrations, and handle objections',
-      'Negotiate deal scopes, prepare service contracts, and close sales',
-      'Coordinate with development teams to ensure smooth client onboarding'
+      'Assist in identifying potential B2B clients across various sectors',
+      'Help initiate sales pitches and schedule service demonstrations',
+      'Support the sales team in preparing proposals and contracts',
+      'Maintain CRM data and follow up with prospective leads'
+    ]
+  },
+  {
+    title: 'Business Development Executive (Full-Time)',
+    desc: 'Drive revenue growth by building strong client relationships, identifying high-value B2B opportunities, and closing deals. Manage the entire sales cycle from lead generation to successful project kickoff.',
+    duration: 'Full-time',
+    location: 'Hybrid',
+    type: 'Full-time',
+    stipend: 'Competitive Salary + Performance Incentives',
+    requirements: [
+      'Proven track record in sales, business development, or client relationship management',
+      'Strong understanding of IT services, custom software, and digital marketing',
+      'Excellent negotiation, communication, and presentation skills',
+      'Ability to independently manage the sales pipeline and meet targets'
+    ],
+    responsibilities: [
+      'Identify and convert high-potential B2B clients in targeted industries',
+      'Conduct professional service demonstrations and handle complex objections',
+      'Negotiate terms, prepare detailed service contracts, and close sales',
+      'Coordinate with technical teams to ensure seamless client onboarding'
     ]
   }
 ];
