@@ -92,44 +92,16 @@ export default function ContactPage() {
           
           {/* Left Column: Dark Blue Info Card */}
           <div className="contact-info-panel reveal-top">
-            <div className="quote-box why-choose-hynox-card">
-              <h2 className="why-title">Why Choose HYNOX?</h2>
-              
-              <ul className="why-list">
-                <li>
-                  <div className="check-icon-wrapper">
-                    <Check size={14} strokeWidth={3.5} />
-                  </div>
-                  <span>Expert consultation and planning</span>
-                </li>
-                <li>
-                  <div className="check-icon-wrapper">
-                    <Check size={14} strokeWidth={3.5} />
-                  </div>
-                  <span>Custom solutions for your needs</span>
-                </li>
-                <li>
-                  <div className="check-icon-wrapper">
-                    <Check size={14} strokeWidth={3.5} />
-                  </div>
-                  <span>Transparent pricing and timeline</span>
-                </li>
-                <li>
-                  <div className="check-icon-wrapper">
-                    <Check size={14} strokeWidth={3.5} />
-                  </div>
-                  <span>24-hour response guarantee</span>
-                </li>
-              </ul>
-
-              {/* Overlapping boxes with Response Time */}
-              <div className="decor-boxes response-time-container">
-                <div className="decor-box-outline"></div>
-                <div className="decor-box-solid response-badge-card">
-                  <span className="response-title">Response Time</span>
-                  <span className="response-value">Within 24 hours</span>
-                </div>
-              </div>
+            <div className="quote-box why-choose-hynox-card" style={{ padding: 0, overflow: 'hidden', height: '350px' }}>
+              <iframe 
+                src="https://maps.google.com/maps?q=Sri%20Govindaraj%20Tower,%20R.S.%20Puram,%20Coimbatore&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                width="100%" 
+                height="100%" 
+                style={{ border: 0 }} 
+                allowFullScreen={true} 
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
 
             {/* Contact details list vertically below the box inside the panel */}

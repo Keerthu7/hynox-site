@@ -98,7 +98,7 @@ export default function Home() {
         {/* Centred content */}
         <div className="hero-center-content">
           <span className="hero-badge reveal-fade-in">
-            Software &amp; E-commerce Company in Coimbatore
+            Software &amp; App Development Company in Coimbatore
           </span>
 
           <h1 className="hero-center-h1 reveal-fade-in reveal-delay-100">
@@ -106,7 +106,7 @@ export default function Home() {
           </h1>
 
           <p className="hero-center-p reveal-fade-in reveal-delay-200">
-            HYNOX is the leading software development company in Coimbatore, Tamil Nadu. We build fast websites, custom mobile apps, responsive ERP systems, and AI automation to scale your business globally.
+            HYNOX is the leading software development company in Coimbatore, Tamil Nadu. We build fast websites, custom mobile apps, responsive ERP systems, and AI automation to scale your business globally. We are Shopify partners.
           </p>
 
           <div className="hero-center-actions reveal-fade-in reveal-delay-300">
@@ -156,7 +156,7 @@ export default function Home() {
             </div>
             <div className="reach-card-content">
               <h4>Finland</h4>
-              <p>Supported Graaps' global brand launch from their Finland base</p>
+              <p>Supported Graaps and Voice.ai from their Finland base</p>
             </div>
           </div>
         </div>
@@ -269,7 +269,7 @@ export default function Home() {
       </section>
 
       <section id="industries" className="business-types-section">
-        <div className="section-header reveal-on-scroll">
+        <div className="section-header reveal-on-scroll" style={{ textAlign: 'left' }}>
           <span className="section-subtitle">CORE SOLUTIONS</span>
           <h2>Transforming Businesses Across Industries</h2>
         </div>
@@ -289,7 +289,7 @@ export default function Home() {
               <li>Product Shoots & UGC Video Creation</li>
               <li>Analytics, Tracking & Growth Monitoring</li>
             </ul>
-            <Link href="/services/shopify-stores" className="business-link">Scale your brand <ArrowRight size={14} style={{ display: 'inline-block', marginLeft: '4px', verticalAlign: 'middle' }} /></Link>
+            <Link href="/services/end-to-end-ecommerce" className="business-link">Scale your brand <ArrowRight size={14} style={{ display: 'inline-block', marginLeft: '4px', verticalAlign: 'middle' }} /></Link>
           </div>
 
           <div className="business-card">
@@ -306,23 +306,6 @@ export default function Home() {
               <li>System Integration & API Infrastructure</li>
             </ul>
             <Link href="/services/erp-software" className="business-link">Automate your business <ArrowRight size={14} style={{ display: 'inline-block', marginLeft: '4px', verticalAlign: 'middle' }} /></Link>
-          </div>
-
-          <div className="business-card">
-            <div className="business-icon">
-              <Briefcase size={24} />
-            </div>
-            <h4>Service Businesses</h4>
-            <p>Interiors, travel, consultancies — website, app & digital presence from scratch.</p>
-            <ul style={{ listStyleType: 'disc', paddingLeft: '1.5rem', marginBottom: '2rem', color: '#444444', fontSize: '0.95rem', lineHeight: '1.6' }}>
-              <li>Custom Website & Portfolio Design</li>
-              <li>Booking & Lead Generation Systems</li>
-              <li>Search Engine Optimization (SEO)</li>
-              <li>Brand Identity & Logo Design</li>
-              <li>Content Creation & Video Marketing</li>
-              <li>Client Relationship Management (CRM)</li>
-            </ul>
-            <Link href="#services" className="business-link">Get started <ArrowRight size={14} style={{ display: 'inline-block', marginLeft: '4px', verticalAlign: 'middle' }} /></Link>
           </div>
         </div>
       </section>

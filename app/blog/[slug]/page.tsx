@@ -105,7 +105,7 @@ export default function BlogDetailPage() {
             <h1 style={{ fontSize: 'clamp(2.2rem, 5vw, 3.6rem)', fontWeight: 700, lineHeight: 1.1, marginBottom: '1.5rem', color: '#ffffff', letterSpacing: '-1.5px', maxWidth: '1000px' }}>
               {post.title}
             </h1>
-            <div style={{ display: 'flex', gap: '1.5rem', color: 'rgba(255,255,255,0.5)', fontSize: '0.9rem', alignItems: 'center', justifyContent: 'center', borderBottom: '1px solid rgba(255,255,255,0.1)', paddingBottom: '1.5rem', width: '100%', maxWidth: '800px' }}>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1.5rem', color: 'rgba(255,255,255,0.5)', fontSize: '0.9rem', alignItems: 'center', justifyContent: 'center', borderBottom: '1px solid rgba(255,255,255,0.1)', paddingBottom: '1.5rem', width: '100%', maxWidth: '800px' }}>
               <span>{post.date}</span>
               <span style={{ color: '#333333' }}>|</span>
               <span>{post.readTime}</span>
@@ -205,8 +205,8 @@ export default function BlogDetailPage() {
               </div>
 
               {/* COMMON MISTAKES */}
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr auto', gap: '3rem', background: 'rgba(255,255,255,0.01)', border: '1px solid rgba(255,255,255,0.06)', padding: '2.5rem', borderRadius: '12px', alignItems: 'center' }}>
-                <div>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '3rem', background: 'rgba(255,255,255,0.01)', border: '1px solid rgba(255,255,255,0.06)', padding: '2.5rem', borderRadius: '12px', alignItems: 'center' }}>
+                <div style={{ flex: '1 1 300px' }}>
                   <h3 style={{ fontSize: '1.4rem', fontWeight: 600, marginBottom: '1.2rem', color: '#ffffff' }}>Common Mistakes to Avoid</h3>
                   <ul style={{ listStyleType: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                     {detail.commonMistakes.map((mistake, midx) => (
@@ -218,7 +218,7 @@ export default function BlogDetailPage() {
                   </ul>
                 </div>
                 {/* Need a Custom Quote banner card */}
-                <div style={{ background: '#ffffff', color: '#000000', padding: '2rem', borderRadius: '8px', width: '260px', textAlign: 'center', border: '1px solid #e5e5e5' }}>
+                <div style={{ background: '#ffffff', color: '#000000', padding: '2rem', borderRadius: '8px', flex: '1 1 260px', maxWidth: '100%', textAlign: 'center', border: '1px solid #e5e5e5' }}>
                   <h4 style={{ fontSize: '1.1rem', fontWeight: 700, marginBottom: '0.5rem', color: '#000000' }}>Need a Custom Quote?</h4>
                   <p style={{ fontSize: '0.85rem', color: '#666666', marginBottom: '1.5rem', lineHeight: 1.4 }}>
                     Every business is unique. Let\'s discuss your project and get you the right solution.

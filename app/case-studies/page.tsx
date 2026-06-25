@@ -116,40 +116,8 @@ export default function CaseStudiesPage() {
       <Header />
       <main style={{ background: '#000000', color: '#ffffff', minHeight: '100vh', paddingBottom: '6rem' }}>
         
-        {/* HERO SECTION */}
-        <section className="hero-center-section">
-          {/* Animated Cubes Background */}
-          <div className="absolute inset-0 w-full h-full z-0" style={{ background: "#050505" }}>
-            <CubesBackground />
-          </div>
-
-          {/* Radial gradient overlay */}
-          <div className="absolute inset-0 z-[1] pointer-events-none" style={{ background: "radial-gradient(ellipse at 50% 50%, rgba(20,35,100,0.25) 0%, rgba(5,5,5,0.65) 75%)" }} />
-
-          <div className="hero-center-content">
-            <span className="hero-badge reveal-fade-in">
-              CASE STUDIES
-            </span>
-
-            <h1 className="hero-center-h1 reveal-fade-in reveal-delay-100">
-              Real Projects.<br/>
-              <span style={{ color: '#ffffff' }}>Real Results.</span>
-            </h1>
-
-            <p className="hero-center-p reveal-fade-in reveal-delay-200">
-              We don't just build software — we solve business problems. Here's proof. Discover how we transform ideas into scalable solutions and drive measurable growth across industries.
-            </p>
-
-            <div className="hero-center-actions reveal-fade-in reveal-delay-300">
-              <a href="/contact" className="btn btn-hero-solid">
-                Start a Project <ArrowRight size={18} style={{ marginLeft: '4px', display: 'inline-block', verticalAlign: 'middle' }} />
-              </a>
-            </div>
-          </div>
-        </section>
-
         {/* FILTERS */}
-        <section className="cs-filters-section reveal-blur">
+        <section className="cs-filters-section reveal-blur" style={{ paddingTop: '1rem' }}>
           <div className="cs-filters-container">
             {categories.map((cat, i) => (
               <button 

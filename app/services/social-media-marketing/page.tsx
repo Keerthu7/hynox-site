@@ -256,27 +256,6 @@ export default function SocialMediaMarketingPage() {
                     style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
                   />
                 </div>
-                <div className="social-portfolio-overlay">
-                  <div style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px', opacity: 0.9 }}>
-                      <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24" style={{ display: 'inline-block' }}>
-                        <path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.64-.07-4.85s.01-3.58.07-4.85C2.38 3.86 3.9 2.32 7.15 2.17 8.42 2.11 8.8 2.1 12 2.16zM12 0C8.74 0 8.33.01 7.05.07c-4.27.19-6.78 2.7-6.97 6.98C.01 8.33 0 8.74 0 12s.01 3.67.08 4.95c.19 4.28 2.7 6.79 6.97 6.98C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.08c4.28-.19 6.79-2.7 6.98-6.98C23.99 15.67 24 15.26 24 12s-.01-3.67-.08-4.95c-.19-4.28-2.7-6.79-6.98-6.98C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1018.16 12 6.16 6.16 0 0012 5.84zm0 10.16A4 4 0 1116 12a4 4 0 01-4 4zm6.4-11.44a1.44 1.44 0 11-2.88 0 1.44 1.44 0 012.88 0z" />
-                      </svg>
-                      <span style={{ fontSize: '0.75rem', fontWeight: 500 }}>{item.username}</span>
-                    </div>
-                    <div style={{ textAlign: 'center', margin: 'auto 0 0 0' }}>
-                      <div style={{ background: 'rgba(255, 255, 255, 0.15)', backdropFilter: 'blur(8px)', width: '40px', height: '40px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifySelf: 'center', justifyContent: 'center', margin: '0 auto 1.5rem' }}>
-                        <Play size={16} fill="white" style={{ marginLeft: '2px' }} />
-                      </div>
-                      <h4 style={{ textTransform: 'uppercase', fontSize: '1.2rem', fontWeight: 800, letterSpacing: '0.05em', margin: 0, color: item.titleColor || '#ffffff' }}>
-                        {item.title}
-                      </h4>
-                      <p style={{ fontSize: '0.75rem', fontWeight: 500, letterSpacing: '0.05em', color: '#ffffff', opacity: 0.9, textTransform: 'uppercase', margin: 0 }}>
-                        {item.subtitle}
-                      </p>
-                    </div>
-                  </div>
-                </div>
               </div>
             ))}
             <div className="social-portfolio-card social-portfolio-cta-card">

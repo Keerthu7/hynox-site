@@ -156,44 +156,14 @@ export default function BlogPage() {
 
       <main style={{ background: '#000000', color: '#ffffff', minHeight: '100vh', paddingBottom: '6rem' }}>
         
-        {/* HERO SECTION */}
-        <section className="hero-center-section">
-          {/* Animated Cubes Background */}
-          <div className="absolute inset-0 w-full h-full z-0" style={{ background: "#050505" }}>
-            <CubesBackground />
-          </div>
 
-          {/* Radial gradient overlay */}
-          <div className="absolute inset-0 z-[1] pointer-events-none" style={{ background: "radial-gradient(ellipse at 50% 50%, rgba(20,35,100,0.25) 0%, rgba(5,5,5,0.65) 75%)" }} />
-
-          <div className="hero-center-content">
-            <span className="hero-badge reveal-fade-in">
-              BLOG
-            </span>
-
-            <h1 className="hero-center-h1 reveal-fade-in reveal-delay-100">
-              Insights That Drive<br/>
-              <span style={{ color: '#ffffff' }}>Digital Growth.</span>
-            </h1>
-
-            <p className="hero-center-p reveal-fade-in reveal-delay-200">
-              Practical tips, industry insights and expert guides on web development, eCommerce, automation and digital marketing.
-            </p>
-
-            <div className="hero-center-actions reveal-fade-in reveal-delay-300">
-              <a href="#topics" className="btn btn-hero-solid">
-                Explore Topics <ArrowRight size={18} style={{ marginLeft: '4px', display: 'inline-block', verticalAlign: 'middle' }} />
-              </a>
-            </div>
-          </div>
-        </section>
 
         {/* CONTENT SECTION WRAPPER (Dark Background) */}
-        <div className="mono-blog-content-section" style={{ background: '#000000', color: '#ffffff' }}>
+        <div className="mono-blog-content-section" style={{ background: '#000000', color: '#ffffff', paddingTop: '0rem' }}>
           <div className="mono-blog-container content-container" id="topics">
             
             {/* TOPICS FILTER BAR */}
-            <section className="topics-section reveal-fade-in">
+            <section className="topics-section reveal-fade-in" style={{ marginTop: '-3rem', borderTop: 'none' }}>
               <h2 className="topics-heading">Browse By Topic</h2>
               <div className="topics-pills-container">
                 {topics.map((topic) => (

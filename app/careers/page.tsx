@@ -252,15 +252,7 @@ export default function CareersPage() {
         </section>
 
         {/* ─── 2. OPPORTUNITIES ─── */}
-        <section className="svc-section" style={{ maxWidth: '1200px', margin: '0 auto', padding: '4rem 2rem' }}>
-          <div className="svc-section-header reveal-blur" style={{ textAlign: 'left', marginBottom: '3rem' }}>
-            <span className="svc-label">EXPLORE OPPORTUNITIES</span>
-            <h2 style={{ fontSize: '2rem', fontWeight: 600, color: '#ffffff', margin: '0.5rem 0' }}>Internship &amp; Career Programs</h2>
-            <p style={{ color: 'rgba(255, 255, 255, 0.6)', maxWidth: '600px', margin: '0.5rem 0 0 0', fontSize: '1.05rem', lineHeight: '1.6' }}>
-              6-month programs with performance-based stipends up to ₹5,000/month. Build your professional portfolio with real-world experience.
-            </p>
-            <div className="svc-divider" style={{ margin: '1.5rem 0 0 0', width: '60px', height: '3px', background: '#ffffff' }} />
-          </div>
+        <section className="svc-section" style={{ maxWidth: '1200px', margin: '0 auto', padding: '1rem 2rem 4rem 2rem' }}>
 
           <div className="careers-grid reveal-zoom reveal-delay-200">
             {roles.map((role, i) => (

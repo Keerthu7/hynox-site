@@ -110,10 +110,10 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
             </AnimatedSection>
 
             {/* Main Layout (2 Columns) */}
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 350px', gap: '0.5rem' }}>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '3rem' }}>
               
               {/* Left Column (Content) */}
-              <div>
+              <div style={{ flex: '1 1 500px', minWidth: 0 }}>
               <AnimatedSection animation="fadeLeft" delay={0}>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '2.5rem' }}>
                 
@@ -189,7 +189,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                 {/* Project Gallery */}
                 <div>
                   <h3 style={{ fontSize: '1.4rem', fontWeight: 600, marginBottom: '1.5rem' }}>Project Gallery</h3>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem' }}>
                     {[1, 2, 3, 4].map((i) => (
                       <div key={i} style={{ width: '100%', paddingBottom: '60%', position: 'relative', borderRadius: '8px', overflow: 'hidden', border: '1px solid #222', background: '#000000' }}>
                         <img src="/case-studies/cs_zyden.png" alt={`Gallery ${i}`} style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.8 }} />
@@ -203,7 +203,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
               </div>
 
               {/* Right Column (Sidebar) */}
-              <div>
+              <div style={{ flex: '1 1 350px', minWidth: 0 }}>
               <div style={{ position: 'sticky', top: '6rem' }}>
                 <AnimatedSection animation="fadeRight" delay={200}>
                 
@@ -360,7 +360,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
             </div>
 
             {/* Stats */}
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1.5rem', marginBottom: '4rem', marginTop: '6rem' }}>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', marginBottom: '4rem', marginTop: '6rem' }}>
               {[
                 { icon: <Activity size={24} style={{ color: "#000000" }} />, value: '300+', label: 'Confirmed Orders' },
                 { icon: <CheckCircle size={24} style={{ color: "#000000" }} />, value: '100%', label: 'Fake COD Eliminated' },

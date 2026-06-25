@@ -33,9 +33,10 @@ export default function FAQ() {
   }, []);
 
   const handleQuestionClick = (index: number) => {
-    setActiveIndex(index);
-    if (isMobile) {
-      setIsMobileModalOpen(true);
+    if (isMobile && activeIndex === index) {
+      setActiveIndex(-1); // Toggle off if clicked again
+    } else {
+      setActiveIndex(index);
     }
   };
 
@@ -49,39 +50,31 @@ export default function FAQ() {
       <div className="faq-split-container reveal-on-scroll reveal-delay-200">
         <div className="faq-questions-list">
           {faqs.map((faq, index) => (
-            <button 
-              key={index} 
-              className={`faq-q-btn ${activeIndex === index && !isMobile ? 'active' : ''}`}
-              onClick={() => handleQuestionClick(index)}
-            >
-              <span>{faq.q}</span>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </button>
+            <div key={index} style={{ width: '100%', borderBottom: '1px solid rgba(255, 255, 255, 0.1)' }}>
+              <button 
+                className={`faq-q-btn ${activeIndex === index ? 'active' : ''}`}
+                onClick={() => handleQuestionClick(index)}
+                style={{ width: '100%' }}
+              >
+                <span>{faq.q}</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ transform: isMobile && activeIndex === index ? 'rotate(180deg)' : 'none', transition: 'transform 0.3s ease' }}><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+              {isMobile && activeIndex === index && (
+                <div style={{ padding: '1rem 1.5rem 1.5rem', color: '#94a3b8', fontSize: '1rem', lineHeight: '1.6' }}>
+                  {faq.a}
+                </div>
+              )}
+            </div>
           ))}
         </div>
         
         {/* Desktop Panel */}
-        {!isMobile && (
+        {!isMobile && activeIndex !== -1 && (
           <div className="faq-answer-panel">
             <div className="faq-answer-card" key={activeIndex}>
               <span className="faq-answer-label">Answer</span>
-              <h3 className="faq-answer-q">{faqs[activeIndex].q}</h3>
-              <p className="faq-answer-a">{faqs[activeIndex].a}</p>
-            </div>
-          </div>
-        )}
-
-        {/* Mobile Bottom Sheet Modal */}
-        {isMobile && (
-          <div className={`faq-mobile-modal ${isMobileModalOpen ? 'open' : ''}`}>
-            <div className="faq-modal-backdrop" onClick={() => setIsMobileModalOpen(false)}></div>
-            <div className="faq-modal-content">
-              <button className="faq-modal-close" onClick={() => setIsMobileModalOpen(false)}>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
-              </button>
-              <span className="faq-answer-label">Answer</span>
-              <h3 className="faq-answer-q">{faqs[activeIndex].q}</h3>
-              <p className="faq-answer-a">{faqs[activeIndex].a}</p>
+              <h3 className="faq-answer-q">{faqs[activeIndex]?.q}</h3>
+              <p className="faq-answer-a">{faqs[activeIndex]?.a}</p>
             </div>
           </div>
         )}

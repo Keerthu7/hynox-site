@@ -75,24 +75,8 @@ export default function WorksPage() {
       <Header />
       
       <main className="works-page" style={{ backgroundColor: '#000', color: '#fff', minHeight: '100vh' }}>
-        {/* HERO SECTION */}
-        <section className="hero-center-section" style={{ minHeight: '40vh', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          <div className="absolute inset-0 w-full h-full z-0" style={{ background: "#050505" }}>
-          </div>
-          <div className="absolute inset-0 z-[1] pointer-events-none" style={{ background: "radial-gradient(ellipse at 50% 50%, rgba(20,35,100,0.15) 0%, rgba(0,0,0,0.85) 75%)" }} />
-
-          <div className="hero-center-content" style={{ zIndex: 2, textAlign: 'center', paddingTop: '8rem' }}>
-            <span className="hero-badge reveal-fade-in" style={{ letterSpacing: '0.15em', fontWeight: 600 }}>
-              OUR PORTFOLIO
-            </span>
-            <h1 className="reveal-from-bottom reveal-delay-100" style={{ fontSize: '4rem', fontWeight: 500, letterSpacing: '-0.03em', lineHeight: 1.1, marginBottom: '2rem' }}>
-              Real Stores. <br />
-              <span style={{ color: '#888' }}>Real Results.</span>
-            </h1>
-          </div>
-        </section>
         {/* FEATURED WORKS GRID */}
-        <section style={{ padding: '4rem 5% 6rem 5%' }}>
+        <section style={{ padding: '2rem 5% 6rem 5%' }}>
           <style dangerouslySetInnerHTML={{__html: `
             .client-section {
               margin-bottom: 6rem;
@@ -103,6 +87,11 @@ export default function WorksPage() {
               color: #fff;
               margin-bottom: 2.5rem;
               letter-spacing: -0.02em;
+            }
+            .sketch-grid-4 {
+              display: grid;
+              grid-template-columns: repeat(4, 1fr);
+              gap: 2.5rem;
             }
             .sketch-grid-3 {
               display: grid;
@@ -157,7 +146,7 @@ export default function WorksPage() {
               letter-spacing: 0.02em;
             }
             @media (max-width: 900px) {
-              .sketch-grid-3, .sketch-grid-2 {
+              .sketch-grid-4, .sketch-grid-3, .sketch-grid-2 {
                 grid-template-columns: 1fr;
               }
             }
@@ -229,7 +218,7 @@ export default function WorksPage() {
             {/* SugarStar */}
             <div className="client-section reveal-from-bottom">
               <h2 className="client-heading">SugarStar</h2>
-              <div className="sketch-grid-3">
+              <div className="sketch-grid-4">
                 <div className="sketch-card">
                   <div className="sketch-media">
                     <img src="/images/sugarstar_web.jpeg" alt="Web Dev" />
@@ -247,6 +236,12 @@ export default function WorksPage() {
                     <img src="/performance-marketing-hero.png" alt="Performance Market" />
                   </div>
                   <div className="sketch-text">Performance Marketing</div>
+                </div>
+                <div className="sketch-card">
+                  <div className="sketch-media">
+                    <video src="/videos/5.mp4" autoPlay loop muted playsInline></video>
+                  </div>
+                  <div className="sketch-text">Influencer Marketing</div>
                 </div>
               </div>
             </div>
