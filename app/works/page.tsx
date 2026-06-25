@@ -91,88 +91,75 @@ export default function WorksPage() {
             </h1>
           </div>
         </section>
-
         {/* FEATURED WORKS GRID */}
         <section style={{ padding: '4rem 5% 6rem 5%' }}>
           <style dangerouslySetInnerHTML={{__html: `
-            .featured-works-grid {
+            .client-section {
+              margin-bottom: 6rem;
+            }
+            .client-heading {
+              font-size: 2.5rem;
+              font-weight: 500;
+              color: #fff;
+              margin-bottom: 2.5rem;
+              letter-spacing: -0.02em;
+            }
+            .sketch-grid-3 {
+              display: grid;
+              grid-template-columns: repeat(3, 1fr);
+              gap: 2.5rem;
+            }
+            .sketch-grid-2 {
               display: grid;
               grid-template-columns: repeat(2, 1fr);
-              gap: 4rem;
-              max-width: 1300px;
-              margin: 0 auto;
+              gap: 2.5rem;
             }
-            .feat-work-card {
-              background: rgba(255,255,255,0.02);
-              border: 1px solid rgba(255,255,255,0.05);
-              border-radius: 24px;
+            .sketch-card {
+              background: #ffffff;
+              border-radius: 12px;
+              padding: 1.2rem 1.2rem 2.5rem 1.2rem;
+              box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+              display: flex;
+              flex-direction: column;
+              transition: transform 0.3s ease;
+              color: #000;
+            }
+            .sketch-card:hover {
+              transform: scale(1.02);
+            }
+            .sketch-media {
+              width: 100%;
+              aspect-ratio: 1/1;
+              background: #f0f0f0;
+              border-radius: 6px;
               overflow: hidden;
-              transition: all 0.4s ease;
+              margin-bottom: 1.5rem;
             }
-            .feat-work-card:hover {
-              border-color: rgba(255,255,255,0.15);
-              box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-              transform: translateY(-5px);
-            }
-            .feat-work-img {
+            .sketch-media-rect {
               width: 100%;
               aspect-ratio: 16/10;
+              background: #f0f0f0;
+              border-radius: 6px;
               overflow: hidden;
-              position: relative;
+              margin-bottom: 1.5rem;
             }
-            .feat-work-img img {
+            .sketch-media img, .sketch-media video,
+            .sketch-media-rect img, .sketch-media-rect video {
               width: 100%;
               height: 100%;
               object-fit: cover;
-              transition: transform 0.6s ease;
+              display: block;
             }
-            .feat-work-card:hover .feat-work-img img {
-              transform: scale(1.05);
-            }
-            .feat-work-info {
-              padding: 3rem;
-            }
-            .feat-work-cat {
-              display: inline-block;
-              font-size: 0.8rem;
-              letter-spacing: 0.1em;
-              text-transform: uppercase;
-              color: #a0a0a0;
-              margin-bottom: 1.5rem;
+            .sketch-text {
+              text-align: center;
+              font-size: 1.2rem;
               font-weight: 600;
-              background: rgba(255,255,255,0.05);
-              padding: 0.5rem 1rem;
-              border-radius: 100px;
+              letter-spacing: 0.02em;
             }
-            .feat-work-title {
-              font-size: 2.2rem;
-              font-weight: 500;
-              margin-bottom: 2rem;
-              color: #fff;
-              letter-spacing: -0.02em;
-            }
-            .feat-work-points {
-              list-style: none;
-              padding: 0;
-              margin: 0;
-            }
-            .feat-work-points li {
-              color: #bbb;
-              font-size: 1.1rem;
-              line-height: 1.6;
-              font-weight: 300;
-              margin-bottom: 1rem;
-              display: flex;
-              align-items: flex-start;
-            }
-            .feat-work-points li::before {
-              content: '•';
-              color: #fff;
-              font-weight: bold;
-              display: inline-block;
-              width: 1em;
-              margin-left: -1em;
-              margin-right: 1rem;
+            @media (max-width: 900px) {
+              .sketch-grid-3, .sketch-grid-2 {
+                grid-template-columns: 1fr;
+              }
             }
             
             /* Marquee CSS */
@@ -237,23 +224,77 @@ export default function WorksPage() {
             }
           `}} />
           
-          <div className="featured-works-grid reveal-zoom">
-            {featuredProjects.map((item, i) => (
-              <div className="feat-work-card" key={i}>
-                <div className="feat-work-img">
-                  <img src={item.img} alt={item.title} />
+          <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+            
+            {/* SugarStar */}
+            <div className="client-section reveal-from-bottom">
+              <h2 className="client-heading">SugarStar</h2>
+              <div className="sketch-grid-3">
+                <div className="sketch-card">
+                  <div className="sketch-media">
+                    <img src="/images/sugarstar_web.jpeg" alt="Web Dev" />
+                  </div>
+                  <div className="sketch-text">Web Development</div>
                 </div>
-                <div className="feat-work-info">
-                  <span className="feat-work-cat">{item.cat}</span>
-                  <h3 className="feat-work-title">{item.title}</h3>
-                  <ul className="feat-work-points">
-                    {item.points.map((point, idx) => (
-                      <li key={idx}>{point}</li>
-                    ))}
-                  </ul>
+                <div className="sketch-card">
+                  <div className="sketch-media">
+                    <video src="/videos/1.mp4" autoPlay loop muted playsInline></video>
+                  </div>
+                  <div className="sketch-text">Social Media Marketing</div>
+                </div>
+                <div className="sketch-card">
+                  <div className="sketch-media">
+                    <img src="/performance-marketing-hero.png" alt="Performance Market" />
+                  </div>
+                  <div className="sketch-text">Performance Marketing</div>
                 </div>
               </div>
-            ))}
+            </div>
+
+            {/* Team 3 Associates */}
+            <div className="client-section reveal-from-bottom">
+              <h2 className="client-heading">Team 3 Associates</h2>
+              <div className="sketch-grid-3">
+                <div className="sketch-card">
+                  <div className="sketch-media">
+                    <img src="/images/team3_web.png" alt="Web Dev" />
+                  </div>
+                  <div className="sketch-text">Web Development</div>
+                </div>
+                <div className="sketch-card">
+                  <div className="sketch-media">
+                    <img src="/images/JpWeb_works.png" alt="Photography" />
+                  </div>
+                  <div className="sketch-text">Photography Production</div>
+                </div>
+                <div className="sketch-card">
+                  <div className="sketch-media">
+                    <video src="/videos/2.mp4" autoPlay loop muted playsInline></video>
+                  </div>
+                  <div className="sketch-text">Videography Production</div>
+                </div>
+              </div>
+            </div>
+
+            {/* JP Interior */}
+            <div className="client-section reveal-from-bottom">
+              <h2 className="client-heading">JP Interior</h2>
+              <div className="sketch-grid-2">
+                <div className="sketch-card">
+                  <div className="sketch-media-rect">
+                    <img src="/images/JpWeb_works.png" alt="Web Dev" />
+                  </div>
+                  <div className="sketch-text">Web Development</div>
+                </div>
+                <div className="sketch-card">
+                  <div className="sketch-media-rect">
+                    <img src="/images/JpApp_works.png" alt="App Dev" />
+                  </div>
+                  <div className="sketch-text">App Development</div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </section>
 
