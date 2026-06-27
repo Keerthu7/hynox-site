@@ -186,17 +186,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
 
                 </div>
 
-                {/* Project Gallery */}
-                <div>
-                  <h3 style={{ fontSize: '1.4rem', fontWeight: 600, marginBottom: '1.5rem' }}>Project Gallery</h3>
-                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem' }}>
-                    {[1, 2, 3, 4].map((i) => (
-                      <div key={i} style={{ width: '100%', paddingBottom: '60%', position: 'relative', borderRadius: '8px', overflow: 'hidden', border: '1px solid #222', background: '#000000' }}>
-                        <img src="/case-studies/cs_zyden.png" alt={`Gallery ${i}`} style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.8 }} />
-                      </div>
-                    ))}
-                  </div>
-                </div>
+
 
               </div>
               </AnimatedSection>
@@ -449,17 +439,6 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                   </div>
                 </div>
 
-                {/* Gallery */}
-                <div>
-                  <h3 style={{ fontSize: '1.4rem', fontWeight: 600, marginBottom: '1.5rem' }}>Project Gallery</h3>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
-                    {[1, 2, 3, 4].map((i) => (
-                      <div key={i} style={{ width: '100%', paddingBottom: '60%', position: 'relative', borderRadius: '8px', overflow: 'hidden', border: '1px solid #222', background: '#000000' }}>
-                        <img src="/case-studies/cs_nsk.png" alt={`NSK Gallery ${i}`} style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.8 }} />
-                      </div>
-                    ))}
-                  </div>
-                </div>
               </div>
 
               {/* Right Sidebar */}
@@ -657,16 +636,7 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                     </div>
                   </div>
                 </div>
-                <div>
-                  <h3 style={{ fontSize: '1.4rem', fontWeight: 600, marginBottom: '1.5rem' }}>Project Gallery</h3>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
-                    {[1,2,3,4].map(i => (
-                      <div key={i} style={{ width: '100%', paddingBottom: '60%', position: 'relative', borderRadius: '8px', overflow: 'hidden', border: '1px solid #222', background: '#000' }}>
-                        <img src="/case-studies/cs_jp.png" alt={`JP Gallery ${i}`} style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.8 }} />
-                      </div>
-                    ))}
-                  </div>
-                </div>
+
               </div>
               </AnimatedSection>
               </div>
@@ -902,17 +872,6 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                   </div>
                 </div>
 
-                {/* Gallery */}
-                <div>
-                  <h3 style={{ fontSize: '1.4rem', fontWeight: 600, marginBottom: '1.5rem' }}>Project Gallery</h3>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
-                    {[1,2,3,4].map(i => (
-                      <div key={i} style={{ width: '100%', paddingBottom: '60%', position: 'relative', borderRadius: '8px', overflow: 'hidden', border: '1px solid #222', background: '#000' }}>
-                        <img src="/case-studies/cs_graaps.png" alt={`graaps Gallery ${i}`} style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.8 }} />
-                      </div>
-                    ))}
-                  </div>
-                </div>
               </div>
               </AnimatedSection>
               </div>
@@ -1149,17 +1108,6 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                   </div>
                 </div>
 
-                {/* Gallery */}
-                <div>
-                  <h3 style={{ fontSize: '1.4rem', fontWeight: 600, marginBottom: '1.5rem' }}>Project Gallery</h3>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
-                    {[1,2,3,4].map(i => (
-                      <div key={i} style={{ width: '100%', paddingBottom: '60%', position: 'relative', borderRadius: '8px', overflow: 'hidden', border: '1px solid #222', background: '#000' }}>
-                        <img src="/case-studies/cs_kores.png" alt={`Kores Gallery ${i}`} style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.8 }} />
-                      </div>
-                    ))}
-                  </div>
-                </div>
               </div>
               </AnimatedSection>
               </div>
@@ -1392,17 +1340,6 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                   </div>
                 </div>
 
-                {/* Gallery */}
-                <div>
-                  <h3 style={{ fontSize: '1.4rem', fontWeight: 600, marginBottom: '1.5rem' }}>Project Gallery</h3>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
-                    {[1,2,3,4].map(i => (
-                      <div key={i} style={{ width: '100%', paddingBottom: '60%', position: 'relative', borderRadius: '8px', overflow: 'hidden', border: '1px solid #222', background: '#000' }}>
-                        <img src="/case-studies/cs_kido.png" alt={`Kido Gallery ${i}`} style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.8 }} />
-                      </div>
-                    ))}
-                  </div>
-                </div>
               </div>
               </AnimatedSection>
               </div>
@@ -1635,17 +1572,6 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                   </div>
                 </div>
 
-                {/* Gallery */}
-                <div>
-                  <h3 style={{ fontSize: '1.4rem', fontWeight: 600, marginBottom: '1.5rem' }}>Project Gallery</h3>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
-                    {[1,2,3,4].map(i => (
-                      <div key={i} style={{ width: '100%', paddingBottom: '60%', position: 'relative', borderRadius: '8px', overflow: 'hidden', border: '1px solid #222', background: '#000' }}>
-                        <img src="/case-studies/cs_sun.png" alt={`Sun Holidays Gallery ${i}`} style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.8 }} />
-                      </div>
-                    ))}
-                  </div>
-                </div>
               </div>
               </AnimatedSection>
               </div>
@@ -1878,17 +1804,6 @@ export default async function CaseStudyDetail({ params }: { params: Promise<{ sl
                   </div>
                 </div>
 
-                {/* Gallery */}
-                <div>
-                  <h3 style={{ fontSize: '1.4rem', fontWeight: 600, marginBottom: '1.5rem' }}>Project Gallery</h3>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
-                    {[1,2,3,4].map(i => (
-                      <div key={i} style={{ width: '100%', paddingBottom: '60%', position: 'relative', borderRadius: '8px', overflow: 'hidden', border: '1px solid #222', background: '#000' }}>
-                        <img src="/case-studies/cs_livinza.png" alt={`Livinza Gallery ${i}`} style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.8 }} />
-                      </div>
-                    ))}
-                  </div>
-                </div>
               </div>
               </AnimatedSection>
               </div>

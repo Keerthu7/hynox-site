@@ -227,19 +227,45 @@ export default function WorksPage() {
                 </div>
                 <div className="sketch-card">
                   <div className="sketch-media">
-                    <video src="/videos/1.mp4" autoPlay loop muted playsInline></video>
+                    <video src="/videos/3.mp4" autoPlay loop muted playsInline></video>
                   </div>
                   <div className="sketch-text">Social Media Marketing</div>
                 </div>
                 <div className="sketch-card">
-                  <div className="sketch-media">
-                    <img src="/performance-marketing-hero.png" alt="Performance Market" />
+                  <div className="sketch-media" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#0b0f19', overflow: 'hidden' }}>
+                    <div style={{ transform: 'scale(0.55)', transformOrigin: 'center', width: '100%', minWidth: '320px', pointerEvents: 'none' }}>
+                      <div style={{ border: '1px solid rgba(255, 255, 255, 0.08)', borderRadius: '24px', padding: '1.5rem', fontFamily: 'system-ui, -apple-system, sans-serif' }}>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem', color: '#ffffff' }}>
+                          <span style={{ fontSize: '1.2rem' }}>←</span>
+                          <span style={{ fontSize: '0.95rem', fontWeight: 600 }}>Professional dashboard</span>
+                          <span style={{ fontSize: '1.2rem' }}>⚙</span>
+                        </div>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '1.5rem' }}>
+                          <div><h3 style={{ fontSize: '1.3rem', fontWeight: 700, color: '#ffffff', margin: 0 }}>Insights</h3></div>
+                          <div style={{ color: '#8e9aa8', fontSize: '0.8rem', fontWeight: 500 }}>6 Apr-5 May</div>
+                        </div>
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                            <span style={{ color: '#8e9aa8', fontSize: '0.9rem', fontWeight: 500 }}>Views</span>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '4px', color: '#4ade80', fontWeight: 600, fontSize: '0.95rem' }}><span>↗ 4.2M</span><span style={{ color: '#8e9aa8', fontSize: '0.8rem', marginLeft: '2px' }}>&gt;</span></div>
+                          </div>
+                          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                            <span style={{ color: '#8e9aa8', fontSize: '0.9rem', fontWeight: 500 }}>Interactions</span>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '4px', color: '#ffffff', fontWeight: 600, fontSize: '0.95rem' }}><span>330.2K</span><span style={{ color: '#8e9aa8', fontSize: '0.8rem', marginLeft: '2px' }}>&gt;</span></div>
+                          </div>
+                          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                            <span style={{ color: '#8e9aa8', fontSize: '0.9rem', fontWeight: 500 }}>New followers</span>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '4px', color: '#ffffff', fontWeight: 600, fontSize: '0.95rem' }}><span>829</span><span style={{ color: '#8e9aa8', fontSize: '0.8rem', marginLeft: '2px' }}>&gt;</span></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                   <div className="sketch-text">Performance Marketing</div>
                 </div>
                 <div className="sketch-card">
                   <div className="sketch-media">
-                    <video src="/videos/5.mp4" autoPlay loop muted playsInline></video>
+                    <video src="/videos/influencer_marketing.mp4" autoPlay loop muted playsInline></video>
                   </div>
                   <div className="sketch-text">Influencer Marketing</div>
                 </div>
@@ -258,15 +284,15 @@ export default function WorksPage() {
                 </div>
                 <div className="sketch-card">
                   <div className="sketch-media">
-                    <img src="/images/JpWeb_works.png" alt="Photography" />
-                  </div>
-                  <div className="sketch-text">Photography Production</div>
-                </div>
-                <div className="sketch-card">
-                  <div className="sketch-media">
                     <video src="/videos/2.mp4" autoPlay loop muted playsInline></video>
                   </div>
-                  <div className="sketch-text">Videography Production</div>
+                  <div className="sketch-text">Photography and Videography Production</div>
+                </div>
+                <div className="sketch-card">
+                  <div className="sketch-media" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#0a0a0a' }}>
+                    <span style={{ fontSize: '5rem', fontWeight: 800, color: '#ffffff', letterSpacing: '4px', fontFamily: 'var(--font-geist-sans), sans-serif' }}>T3</span>
+                  </div>
+                  <div className="sketch-text">Social Media Management</div>
                 </div>
               </div>
             </div>

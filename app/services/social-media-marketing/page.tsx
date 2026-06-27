@@ -146,7 +146,7 @@ export default function SocialMediaMarketingPage() {
 
             <div className="hero-center-actions reveal-fade-in reveal-delay-300">
               <a href="/contact" className="btn btn-hero-solid">Get Free Consultation <ArrowRight size={16} style={{ marginLeft: "4px", display: "inline-block", verticalAlign: "middle" }} /></a>
-              <a href="#portfolio" className="btn btn-hero-outline">View Our Work</a>
+              <a href="/works" className="btn btn-hero-outline">View Our Work</a>
             </div>
 
             <div className="svc-hero-badges-bw reveal-fade-in reveal-delay-400" style={{ justifyContent: 'center', marginTop: '2.5rem' }}>
@@ -271,7 +271,7 @@ export default function SocialMediaMarketingPage() {
         <section className="svc-section svc-section-alt" id="insights" style={{ paddingBottom: '5rem' }}>
           <div className="svc-section-header reveal-blur" style={{ textAlign: 'center', marginBottom: '3rem' }}>
             <span className="svc-label" style={{ letterSpacing: '0.15em', fontSize: '0.85rem' }}>PROOF OF PERFORMANCE</span>
-            <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textTransform: 'uppercase', color: '#ffffff', marginTop: '0.5rem', fontFamily: 'var(--font-geist-sans), sans-serif' }}>View Insights</h2>
+            <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textTransform: 'uppercase', color: '#111111', marginTop: '0.5rem', fontFamily: 'var(--font-geist-sans), sans-serif' }}>View Insights</h2>
             <div className="svc-divider" style={{ margin: '1rem auto' }} />
           </div>
 

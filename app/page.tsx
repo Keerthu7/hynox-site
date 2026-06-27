@@ -111,7 +111,7 @@ export default function Home() {
 
           <div className="hero-center-actions reveal-fade-in reveal-delay-300">
             <Link href="/contact" className="btn btn-hero-solid">Get Free Consultation</Link>
-            <Link href="#work" className="btn btn-hero-outline">See Our Work</Link>
+            <Link href="/works" className="btn btn-hero-outline">See Our Work</Link>
           </div>
         </div>
       </main>
@@ -200,7 +200,7 @@ export default function Home() {
               </div>
             </div>
             <div className="service-card">
-              <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?q=80&w=800&auto=format&fit=crop" alt="Shopify Stores" className="service-card-image" />
+              <img src="/images/shopify_logo_thumbnail.png" alt="Shopify Stores" className="service-card-image" />
               <div className="service-card-content">
                 <span className="badge-dev">Development</span>
                 <h4>Shopify Stores</h4>
@@ -256,7 +256,7 @@ export default function Home() {
               </div>
             </div>
             <div className="service-card">
-              <img src="https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?q=80&w=800&auto=format&fit=crop" alt="UGC Video Creation" className="service-card-image" />
+              <img src="/images/ugc_video_creation_thumbnail.png" alt="UGC Video Creation" className="service-card-image" />
               <div className="service-card-content">
                 <span className="badge-content">Content</span>
                 <h4>UGC Video Creation</h4>

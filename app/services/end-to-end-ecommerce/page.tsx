@@ -106,7 +106,7 @@ export default function EndToEndEcommercePage() {
 
             <div className="hero-center-actions reveal-fade-in reveal-delay-300">
               <a href="/contact" className="btn btn-hero-solid">Free Strategy Call <ArrowRight size={16} style={{ marginLeft: "4px", display: "inline-block", verticalAlign: "middle" }} /></a>
-              <a href="#portfolio" className="btn btn-hero-outline">See Our Works</a>
+              <a href="/works" className="btn btn-hero-outline">See Our Works</a>
             </div>
 
             <div className="svc-hero-badges-bw reveal-fade-in reveal-delay-400" style={{ justifyContent: 'center', marginTop: '3rem', flexWrap: 'wrap', gap: '1.5rem' }}>
@@ -335,20 +335,6 @@ export default function EndToEndEcommercePage() {
           </div>
         </section>
 
-        {/* ─── 09. TOOLS WE USE ─── */}
-        <section className="svc-section svc-section-alt" id="tools" style={{ paddingBottom: '3rem' }}>
-          <div className="svc-section-header reveal-flip-x">
-            <span className="svc-label">09 — TOOLS WE USE</span>
-            <h2>Our E-Commerce Tech Stack</h2>
-          </div>
-          <div className="reveal-from-left reveal-delay-200" style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', justifyContent: 'center', maxWidth: '800px', margin: '0 auto' }}>
-            {tools.map((tool, i) => (
-              <div key={i} style={{ background: 'rgba(255,255,255,0.05)', padding: '1rem 2rem', borderRadius: '40px', fontSize: '1rem', fontWeight: 600, color: '#fff', border: '1px solid rgba(255,255,255,0.1)' }}>
-                {tool}
-              </div>
-            ))}
-          </div>
-        </section>
 
         {/* ─── 10. WHY HYNOX ─── */}
         <section className="svc-section" id="why-hynox">

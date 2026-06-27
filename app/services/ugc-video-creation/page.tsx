@@ -129,7 +129,7 @@ export default function UGCVideoCreationPage() {
 
             <div className="hero-center-actions reveal-fade-in reveal-delay-300">
               <a href="/contact" className="btn btn-hero-solid">Get Free Consultation <ArrowRight size={16} style={{ marginLeft: "4px", display: "inline-block", verticalAlign: "middle" }} /></a>
-              <a href="#portfolio" className="btn btn-hero-outline">View Our Work</a>
+              <a href="/works" className="btn btn-hero-outline">View Our Work</a>
             </div>
 
             <div className="svc-hero-badges-bw reveal-fade-in reveal-delay-400" style={{ justifyContent: 'center', marginTop: '2.5rem' }}>
