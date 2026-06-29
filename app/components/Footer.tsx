@@ -44,7 +44,7 @@ export default function Footer() {
             <li><Link href="/services/ai-solutions">AI/ML Solutions</Link></li>
             <li><Link href="/services/performance-marketing">Performance Marketing</Link></li>
             <li><Link href="/services/social-media-marketing">Social Media Marketing</Link></li>
-            <li><Link href="/services/ugc-video-creation">UGC Video Creation</Link></li>
+            <li><Link href="/services/photography-and-videography">Photography & Videography</Link></li>
           </ul>
         </div>
 

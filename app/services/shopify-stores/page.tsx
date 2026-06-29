@@ -146,6 +146,19 @@ export default function ShopifyStoresPage() {
           </div>
         </section>
 
+        {/* ─── TECHNOLOGY MARQUEE ─── */}
+        <section className="tech-marquee-section">
+          <div className="tech-marquee-container">
+            <div className="tech-marquee-content">
+              {["Shiprocket", "Razorpay", "Razorpay Checkout", "Klaviyo", "Gorgias", "Recharge", "Shiprocket", "Razorpay", "Razorpay Checkout", "Klaviyo", "Gorgias", "Recharge", "Shiprocket", "Razorpay", "Razorpay Checkout", "Klaviyo", "Gorgias", "Recharge", "Shiprocket", "Razorpay", "Razorpay Checkout", "Klaviyo", "Gorgias", "Recharge"].map((tech, i) => (
+                <div key={i} className="tech-badge">
+                  {tech}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* ─── 2. WHAT WE BUILD ─── */}
         <section className="svc-section" id="what-we-build">
           <div className="svc-section-header reveal-blur">

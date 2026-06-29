@@ -142,6 +142,19 @@ export default function ERPSoftwarePage() {
           </div>
         </section>
 
+        {/* ─── TECHNOLOGY MARQUEE ─── */}
+        <section className="tech-marquee-section">
+          <div className="tech-marquee-container">
+            <div className="tech-marquee-content">
+              {["Python","Django","PostgreSQL","Docker","AWS","GraphQL","React","Python","Django","PostgreSQL","Docker","AWS","GraphQL","React","Python","Django","PostgreSQL","Docker","AWS","GraphQL","React","Python","Django","PostgreSQL","Docker","AWS","GraphQL","React"].map((tech, i) => (
+                <div key={i} className="tech-badge">
+                  {tech}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* ─── 2. WHAT WE BUILD ─── */}
         <section className="svc-section" id="what-we-build">
           <div className="svc-section-header reveal-blur">

@@ -256,12 +256,12 @@ export default function Home() {
               </div>
             </div>
             <div className="service-card">
-              <img src="/images/ugc_video_creation_thumbnail.png" alt="UGC Video Creation" className="service-card-image" />
+              <img src="/images/ugc_video_creation_thumbnail.png" alt="Photography & Videography" className="service-card-image" />
               <div className="service-card-content">
                 <span className="badge-content">Content</span>
-                <h4>UGC Video Creation</h4>
-                <p>Authentic product videos that drive sales</p>
-                <Link href="/services/ugc-video-creation" className="service-link">Learn More <ArrowRight size={14} style={{ display: 'inline-block', marginLeft: '4px', verticalAlign: 'middle' }} /></Link>
+                <h4>Photography & Videography</h4>
+                <p>High-quality product shoots & UGC video creation</p>
+                <Link href="/services/photography-and-videography" className="service-link">Learn More <ArrowRight size={14} style={{ display: 'inline-block', marginLeft: '4px', verticalAlign: 'middle' }} /></Link>
               </div>
             </div>
           </div>

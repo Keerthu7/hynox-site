@@ -25,7 +25,7 @@ export default function Header() {
   };
 
   return (
-    <header className={`header ${isHome ? 'reveal-fade-in' : 'svc-header'} ${isMobileMenuOpen ? 'mobile-menu-active' : ''}`}>
+    <header className={`header ${isHome ? 'animate-fade-in' : 'svc-header'} ${isMobileMenuOpen ? 'mobile-menu-active' : ''}`}>
       <Link href="/" className="logo" style={{ textDecoration: 'none', color: 'inherit' }} onClick={closeMobileMenu}>
         <img src="/images/hynox_logo.jpg" alt="HYNOX" style={{ width: '32px', height: '32px', borderRadius: '50%', objectFit: 'cover' }} />
         <span>HYNOX</span>

@@ -97,6 +97,20 @@ export default function SocialMediaMarketingPage() {
       img: '/images/kido_care_web.jpg',
       videoUrl: '/videos/5.mp4'
     },
+    {
+      title: 'Team 3 Associates',
+      username: '@team3_associates',
+      subtitle: 'Photography & Videography',
+      img: '/images/team3_web.png',
+      videoUrl: '/videos/2.mp4'
+    },
+    {
+      title: 'SugarStar',
+      username: '@sugarstar_official',
+      subtitle: 'Social Media Management',
+      img: '/images/sugarstar_web.jpeg',
+      videoUrl: '/videos/1.mp4'
+    }
   ];
 
   const faqs = [
@@ -154,6 +168,49 @@ export default function SocialMediaMarketingPage() {
               <span>✓ Page Management</span>
               <span>✓ Organic Growth</span>
               <span>✓ Brand Engagement</span>
+            </div>
+          </div>
+        </section>
+
+        {/* ─── TECHNOLOGY MARQUEE ─── */}
+        <section className="tech-marquee-section">
+          <div className="tech-marquee-container">
+            <div className="tech-marquee-content">
+              {["Instagram Reels","TikTok","YouTube Shorts","LinkedIn","X (Twitter)","Pinterest","Instagram Reels","TikTok","YouTube Shorts","LinkedIn","X (Twitter)","Pinterest","Instagram Reels","TikTok","YouTube Shorts","LinkedIn","X (Twitter)","Pinterest","Instagram Reels","TikTok","YouTube Shorts","LinkedIn","X (Twitter)","Pinterest"].map((tech, i) => (
+                <div key={i} className="tech-badge">
+                  {tech}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+        {/* ─── 6. PORTFOLIO ─── */}
+        <section className="svc-section svc-section-alt" id="portfolio">
+          <div className="svc-section-header reveal-blur">
+            <span className="svc-label">PORTFOLIO</span>
+            <h2>Recent Works</h2>
+          </div>
+          <div className="social-portfolio-grid reveal-zoom reveal-delay-200">
+            {portfolio.map((item: any, i) => (
+              <div className="social-portfolio-card" key={i}>
+                <div className="social-portfolio-img" style={{ width: '100%', height: '100%' }}>
+                  <video 
+                    src={item.videoUrl} 
+                    poster={item.img} 
+                    autoPlay 
+                    loop 
+                    muted 
+                    playsInline 
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+                  />
+                </div>
+              </div>
+            ))}
+            <div className="social-portfolio-card social-portfolio-cta-card">
+              <h4 style={{ margin: 0 }}>YOUR BRAND<br />NEXT?</h4>
+              <a href="/contact" className="cta-btn">
+                Start Now <ArrowRight size={14} />
+              </a>
             </div>
           </div>
         </section>
@@ -236,42 +293,14 @@ export default function SocialMediaMarketingPage() {
           </div>
         </section>
 
-        {/* ─── 6. PORTFOLIO ─── */}
-        <section className="svc-section" id="portfolio">
-          <div className="svc-section-header reveal-blur">
-            <span className="svc-label">PORTFOLIO</span>
-            <h2>Recent Works</h2>
-          </div>
-          <div className="social-portfolio-grid reveal-zoom reveal-delay-200">
-            {portfolio.map((item: any, i) => (
-              <div className="social-portfolio-card" key={i}>
-                <div className="social-portfolio-img" style={{ width: '100%', height: '100%' }}>
-                  <video 
-                    src={item.videoUrl} 
-                    poster={item.img} 
-                    autoPlay 
-                    loop 
-                    muted 
-                    playsInline 
-                    style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
-                  />
-                </div>
-              </div>
-            ))}
-            <div className="social-portfolio-card social-portfolio-cta-card">
-              <h4 style={{ margin: 0 }}>YOUR BRAND<br />NEXT?</h4>
-              <a href="/contact" className="cta-btn">
-                Start Now <ArrowRight size={14} />
-              </a>
-            </div>
-          </div>
-        </section>
+        
+
 
         {/* ─── 6b. PROOF OF PERFORMANCE / VIEW INSIGHTS ─── */}
-        <section className="svc-section svc-section-alt" id="insights" style={{ paddingBottom: '5rem' }}>
+        <section className="svc-section" id="insights" style={{ paddingBottom: '5rem' }}>
           <div className="svc-section-header reveal-blur" style={{ textAlign: 'center', marginBottom: '3rem' }}>
             <span className="svc-label" style={{ letterSpacing: '0.15em', fontSize: '0.85rem' }}>PROOF OF PERFORMANCE</span>
-            <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textTransform: 'uppercase', color: '#111111', marginTop: '0.5rem', fontFamily: 'var(--font-geist-sans), sans-serif' }}>View Insights</h2>
+            <h2 style={{ fontSize: '2.5rem', fontWeight: 800, textTransform: 'uppercase', color: '#ffffff', marginTop: '0.5rem', fontFamily: 'var(--font-geist-sans), sans-serif' }}>View Insights</h2>
             <div className="svc-divider" style={{ margin: '1rem auto' }} />
           </div>
 

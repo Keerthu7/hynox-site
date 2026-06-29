@@ -31,11 +31,14 @@ export default function CubesBackground() {
     canvas.height = height;
 
     // Create cubes
-    const NUM_CUBES = 28;
+    const isMobile = width < 768;
+    const NUM_CUBES = isMobile ? 8 : 50;
+    const maxSize = isMobile ? 50 : 80;
+    const minSize = isMobile ? 20 : 30;
     const cubes: Cube[] = [];
 
     for (let i = 0; i < NUM_CUBES; i++) {
-      const size = Math.random() * 80 + 30;
+      const size = Math.random() * (maxSize - minSize) + minSize;
       cubes.push({
         x: Math.random() * width,
         y: Math.random() * height,

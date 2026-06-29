@@ -8,6 +8,8 @@ import CubesBackground from '../../components/CubesBackground';
 import ServiceCTA from '../../components/ServiceCTA';
 import Footer from '../../components/Footer';
 
+import { FaYoutube, FaInstagram, FaLinkedin, FaFacebook } from 'react-icons/fa';
+
 export default function PerformanceMarketingPage() {
   useEffect(() => {
     const animationClasses = [
@@ -76,10 +78,56 @@ export default function PerformanceMarketingPage() {
     { title: "Mallika Garments", cat: "Custom Development", desc: "Fashion retail business solution", img: "/images/malika-garments_web.jpg" },
     { title: "Graaps", cat: "Clothing Brand", desc: "Online clothing store", img: "/images/graaps_web.png" },
     { title: "Food delivery app", cat: "Custom Development", desc: "On-demand food delivery service", img: "/images/aharraa_web.png" },
-    { title: "Kores Fabrics", cat: "Clothing Brand", desc: "Online clothing Wholesale Store", img: "/images/kores_web.png" },
+    { title: "Kores Fabrics", cat: "Clothing Brand", desc: "Online Wholesale Store", img: "/images/kores_web.png" },
     { title: "Kido Care", cat: "Kids Clothing Brand", desc: "Online clothing store", img: "/images/kido_care_web.jpg" },
     { title: "Sun Holidays", cat: "Tours and Travel Agency", desc: "Travel Agency Portfolio", img: "/images/sun_holidays_web.png" },
     { title: "Livinza", cat: "Interior Business", desc: "Interior Business Portfolio", img: "/images/livinza_web.png" }
+  ];
+
+  const videoPortfolio = [
+    { 
+      title: 'JP Interiors', 
+      username: '@jp_interiors',
+      subtitle: 'Design & Build', 
+      img: '/images/JpWeb_works.png',
+      videoUrl: '/videos/1.mp4'
+    },
+    { 
+      title: 'Graaps Brand', 
+      username: '@graaps_clothing',
+      subtitle: 'Summer Collection', 
+      img: '/images/graaps_web.png',
+      videoUrl: '/videos/3.mp4'
+    },
+    { 
+      title: 'Sun Holidays', 
+      username: '@_sun_holidays',
+      subtitle: 'Tours & Travels', 
+      img: '/images/sun_holidays_web.png',
+      videoUrl: '/videos/4.mp4',
+      titleColor: '#facc15'
+    },
+    { 
+      title: 'Kido Care', 
+      username: '@kidocare_store',
+      subtitle: 'Kids Fashion Reels', 
+      img: '/images/kido_care_web.jpg',
+      videoUrl: '/videos/5.mp4'
+    },
+    {
+      title: 'Team 3 Associates',
+      username: '@team3_associates',
+      subtitle: 'Photography & Videography',
+      img: '/images/team3_web.png',
+      videoUrl: '/videos/2.mp4'
+    },
+    {
+      title: 'SugarStar',
+      username: '@sugarstar_official',
+      subtitle: 'Social Media Management',
+      img: '/images/sugarstar_web.jpeg',
+      videoUrl: '/videos/1.mp4'
+    }
   ];
 
   const faqs = [
@@ -137,6 +185,90 @@ export default function PerformanceMarketingPage() {
               <span>✓ Google Search &amp; PMax</span>
               <span>✓ ROAS Optimization</span>
               <span>✓ Creative Strategy</span>
+            </div>
+          </div>
+        </section>
+
+        {/* ─── DIGITAL PRESENCE ─── */}
+        <section className="svc-section" id="digital-presence">
+          <div className="svc-section-header reveal-blur">
+            <span className="svc-label">WHAT WE DO</span>
+            <h2>Digital Presence</h2>
+            <div className="svc-divider" />
+          </div>
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '6rem', flexWrap: 'wrap', alignItems: 'center', maxWidth: '1200px', margin: '0 auto' }}>
+            
+            {/* YouTube */}
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem' }}>
+              <div style={{ background: '#FF0000', borderRadius: '12px', width: '56px', height: '42px', display: 'flex', alignItems: 'center', justifyContent: 'center', filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.3))' }}>
+                 <FaYoutube size={36} color="#FFFFFF" />
+              </div>
+              <span style={{ color: '#6b7280', fontSize: '0.9rem', fontWeight: 500 }}>YouTube</span>
+            </div>
+
+            {/* Instagram */}
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem' }}>
+              <div style={{ background: 'linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)', borderRadius: '14px', width: '52px', height: '52px', display: 'flex', alignItems: 'center', justifyContent: 'center', filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.3))' }}>
+                 <FaInstagram size={36} color="#FFFFFF" />
+              </div>
+              <span style={{ color: '#6b7280', fontSize: '0.9rem', fontWeight: 500 }}>Instagram</span>
+            </div>
+
+            {/* LinkedIn */}
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem' }}>
+              <div style={{ filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.3))' }}>
+                 <FaLinkedin size={54} color="#0A66C2" />
+              </div>
+              <span style={{ color: '#6b7280', fontSize: '0.9rem', fontWeight: 500 }}>LinkedIn</span>
+            </div>
+
+            {/* Facebook */}
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem' }}>
+              <div style={{ filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.3))' }}>
+                 <FaFacebook size={54} color="#1877F2" />
+              </div>
+              <span style={{ color: '#6b7280', fontSize: '0.9rem', fontWeight: 500 }}>Facebook</span>
+            </div>
+
+            {/* Hotstar */}
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem' }}>
+              <div style={{ height: '54px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <span style={{ color: '#ffffff', fontSize: '1.75rem', fontWeight: 600, letterSpacing: '-0.02em', fontFamily: 'system-ui, -apple-system, sans-serif' }}>hotstar</span>
+              </div>
+              <span style={{ color: '#6b7280', fontSize: '0.9rem', fontWeight: 500 }}>Hotstar</span>
+            </div>
+
+          </div>
+        </section>
+
+        {/* ─── RECENT WORKS (VIDEOS) ─── */}
+        <section className="svc-section svc-section-alt" id="recent-works">
+          <div className="svc-section-header reveal-blur">
+            <span className="svc-label">PORTFOLIO</span>
+            <h2>Recent Works</h2>
+            <div className="svc-divider" />
+          </div>
+          <div className="social-portfolio-grid reveal-zoom reveal-delay-200">
+            {videoPortfolio.map((item: any, i) => (
+              <div className="social-portfolio-card" key={i}>
+                <div className="social-portfolio-img" style={{ width: '100%', height: '100%' }}>
+                  <video 
+                    src={item.videoUrl} 
+                    poster={item.img} 
+                    autoPlay 
+                    loop 
+                    muted 
+                    playsInline 
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+                  />
+                </div>
+              </div>
+            ))}
+            <div className="social-portfolio-card social-portfolio-cta-card">
+              <h4 style={{ margin: 0 }}>YOUR BRAND<br />NEXT?</h4>
+              <a href="/contact" className="cta-btn">
+                Start Now <ArrowRight size={14} />
+              </a>
             </div>
           </div>
         </section>
@@ -214,28 +346,6 @@ export default function PerformanceMarketingPage() {
                 {i < process.length - 1 && <div className="svc-process-line" />}
                 <h4>{item.title}</h4>
                 <p>{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* ─── 6. PORTFOLIO ─── */}
-        <section className="svc-section" id="portfolio">
-          <div className="svc-section-header reveal-blur">
-            <span className="svc-label">PORTFOLIO</span>
-            <h2>Real Campaigns. Real Results.</h2>
-          </div>
-          <div className="svc-portfolio-grid reveal-zoom reveal-delay-200">
-            {portfolio.map((item, i) => (
-              <div className="svc-portfolio-card" key={i}>
-                <div className="svc-portfolio-img">
-                  <img src={item.img} alt={item.title} />
-                </div>
-                <div className="svc-portfolio-info">
-                  <span className="badge-marketing">{item.cat}</span>
-                  <h4>{item.title}</h4>
-                  <p>{item.desc}</p>
-                </div>
               </div>
             ))}
           </div>

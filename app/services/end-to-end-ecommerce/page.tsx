@@ -118,6 +118,19 @@ export default function EndToEndEcommercePage() {
           </div>
         </section>
 
+        {/* ─── TECHNOLOGY MARQUEE ─── */}
+        <section className="tech-marquee-section">
+          <div className="tech-marquee-container">
+            <div className="tech-marquee-content">
+              {["Shopify","React","Next.js","Node.js","Stripe","AWS","Vercel","Shopify","React","Next.js","Node.js","Stripe","AWS","Vercel","Shopify","React","Next.js","Node.js","Stripe","AWS","Vercel","Shopify","React","Next.js","Node.js","Stripe","AWS","Vercel"].map((tech, i) => (
+                <div key={i} className="tech-badge">
+                  {tech}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* ─── 01. THE JOURNEY ─── */}
         <section className="svc-section" id="journey">
           <div className="svc-section-header reveal-blur">
