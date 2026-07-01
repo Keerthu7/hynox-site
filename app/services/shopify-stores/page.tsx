@@ -144,23 +144,38 @@ export default function ShopifyStoresPage() {
               <span>✓ Conversion Focused</span>
             </div>
           </div>
-        </section>
-
-        {/* ─── TECHNOLOGY MARQUEE ─── */}
-        <section className="tech-marquee-section">
+{/* ─── TECHNOLOGY MARQUEE ─── */}
+        <section className="tech-marquee-section" style={{ position: 'absolute', bottom: 0, left: 0, right: 0, zIndex: 20, background: 'transparent', borderBottom: 'none', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
           <div className="tech-marquee-container">
             <div className="tech-marquee-content">
-              {["Shiprocket", "Razorpay", "Razorpay Checkout", "Klaviyo", "Gorgias", "Recharge", "Shiprocket", "Razorpay", "Razorpay Checkout", "Klaviyo", "Gorgias", "Recharge", "Shiprocket", "Razorpay", "Razorpay Checkout", "Klaviyo", "Gorgias", "Recharge", "Shiprocket", "Razorpay", "Razorpay Checkout", "Klaviyo", "Gorgias", "Recharge"].map((tech, i) => (
-                <div key={i} className="tech-badge">
-                  {tech}
+              {[...Array(2)].flatMap(() => [
+                { name: "Shiprocket", icon: "rocket" },
+                { name: "Razorpay", icon: "razorpay" },
+                { name: "Messaging", lucide: "MessageSquare" },
+                { name: "Flow", lucide: "Workflow" },
+                { name: "TYDAL Product Reviews", lucide: "Star" },
+                { name: "TrustZ", lucide: "ShieldCheck" },
+                { name: "Sized", lucide: "Ruler" },
+                { name: "Payflow", lucide: "CreditCard" },
+                { name: "MS Order Printers", lucide: "Printer" },
+                { name: "Qikify Volume Discount", lucide: "Percent" },
+                { name: "Microsoft Clarity", lucide: "LineChart" }
+              ]).map((tech: any, i) => {
+                const LucideIcon = tech.lucide ? (LucideIcons as any)[tech.lucide] : null;
+                return (
+                <div key={i} className="tech-badge" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                  {LucideIcon ? <LucideIcon size={24} /> : <img src={`https://cdn.simpleicons.org/${tech.icon}/ffffff`} alt={tech.name} style={{ width: '24px', height: '24px' }} />}
+                  <span>{tech.name}</span>
                 </div>
-              ))}
+              )})}
             </div>
           </div>
         </section>
 
+        </section>
+
         {/* ─── 2. WHAT WE BUILD ─── */}
-        <section className="svc-section" id="what-we-build">
+        <section className="svc-section svc-section-alt" id="what-we-build">
           <div className="svc-section-header reveal-blur">
             <span className="svc-label">WHAT WE BUILD</span>
             <h2>Shopify Solutions Designed to Scale</h2>
@@ -181,7 +196,7 @@ export default function ShopifyStoresPage() {
         </section>
 
         {/* ─── 3. WHAT YOU GET ─── */}
-        <section className="svc-section svc-section-alt" id="what-you-get">
+        <section className="svc-section" id="what-you-get">
           <div className="svc-section-header reveal-blur">
             <span className="svc-label">WHAT YOU GET</span>
             <h2>Everything You Need, Included</h2>
@@ -203,7 +218,7 @@ export default function ShopifyStoresPage() {
         </section>
 
         {/* ─── 4. WHY CHOOSE HYNOX ─── */}
-        <section className="svc-section" id="why-hynox">
+        <section className="svc-section svc-section-alt" id="why-hynox">
           <div className="svc-section-header reveal-flip-x">
             <span className="svc-label">WHY CHOOSE HYNOX?</span>
             <h2>We Focus On What Matters</h2>
@@ -220,7 +235,7 @@ export default function ShopifyStoresPage() {
         </section>
 
         {/* ─── 5. PROCESS ─── */}
-        <section className="svc-section svc-section-alt" id="process">
+        <section className="svc-section" id="process">
           <div className="svc-section-header reveal-blur">
             <span className="svc-label">OUR PROCESS</span>
             <h2>Simple Process, Successful Results</h2>
@@ -238,7 +253,7 @@ export default function ShopifyStoresPage() {
         </section>
 
         {/* ─── CASE STUDIES ─── */}
-        <section className="svc-section" id="cases">
+        <section className="svc-section svc-section-alt" id="cases">
           <style dangerouslySetInnerHTML={{__html: `
             .cases-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; max-width: 1200px; margin: 0 auto; }
             .case-card { background: #ffffff; border: 1px solid #eaeaea; padding: 4rem; border-radius: 16px; transition: all 0.3s ease; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }

@@ -190,7 +190,7 @@ export default function PerformanceMarketingPage() {
         </section>
 
         {/* ─── DIGITAL PRESENCE ─── */}
-        <section className="svc-section" id="digital-presence">
+        <section className="svc-section svc-section-alt" id="digital-presence">
           <div className="svc-section-header reveal-blur">
             <span className="svc-label">WHAT WE DO</span>
             <h2>Digital Presence</h2>
@@ -233,7 +233,7 @@ export default function PerformanceMarketingPage() {
             {/* Hotstar */}
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem' }}>
               <div style={{ height: '54px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <span style={{ color: '#ffffff', fontSize: '1.75rem', fontWeight: 600, letterSpacing: '-0.02em', fontFamily: 'system-ui, -apple-system, sans-serif' }}>hotstar</span>
+                <span style={{ color: '#111827', fontSize: '1.75rem', fontWeight: 600, letterSpacing: '-0.02em', fontFamily: 'system-ui, -apple-system, sans-serif' }}>hotstar</span>
               </div>
               <span style={{ color: '#6b7280', fontSize: '0.9rem', fontWeight: 500 }}>Hotstar</span>
             </div>
@@ -241,40 +241,73 @@ export default function PerformanceMarketingPage() {
           </div>
         </section>
 
-        {/* ─── RECENT WORKS (VIDEOS) ─── */}
-        <section className="svc-section svc-section-alt" id="recent-works">
+        {/* ─── CASE STUDIES ─── */}
+        <section className="svc-section" id="recent-works">
           <div className="svc-section-header reveal-blur">
-            <span className="svc-label">PORTFOLIO</span>
-            <h2>Recent Works</h2>
+            <span className="svc-label">PERFORMANCE</span>
+            <h2>Proven Results</h2>
             <div className="svc-divider" />
           </div>
-          <div className="social-portfolio-grid reveal-zoom reveal-delay-200">
-            {videoPortfolio.map((item: any, i) => (
-              <div className="social-portfolio-card" key={i}>
-                <div className="social-portfolio-img" style={{ width: '100%', height: '100%' }}>
-                  <video 
-                    src={item.videoUrl} 
-                    poster={item.img} 
-                    autoPlay 
-                    loop 
-                    muted 
-                    playsInline 
-                    style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
-                  />
+          
+          <div style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap', maxWidth: '1200px', margin: '0 auto', padding: '0 1.25rem' }}>
+            {/* Card 1: SugarStar */}
+            <div className="case-study-card reveal-from-left" style={{ flex: '1 1 500px', background: '#ffffff', borderRadius: '12px', padding: '3rem', color: '#000000', display: 'flex', flexDirection: 'column' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '2rem', fontSize: '0.75rem', fontWeight: 600, color: '#9ca3af', letterSpacing: '0.05em' }}>
+                <span>E-COMMERCE · LOUNGEWEAR</span>
+                <span>DURATION: 4 MONTHS</span>
+              </div>
+              <h3 style={{ fontSize: '2.5rem', fontWeight: 600, marginBottom: '1.5rem', color: '#000000', letterSpacing: '-0.02em' }}>SugarStar</h3>
+              <p style={{ color: '#4b5563', fontSize: '1rem', lineHeight: 1.6, marginBottom: '3rem', flexGrow: 1 }}>
+                Executed hyper-targeted message campaigns to drive direct inquiries. Achieved massive scale with optimized entry costs, resulting in high-intent sales conversions.
+              </p>
+              
+              <div style={{ display: 'flex', justifyContent: 'space-between', borderTop: '1px solid #f3f4f6', paddingTop: '2rem' }}>
+                <div>
+                  <div style={{ fontSize: '2rem', fontWeight: 700, color: '#000000', marginBottom: '0.5rem', letterSpacing: '-0.02em' }}>₹9.9</div>
+                  <div style={{ fontSize: '0.75rem', fontWeight: 600, color: '#9ca3af', letterSpacing: '0.05em' }}>COST PER CLICK</div>
+                </div>
+                <div>
+                  <div style={{ fontSize: '2rem', fontWeight: 700, color: '#000000', marginBottom: '0.5rem', letterSpacing: '-0.02em' }}>₹4.2L</div>
+                  <div style={{ fontSize: '0.75rem', fontWeight: 600, color: '#9ca3af', letterSpacing: '0.05em' }}>TOTAL SALES</div>
+                </div>
+                <div>
+                  <div style={{ fontSize: '2rem', fontWeight: 700, color: '#000000', marginBottom: '0.5rem', letterSpacing: '-0.02em' }}>₹1L</div>
+                  <div style={{ fontSize: '0.75rem', fontWeight: 600, color: '#9ca3af', letterSpacing: '0.05em' }}>NET PROFIT</div>
                 </div>
               </div>
-            ))}
-            <div className="social-portfolio-card social-portfolio-cta-card">
-              <h4 style={{ margin: 0 }}>YOUR BRAND<br />NEXT?</h4>
-              <a href="/contact" className="cta-btn">
-                Start Now <ArrowRight size={14} />
-              </a>
+            </div>
+
+            {/* Card 2: Teerex */}
+            <div className="case-study-card reveal-from-right" style={{ flex: '1 1 500px', background: '#ffffff', borderRadius: '12px', padding: '3rem', color: '#000000', display: 'flex', flexDirection: 'column' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '2rem', fontSize: '0.75rem', fontWeight: 600, color: '#9ca3af', letterSpacing: '0.05em' }}>
+                <span>RETAIL · APPAREL</span>
+                <span>DURATION: 6 MONTHS</span>
+              </div>
+              <h3 style={{ fontSize: '2.5rem', fontWeight: 600, marginBottom: '1.5rem', color: '#000000', letterSpacing: '-0.02em' }}>Teerex</h3>
+              <p style={{ color: '#4b5563', fontSize: '1rem', lineHeight: 1.6, marginBottom: '3rem', flexGrow: 1 }}>
+                Scaled lead generation for high-volume retail. By optimizing lead quality, we delivered a consistent flow of prospects and a strong return on marketing investment.
+              </p>
+              
+              <div style={{ display: 'flex', justifyContent: 'space-between', borderTop: '1px solid #f3f4f6', paddingTop: '2rem' }}>
+                <div>
+                  <div style={{ fontSize: '2rem', fontWeight: 700, color: '#000000', marginBottom: '0.5rem', letterSpacing: '-0.02em' }}>₹220</div>
+                  <div style={{ fontSize: '0.75rem', fontWeight: 600, color: '#9ca3af', letterSpacing: '0.05em' }}>COST PER LEAD</div>
+                </div>
+                <div>
+                  <div style={{ fontSize: '2rem', fontWeight: 700, color: '#000000', marginBottom: '0.5rem', letterSpacing: '-0.02em' }}>₹11.48L</div>
+                  <div style={{ fontSize: '0.75rem', fontWeight: 600, color: '#9ca3af', letterSpacing: '0.05em' }}>TOTAL RETURNS</div>
+                </div>
+                <div>
+                  <div style={{ fontSize: '2rem', fontWeight: 700, color: '#000000', marginBottom: '0.5rem', letterSpacing: '-0.02em' }}>3.02×</div>
+                  <div style={{ fontSize: '0.75rem', fontWeight: 600, color: '#9ca3af', letterSpacing: '0.05em' }}>ROI</div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
         {/* ─── 2. WHAT WE BUILD ─── */}
-        <section className="svc-section" id="what-we-build">
+        <section className="svc-section svc-section-alt" id="what-we-build">
           <div className="svc-section-header reveal-blur">
             <span className="svc-label">WHAT WE BUILD</span>
             <h2>Advertising Channels We Master</h2>
@@ -295,7 +328,7 @@ export default function PerformanceMarketingPage() {
         </section>
 
         {/* ─── 3. WHAT YOU GET ─── */}
-        <section className="svc-section svc-section-alt" id="what-you-get">
+        <section className="svc-section" id="what-you-get">
           <div className="svc-section-header reveal-blur">
             <span className="svc-label">WHAT YOU GET</span>
             <h2>Everything You Need, Included</h2>
@@ -317,7 +350,7 @@ export default function PerformanceMarketingPage() {
         </section>
 
         {/* ─── 4. WHY CHOOSE HYNOX ─── */}
-        <section className="svc-section" id="why-hynox">
+        <section className="svc-section svc-section-alt" id="why-hynox">
           <div className="svc-section-header reveal-flip-x">
             <span className="svc-label">WHY CHOOSE HYNOX?</span>
             <h2>We Focus On What Matters</h2>
@@ -334,7 +367,7 @@ export default function PerformanceMarketingPage() {
         </section>
 
         {/* ─── 5. PROCESS ─── */}
-        <section className="svc-section svc-section-alt" id="process">
+        <section className="svc-section" id="process">
           <div className="svc-section-header reveal-blur">
             <span className="svc-label">OUR PROCESS</span>
             <h2>Simple Process, Successful Results</h2>

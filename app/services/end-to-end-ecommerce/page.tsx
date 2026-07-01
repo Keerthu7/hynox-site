@@ -116,23 +116,32 @@ export default function EndToEndEcommercePage() {
               <span style={{ fontSize: '1rem', fontWeight: 600 }}>6+ <span style={{ opacity: 0.6, fontSize: '0.85rem' }}>Services Bundled</span></span>
             </div>
           </div>
-        </section>
-
-        {/* ─── TECHNOLOGY MARQUEE ─── */}
-        <section className="tech-marquee-section">
+{/* ─── TECHNOLOGY MARQUEE ─── */}
+        <section className="tech-marquee-section" style={{ position: 'absolute', bottom: 0, left: 0, right: 0, zIndex: 20, background: 'transparent', borderBottom: 'none', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
           <div className="tech-marquee-container">
             <div className="tech-marquee-content">
-              {["Shopify","React","Next.js","Node.js","Stripe","AWS","Vercel","Shopify","React","Next.js","Node.js","Stripe","AWS","Vercel","Shopify","React","Next.js","Node.js","Stripe","AWS","Vercel","Shopify","React","Next.js","Node.js","Stripe","AWS","Vercel"].map((tech, i) => (
-                <div key={i} className="tech-badge">
-                  {tech}
+              {[...Array(4)].flatMap(() => [
+                { name: "Shopify", icon: "shopify" },
+                { name: "React", icon: "react" },
+                { name: "Next.js", icon: "nextdotjs" },
+                { name: "Node.js", icon: "nodedotjs" },
+                { name: "Stripe", icon: "stripe" },
+                { name: "AWS", icon: "amazonaws" },
+                { name: "Vercel", icon: "vercel" }
+              ]).map((tech, i) => (
+                <div key={i} className="tech-badge" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                  <img src={`https://cdn.simpleicons.org/${tech.icon}/ffffff`} alt={tech.name} style={{ width: '24px', height: '24px' }} />
+                  <span>{tech.name}</span>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
+        </section>
+
         {/* ─── 01. THE JOURNEY ─── */}
-        <section className="svc-section" id="journey">
+        <section className="svc-section svc-section-alt" id="journey">
           <div className="svc-section-header reveal-blur">
             <span className="svc-label">01 — THE JOURNEY</span>
             <h2>From Idea to Revenue</h2>
@@ -162,7 +171,7 @@ export default function EndToEndEcommercePage() {
         </section>
 
         {/* ─── 02. OUR SERVICES ─── */}
-        <section className="svc-section svc-section-alt" id="services">
+        <section className="svc-section" id="services">
           <div className="svc-section-header reveal-blur">
             <span className="svc-label">02 — OUR SERVICES</span>
             <h2>Everything Included</h2>
@@ -186,7 +195,7 @@ export default function EndToEndEcommercePage() {
         </section>
 
         {/* ─── 03. WEBSITE DEVELOPMENT ─── */}
-        <section className="svc-section" id="website-dev">
+        <section className="svc-section svc-section-alt" id="website-dev">
           <div className="svc-section-header reveal-flip-x">
             <span className="svc-label">03 — WEBSITE DEVELOPMENT</span>
             <h2>Pick Your Store Platform</h2>
@@ -223,7 +232,7 @@ export default function EndToEndEcommercePage() {
         </section>
 
         {/* ─── 04. SALES FUNNEL ─── */}
-        <section className="svc-section svc-section-alt" id="funnel">
+        <section className="svc-section" id="funnel">
           <div className="svc-section-header reveal-blur">
             <span className="svc-label">04 — SALES FUNNEL</span>
             <h2>We Optimise Every Stage</h2>
@@ -242,7 +251,7 @@ export default function EndToEndEcommercePage() {
         </section>
 
         {/* ─── 05. ANALYTICS & TRACKING ─── */}
-        <section className="svc-section" id="analytics">
+        <section className="svc-section svc-section-alt" id="analytics">
           <div className="svc-section-header reveal-zoom">
             <span className="svc-label">05 — ANALYTICS & TRACKING</span>
             <h2>Track Every Rupee.<br/>Know Every Number.</h2>
@@ -285,7 +294,7 @@ export default function EndToEndEcommercePage() {
         </section>
 
         {/* ─── 06. CONTENT PRODUCTION ─── */}
-        <section className="svc-section svc-section-alt" id="content">
+        <section className="svc-section" id="content">
           <div className="svc-section-header reveal-blur">
             <span className="svc-label">06 — CONTENT PRODUCTION</span>
             <h2>Content That Sells<br/>Before You Say a Word</h2>
@@ -324,7 +333,7 @@ export default function EndToEndEcommercePage() {
         </section>
 
         {/* ─── 08. CASE STUDIES ─── */}
-        <section className="svc-section" id="case-studies">
+        <section className="svc-section svc-section-alt" id="case-studies">
           <div className="svc-section-header reveal-blur">
             <span className="svc-label">08 — CASE STUDIES</span>
             <h2>Stores We've Built & Scaled</h2>

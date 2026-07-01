@@ -75,6 +75,13 @@ export default function SocialMediaMarketingPage() {
       img: '/images/JpWeb_works.png',
       videoUrl: '/videos/1.mp4'
     },
+    {
+      title: 'Team 3 Associates',
+      username: '@team3_associates',
+      subtitle: 'Photography & Videography',
+      img: '/images/team3_web.png',
+      videoUrl: '/videos/2.mp4'
+    },
     { 
       title: 'Graaps Brand', 
       username: '@graaps_clothing',
@@ -97,20 +104,8 @@ export default function SocialMediaMarketingPage() {
       img: '/images/kido_care_web.jpg',
       videoUrl: '/videos/5.mp4'
     },
-    {
-      title: 'Team 3 Associates',
-      username: '@team3_associates',
-      subtitle: 'Photography & Videography',
-      img: '/images/team3_web.png',
-      videoUrl: '/videos/2.mp4'
-    },
-    {
-      title: 'SugarStar',
-      username: '@sugarstar_official',
-      subtitle: 'Social Media Management',
-      img: '/images/sugarstar_web.jpeg',
-      videoUrl: '/videos/1.mp4'
-    }
+    
+   
   ];
 
   const faqs = [
@@ -170,19 +165,27 @@ export default function SocialMediaMarketingPage() {
               <span>✓ Brand Engagement</span>
             </div>
           </div>
-        </section>
-
-        {/* ─── TECHNOLOGY MARQUEE ─── */}
-        <section className="tech-marquee-section">
+{/* ─── TECHNOLOGY MARQUEE ─── */}
+        <section className="tech-marquee-section" style={{ position: 'absolute', bottom: 0, left: 0, right: 0, zIndex: 20, background: 'transparent', borderBottom: 'none', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
           <div className="tech-marquee-container">
             <div className="tech-marquee-content">
-              {["Instagram Reels","TikTok","YouTube Shorts","LinkedIn","X (Twitter)","Pinterest","Instagram Reels","TikTok","YouTube Shorts","LinkedIn","X (Twitter)","Pinterest","Instagram Reels","TikTok","YouTube Shorts","LinkedIn","X (Twitter)","Pinterest","Instagram Reels","TikTok","YouTube Shorts","LinkedIn","X (Twitter)","Pinterest"].map((tech, i) => (
-                <div key={i} className="tech-badge">
-                  {tech}
+              {[...Array(4)].flatMap(() => [
+                { name: "Instagram Reels", icon: "instagram" },
+                { name: "TikTok", icon: "tiktok" },
+                { name: "YouTube Shorts", icon: "youtube" },
+                { name: "LinkedIn", customUrl: "https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" },
+                { name: "X (Twitter)", icon: "x" },
+                { name: "Pinterest", icon: "pinterest" }
+              ]).map((tech, i) => (
+                <div key={i} className="tech-badge" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                  <img src={tech.customUrl || `https://cdn.simpleicons.org/${tech.icon}/ffffff`} alt={tech.name} style={{ width: '24px', height: '24px' }} />
+                  <span>{tech.name}</span>
                 </div>
               ))}
             </div>
           </div>
+        </section>
+
         </section>
         {/* ─── 6. PORTFOLIO ─── */}
         <section className="svc-section svc-section-alt" id="portfolio">
@@ -214,86 +217,6 @@ export default function SocialMediaMarketingPage() {
             </div>
           </div>
         </section>
-
-        {/* ─── 2. WHAT WE BUILD ─── */}
-        <section className="svc-section" id="what-we-build">
-          <div className="svc-section-header reveal-blur">
-            <span className="svc-label">WHAT WE BUILD</span>
-            <h2>Our Social Media Services</h2>
-            <div className="svc-divider" />
-          </div>
-          <div className="svc-build-grid reveal-zoom reveal-delay-200">
-            {whatWeBuild.map((item, i) => (
-              <div className="svc-build-card" key={i}>
-                {(() => {
-                  const BuildIcon = (LucideIcons as any)[item.icon] || LucideIcons.HelpCircle;
-                  return <div className="svc-build-icon"><BuildIcon size={36} /></div>;
-                })()}
-                <h3>{item.title}</h3>
-                <p>{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* ─── 3. WHAT YOU GET ─── */}
-        <section className="svc-section svc-section-alt" id="what-you-get">
-          <div className="svc-section-header reveal-blur">
-            <span className="svc-label">WHAT YOU GET</span>
-            <h2>Everything You Need, Included</h2>
-          </div>
-          <div className="svc-get-grid reveal-from-left reveal-delay-200">
-            {whatYouGet.map((item, i) => (
-              <div className="svc-get-card" key={i}>
-                {(() => {
-                  const GetIcon = (LucideIcons as any)[item.icon] || LucideIcons.HelpCircle;
-                  return <span className="svc-get-icon"><GetIcon size={20} /></span>;
-                })()}
-                <div>
-                  <h4>{item.title}</h4>
-                  <p>{item.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* ─── 4. WHY CHOOSE HYNOX ─── */}
-        <section className="svc-section" id="why-hynox">
-          <div className="svc-section-header reveal-flip-x">
-            <span className="svc-label">WHY CHOOSE HYNOX?</span>
-            <h2>We Focus On What Matters</h2>
-          </div>
-          <div className="svc-why-grid reveal-zoom reveal-delay-200">
-            {whyChoose.map((item, i) => (
-              <div className="svc-why-card" key={i}>
-                <div className="svc-why-check"><Check size={16} /></div>
-                <h4>{item.title}</h4>
-                <p>{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* ─── 5. PROCESS ─── */}
-        <section className="svc-section svc-section-alt" id="process">
-          <div className="svc-section-header reveal-blur">
-            <span className="svc-label">OUR PROCESS</span>
-            <h2>Simple Process, Successful Results</h2>
-          </div>
-          <div className="svc-process-row reveal-from-left reveal-delay-200">
-            {process.map((item, i) => (
-              <div className="svc-process-step" key={i}>
-                <div className="svc-process-circle">{item.step}</div>
-                {i < process.length - 1 && <div className="svc-process-line" />}
-                <h4>{item.title}</h4>
-                <p>{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        
 
 
         {/* ─── 6b. PROOF OF PERFORMANCE / VIEW INSIGHTS ─── */}
@@ -406,6 +329,88 @@ export default function SocialMediaMarketingPage() {
             </div>
           </div>
         </section>
+
+        {/* ─── 2. WHAT WE BUILD ─── */}
+        <section className="svc-section svc-section-alt" id="what-we-build">
+          <div className="svc-section-header reveal-blur">
+            <span className="svc-label">WHAT WE BUILD</span>
+            <h2>Our Social Media Services</h2>
+            <div className="svc-divider" />
+          </div>
+          <div className="svc-build-grid reveal-zoom reveal-delay-200">
+            {whatWeBuild.map((item, i) => (
+              <div className="svc-build-card" key={i}>
+                {(() => {
+                  const BuildIcon = (LucideIcons as any)[item.icon] || LucideIcons.HelpCircle;
+                  return <div className="svc-build-icon"><BuildIcon size={36} /></div>;
+                })()}
+                <h3>{item.title}</h3>
+                <p>{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* ─── 3. WHAT YOU GET ─── */}
+        <section className="svc-section" id="what-you-get">
+          <div className="svc-section-header reveal-blur">
+            <span className="svc-label">WHAT YOU GET</span>
+            <h2>Everything You Need, Included</h2>
+          </div>
+          <div className="svc-get-grid reveal-from-left reveal-delay-200">
+            {whatYouGet.map((item, i) => (
+              <div className="svc-get-card" key={i}>
+                {(() => {
+                  const GetIcon = (LucideIcons as any)[item.icon] || LucideIcons.HelpCircle;
+                  return <span className="svc-get-icon"><GetIcon size={20} /></span>;
+                })()}
+                <div>
+                  <h4>{item.title}</h4>
+                  <p>{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* ─── 4. WHY CHOOSE HYNOX ─── */}
+        <section className="svc-section svc-section-alt" id="why-hynox">
+          <div className="svc-section-header reveal-flip-x">
+            <span className="svc-label">WHY CHOOSE HYNOX?</span>
+            <h2>We Focus On What Matters</h2>
+          </div>
+          <div className="svc-why-grid reveal-zoom reveal-delay-200">
+            {whyChoose.map((item, i) => (
+              <div className="svc-why-card" key={i}>
+                <div className="svc-why-check"><Check size={16} /></div>
+                <h4>{item.title}</h4>
+                <p>{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* ─── 5. PROCESS ─── */}
+        <section className="svc-section" id="process">
+          <div className="svc-section-header reveal-blur">
+            <span className="svc-label">OUR PROCESS</span>
+            <h2>Simple Process, Successful Results</h2>
+          </div>
+          <div className="svc-process-row reveal-from-left reveal-delay-200">
+            {process.map((item, i) => (
+              <div className="svc-process-step" key={i}>
+                <div className="svc-process-circle">{item.step}</div>
+                {i < process.length - 1 && <div className="svc-process-line" />}
+                <h4>{item.title}</h4>
+                <p>{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        
+
+
 
         {/* ─── 7. FAQ ─── */}
         <section className="svc-section svc-section-alt" id="faq">

@@ -140,23 +140,32 @@ export default function ERPSoftwarePage() {
               <span>✓ No License Fees</span>
             </div>
           </div>
-        </section>
-
-        {/* ─── TECHNOLOGY MARQUEE ─── */}
-        <section className="tech-marquee-section">
+{/* ─── TECHNOLOGY MARQUEE ─── */}
+        <section className="tech-marquee-section" style={{ position: 'absolute', bottom: 0, left: 0, right: 0, zIndex: 20, background: 'transparent', borderBottom: 'none', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
           <div className="tech-marquee-container">
             <div className="tech-marquee-content">
-              {["Python","Django","PostgreSQL","Docker","AWS","GraphQL","React","Python","Django","PostgreSQL","Docker","AWS","GraphQL","React","Python","Django","PostgreSQL","Docker","AWS","GraphQL","React","Python","Django","PostgreSQL","Docker","AWS","GraphQL","React"].map((tech, i) => (
-                <div key={i} className="tech-badge">
-                  {tech}
+              {[...Array(4)].flatMap(() => [
+                { name: "Python", icon: "python" },
+                { name: "Django", icon: "django" },
+                { name: "PostgreSQL", icon: "postgresql" },
+                { name: "Docker", icon: "docker" },
+                { name: "AWS", customUrl: "https://img.icons8.com/ios-filled/50/ffffff/amazon-web-services.png" },
+                { name: "GraphQL", icon: "graphql" },
+                { name: "React", icon: "react" }
+              ]).map((tech, i) => (
+                <div key={i} className="tech-badge" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                  <img src={`https://cdn.simpleicons.org/${tech.icon}/ffffff`} alt={tech.name} style={{ width: '24px', height: '24px' }} />
+                  <span>{tech.name}</span>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
+        </section>
+
         {/* ─── 2. WHAT WE BUILD ─── */}
-        <section className="svc-section" id="what-we-build">
+        <section className="svc-section svc-section-alt" id="what-we-build">
           <div className="svc-section-header reveal-blur">
             <span className="svc-label">WHAT WE BUILD</span>
             <h2>Business Software Designed For Growth</h2>
@@ -177,7 +186,7 @@ export default function ERPSoftwarePage() {
         </section>
 
         {/* ─── 3. WHAT YOU GET ─── */}
-        <section className="svc-section svc-section-alt" id="what-you-get">
+        <section className="svc-section" id="what-you-get">
           <div className="svc-section-header reveal-blur">
             <span className="svc-label">WHAT YOU GET</span>
             <h2>Everything You Need, Included</h2>
@@ -199,7 +208,7 @@ export default function ERPSoftwarePage() {
         </section>
 
         {/* ─── 4. WHY CHOOSE HYNOX ─── */}
-        <section className="svc-section" id="why-hynox">
+        <section className="svc-section svc-section-alt" id="why-hynox">
           <div className="svc-section-header reveal-flip-x">
             <span className="svc-label">WHY CHOOSE HYNOX?</span>
             <h2>We Focus On What Matters</h2>
@@ -216,7 +225,7 @@ export default function ERPSoftwarePage() {
         </section>
 
         {/* ─── 5. PROCESS ─── */}
-        <section className="svc-section svc-section-alt" id="process">
+        <section className="svc-section" id="process">
           <div className="svc-section-header reveal-blur">
             <span className="svc-label">OUR PROCESS</span>
             <h2>Simple Process, Successful Results</h2>
@@ -234,7 +243,7 @@ export default function ERPSoftwarePage() {
         </section>
 
         {/* ─── 6. PORTFOLIO ─── */}
-        <section className="svc-section" id="portfolio">
+        <section className="svc-section svc-section-alt" id="portfolio">
           <div className="svc-section-header reveal-blur">
             <span className="svc-label">PORTFOLIO</span>
             <h2>Real Projects. Real Results.</h2>
@@ -256,7 +265,7 @@ export default function ERPSoftwarePage() {
         </section>
 
         {/* ─── 7. FAQ ─── */}
-        <section className="svc-section svc-section-alt" id="faq">
+        <section className="svc-section" id="faq">
           <div className="svc-section-header reveal-flip-x">
             <span className="svc-label">FAQ</span>
             <h2>Software Development Questions Answered</h2>

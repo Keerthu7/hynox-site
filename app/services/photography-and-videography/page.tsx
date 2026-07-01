@@ -67,64 +67,18 @@ export default function PhotographyVideographyPage() {
     { step: '05', title: 'Delivery',   desc: 'Final high-resolution assets handed over in multiple formats.' },
   ];
 
-  const portfolio = [
-    { 
-      title: 'JP Interiors', 
-      username: '@jp_interiors',
-      subtitle: 'Design & Build', 
-      img: '/images/JpWeb_works.png',
-      videoUrl: '/videos/1.mp4'
-    },
-    { 
-      title: 'Graaps Brand', 
-      username: '@graaps_clothing',
-      subtitle: 'Summer Collection', 
-      img: '/images/graaps_web.png',
-      videoUrl: '/videos/3.mp4'
-    },
-    { 
-      title: 'Sun Holidays', 
-      username: '@_sun_holidays',
-      subtitle: 'Tours & Travels', 
-      img: '/images/sun_holidays_web.png',
-      videoUrl: '/videos/4.mp4',
-      titleColor: '#facc15'
-    },
-    { 
-      title: 'Kido Care', 
-      username: '@kidocare_store',
-      subtitle: 'Kids Fashion Reels', 
-      img: '/images/kido_care_web.jpg',
-      videoUrl: '/videos/5.mp4'
-    },
-    {
-      title: 'Team 3 Associates',
-      username: '@team3_associates',
-      subtitle: 'Photography & Videography',
-      img: '/images/team3_web.png',
-      videoUrl: '/videos/2.mp4'
-    },
-    {
-      title: 'SugarStar',
-      username: '@sugarstar_official',
-      subtitle: 'Social Media Management',
-      img: '/images/sugarstar_web.jpeg',
-      videoUrl: '/videos/1.mp4'
-    },
-    { 
-      title: 'Aura Lifestyle', 
-      username: '@aura_lifestyle',
-      subtitle: 'UGC Ad Creative', 
-      img: '/images/team3_web.png',
-      videoUrl: '/videos/3.mp4'
-    },
-    { 
-      title: 'FitFuel', 
-      username: '@fitfuel_nutrition',
-      subtitle: 'Product Commercial', 
-      img: '/images/graaps_web.png',
-      videoUrl: '/videos/5.mp4'
-    },
+
+  const photographyPortfolio = [
+    { title: 'Project 1', img: '/images/photography/1.jpg' },
+    { title: 'Project 2', img: '/images/photography/2.png' },
+    { title: 'Project 3', img: '/images/photography/3.jpg' }
+  ];
+
+  const videographyPortfolio = [
+    { title: 'Project 1', videoUrl: '/videos/videography/1.mp4' },
+    { title: 'Project 2', videoUrl: '/videos/videography/2.mp4' },
+    { title: 'Project 3', videoUrl: '/videos/videography/3.mov' },
+    { title: 'Project 4', videoUrl: '/videos/videography/4.mov' }
   ];
 
   const faqs = [
@@ -145,12 +99,24 @@ export default function PhotographyVideographyPage() {
       <main>
         {/* ─── 1. HERO ─── */}
         <section className="hero-center-section">
-          <div className="absolute inset-0 w-full h-full z-0" style={{ background: "#050505" }}>
-            <CubesBackground />
+          <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, width: '100%', height: '100%', zIndex: 0, overflow: 'hidden', background: "#050505" }}>
+            <div className="desktop-only" style={{ width: '100%', height: '100%' }}>
+              <CubesBackground />
+            </div>
+            <div className="mobile-only" style={{ width: '100%', height: '100%', opacity: 0.7 }}>
+              <video 
+                src="/videos/videography/hero-section-mobileview.mp4" 
+                autoPlay 
+                loop 
+                muted 
+                playsInline 
+                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              />
+            </div>
           </div>
-          <div className="absolute inset-0 z-[1] pointer-events-none" style={{ background: "radial-gradient(ellipse at 50% 50%, rgba(20,35,100,0.25) 0%, rgba(5,5,5,0.65) 75%)" }} />
+          <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, zIndex: 1, pointerEvents: 'none', background: "radial-gradient(ellipse at 50% 50%, rgba(20,35,100,0.25) 0%, rgba(5,5,5,0.65) 75%)" }} />
 
-          <div className="hero-center-content">
+          <div className="hero-center-content" style={{ position: 'relative', zIndex: 10 }}>
             <span className="hero-badge reveal-fade-in">
               PHOTOGRAPHY & VIDEOGRAPHY IN COIMBATORE
             </span>
@@ -176,29 +142,62 @@ export default function PhotographyVideographyPage() {
               <span>✓ Cinema-Grade Gear</span>
             </div>
           </div>
-        </section>
-
-        {/* ─── TECHNOLOGY MARQUEE ─── */}
-        <section className="tech-marquee-section">
+{/* ─── TECHNOLOGY MARQUEE ─── */}
+        <section className="tech-marquee-section" style={{ position: 'absolute', bottom: 0, left: 0, right: 0, zIndex: 20, background: 'transparent', borderBottom: 'none', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
           <div className="tech-marquee-container">
             <div className="tech-marquee-content">
-              {["Premiere Pro","After Effects","DaVinci Resolve","Sony Cinema","RED Digital","Lightroom","Premiere Pro","After Effects","DaVinci Resolve","Sony Cinema","RED Digital","Lightroom","Premiere Pro","After Effects","DaVinci Resolve","Sony Cinema","RED Digital","Lightroom"].map((tech, i) => (
-                <div key={i} className="tech-badge">
-                  {tech}
+              {[...Array(4)].flatMap(() => [
+                { name: "Premiere Pro", customUrl: "https://img.icons8.com/ios-filled/50/ffffff/adobe-premiere-pro.png" },
+                { name: "After Effects", customUrl: "https://img.icons8.com/ios-filled/50/ffffff/adobe-after-effects.png" },
+                { name: "DaVinci Resolve", icon: "davinciresolve" },
+                { name: "Sony Cinema", icon: "sony" },
+                { name: "RED Digital", icon: "red" },
+                { name: "Lightroom", customUrl: "https://img.icons8.com/ios-filled/50/ffffff/adobe-lightroom.png" }
+              ]).map((tech, i) => (
+                <div key={i} className="tech-badge" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                  <img src={tech.customUrl || `https://cdn.simpleicons.org/${tech.icon}/ffffff`} alt={tech.name} style={{ width: '24px', height: '24px' }} />
+                  <span>{tech.name}</span>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* ─── 6. PORTFOLIO ─── */}
-        <section className="svc-section svc-section-alt" id="portfolio">
+        </section>
+
+        {/* ─── PHOTOGRAPHY PORTFOLIO ─── */}
+        <section className="svc-section svc-section-alt" id="photography-portfolio">
           <div className="svc-section-header reveal-blur">
-            <span className="svc-label">PORTFOLIO</span>
-            <h2>Recent Works & UGC Clips</h2>
+            <span className="svc-label">PHOTOGRAPHY</span>
+            <h2>Our Photography Work</h2>
+          </div>
+          <div className="reveal-zoom reveal-delay-200" style={{ display: 'flex', gap: '2rem', overflowX: 'auto', paddingBottom: '2rem', padding: '0 1rem', WebkitOverflowScrolling: 'touch' }}>
+            {photographyPortfolio.map((item: any, i) => (
+              <div key={i} style={{ flexShrink: 0, height: '350px', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 15px 35px rgba(0,0,0,0.2)', border: '1px solid rgba(255,255,255,0.1)' }}>
+                <img 
+                  src={item.img} 
+                  alt={item.title}
+                  style={{ height: '100%', width: 'auto', objectFit: 'contain' }} 
+                />
+              </div>
+            ))}
+            <div className="social-portfolio-card social-portfolio-cta-card" style={{ flexShrink: 0, height: '350px' }}>
+              <h4 style={{ margin: 0 }}>BOOK YOUR<br />SHOOT</h4>
+              <a href="/contact" className="cta-btn">
+                Start Now <ArrowRight size={14} />
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* ─── VIDEOGRAPHY PORTFOLIO ─── */}
+        <section className="svc-section" id="videography-portfolio">
+          <div className="svc-section-header reveal-blur">
+            <span className="svc-label">VIDEOGRAPHY</span>
+            <h2>Our Videography Work</h2>
           </div>
           <div className="social-portfolio-grid reveal-zoom reveal-delay-200">
-            {portfolio.map((item: any, i) => (
+            {videographyPortfolio.map((item: any, i) => (
               <div className="social-portfolio-card" key={i}>
                 <div className="social-portfolio-img" style={{ width: '100%', height: '100%' }}>
                   <video 
@@ -223,7 +222,7 @@ export default function PhotographyVideographyPage() {
         </section>
 
         {/* ─── 2. WHAT WE BUILD ─── */}
-        <section className="svc-section" id="what-we-build">
+        <section className="svc-section svc-section-alt" id="what-we-build">
           <div className="svc-section-header reveal-blur">
             <span className="svc-label">OUR SERVICES</span>
             <h2>Production That Performs</h2>
@@ -244,7 +243,7 @@ export default function PhotographyVideographyPage() {
         </section>
 
         {/* ─── 3. WHAT YOU GET ─── */}
-        <section className="svc-section svc-section-alt" id="what-you-get">
+        <section className="svc-section" id="what-you-get">
           <div className="svc-section-header reveal-blur">
             <span className="svc-label">WHAT YOU GET</span>
             <h2>Everything You Need, Included</h2>
@@ -266,7 +265,7 @@ export default function PhotographyVideographyPage() {
         </section>
 
         {/* ─── 4. WHY CHOOSE HYNOX ─── */}
-        <section className="svc-section" id="why-hynox">
+        <section className="svc-section svc-section-alt" id="why-hynox">
           <div className="svc-section-header reveal-flip-x">
             <span className="svc-label">WHY CHOOSE HYNOX?</span>
             <h2>We Focus On Quality & Conversions</h2>
@@ -283,7 +282,7 @@ export default function PhotographyVideographyPage() {
         </section>
 
         {/* ─── 5. PROCESS ─── */}
-        <section className="svc-section svc-section-alt" id="process">
+        <section className="svc-section" id="process">
           <div className="svc-section-header reveal-blur">
             <span className="svc-label">OUR PROCESS</span>
             <h2>From Concept to Final Cut</h2>
@@ -301,7 +300,7 @@ export default function PhotographyVideographyPage() {
         </section>
 
         {/* ─── 7. FAQ ─── */}
-        <section className="svc-section" id="faq">
+        <section className="svc-section svc-section-alt" id="faq">
           <div className="svc-section-header reveal-flip-x">
             <span className="svc-label">FAQ</span>
             <h2>Photography & Videography Questions Answered</h2>
